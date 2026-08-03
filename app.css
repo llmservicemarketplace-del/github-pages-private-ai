@@ -1,0 +1,29 @@
+/* App CSS - defines CSS variables used by setup.css */
+:root {
+  --seal: #4f46e5;           /* Indigo-600 */
+  --edge: #e5e7eb;           /* Gray-200 */
+  --raised: #f9fafb;         /* Gray-50 */
+  --ink: #1f2937;            /* Gray-800 */
+  --muted: #6b7280;          /* Gray-500 */
+  --warn: #ef4444;           /* Red-500 */
+
+  /* Font families */
+  --display: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --mono: 'Courier New', Courier, monospace;
+}
+
+/* Basic reset and body styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--display);
+  background-color: white;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.setup { overflow-y: auto; min-height: 100vh; padding: 2rem; }

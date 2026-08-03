@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Private AI Setup</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="setup.css">
+</head>
+<body class="setup">
+
+<div class="seal" id="seal">
+  <span class="seal__dot"></span>
+  <span class="seal__text">Setting up</span>
+  <span class="seal__rule"></span>
+  <span class="seal__stat">this is the only time it uses the internet</span>
+</div>
+
+<main class="wiz">
+
+  <!-- 1. redeem -->
+  <section class="step" id="step-code" data-step>
+    <h1 class="step__head">Enter the code from your card</h1>
+    <p class="step__sub">Scratch off the panel on the back. Letters aren't case-sensitive.</p>
+    <input class="code" id="code" placeholder="PAI-0000-0000" autocomplete="off"
+           spellcheck="false" aria-label="Redeem code">
+    <p class="err" id="code-err" hidden></p>
+    <button class="go" id="code-go">Continue</button>
+  </section>
+
+  <!-- 2. pick -->
+  <section class="step" id="step-pick" data-step hidden>
+    <h1 class="step__head">Choose your AI</h1>
+    <p class="step__sub" id="hw-line"></p>
+    <div class="picks" id="picks"></div>
+    <p class="note" id="empty-note" hidden>
+      This computer doesn't have enough memory for any of the current options.
+      Nothing here will run well on it, so we won't pretend otherwise.
+    </p>
+  </section>
+
+  <!-- 3. license -->
+  <section class="step" id="step-license" data-step hidden>
+    <h1 class="step__head">Terms for this model</h1>
+    <p class="step__sub" id="license-line"></p>
+    <div class="license" id="license-text"></div>
+    <label class="accept">
+      <input type="checkbox" id="accept"> I accept these terms
+    </label>
+    <button class="go" id="license-go" disabled>Download</button>
+  </section>
+
+  <!-- 4. download -->
+  <section class="step" id="step-dl" data-step hidden>
+    <h1 class="step__head" id="dl-head">Downloading</h1>
+    <p class="step__sub">This runs once. After it finishes you can unplug the internet
+      and it keeps working.</p>
+    <div class="bar"><div class="bar__fill" id="bar"></div></div>
+    <p class="dl-stat" id="dl-stat">Starting…</p>
+    <p class="err" id="dl-err" hidden></p>
+    <button class="go go--quiet" id="dl-retry" hidden>Resume</button>
+  </section>
+
+  <!-- 5. done -->
+  <section class="step" id="step-done" data-step hidden>
+    <h1 class="step__head">Ready.</h1>
+    <p class="step__sub">
+      Turn off your wifi and ask it something. That's the whole point —
+      see it work with nothing connected.
+    </p>
+    <button class="go" id="done-go">Open Private AI</button>
+  </section>
+
+</main>
+
+<script src="setup.js"></script>
+</body>
+</html>

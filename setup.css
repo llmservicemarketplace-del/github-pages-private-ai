@@ -1,0 +1,130 @@
+/* Setup wizard. Shares the token set in app.css. */
+
+.setup { overflow-y: auto; }
+
+.wiz {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: calc(var(--seal-h) + 4rem) 1.5rem 4rem;
+}
+
+.step__head {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  letter-spacing: -0.015em;
+  margin: 0 0 0.5rem;
+}
+
+.step__sub { color: var(--muted); margin: 0 0 1.8rem; }
+
+.note {
+  border-left: 2px solid var(--warn);
+  padding-left: 0.85rem;
+  color: var(--muted);
+}
+
+.err { color: var(--warn); margin: 0.7rem 0 0; }
+
+/* --- code --- */
+
+.code {
+  font-family: var(--mono);
+  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--edge);
+  border-radius: 0.35rem;
+  background: var(--raised);
+  color: var(--ink);
+}
+.code:focus { border-color: var(--seal); outline: none; }
+
+/* --- picks --- */
+
+.picks { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.pick {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  padding: 0.95rem 1.05rem;
+  border: 1px solid var(--edge);
+  border-radius: 0.4rem;
+  background: var(--raised);
+  color: var(--ink);
+  cursor: pointer;
+}
+.pick:hover { border-color: var(--seal); }
+
+.pick__label { font-weight: 600; margin-bottom: 0.2rem; }
+.pick__blurb { color: var(--muted); font-size: 0.9rem; }
+
+.pick__meta {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.55rem;
+}
+
+.pick__tight { color: var(--warn); }
+
+/* --- license --- */
+
+.license {
+  max-height: 15rem;
+  overflow-y: auto;
+  padding: 0.9rem;
+  border: 1px solid var(--edge);
+  border-radius: 0.35rem;
+  background: var(--raised);
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+}
+
+.accept { display: flex; gap: 0.5rem; align-items: center; margin: 1rem 0 1.4rem; }
+
+/* --- download --- */
+
+.bar {
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background: var(--edge);
+  overflow: hidden;
+}
+.bar__fill {
+  height: 100%;
+  width: 0;
+  background: var(--seal);
+  transition: width 0.3s ease;
+}
+@media (prefers-reduced-motion: reduce) { .bar__fill { transition: none; } }
+
+.dl-stat {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0.7rem 0 0;
+}
+
+/* --- buttons --- */
+
+.go {
+  font: inherit;
+  font-weight: 600;
+  margin-top: 1.4rem;
+  padding: 0.62rem 1.3rem;
+  border: 1px solid transparent;
+  border-radius: 0.35rem;
+  background: var(--seal);
+  color: #FFF;
+  cursor: pointer;
+}
+.go[disabled] { opacity: 0.4; cursor: default; }
+.go--quiet { background: none; border-color: var(--edge); color: var(--ink); }
