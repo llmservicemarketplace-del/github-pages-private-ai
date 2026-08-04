@@ -118,6 +118,60 @@
   // Focus on input when page loads
   codeInput.focus();
 </script>
+<section>
+  <h2>Download Your Software</h2>
+
+  <input
+    id="purchaseCode"
+    type="text"
+    placeholder="Enter purchase code"
+  >
+
+  <button id="verifyButton">Verify Code</button>
+
+  <p id="status"></p>
+</section>
+
+<script>
+const WORKER_URL =
+  "https://private-ai-code-server.llmservicemarketplace.workers.dev";
+
+document
+  .getElementById("verifyButton")
+  .addEventListener("click", async () => {
+    const code = document
+      .getElementById("purchaseCode")
+      .value
+      .trim();
+
+    const status = document.getElementById("status");
+    status.textContent = "Checking code...";
+
+    try {
+      const response = await fetch(WORKER_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ code })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.valid) {
+        status.textContent =
+          data.error || "Invalid purchase code.";
+        return;
+      }
+
+      status.textContent = "Code verified. Download starting.";
+      window.location.href = data.downloadUrl;
+    } catch {
+      status.textContent =
+        "Unable to verify the code.";
+    }
+  });
+</script>
 </body>
 </html>
 <hr>
