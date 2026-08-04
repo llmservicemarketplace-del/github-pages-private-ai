@@ -105,11 +105,11 @@ async function loadPicks() {
         `<div class="pick__label"></div>` +
         `<div class="pick__blurb"></div>` +
         `<div class="pick__meta${tight ? ' pick__tight' : ''}"></div>`;
-      b.querySelector('.pick__label').textContent = o.model.label;
-      b.querySelector('.pick__blurb').textContent = o.model.blurb;
+      b.querySelector('.pick__label').textContent = o.label;
+      b.querySelector('.pick__blurb').textContent = o.blurb;
       b.querySelector('.pick__meta').textContent = tight
-        ? `${o.model.download_gb} GB download · will run, but slowly on this computer`
-        : `${o.model.download_gb} GB download · runs well here`;
+        ? `${o.download_gb} GB download · will run, but slowly on this computer`
+        : `${o.download_gb} GB download · runs well here`;
       b.onclick = () => choose(i);
       box.appendChild(b);
     });
@@ -125,12 +125,12 @@ async function loadPicks() {
 
 function choose(i) {
   chosen = offers[i];
-  if (!chosen.model.gated) return startDownload();
+  if (!chosen.gated) return startDownload();
 
   el('license-line').textContent =
-    `${chosen.model.label} is published under ${chosen.model.license}. ` +
+    `${chosen.label} is published under ${chosen.license}. ` +
     `You're downloading it directly from the publisher.`;
-  el('license-text').textContent = chosen.model.license_text || chosen.model.license_url;
+  el('license-text').textContent = chosen.license_text || chosen.license_url;
   show('step-license');
 }
 
@@ -141,7 +141,7 @@ el('license-go').onclick = () => startDownload();
 
 async function startDownload() {
   show('step-dl');
-  el('dl-head').textContent = `Downloading ${chosen.model.label}`;
+  el('dl-head').textContent = `Downloading ${chosen.label}`;
   el('dl-err').hidden = true;
   el('dl-retry').hidden = false;
 
@@ -171,7 +171,7 @@ async function simulateDownload() {
     const pct = i;
     el('bar').style.width = pct + '%';
     el('dl-stat').textContent =
-      `${(i * chosen.model.download_gb / totalSteps).toFixed(2)} of ${chosen.model.download_gb.toFixed(2)} GB` +
+      `${(i * chosen.download_gb / totalSteps).toFixed(2)} of ${chosen.download_gb.toFixed(2)} GB` +
       ` · 5.0 MB/s` +
       ` · ${Math.round((totalSteps - i) * 0.3)} sec left`;
   }
@@ -184,7 +184,7 @@ function showCompletion() {
   const doneSection = el('step-done');
   doneSection.querySelector('h1').textContent = 'Setup Complete!';
   doneSection.querySelector('.step__sub').innerHTML =
-    `Your Private AI with <strong>${chosen.model.label}</strong> is ready.<br><br>` +
+    `Your Private AI with <strong>${chosen.label}</strong> is ready.<br><br>` +
     `To use it:<br>` +
     `1. Download the Private AI app for your platform:<br>` +
     `   <a href="https://private-ai.example.org/download/${getPlatform()}" target="_blank">Download Private AI</a><br><br>` +
@@ -245,5 +245,6 @@ el('done-go').onclick = () => {
     codeInput.focus();
   }
 })();
+
 
 
