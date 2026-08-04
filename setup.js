@@ -69,7 +69,7 @@ async function loadPicks() {
       throw new Error('Failed to load catalog');
     }
     const catalogData = await catalogResponse.json();
-    offers = catalogData.models.filter(m => m.enabled);
+    offers = (catalogData.models || []).filter(m => m && m.enabled && m.label);
 
     // Filter by platforms if we could detect them (simplified)
     // In browser, we can detect OS roughly
@@ -105,8 +105,8 @@ async function loadPicks() {
         `<div class="pick__label"></div>` +
         `<div class="pick__blurb"></div>` +
         `<div class="pick__meta${tight ? ' pick__tight' : ''}"></div>`;
-      b.querySelector('.pick__label').textContent = o.label;
-      b.querySelector('.pick__blurb').textContent = o.blurb;
+      b.querySelector('.pick__label').textContent = o?.label || 'Unnamed model';
+      b.querySelector('.pick__blurb').textContent = o?.blurb || '';
       b.querySelector('.pick__meta').textContent = tight
         ? `${o.download_gb} GB download · will run, but slowly on this computer`
         : `${o.download_gb} GB download · runs well here`;
@@ -245,6 +245,8 @@ el('done-go').onclick = () => {
     codeInput.focus();
   }
 })();
+
+
 
 
 
