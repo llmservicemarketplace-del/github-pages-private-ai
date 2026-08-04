@@ -1,254 +1,293 @@
-// Setup wizard for GitHub Pages version. Redeem -> pick -> license -> download -> done.
-// Communicates with backend endpoints instead of Tauri invoke.
+﻿// Private AI web setup wizard.
+// Verifies purchase code, loads model catalog, and downloads the selected files.
+
+const WORKER_URL =
+  "https://private-ai-code-server.llmservicemarketplace.workers.dev";
+
+const CATALOG_URL =
+  "https://llmservicemarketplace-del.github.io/github-pages-private-ai/catalog.json";
+
+const INSTALLER_URL =
+  "https://github.com/llmservicemarketplace-del/github-pages-private-ai/releases/download/v1.0.0/LFM_Console.exe";
 
 const el = (id) => document.getElementById(id);
+
 const show = (id) => {
-  document.querySelectorAll('[data-step]').forEach(s => s.hidden = true);
-  el(id).hidden = false;
+  document.querySelectorAll("[data-step]").forEach((section) => {
+    section.hidden = true;
+  });
+
+  const target = el(id);
+
+  if (target) {
+    target.hidden = false;
+  }
 };
 
-let hw = null;
 let offers = [];
 let chosen = null;
-let validatedCode = null; // Store validated code if we have one from landing page
 
-// Backend configuration - user should update these
-const WORKER_URL = 'https://private-ai-code-server.llmservicemarketplace.workers.dev';
-const CATALOG_URL = 'https://llmservicemarketplace-del.github.io/github-pages-private-ai/catalog.json';
+const codeInput = el("code");
 
-// ---------- 1. redeem ----------
-// The code gates the download, not the app. If the redeem server ever goes
-// away, units already installed must keep working forever.
+// Format codes as PAI-XXXX-XXXX.
+codeInput.addEventListener("input", () => {
+  let value = codeInput.value
+    .toUpperCase()
+    .replace(/[^A-Z0-9]/g, "");
 
-const codeInput = el('code');
+  if (value.startsWith("PAI")) {
+    value = value.slice(3);
+  }
 
-codeInput.addEventListener('input', () => {
-  // Format as they type. No ambiguous characters exist in the alphabet.
-  let v = codeInput.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
-  if (v.startsWith('PAI')) v = v.slice(3);
-  v = v.slice(0, 8);
-  codeInput.value = 'PAI-' + (v.slice(0, 4) + (v.length > 4 ? '-' + v.slice(4) : ''));
+  value = value.slice(0, 8);
+
+  codeInput.value =
+    "PAI-" +
+    value.slice(0, 4) +
+    (value.length > 4 ? "-" + value.slice(4) : "");
 });
 
-el('code-go').onclick = async () => {
-  const err = el('code-err');
-  err.hidden = true;
-  try {
-    // Validate code with backend
-    const response = await fetch(WORKER_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ code: codeInput.value })
-    });
+el("code-go").onclick = async () => {
+  const errorLine = el("code-err");
+  errorLine.hidden = true;
 
-    if (!response.ok) {
-      throw new Error(await response.text() || 'Invalid code');
+  try {
+    const code = codeInput.value.trim().toUpperCase();
+
+    if (!/^PAI-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(code)) {
+      throw new Error("Please enter a valid code in the format PAI-XXXX-XXXX.");
     }
 
-    // Code validated successfully
-    await loadPicks();
-  } catch (e) {
-    err.textContent = String(e);
-    err.hidden = false;
+    const response = await fetch(WORKER_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ code })
+    });
+
+    const result = await response.json();
+
+    if (!response.ok || !result.valid) {
+      throw new Error(result.error || "Invalid purchase code.");
+    }
+
+    sessionStorage.setItem("validatedCode", code);
+    await loadModels();
+  } catch (error) {
+    errorLine.textContent =
+      error instanceof Error ? error.message : String(error);
+
+    errorLine.hidden = false;
   }
 };
 
-// ---------- 2. pick ----------
+async function loadModels() {
+  const response = await fetch(CATALOG_URL, {
+    cache: "no-store"
+  });
 
-async function loadPicks() {
+  if (!response.ok) {
+    throw new Error("The model catalog could not be loaded.");
+  }
+
+  const catalog = await response.json();
+
+  offers = (catalog.models || []).filter((model) => {
+    return model && model.enabled && model.label && model.url;
+  });
+
+  const userAgent = navigator.userAgent.toLowerCase();
+  let platform = "windows";
+
+  if (userAgent.includes("android")) {
+    platform = "android";
+  } else if (
+    userAgent.includes("iphone") ||
+    userAgent.includes("ipad")
+  ) {
+    platform = "ios";
+  } else if (userAgent.includes("mac")) {
+    platform = "macos";
+  }
+
+  offers = offers.filter((model) => {
+    return (
+      Array.isArray(model.platforms) &&
+      model.platforms.includes(platform)
+    );
+  });
+
+  el("hw-line").textContent =
+    `Detected: ${navigator.platform}. ` +
+    "Choose the AI model you want installed.";
+
+  const box = el("picks");
+  box.replaceChildren();
+
+  if (!offers.length) {
+    el("empty-note").hidden = false;
+    show("step-pick");
+    return;
+  }
+
+  el("empty-note").hidden = true;
+
+  offers.forEach((model, index) => {
+    const button = document.createElement("button");
+    button.className = "pick";
+
+    button.innerHTML =
+      '<div class="pick__label"></div>' +
+      '<div class="pick__blurb"></div>' +
+      '<div class="pick__meta"></div>';
+
+    button.querySelector(".pick__label").textContent =
+      model.label;
+
+    button.querySelector(".pick__blurb").textContent =
+      model.blurb || "";
+
+    button.querySelector(".pick__meta").textContent =
+      `${Number(model.download_gb || 0).toFixed(1)} GB download · ` +
+      `${Number(model.ram_gb || 0).toFixed(1)} GB RAM recommended`;
+
+    button.onclick = () => chooseModel(index);
+    box.appendChild(button);
+  });
+
+  show("step-pick");
+}
+
+function chooseModel(index) {
+  chosen = offers[index];
+
+  if (!chosen) {
+    alert("That model option could not be loaded.");
+    return;
+  }
+
+  localStorage.setItem(
+    "privateAiSelectedModel",
+    JSON.stringify({
+      id: chosen.id,
+      label: chosen.label,
+      url: chosen.url,
+      sha256: chosen.sha256 || "",
+      license: chosen.license || ""
+    })
+  );
+
+  if (!chosen.gated) {
+    beginDownloads();
+    return;
+  }
+
+  el("license-line").textContent =
+    `${chosen.label} is published under ${chosen.license}. ` +
+    "The model is downloaded directly from its publisher.";
+
+  el("license-text").textContent =
+    chosen.license_text ||
+    chosen.license_url ||
+    "Review the publisher's license before continuing.";
+
+  el("accept").checked = false;
+  el("license-go").disabled = true;
+  show("step-license");
+}
+
+el("accept").onchange = (event) => {
+  el("license-go").disabled = !event.target.checked;
+};
+
+el("license-go").onclick = beginDownloads;
+
+function beginDownloads() {
+  if (!chosen) {
+    alert("Choose a model first.");
+    return;
+  }
+
+  show("step-dl");
+
+  el("dl-head").textContent =
+    `Preparing ${chosen.label}`;
+
+  el("dl-err").hidden = true;
+  el("dl-retry").hidden = true;
+  el("bar").style.width = "100%";
+
   try {
-    // In a real implementation, we might get hardware info via UserAgent or similar
-    // For now, we'll use mock values or skip hardware check
-    hw = { total_ram_gb: 8, free_disk_gb: 100 }; // Mock - in reality, could use navigator.deviceMemory
-
-    // Fetch catalog from CDN
-    const catalogResponse = await fetch(CATALOG_URL);
-    if (!catalogResponse.ok) {
-      throw new Error('Failed to load catalog');
+    if (
+      !chosen.url ||
+      chosen.url.includes("/ORG/REPO/") ||
+      chosen.url.includes("FILL_ME")
+    ) {
+      throw new Error(
+        "This model still has a placeholder Hugging Face download URL."
+      );
     }
-    const catalogData = await catalogResponse.json();
-    offers = (catalogData.models || []).filter(m => m && m.enabled && m.label);
 
-    // Filter by platforms if we could detect them (simplified)
-    // In browser, we can detect OS roughly
-    const platform = navigator.userAgent.toLowerCase();
-    let platforms = ['windows']; // default
-    if (platform.indexOf('mac') !== -1) platforms = ['macos'];
-    if (platform.indexOf('android') !== -1) platforms = ['android'];
-    if (platform.indexOf('iphone') !== -1 || platform.indexOf('ipad') !== -1) platforms = ['ios'];
+    el("dl-stat").textContent =
+      "Opening the model and application downloads...";
 
-    offers = offers.filter(o =>
-      o.platforms.some(p => platforms.includes(p)) ||
-      platforms.some(p => o.platforms.includes(p))
+    // Start the selected Hugging Face model download.
+    const modelWindow = window.open(
+      chosen.url,
+      "_blank",
+      "noopener"
     );
 
-    el('hw-line').textContent =
-      `Detected: ${navigator.platform}. ` +
-      `These are the options available for your device.`;
-
-    const box = el('picks');
-    box.replaceChildren();
-
-    if (!offers.length) {
-      el('empty-note').hidden = false;
-      show('step-pick');
-      return;
+    if (!modelWindow) {
+      throw new Error(
+        "Your browser blocked the model download. Allow pop-ups and try again."
+      );
     }
 
-    offers.forEach((o, i) => {
-      const b = document.createElement('button');
-      b.className = 'pick';
-      const tight = o.fit === 'Tight';
-      b.innerHTML =
-        `<div class="pick__label"></div>` +
-        `<div class="pick__blurb"></div>` +
-        `<div class="pick__meta${tight ? ' pick__tight' : ''}"></div>`;
-      b.querySelector('.pick__label').textContent = o?.label || 'Unnamed model';
-      b.querySelector('.pick__blurb').textContent = o?.blurb || '';
-      b.querySelector('.pick__meta').textContent = tight
-        ? `${o.download_gb} GB download · will run, but slowly on this computer`
-        : `${o.download_gb} GB download · runs well here`;
-      b.onclick = () => choose(i);
-      box.appendChild(b);
-    });
-
-    show('step-pick');
-  } catch (e) {
-    el('code-err').textContent = `Failed to load options: ${e}`;
-    el('code-err').hidden = false;
-  }
-}
-
-// ---------- 3. license ----------
-
-function choose(i) {
-  chosen = offers[i];
-  if (!chosen.gated) return startDownload();
-
-  el('license-line').textContent =
-    `${chosen.label} is published under ${chosen.license}. ` +
-    `You're downloading it directly from the publisher.`;
-  el('license-text').textContent = chosen.license_text || chosen.license_url;
-  show('step-license');
-}
-
-el('accept').onchange = (e) => { el('license-go').disabled = !e.target.checked; };
-el('license-go').onclick = () => startDownload();
-
-// ---------- 4. download ----------
-
-async function startDownload() {
-  show('step-dl');
-  el('dl-head').textContent = `Downloading ${chosen.label}`;
-  el('dl-err').hidden = true;
-  el('dl-retry').hidden = false;
-
-  // Since we can't actually download and install in browser,
-  // we'll simulate the process and then provide next steps
-  try {
-    // Simulate download progress
-    await simulateDownload();
-
-    // Instead of actually installing, show completion with instructions
     showCompletion();
-  } catch (e) {
-    el('dl-err').textContent = String(e);
-    el('dl-err').hidden = false;
-    el('dl-retry').hidden = false;
+  } catch (error) {
+    el("dl-err").textContent =
+      error instanceof Error ? error.message : String(error);
+
+    el("dl-err").hidden = false;
+    el("dl-retry").hidden = false;
   }
 }
 
-el('dl-retry').onclick = () => startDownload();
-
-async function simulateDownload() {
-  // Simulate progress updates
-  const totalSteps = 100;
-  for (let i = 0; i <= totalSteps; i++) {
-    await new Promise(resolve => setTimeout(resolve, 30)); // 30ms per step
-
-    const pct = i;
-    el('bar').style.width = pct + '%';
-    el('dl-stat').textContent =
-      `${(i * chosen.download_gb / totalSteps).toFixed(2)} of ${chosen.download_gb.toFixed(2)} GB` +
-      ` · 5.0 MB/s` +
-      ` · ${Math.round((totalSteps - i) * 0.3)} sec left`;
-  }
-}
+el("dl-retry").onclick = beginDownloads;
 
 function showCompletion() {
-  // Instead of invoking finish_setup, we show what to do next
-  el('step-dl').hidden = true;
+  const doneSection = el("step-done");
 
-  const doneSection = el('step-done');
-  doneSection.querySelector('h1').textContent = 'Setup Complete!';
-  doneSection.querySelector('.step__sub').innerHTML =
-    `Your Private AI with <strong>${chosen.label}</strong> is ready.<br><br>` +
-    `To use it:<br>` +
-    `1. Download the Private AI app for your platform:<br>` +
-    `   <a href="https://github.com/llmservicemarketplace-del/github-pages-private-ai/releases/download/v1.0.0/LFM_Console.exe" target="_blank">Download Private AI</a><br><br>` +
-    `2. Internet is required only during this initial setup and model download.<br><br>` +
-    `3. Once installed, turn off your wifi and try it - it works completely offline!`;
+  doneSection.querySelector("h1").textContent =
+    "Downloads Started";
 
-  doneSection.hidden = false;
+  doneSection.querySelector(".step__sub").innerHTML =
+    `Your selected model is <strong>${escapeHtml(chosen.label)}</strong>.<br><br>` +
+    `1. The selected AI model download has opened in a new tab.<br><br>` +
+    `2. Download the Private AI Windows application:<br>` +
+    `<a href="${INSTALLER_URL}" target="_blank" rel="noopener">` +
+    `Download Private AI</a><br><br>` +
+    `3. Internet is needed only for these initial downloads.<br><br>` +
+    `4. After the model is placed in the application's model folder and configured, ` +
+    `the AI can run locally without an internet connection.`;
+
+  show("step-done");
 }
 
-// Helper to detect platform for download links
-function getPlatform() {
-  const platform = navigator.userAgent.toLowerCase();
-  if (platform.indexOf('win') !== -1) return 'windows';
-  if (platform.indexOf('mac') !== -1) return 'macos';
-  if (platform.indexOf('android') !== -1) return 'android';
-  if (platform.indexOf('iphone') !== -1 || platform.indexOf('ipad') !== -1) return 'ios';
-  return 'windows'; // fallback
-}
-
-// ---------- 5. done ----------
-
-el('done-go').onclick = () => {
-  // In the real app, this would invoke('finish_setup')
-  // For web version, we just acknowledge
-  alert('Remember to download and install the Private AI app from the link provided!');
+el("done-go").onclick = () => {
+  window.open(INSTALLER_URL, "_blank", "noopener");
 };
 
-// ---------- boot ----------
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
 
-(async function () {
-  // Check if we have a validated code from landing page (stored in sessionStorage)
-  validatedCode = sessionStorage.getItem('validatedCode');
-
-  // Already set up? Skip straight past the wizard.
-  // For web version, we always show the setup flow since we can't detect installed state
-  // if (await invoke('is_installed')) { invoke('finish_setup'); return; }
-
-  if (validatedCode) {
-    // We have a pre-validated code, skip code entry and go straight to loading picks
-    // Hide code entry step
-    el('step-code').hidden = true;
-    try {
-      await loadPicks();
-    } catch (e) {
-      // If loading picks fails, show error and maybe allow re-entry?
-      el('code-err').textContent = String(e);
-      el('code-err').hidden = false;
-      // Fall back to showing code entry so user can try again?
-      el('step-code').hidden = false;
-      codeInput.value = validatedCode; // pre-fill with the code we had
-      codeInput.focus();
-    }
-    // Clear the validated code from sessionStorage after use (optional)
-    sessionStorage.removeItem('validatedCode');
-  } else {
-    // No pre-validated code, show normal code entry flow
-    show('step-code');
-    codeInput.focus();
-  }
-})();
-
-
-
-
-
-
-
+show("step-code");
+codeInput.focus();
