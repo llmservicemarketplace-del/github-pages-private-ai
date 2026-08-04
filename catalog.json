@@ -1,264 +1,422 @@
-﻿{
-  "version": 2,
-  "models": [
-    {
-      "id": "light-qwen",
-      "tier": "Light",
-      "family": "Qwen",
-      "label": "Qwen — Light",
-      "blurb": "Fast everyday assistant for basic questions, writing, and summaries.",
-      "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf?download=true",
-      "sha256": "",
-      "download_gb": 2.0,
-      "ram_gb": 4.0,
-      "license": "Qwen License",
-      "license_url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": false
-    },
-    {
-      "id": "light-gemma",
-      "tier": "Light",
-      "family": "Gemma",
-      "label": "Gemma — Light",
-      "blurb": "Compact assistant suited to ordinary laptops and simple everyday work.",
-      "url": "PLACEHOLDER_GEMMA_LIGHT",
-      "sha256": "",
-      "download_gb": 2.0,
-      "ram_gb": 4.0,
-      "license": "Gemma Terms",
-      "license_url": "https://ai.google.dev/gemma/terms",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": true
-    },
-    {
-      "id": "light-llama",
-      "tier": "Light",
-      "family": "Llama",
-      "label": "Llama — Light",
-      "blurb": "Small multilingual assistant for chat, summarization, and everyday tasks.",
-      "url": "PLACEHOLDER_LLAMA_LIGHT",
-      "sha256": "",
-      "download_gb": 2.0,
-      "ram_gb": 4.0,
-      "license": "Llama Community License",
-      "license_url": "https://www.llama.com/llama-downloads/",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": true
-    },
-    {
-      "id": "light-deepseek",
-      "tier": "Light",
-      "family": "DeepSeek",
-      "label": "DeepSeek — Light",
-      "blurb": "Compact reasoning-focused model for basic logic and technical questions.",
-      "url": "PLACEHOLDER_DEEPSEEK_LIGHT",
-      "sha256": "",
-      "download_gb": 2.0,
-      "ram_gb": 4.0,
-      "license": "Model-specific license",
-      "license_url": "https://huggingface.co/deepseek-ai",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": false
-    },
+{
+    "version":  3,
+    "generated_at":  "2026-08-04T06:28:12.2926873Z",
+    "models":  [
+                   {
+                       "id":  "light-qwen",
+                       "tier":  "Light",
+                       "family":  "Qwen",
+                       "label":  "Qwen 2.5 3B - Light",
+                       "blurb":  "Fast everyday assistant for questions, writing, and explanations.",
+                       "repo_id":  "Qwen/Qwen2.5-3B-Instruct-GGUF",
+                       "filename":  "qwen2.5-3b-instruct-q4_k_m.gguf",
+                       "url":  "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  1.96,
+                       "ram_gb":  4,
+                       "license":  "Qwen License",
+                       "license_url":  "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
 
-    {
-      "id": "standard-qwen",
-      "tier": "Standard",
-      "family": "Qwen",
-      "label": "Qwen — Standard",
-      "blurb": "Balanced local assistant for most modern computers.",
-      "url": "PLACEHOLDER_QWEN_STANDARD",
-      "sha256": "",
-      "download_gb": 5.0,
-      "ram_gb": 8.0,
-      "license": "Qwen License",
-      "license_url": "https://huggingface.co/Qwen",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": false
-    },
-    {
-      "id": "standard-gemma",
-      "tier": "Standard",
-      "family": "Gemma",
-      "label": "Gemma — Standard",
-      "blurb": "Balanced writing, explanation, and general-assistant performance.",
-      "url": "PLACEHOLDER_GEMMA_STANDARD",
-      "sha256": "",
-      "download_gb": 5.0,
-      "ram_gb": 8.0,
-      "license": "Gemma Terms",
-      "license_url": "https://ai.google.dev/gemma/terms",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": true
-    },
-    {
-      "id": "standard-llama",
-      "tier": "Standard",
-      "family": "Llama",
-      "label": "Llama — Standard",
-      "blurb": "General-purpose local assistant with stronger conversation quality.",
-      "url": "PLACEHOLDER_LLAMA_STANDARD",
-      "sha256": "",
-      "download_gb": 5.0,
-      "ram_gb": 8.0,
-      "license": "Llama Community License",
-      "license_url": "https://www.llama.com/llama-downloads/",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": true
-    },
-    {
-      "id": "standard-deepseek",
-      "tier": "Standard",
-      "family": "DeepSeek",
-      "label": "DeepSeek — Standard",
-      "blurb": "Stronger reasoning and technical assistance for daily professional use.",
-      "url": "PLACEHOLDER_DEEPSEEK_STANDARD",
-      "sha256": "",
-      "download_gb": 5.0,
-      "ram_gb": 8.0,
-      "license": "Model-specific license",
-      "license_url": "https://huggingface.co/deepseek-ai",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": false
-    },
+                                        ]
+                   },
+                   {
+                       "id":  "light-gemma",
+                       "tier":  "Light",
+                       "family":  "Gemma",
+                       "label":  "Gemma 3 1B - Light",
+                       "blurb":  "Compact Google model for everyday writing and general assistance.",
+                       "repo_id":  "unsloth/gemma-3-1b-it-GGUF",
+                       "filename":  "gemma-3-1b-it-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  0.75,
+                       "ram_gb":  4,
+                       "license":  "Gemma Terms",
+                       "license_url":  "https://ai.google.dev/gemma/terms",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  true,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
 
-    {
-      "id": "advanced-qwen",
-      "tier": "Advanced",
-      "family": "Qwen",
-      "label": "Qwen — Advanced",
-      "blurb": "Higher-quality reasoning and writing for powerful desktops.",
-      "url": "PLACEHOLDER_QWEN_ADVANCED",
-      "sha256": "",
-      "download_gb": 9.0,
-      "ram_gb": 16.0,
-      "license": "Qwen License",
-      "license_url": "https://huggingface.co/Qwen",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": false
-    },
-    {
-      "id": "advanced-gemma",
-      "tier": "Advanced",
-      "family": "Gemma",
-      "label": "Gemma — Advanced",
-      "blurb": "Larger Gemma option for stronger writing and detailed explanations.",
-      "url": "PLACEHOLDER_GEMMA_ADVANCED",
-      "sha256": "",
-      "download_gb": 9.0,
-      "ram_gb": 16.0,
-      "license": "Gemma Terms",
-      "license_url": "https://ai.google.dev/gemma/terms",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": true
-    },
-    {
-      "id": "advanced-llama",
-      "tier": "Advanced",
-      "family": "Llama",
-      "label": "Llama — Advanced",
-      "blurb": "Stronger general-purpose performance for higher-memory computers.",
-      "url": "PLACEHOLDER_LLAMA_ADVANCED",
-      "sha256": "",
-      "download_gb": 9.0,
-      "ram_gb": 16.0,
-      "license": "Llama Community License",
-      "license_url": "https://www.llama.com/llama-downloads/",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": true
-    },
-    {
-      "id": "advanced-deepseek",
-      "tier": "Advanced",
-      "family": "DeepSeek",
-      "label": "DeepSeek — Advanced",
-      "blurb": "Advanced reasoning and coding assistance for capable desktop systems.",
-      "url": "PLACEHOLDER_DEEPSEEK_ADVANCED",
-      "sha256": "",
-      "download_gb": 9.0,
-      "ram_gb": 16.0,
-      "license": "Model-specific license",
-      "license_url": "https://huggingface.co/deepseek-ai",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": false
-    },
+                                        ]
+                   },
+                   {
+                       "id":  "light-llama",
+                       "tier":  "Light",
+                       "family":  "Llama",
+                       "label":  "Llama 3.2 1B - Light",
+                       "blurb":  "Small multilingual assistant for lightweight local use.",
+                       "repo_id":  "unsloth/Llama-3.2-1B-Instruct-GGUF",
+                       "filename":  "Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  0.75,
+                       "ram_gb":  4,
+                       "license":  "Llama Community License",
+                       "license_url":  "https://www.llama.com/llama-downloads/",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  true,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
 
-    {
-      "id": "heavy-qwen",
-      "tier": "Heavy",
-      "family": "Qwen",
-      "label": "Qwen — Heavy",
-      "blurb": "Large local model for advanced reasoning on high-memory workstations.",
-      "url": "PLACEHOLDER_QWEN_HEAVY",
-      "sha256": "",
-      "download_gb": 19.0,
-      "ram_gb": 24.0,
-      "license": "Qwen License",
-      "license_url": "https://huggingface.co/Qwen",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": false
-    },
-    {
-      "id": "heavy-gemma",
-      "tier": "Heavy",
-      "family": "Gemma",
-      "label": "Gemma — Heavy",
-      "blurb": "Large Gemma model intended for powerful desktop workstations.",
-      "url": "PLACEHOLDER_GEMMA_HEAVY",
-      "sha256": "",
-      "download_gb": 19.0,
-      "ram_gb": 24.0,
-      "license": "Gemma Terms",
-      "license_url": "https://ai.google.dev/gemma/terms",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": true
-    },
-    {
-      "id": "heavy-llama",
-      "tier": "Heavy",
-      "family": "Llama",
-      "label": "Llama — Heavy",
-      "blurb": "Large general-purpose assistant for high-end local systems.",
-      "url": "PLACEHOLDER_LLAMA_HEAVY",
-      "sha256": "",
-      "download_gb": 19.0,
-      "ram_gb": 24.0,
-      "license": "Llama Community License",
-      "license_url": "https://www.llama.com/llama-downloads/",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": true
-    },
-    {
-      "id": "heavy-deepseek",
-      "tier": "Heavy",
-      "family": "DeepSeek",
-      "label": "DeepSeek — Heavy",
-      "blurb": "Large reasoning-focused model for advanced technical workstations.",
-      "url": "PLACEHOLDER_DEEPSEEK_HEAVY",
-      "sha256": "",
-      "download_gb": 19.0,
-      "ram_gb": 24.0,
-      "license": "Model-specific license",
-      "license_url": "https://huggingface.co/deepseek-ai",
-      "enabled": true,
-      "platforms": ["windows", "macos"],
-      "gated": false
-    }
-  ]
+                                        ]
+                   },
+                   {
+                       "id":  "light-deepseek",
+                       "tier":  "Light",
+                       "family":  "DeepSeek",
+                       "label":  "DeepSeek R1 Distill 1.5B - Light",
+                       "blurb":  "Compact reasoning-focused model for basic logic and technical questions.",
+                       "repo_id":  "unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF",
+                       "filename":  "DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-1.5B-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  1.04,
+                       "ram_gb":  4,
+                       "license":  "MIT",
+                       "license_url":  "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "standard-qwen",
+                       "tier":  "Standard",
+                       "family":  "Qwen",
+                       "label":  "Qwen 2.5 7B - Standard",
+                       "blurb":  "Balanced general assistant for most modern computers.",
+                       "repo_id":  "bartowski/Qwen2.5-7B-Instruct-GGUF",
+                       "filename":  "Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  4.36,
+                       "ram_gb":  8,
+                       "license":  "Qwen License",
+                       "license_url":  "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct-GGUF",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "standard-gemma",
+                       "tier":  "Standard",
+                       "family":  "Gemma",
+                       "label":  "Gemma 3 4B - Standard",
+                       "blurb":  "Balanced writing, explanation, and everyday assistant performance.",
+                       "repo_id":  "unsloth/gemma-3-4b-it-GGUF",
+                       "filename":  "gemma-3-4b-it-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/gemma-3-4b-it-GGUF/resolve/main/gemma-3-4b-it-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  2.32,
+                       "ram_gb":  8,
+                       "license":  "Gemma Terms",
+                       "license_url":  "https://ai.google.dev/gemma/terms",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  true,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "standard-llama",
+                       "tier":  "Standard",
+                       "family":  "Llama",
+                       "label":  "Llama 3.2 3B - Standard",
+                       "blurb":  "General-purpose multilingual assistant for everyday local use.",
+                       "repo_id":  "unsloth/Llama-3.2-3B-Instruct-GGUF",
+                       "filename":  "Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  1.88,
+                       "ram_gb":  8,
+                       "license":  "Llama Community License",
+                       "license_url":  "https://www.llama.com/llama-downloads/",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  true,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "standard-deepseek",
+                       "tier":  "Standard",
+                       "family":  "DeepSeek",
+                       "label":  "DeepSeek R1 Distill 7B - Standard",
+                       "blurb":  "Stronger reasoning and technical assistance for daily professional use.",
+                       "repo_id":  "unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF",
+                       "filename":  "DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-7B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-7B-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  4.36,
+                       "ram_gb":  8,
+                       "license":  "MIT",
+                       "license_url":  "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "advanced-qwen",
+                       "tier":  "Advanced",
+                       "family":  "Qwen",
+                       "label":  "Qwen 2.5 14B - Advanced",
+                       "blurb":  "Higher-quality reasoning, writing, coding, and mathematics.",
+                       "repo_id":  "bartowski/Qwen2.5-14B-Instruct-GGUF",
+                       "filename":  "Qwen2.5-14B-Instruct-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/bartowski/Qwen2.5-14B-Instruct-GGUF/resolve/main/Qwen2.5-14B-Instruct-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  8.37,
+                       "ram_gb":  16,
+                       "license":  "Qwen License",
+                       "license_url":  "https://huggingface.co/Qwen/Qwen2.5-14B-Instruct-GGUF",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "advanced-gemma",
+                       "tier":  "Advanced",
+                       "family":  "Gemma",
+                       "label":  "Gemma 3 12B - Advanced",
+                       "blurb":  "Larger Gemma model for detailed writing and stronger explanations.",
+                       "repo_id":  "unsloth/gemma-3-12b-it-GGUF",
+                       "filename":  "gemma-3-12b-it-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/gemma-3-12b-it-GGUF/resolve/main/gemma-3-12b-it-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  6.8,
+                       "ram_gb":  16,
+                       "license":  "Gemma Terms",
+                       "license_url":  "https://ai.google.dev/gemma/terms",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  true,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "advanced-llama",
+                       "tier":  "Advanced",
+                       "family":  "Llama",
+                       "label":  "Llama 3.1 8B - Advanced",
+                       "blurb":  "Strong general-purpose multilingual assistant for capable systems.",
+                       "repo_id":  "unsloth/Llama-3.1-8B-Instruct-GGUF",
+                       "filename":  "Llama-3.1-8B-Instruct-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/Llama-3.1-8B-Instruct-GGUF/resolve/main/Llama-3.1-8B-Instruct-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  4.58,
+                       "ram_gb":  16,
+                       "license":  "Llama Community License",
+                       "license_url":  "https://www.llama.com/llama-downloads/",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  true,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "advanced-deepseek",
+                       "tier":  "Advanced",
+                       "family":  "DeepSeek",
+                       "label":  "DeepSeek R1 Distill 14B - Advanced",
+                       "blurb":  "Advanced reasoning and coding assistance for powerful desktops.",
+                       "repo_id":  "unsloth/DeepSeek-R1-Distill-Qwen-14B-GGUF",
+                       "filename":  "DeepSeek-R1-Distill-Qwen-14B-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-14B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-14B-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  8.37,
+                       "ram_gb":  16,
+                       "license":  "MIT",
+                       "license_url":  "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "heavy-qwen",
+                       "tier":  "Heavy",
+                       "family":  "Qwen",
+                       "label":  "Qwen 2.5 32B - Heavy",
+                       "blurb":  "Large local model for advanced workstations and complex reasoning.",
+                       "repo_id":  "bartowski/Qwen2.5-32B-Instruct-GGUF",
+                       "filename":  "Qwen2.5-32B-Instruct-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/bartowski/Qwen2.5-32B-Instruct-GGUF/resolve/main/Qwen2.5-32B-Instruct-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  18.49,
+                       "ram_gb":  32,
+                       "license":  "Qwen License",
+                       "license_url":  "https://huggingface.co/Qwen/Qwen2.5-32B-Instruct-GGUF",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "heavy-gemma",
+                       "tier":  "Heavy",
+                       "family":  "Gemma",
+                       "label":  "Gemma 3 27B - Heavy",
+                       "blurb":  "Large Gemma model intended for high-memory desktop workstations.",
+                       "repo_id":  "unsloth/gemma-3-27b-it-GGUF",
+                       "filename":  "gemma-3-27b-it-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/gemma-3-27b-it-GGUF/resolve/main/gemma-3-27b-it-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  15.41,
+                       "ram_gb":  32,
+                       "license":  "Gemma Terms",
+                       "license_url":  "https://ai.google.dev/gemma/terms",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  true,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "heavy-llama",
+                       "tier":  "Heavy",
+                       "family":  "Llama",
+                       "label":  "Llama 3.3 70B - Heavy",
+                       "blurb":  "Large general-purpose assistant for high-end workstations.",
+                       "repo_id":  "bartowski/Llama-3.3-70B-Instruct-GGUF",
+                       "filename":  "Llama-3.3-70B-Instruct-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/bartowski/Llama-3.3-70B-Instruct-GGUF/resolve/main/Llama-3.3-70B-Instruct-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  39.6,
+                       "ram_gb":  48,
+                       "license":  "Llama Community License",
+                       "license_url":  "https://www.llama.com/llama-downloads/",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  true,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "heavy-deepseek",
+                       "tier":  "Heavy",
+                       "family":  "DeepSeek",
+                       "label":  "DeepSeek R1 Distill 32B - Heavy",
+                       "blurb":  "Large reasoning-focused model for advanced technical work.",
+                       "repo_id":  "unsloth/DeepSeek-R1-Distill-Qwen-32B-GGUF",
+                       "filename":  "DeepSeek-R1-Distill-Qwen-32B-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-32B-GGUF/resolve/main/DeepSeek-R1-Distill-Qwen-32B-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  18.49,
+                       "ram_gb":  32,
+                       "license":  "MIT",
+                       "license_url":  "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   }
+               ]
 }
