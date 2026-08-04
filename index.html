@@ -49,7 +49,7 @@
   const loadingMsg = document.getElementById('loadingMsg');
 
   // Backend URL - UPDATE THIS TO YOUR ACTUAL BACKEND
-  const BACKEND_URL = 'https://your-backend-domain.com'; // <-- CHANGE THIS
+  
 
   function showError(msg) {
     errorMsg.textContent = msg;
@@ -81,7 +81,7 @@
     loadingMsg.hidden = false;
 
     try {
-      const response = await fetch(`${BACKEND_URL}/v1/claim`, {
+      const response = await fetch(WORKER_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -181,3 +181,4 @@ document
 <a href="https://github.com/llmservicemarketplace-del/github-pages-private-ai/releases/download/v1.0.0/LFM_Console.exe">
 Download LFM Console
 </a>
+

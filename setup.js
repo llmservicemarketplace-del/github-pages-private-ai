@@ -13,8 +13,8 @@ let chosen = null;
 let validatedCode = null; // Store validated code if we have one from landing page
 
 // Backend configuration - user should update these
-const BACKEND_URL = 'https://your-backend-domain.com'; // Where codes.py serve is hosted
-const CATALOG_URL = 'https://your-cdn-domain.com/catalog-v1.json'; // Where catalog is hosted
+const WORKER_URL = 'https://private-ai-code-server.llmservicemarketplace.workers.dev';
+const CATALOG_URL = 'https://llmservicemarketplace-del.github.io/github-pages-private-ai/catalog.json';
 
 // ---------- 1. redeem ----------
 // The code gates the download, not the app. If the redeem server ever goes
@@ -35,7 +35,7 @@ el('code-go').onclick = async () => {
   err.hidden = true;
   try {
     // Validate code with backend
-    const response = await fetch(`${BACKEND_URL}/v1/claim`, {
+    const response = await fetch(WORKER_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -245,3 +245,5 @@ el('done-go').onclick = () => {
     codeInput.focus();
   }
 })();
+
+
