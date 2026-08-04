@@ -188,7 +188,7 @@ function showCompletion() {
     `To use it:<br>` +
     `1. Download the Private AI app for your platform:<br>` +
     `   <a href="https://github.com/llmservicemarketplace-del/github-pages-private-ai/releases/download/v1.0.0/LFM_Console.exe" target="_blank">Download Private AI</a><br><br>` +
-    `2. During setup, it will automatically configure itself with your selected model.<br><br>` +
+    `2. Internet is required only during this initial setup and model download.<br><br>` +
     `3. Once installed, turn off your wifi and try it - it works completely offline!`;
 
   doneSection.hidden = false;
@@ -245,6 +245,7 @@ el('done-go').onclick = () => {
     codeInput.focus();
   }
 })();
+
 
 
 
