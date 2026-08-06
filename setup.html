@@ -1,78 +1,106 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Private AI Setup</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="app.css">
-<link rel="stylesheet" href="setup.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PAi Guided Setup</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #08111f;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 70px auto;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 52px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #cbd5e1;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .download {
+      display: inline-block;
+      margin: 28px 0 18px;
+      padding: 17px 30px;
+      background: #147cff;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 9px;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .steps {
+      margin-top: 35px;
+      padding: 25px;
+      background: #111d2e;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    li {
+      margin: 12px 0;
+      color: #dbeafe;
+    }
+
+    .note {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
 </head>
-<body class="setup">
 
-<div class="seal" id="seal">
-  <span class="seal__dot"></span>
-  <span class="seal__text">Setting up</span>
-  <span class="seal__rule"></span>
-  <span class="seal__stat">this is the only time it uses the internet</span>
-</div>
+<body>
+  <main>
+    <div class="logo">PAiâ„¢</div>
 
-<main class="wiz">
+    <h1>Download the PAi Guided Setup</h1>
 
-  <!-- 1. redeem -->
-  <section class="step" id="step-code" data-step>
-    <h1 class="step__head">Enter the code from your card</h1>
-    <p class="step__sub">Scratch off the panel on the back. Letters aren't case-sensitive.</p>
-    <input class="code" id="code" placeholder="PAI-0000-0000" autocomplete="off"
-           spellcheck="false" aria-label="Redeem code">
-    <p class="err" id="code-err" hidden></p>
-    <button class="go" id="code-go">Continue</button>
-  </section>
-
-  <!-- 2. pick -->
-  <section class="step" id="step-pick" data-step hidden>
-    <h1 class="step__head">Choose your AI</h1>
-    <p class="step__sub" id="hw-line"></p>
-    <div class="picks" id="picks"></div>
-    <p class="note" id="empty-note" hidden>
-      This computer doesn't have enough memory for any of the current options.
-      Nothing here will run well on it, so we won't pretend otherwise.
+    <p>
+      Your PAi installer will confirm your activation code, analyze your
+      computer, and show only the AI options suited to your hardware.
     </p>
-  </section>
 
-  <!-- 3. license -->
-  <section class="step" id="step-license" data-step hidden>
-    <h1 class="step__head">Terms for this model</h1>
-    <p class="step__sub" id="license-line"></p>
-    <div class="license" id="license-text"></div>
-    <label class="accept">
-      <input type="checkbox" id="accept"> I accept these terms
-    </label>
-    <button class="go" id="license-go" disabled>Download</button>
-  </section>
+    <a class="download" href="https://github.com/llmservicemarketplace-del/github-pages-private-ai/releases/download/v1.1.1/PAi_Guided_Setup.zip">
+      Download PAi Guided Setup
+    </a>
 
-  <!-- 4. download -->
-  <section class="step" id="step-dl" data-step hidden>
-    <h1 class="step__head" id="dl-head">Downloading</h1>
-    <p class="step__sub">This runs once. After it finishes you can unplug the internet
-      and it keeps working.</p>
-    <div class="bar"><div class="bar__fill" id="bar"></div></div>
-    <p class="dl-stat" id="dl-stat">Starting…</p>
-    <p class="err" id="dl-err" hidden></p>
-    <button class="go go--quiet" id="dl-retry" hidden>Resume</button>
-  </section>
+    <div class="steps">
+      <h2>Getting Started</h2>
+      <ol>
+        <li>Download the PAi Windows installer.</li>
+        <li>Extract the downloaded ZIP, open the <strong>PrivateAI_Loader</strong> folder, then run <strong>PrivateAI_Loader.exe</strong>.</li>
+        <li>Enter the activation code from your purchase email.</li>
+        <li>Allow PAi to analyze your computer.</li>
+        <li>Choose from the compatible AI options shown by the installer.</li>
+        <li>PAi will download and configure the selected AI automatically.</li>
+      </ol>
+    </div>
 
-  <!-- 5. done -->
-  <section class="step" id="step-done" data-step hidden>
-    <h1 class="step__head">Ready.</h1>
-    <p class="step__sub">
-      Turn off your wifi and ask it something. That's the whole point —
-      see it work with nothing connected.
+    <p class="note">
+      Do not download AI model files manually. PAi manages model downloads,
+      hardware compatibility, installation, and configuration for you.
     </p>
-    <button class="go" id="done-go">Open Private AI</button>
-  </section>
-
-</main>
-
-<script src="setup.js"></script>
+  </main>
 </body>
 </html>

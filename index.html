@@ -1,184 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Private AI Setup</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="app.css">
-<link rel="stylesheet" href="setup.css">
+<title>PAi — Private AI. Total Privacy.</title>
+<meta name="description" content="Specialist AI assistants that run entirely on your own Windows PC. One-time purchase, no subscription, works offline.">
+<!--
+  PAi landing page.
+
+  Self-contained: all styling is inline, so it does not depend on app.css or
+  setup.css and cannot be broken by leftover files from the previous site.
+
+  It links to setup.html and nothing else. It never downloads a model.
+-->
 <style>
-  body { display: flex; height: 100vh; margin: 0; align-items: center; justify-content: center; background: #f9fafb; }
-  .container { max-width: 28rem; width: 90%; padding: 2rem; background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); }
-  .logo { text-align: center; margin-bottom: 2rem; }
-  .logo img { max-height: 48px; }
-  .title { font-size: 1.5rem; font-weight: 600; text-align: center; margin-bottom: 1.5rem; color: #1f2937; }
-  .subtitle { text-align: center; color: #6b7280; margin-bottom: 2rem; }
-  rem; }
-  .input-group { margin-bottom: 1.5rem; .code-input { width: 100%; padding: 0.75rem 1rem; font-size: 1.125rem; letter-spacing: 0.1em; text-transform: uppercase; border: 2px solid #e5e7eb; border-radius: 0.375rem; font-family: monospace; text-align: center; }
-  .code-input:focus { outline: none; border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25); }
-  .btn { width: 100%; padding: 0.75rem; background: #4f46e5; color: white; border: none; border-radius: 0.375rem; font-weight: 600; cursor: pointer; }
-  .btn:hover { background: #4338ca; }
-  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
-  .error { color: #ef4444; margin-top: 1rem; text-align: center; min-height: 1.5rem; }
-  .loading { text-align: center; margin-top: 1rem; color: #6b7280; }
+  :root{
+    --bg:#0F1216; --surface:#171B21; --line:#232830;
+    --text:#F2F4F7; --muted:#9AA4B2; --accent:#18A7FF;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+       font-family:"Segoe UI",Inter,Arial,sans-serif;line-height:1.6}
+  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
+  header{padding:56px 0 8px}
+  .mark{font-size:24px;font-weight:800;letter-spacing:.5px}
+  .mark span{color:var(--accent)}
+  .tagline{color:var(--muted);letter-spacing:2px;font-size:13px;font-weight:700;margin-top:4px}
+  h1{font-size:42px;line-height:1.15;margin:36px 0 14px}
+  .lead{font-size:19px;color:var(--muted);max-width:640px;margin:0 0 28px}
+  .btn{display:inline-block;background:var(--accent);color:#06131C;
+       padding:15px 30px;border-radius:10px;font-weight:700;font-size:17px;
+       text-decoration:none}
+  .btn.ghost{background:transparent;color:var(--text);
+             border:1px solid #2A2F38;margin-left:10px}
+  .claim{display:inline-block;border:1px solid var(--accent);color:var(--accent);
+         padding:9px 16px;border-radius:8px;font-weight:700;font-size:14px;
+         letter-spacing:1px;margin:32px 0 0}
+  section{padding:52px 0;border-top:1px solid var(--line);margin-top:52px}
+  h2{font-size:26px;margin:0 0 10px}
+  .sub{color:var(--muted);margin:0 0 26px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+  .item{background:var(--surface);border:1px solid var(--line);
+        border-radius:10px;padding:14px 16px}
+  .item b{display:block;font-size:15px}
+  .item span{color:var(--muted);font-size:13px}
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
+  .cols h3{margin:0 0 8px;font-size:17px}
+  .cols p{margin:0;color:var(--muted);font-size:15px}
+  ol{color:var(--muted);padding-left:22px}
+  ol li{margin-bottom:12px}
+  ol li strong{color:var(--text)}
+  footer{border-top:1px solid var(--line);margin-top:52px;padding:32px 0 60px;
+         color:var(--muted);font-size:13px}
+  a{color:var(--accent)}
 </style>
 </head>
-<a href="https://github.com/llmservicemarketplace-del/github-pages-private-ai/releases/download/v1.0.0/LFM_Console.exe">
-  Download LFM Console
-</a>
 <body>
-<div class="container">
-  <div class="logo">
-    <!-- Optional: add your logo here -->
-    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #4f46e5, #7c3aed); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-      <span style="color: white; font-weight: bold;">AI</span>
-    </div>
+<div class="wrap">
+
+<header>
+  <div class="mark">PAi<span>·</span></div>
+  <div class="tagline">PRIVATE AI. TOTAL PRIVACY.</div>
+
+  <h1>A specialist AI that runs on your computer, not someone else's.</h1>
+  <p class="lead">
+    Nothing you type is uploaded, logged or used for training. No subscription,
+    no account, no monthly fee. Once it is installed, it keeps working with the
+    internet switched off.
+  </p>
+
+  <a class="btn" href="setup.html">I have a code — set up now</a>
+  <a class="btn ghost" href="#how">How it works</a>
+
+  <div class="claim">FULL AI SOFTWARE — NOT JUST ACCESS</div>
+</header>
+
+<section id="products">
+  <h2>Choose the assistant for what you actually do</h2>
+  <p class="sub">
+    Each one is tuned for its subject — the questions it asks you, the way it
+    reasons, and where it tells you to check with a professional.
+  </p>
+  <div class="grid">
+    <div class="item"><b>PAi Everyday</b><span>Questions, writing, planning</span></div>
+    <div class="item"><b>PAi Mechanic</b><span>Automotive diagnosis and repair</span></div>
+    <div class="item"><b>PAi Engineering</b><span>Calculations and design</span></div>
+    <div class="item"><b>PAi Metallurgy</b><span>Alloys, heat treatment, failures</span></div>
+    <div class="item"><b>PAi Grow Pro</b><span>Gardening and growing</span></div>
+    <div class="item"><b>PAi Herbal Reference</b><span>Educational plant reference</span></div>
+    <div class="item"><b>PAi Hobby Pro</b><span>Making, DIY, 3D printing</span></div>
+    <div class="item"><b>PAi Coding</b><span>Write and debug software</span></div>
+    <div class="item"><b>PAi Writer</b><span>Drafting and editing</span></div>
+    <div class="item"><b>PAi Business</b><span>Planning and operations</span></div>
+    <div class="item"><b>PAi Research</b><span>Sources and structured reasoning</span></div>
+    <div class="item"><b>PAi Sports Analysis</b><span>Matchups and probability</span></div>
+    <div class="item"><b>PAi Collector</b><span>Antiques and collectibles</span></div>
+    <div class="item"><b>PAi Coins &amp; Stamps</b><span>Attribution and grading</span></div>
+    <div class="item"><b>PAi Tech Repair</b><span>Computers, phones, devices</span></div>
+    <div class="item"><b>PAi Home Pro</b><span>Home repair and renovation</span></div>
+    <div class="item"><b>PAi Photography</b><span>Cameras and technique</span></div>
+    <div class="item"><b>PAi Music Gear</b><span>Instruments and recording</span></div>
+    <div class="item"><b>PAi Gaming</b><span>Consoles, retro, collecting</span></div>
+    <div class="item"><b>PAi Style</b><span>Clothing, jewellery, watches</span></div>
+    <div class="item"><b>PAi Pet Care</b><span>Everyday animal care</span></div>
+    <div class="item"><b>PAi Outdoors</b><span>Training, gear, trips</span></div>
+    <div class="item"><b>PAi Family</b><span>Practical family logistics</span></div>
+    <div class="item"><b>PAi Seller</b><span>Listings, pricing, buyers</span></div>
   </div>
-  <h1 class="title">Private AI Setup</h1>
-  <p class="subtitle">Enter your code to begin setup</p>
-  <input type="text" id="codeInput" class="code-input" placeholder="PAI-XXXX-XXXX" autocomplete="off" maxlength="13">
-  <button id="submitBtn" class="btn">Continue</button>
-  <p id="errorMsg" class="error" hidden></p>
-  <p id="loadingMsg" class="loading" hidden>Validating code...</p>
-</div>
-
-<script>
-  const codeInput = document.getElementById('codeInput');
-  const submitBtn = document.getElementById('submitBtn');
-  const errorMsg = document.getElementById('errorMsg');
-  const loadingMsg = document.getElementById('loadingMsg');
-
-  // Backend URL - UPDATE THIS TO YOUR ACTUAL BACKEND
-  
-
-  function showError(msg) {
-    errorMsg.textContent = msg;
-    errorMsg.hidden = false;
-    loadingMsg.hidden = true;
-    submitBtn.disabled = false;
-  }
-
-  function hideError() {
-    errorMsg.hidden = true;
-  }
-
-  submitBtn.addEventListener('click', async () => {
-    const code = codeInput.value.trim();
-    if (!code) {
-      showError('Please enter your code');
-      return;
-    }
-
-    // Basic format validation
-    const normalized = code.toUpperCase().replace(/[^A-Z0-9]/g, '');
-    if (!normalized.startsWith('PAI') || normalized.length !== 11) {
-      showError('Please enter a valid code (format: PAI-XXXX-XXXX)');
-      return;
-    }
-
-    hideError();
-    submitBtn.disabled = true;
-    loadingMsg.hidden = false;
-
-    try {
-      const response = await fetch(WORKER_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ code: code.toUpperCase() })
-      });
-
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(errorText || 'Invalid code');
-      }
-
-      // Code validated successfully
-      // Store code in sessionStorage (clears when tab closes)
-      sessionStorage.setItem('validatedCode', code.toUpperCase());
-
-      // Redirect to setup page
-      window.location.href = 'setup.html';
-    } catch (err) {
-      showError(err.message || 'Validation failed. Please check your code and try again.');
-    } finally {
-      submitBtn.disabled = false;
-      loadingMsg.hidden = true;
-    }
-  });
-
-  // Allow Enter key to submit
-  codeInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      submitBtn.click();
-    }
-  });
-
-  // Focus on input when page loads
-  codeInput.focus();
-</script>
-<section>
-  <h2>Download Your Software</h2>
-
-  <input
-    id="purchaseCode"
-    type="text"
-    placeholder="Enter purchase code"
-  >
-
-  <button id="verifyButton">Verify Code</button>
-
-  <p id="status"></p>
 </section>
 
-<script>
-const WORKER_URL =
-  "https://private-ai-code-server.llmservicemarketplace.workers.dev";
+<section id="how">
+  <h2>How it works</h2>
+  <p class="sub">Internet is needed once, during setup. After that, never.</p>
+  <ol>
+    <li><strong>Buy the assistant you want</strong> and receive an activation code.</li>
+    <li><strong>Download the PAi setup program</strong> — one file, about 40 MB.</li>
+    <li><strong>Enter your code.</strong> PAi checks your computer's memory, disk
+        space and graphics, then recommends the AI that suits it.</li>
+    <li><strong>Choose your AI engine</strong> — DeepSeek, Qwen, Llama or Gemma.</li>
+    <li><strong>The AI downloads.</strong> Several gigabytes, once, because it runs
+        on your machine rather than a server. It resumes if interrupted.</li>
+    <li><strong>Done.</strong> PAi installs it, tests that it starts, and creates
+        your desktop shortcut. Disconnect the internet if you like.</li>
+  </ol>
+  <p style="margin-top:26px"><a class="btn" href="setup.html">Set up with my code</a></p>
+</section>
 
-document
-  .getElementById("verifyButton")
-  .addEventListener("click", async () => {
-    const code = document
-      .getElementById("purchaseCode")
-      .value
-      .trim();
+<section>
+  <h2>What you are buying</h2>
+  <div class="cols">
+    <div>
+      <h3>The software</h3>
+      <p>The specialist assistant configuration, guided installation, hardware
+         detection, model setup, the chat application, documentation and support.</p>
+    </div>
+    <div>
+      <h3>The AI model</h3>
+      <p>Downloaded directly from its publisher under that publisher's own licence.
+         It is not owned by PAi. You choose which one during setup.</p>
+    </div>
+    <div>
+      <h3>What it needs</h3>
+      <p>Windows 10 or 11, 64-bit. 8 GB memory minimum, 16 GB recommended. About
+         10 GB free disk space. No Python, Docker or developer tools.</p>
+    </div>
+  </div>
+</section>
 
-    const status = document.getElementById("status");
-    status.textContent = "Checking code...";
+<footer>
+  <strong>PAi — PRIVATE AI. TOTAL PRIVACY.</strong><br><br>
+  Support: <a href="mailto:SUPPORT_EMAIL_HERE">SUPPORT_EMAIL_HERE</a><br>
+  AI models are supplied by their publishers under their own licences and are not
+  owned by PAi. PAi provides the specialist configuration, installation and support.
+</footer>
 
-    try {
-      const response = await fetch(WORKER_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ code })
-      });
-
-      const data = await response.json();
-
-      if (!response.ok || !data.valid) {
-        status.textContent =
-          data.error || "Invalid purchase code.";
-        return;
-      }
-
-      status.textContent = "Code verified. Download starting.";
-      window.location.href = data.downloadUrl;
-    } catch {
-      status.textContent =
-        "Unable to verify the code.";
-    }
-  });
-</script>
+</div>
 </body>
 </html>
-<hr>
-
-<h2>Downloads</h2>
-
-<a href="https://github.com/llmservicemarketplace-del/github-pages-private-ai/releases/download/v1.0.0/LFM_Console.exe">
-Download LFM Console
-</a>
-
