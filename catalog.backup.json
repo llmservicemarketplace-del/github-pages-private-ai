@@ -1,0 +1,90 @@
+{
+    "version":  1,
+    "models":  [
+                   {
+                       "id":  "everyday-sm",
+                       "label":  "Qwen 2.5 3B — Light",
+                       "blurb":  "Fast local assistant for everyday questions, writing, and explanations.",
+                       "url":  "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf?download=true",
+                       "sha256":  "FILL_ME",
+                       "download_gb":  2,
+                       "ram_gb":  4,
+                       "license":  "Apache-2.0",
+                       "license_url":  "https://www.apache.org/licenses/LICENSE-2.0",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos",
+                                         "android"
+                                     ],
+                       "gated":  false
+                   },
+                   {
+                       "id":  "everyday-md",
+                       "label":  "Everyday Assistant",
+                       "blurb":  "Better reasoning and longer answers. The default pick for most computers.",
+                       "url":  "https://huggingface.co/ORG/REPO/resolve/main/model-8b-q4_k_m.gguf",
+                       "sha256":  "FILL_ME",
+                       "download_gb":  4.9,
+                       "ram_gb":  7.5,
+                       "license":  "Apache-2.0",
+                       "license_url":  "https://www.apache.org/licenses/LICENSE-2.0",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false
+                   },
+                   {
+                       "id":  "writer",
+                       "label":  "Writing Partner",
+                       "blurb":  "Tuned for drafting, editing, and rewriting. Longer memory for documents.",
+                       "url":  "https://huggingface.co/ORG/REPO/resolve/main/model-writer-q4_k_m.gguf",
+                       "sha256":  "FILL_ME",
+                       "download_gb":  4.9,
+                       "ram_gb":  7.5,
+                       "license":  "Apache-2.0",
+                       "license_url":  "https://www.apache.org/licenses/LICENSE-2.0",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false
+                   },
+                   {
+                       "id":  "pro-lg",
+                       "label":  "Deep Thinker",
+                       "blurb":  "Slower, noticeably sharper. Needs a strong desktop or a gaming PC.",
+                       "url":  "https://huggingface.co/ORG/REPO/resolve/main/model-32b-q4_k_m.gguf",
+                       "sha256":  "FILL_ME",
+                       "download_gb":  19.0,
+                       "ram_gb":  24.0,
+                       "license":  "Apache-2.0",
+                       "license_url":  "https://www.apache.org/licenses/LICENSE-2.0",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false
+                   },
+                   {
+                       "id":  "phone-tiny",
+                       "label":  "Pocket Assistant",
+                       "blurb":  "Small and quick. Built to run on a phone without draining it.",
+                       "url":  "https://huggingface.co/ORG/REPO/resolve/main/model-2b-q4_k_m.gguf",
+                       "sha256":  "FILL_ME",
+                       "download_gb":  1.4,
+                       "ram_gb":  2.2,
+                       "license":  "Apache-2.0",
+                       "license_url":  "https://www.apache.org/licenses/LICENSE-2.0",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "android"
+                                     ],
+                       "gated":  false
+                   }
+               ]
+}

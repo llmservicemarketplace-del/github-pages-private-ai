@@ -1,0 +1,336 @@
+{
+    "schema_version":  1,
+    "catalog_version":  "1.0.0",
+    "products":  [
+                     {
+                         "product_id":  "pai-everyday",
+                         "display_name":  "PAi Everyday",
+                         "short_name":  "Everyday",
+                         "category":  "General",
+                         "description":  "Private general-purpose assistant for questions, writing, planning and learning.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-everyday.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-mechanic",
+                         "display_name":  "PAi Mechanic",
+                         "short_name":  "Mechanic",
+                         "category":  "Automotive",
+                         "description":  "Private automotive repair, diagnosis and maintenance assistant.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-mechanic.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-engineering",
+                         "display_name":  "PAi Engineering",
+                         "short_name":  "Engineering",
+                         "category":  "Engineering",
+                         "description":  "Private mechanical engineering, materials, manufacturing and calculation assistant.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-engineering.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-metallurgy",
+                         "display_name":  "PAi Metallurgy",
+                         "short_name":  "Metallurgy",
+                         "category":  "Materials",
+                         "description":  "Private metallurgy assistant for alloys, heat treatment, microstructure and failure analysis.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-metallurgy.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-grow-pro",
+                         "display_name":  "PAi Grow Pro",
+                         "short_name":  "Grow Pro",
+                         "category":  "Horticulture",
+                         "description":  "Private growing assistant for gardens, crops, soil, irrigation and greenhouses.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-grow-pro.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-herbal-reference",
+                         "display_name":  "PAi Herbal Reference",
+                         "short_name":  "Herbal Reference",
+                         "category":  "Educational Reference",
+                         "description":  "Educational reference on traditional herbal use, terminology, identification cautions and interaction awareness.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-herbal-reference.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-hobby-pro",
+                         "display_name":  "PAi Hobby Pro",
+                         "short_name":  "Hobby Pro",
+                         "category":  "Making \u0026 DIY",
+                         "description":  "Private maker assistant for woodworking, electronics, 3D printing, RC, models and DIY.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-hobby-pro.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-coding",
+                         "display_name":  "PAi Coding",
+                         "short_name":  "Coding",
+                         "category":  "Software",
+                         "description":  "Private programming assistant for building, debugging and documenting software.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-coding.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-writer",
+                         "display_name":  "PAi Writer",
+                         "short_name":  "Writer",
+                         "category":  "Writing",
+                         "description":  "Private writing assistant for drafting, editing, rewriting and long-form work.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-writer.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-business",
+                         "display_name":  "PAi Business",
+                         "short_name":  "Business",
+                         "category":  "Business",
+                         "description":  "Private assistant for small-business planning, marketing, operations and customer communication.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-business.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-research",
+                         "display_name":  "PAi Research",
+                         "short_name":  "Research",
+                         "category":  "Research",
+                         "description":  "Private assistant for research planning, source analysis, literature notes and structured reasoning.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-research.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-sports-analysis",
+                         "display_name":  "PAi Sports Analysis",
+                         "short_name":  "Sports Analysis",
+                         "category":  "Sports",
+                         "description":  "Private assistant for team and player analysis, matchup reasoning and probability discussion.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-sports-analysis.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-collector",
+                         "display_name":  "PAi Collector",
+                         "short_name":  "Collector",
+                         "category":  "Collectibles",
+                         "description":  "Private assistant for collectibles, antiques, art and memorabilia â€” identification, condition and market reasoning.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-collector.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-coins-stamps",
+                         "display_name":  "PAi Coins \u0026 Stamps",
+                         "short_name":  "Coins \u0026 Stamps",
+                         "category":  "Numismatics \u0026 Philately",
+                         "description":  "Private reference assistant for coins, banknotes and stamps â€” attribution, grading vocabulary and authentication cautions.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-coins-stamps.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-tech-repair",
+                         "display_name":  "PAi Tech Repair",
+                         "short_name":  "Tech Repair",
+                         "category":  "Electronics",
+                         "description":  "Private assistant for diagnosing and repairing computers, phones, tablets, networks and consumer electronics.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-tech-repair.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-home-pro",
+                         "display_name":  "PAi Home Pro",
+                         "short_name":  "Home Pro",
+                         "category":  "Home \u0026 Property",
+                         "description":  "Private assistant for home repair, renovation planning, maintenance and building systems.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-home-pro.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-photography",
+                         "display_name":  "PAi Photography",
+                         "short_name":  "Photography",
+                         "category":  "Photography",
+                         "description":  "Private assistant for cameras, lenses, shooting technique, lighting and editing workflow.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-photography.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-music-gear",
+                         "display_name":  "PAi Music Gear",
+                         "short_name":  "Music Gear",
+                         "category":  "Music",
+                         "description":  "Private assistant for instruments, amplifiers, recording gear, setup, maintenance and repair.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-music-gear.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-gaming",
+                         "display_name":  "PAi Gaming",
+                         "short_name":  "Gaming",
+                         "category":  "Games \u0026 Media",
+                         "description":  "Private assistant for video games, consoles, retro hardware, collecting and home media.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-gaming.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-style",
+                         "display_name":  "PAi Style",
+                         "short_name":  "Style",
+                         "category":  "Fashion",
+                         "description":  "Private assistant for clothing, footwear, jewellery, watches and cosmetics â€” fit, materials, care, authentication cautions and resale.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-style.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-pet-care",
+                         "display_name":  "PAi Pet Care",
+                         "short_name":  "Pet Care",
+                         "category":  "Pets",
+                         "description":  "Private assistant for everyday pet care â€” husbandry, training, enrichment, equipment and knowing when to call a vet.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-pet-care.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-outdoors",
+                         "display_name":  "PAi Outdoors",
+                         "short_name":  "Outdoors",
+                         "category":  "Outdoors \u0026 Travel",
+                         "description":  "Private assistant for sports, fitness, outdoor gear and trip planning.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-outdoors.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-family",
+                         "display_name":  "PAi Family",
+                         "short_name":  "Family",
+                         "category":  "Family",
+                         "description":  "Private assistant for practical family life â€” baby and child equipment, routines, organisation and preparation.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-family.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-seller",
+                         "display_name":  "PAi Seller",
+                         "short_name":  "Seller",
+                         "category":  "Marketplace",
+                         "description":  "Private assistant for online selling â€” listings, pricing, photography, shipping, returns and customer messages.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-seller.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-youtube-creator",
+                         "display_name":  "PAi YouTube Creator",
+                         "short_name":  "YouTube Creator",
+                         "category":  "Content Creation",
+                         "description":  "Private assistant for video planning, scripting, titles, thumbnails and channel growth.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-youtube-creator.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-interior-design",
+                         "display_name":  "PAi Interior Design",
+                         "short_name":  "Interior Design",
+                         "category":  "Home \u0026 Design",
+                         "description":  "Private assistant for room layout, colour, materials, lighting and furnishing decisions.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-interior-design.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-work-assistant",
+                         "display_name":  "PAi Work Assistant",
+                         "short_name":  "Work Assistant",
+                         "category":  "Productivity",
+                         "description":  "Private assistant for workplace writing, planning, meetings, prioritisation and difficult conversations.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-work-assistant.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-personal-finance",
+                         "display_name":  "PAi Personal Finance",
+                         "short_name":  "Personal Finance",
+                         "category":  "Personal Finance",
+                         "description":  "Private assistant for budgeting, debt strategy, saving goals and understanding financial products.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-personal-finance.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-student",
+                         "display_name":  "PAi Student",
+                         "short_name":  "Student",
+                         "category":  "Education",
+                         "description":  "Private study assistant for understanding material, revision, essay planning and exam preparation.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-student.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-teacher",
+                         "display_name":  "PAi Teacher",
+                         "short_name":  "Teacher",
+                         "category":  "Education",
+                         "description":  "Private assistant for lesson planning, resources, differentiation, assessment and parent communication.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-teacher.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-real-estate",
+                         "display_name":  "PAi Real Estate",
+                         "short_name":  "Real Estate",
+                         "category":  "Property",
+                         "description":  "Private assistant for property listings, marketing, buyer and seller communication, and evaluating a deal.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-real-estate.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-legal-document",
+                         "display_name":  "PAi Legal Document Assistant",
+                         "short_name":  "Legal Document",
+                         "category":  "Legal Reference",
+                         "description":  "Private reference assistant for understanding legal documents, terminology and processes. Educational reference only.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-legal-document.json",
+                         "enabled":  true
+                     },
+                     {
+                         "product_id":  "pai-legal",
+                         "display_name":  "PSi Legal",
+                         "short_name":  "PSi Legal",
+                         "category":  "Legal Research",
+                         "description":  "Private local legal research and case analysis system with integrated case-law retrieval.",
+                         "system_prompt_version":  "1.0.0",
+                         "profile":  "products/pai-legal.json",
+                         "enabled":  true
+                     }
+                 ]
+}
