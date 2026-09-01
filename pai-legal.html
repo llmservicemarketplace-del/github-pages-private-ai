@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>PAi Legal | Private Legal Case Management Software</title>
-  <meta name="description" content="Organize legal records, OCR documents, search evidence, and build source-traced case files with private on-device analysis and optional research.">
+  <title>Legal Case Narrative &amp; Evidence Software | PAi Legal</title>
+  <meta name="description" content="Build a case narrative where every fact traces to its source, mapped so thin arguments show up before opposing counsel finds them. Runs on your own hardware.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="PAi Legal | Private Legal Case Management Software">
-  <meta property="og:description" content="Preserve records, search OCR text, analyze evidence privately, and export structured legal case files.">
-  <meta property="og:url" content="https://llmservicemarketplace-del.github.io/github-pages-private-ai/pai-legal.html">
+  <meta property="og:title" content="Legal Case Narrative &amp; Evidence Software | PAi Legal">
+  <meta property="og:description" content="A private case workspace for attorneys and for self-represented litigants. Runs on your computer, not a server.">
+  <meta property="og:url" content="https://yprivateai.com/pai-legal.html">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -16,9 +16,57 @@
     "name": "PAi Legal",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Windows 10, Windows 11",
-    "url": "https://llmservicemarketplace-del.github.io/github-pages-private-ai/pai-legal.html",
+    "url": "https://yprivateai.com/pai-legal.html",
     "publisher": {"@type": "Organization", "name": "PAi Luton"},
-    "description": "Private legal case software for preserving evidence, OCR search, source-traced analysis, optional research, and structured case-file exports."
+    "description": "Legal case software that builds a factual narrative from discrete facts, statements, and allegations, each traceable to its supporting document. For law firms, solo attorneys, and self-represented litigants. Each matter is stored in a separate location chosen by the attorney and runs entirely on the user's hardware."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is PAi Legal for lawyers or for self-represented litigants?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Both. At first run you choose which you are. In self-represented mode the software uses plain language and explains every term and step as it comes up; in attorney mode it uses standard terminology without the explanations. The underlying features are the same."}
+      },
+      {
+        "@type": "Question",
+        "name": "What does PAi Legal cost?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The download is free and so is the first case, which runs on the full product — not a trial or a limited version."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does PAi Legal find weak points in a case?",
+        "acceptedAnswer": {"@type": "Answer", "text": "The links between facts and documents form a map in which each point carries a weight derived from how much of the record connects to it. The least-supported part is surfaced as the first structural gap to inspect. The weighting identifies where the record concentrates, not whether a claim is true."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does PAi Legal keep a case narrative traceable?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Facts, statements, and allegations are entered as discrete units, each tied to the document, page, photograph, or dated communication that supports it. The narrative is assembled from those units, so any sentence in the finished account can be traced to its source in the record."}
+      },
+      {
+        "@type": "Question",
+        "name": "How does PAi Legal handle ethical walls between matters?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Each matter is stored in a separate location the attorney chooses, such as a removable drive or a designated volume. Separation is physical rather than a permission setting, so a screened matter can simply be absent from a machine."}
+      },
+      {
+        "@type": "Question",
+        "name": "Does PAi Legal upload case files to a server?",
+        "acceptedAnswer": {"@type": "Answer", "text": "No. The case folder is on your hard drive. There is no account and no upload step, and the software runs with the network disconnected."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can PAi Legal read scanned or photographed documents?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Optical character recognition is built in and runs at import, on your machine, with no per-page fee."}
+      },
+      {
+        "@type": "Question",
+        "name": "What file types can it import?",
+        "acceptedAnswer": {"@type": "Answer", "text": "PDFs, Word documents, spreadsheets, Outlook mail, and scanned or photographed paper."}
+      }
+    ]
   }
   </script>
   <style>
@@ -26,44 +74,193 @@
     *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "Segoe UI",Arial,sans-serif}
     main,nav,footer{max-width:980px;margin:auto;padding:0 24px}nav{padding-top:28px}nav a,footer a{color:var(--blue)}
     header{padding:72px 0 42px}h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin:12px 0 20px;max-width:850px}
-    h2{font-size:30px;margin-top:0}.eyebrow{color:var(--blue);font-weight:800;letter-spacing:.12em}.lead{font-size:21px;color:var(--muted);max-width:760px}
-    .button{display:inline-block;background:var(--blue);color:#06131c;padding:13px 22px;border-radius:9px;text-decoration:none;font-weight:800;margin-top:24px}
-    section{padding:46px 0;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:12px}.card h3{margin-top:0}.card p{color:var(--muted);margin-bottom:0}
+    h2{font-size:30px;margin-top:0}h3{margin-top:0}
+    .eyebrow{color:var(--blue);font-weight:800;letter-spacing:.12em}.lead{font-size:21px;color:var(--muted);max-width:760px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.button{background:var(--blue);color:#06131c;padding:13px 22px;border-radius:9px;text-decoration:none;font-weight:800}.button.alt{background:transparent;color:var(--text);border:1px solid var(--line)}
+    section{padding:46px 0;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:12px}.card p{color:var(--muted);margin-bottom:0}
     .notice{border-left:4px solid var(--blue);padding:10px 18px;color:var(--muted)}footer{padding:34px 24px 70px;color:var(--muted)}
+    section p{max-width:760px}
+    .faq h3{margin-bottom:6px}.faq p{color:var(--muted);max-width:760px}
+    .roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
   </style>
   <link rel="canonical" href="https://yprivateai.com/pai-legal.html">
 </head>
 <body>
-<nav><a href="index.html">PAi home</a> &nbsp;Â·&nbsp; <a href="pai-claims.html">PAi Claims</a></nav>
+<nav><a href="index.html">PAi home</a> &nbsp;&middot;&nbsp; <a href="pai-claims.html">PAi Claims</a></nav>
 <main>
   <header>
     <div class="eyebrow">PAi LEGAL</div>
-    <h1>A private legal case workspace built around your evidence</h1>
-    <p class="lead">Preserve original records, make scanned evidence searchable, and turn a case folder into structured, source-traced work product on Windows.</p>
-    <a class="button" href="pai-claims.html#pricing">See the introductory PAi Claims benefit</a>
+    <h1>Build a case narrative where every sentence traces back to the record</h1>
+    <p class="lead">PAi Legal assembles facts, statements, and allegations into a structured narrative, each unit tied to the document that supports it. Every matter stays in its own storage location on hardware you control. No account, no upload, no server holding the file.</p>
+    <div class="buttons">
+      <a class="button" href="https://apps.microsoft.com/detail/9NP4XL1MRXP8">View PAi Legal in Microsoft Store</a>
+      <a class="button alt" href="#pricing">First case is free</a>
+    </div>
   </header>
 
   <section>
-    <h2>Build a structured legal case file</h2>
+    <h2>The narrative is built from the record, one sentence at a time</h2>
+    <p>Most case software stores documents. The hard part of a case is not storage. It is the narrative — the ordered account of what happened, who did what, and why that entitles you to something — and the fact that every sentence of it has to survive being challenged.</p>
+    <p>PAi Legal builds that account as a structured object rather than as prose in a word processor. Each fact, each statement, and each allegation is entered as a discrete unit and tied to what supports it: a document, a page, a photograph, a dated communication. Sentences assemble into paragraphs, paragraphs into the narrative, and every level retains the link back to its source.</p>
+    <p>The practical result is that any assertion in the finished document can be traced to the record behind it. Nothing arrives in the narrative without a source attached, because the structure does not accept it that way.</p>
+    <p>This is also where unsupported assertions become visible. A claim with nothing behind it does not blend into the surrounding prose — it stands out as a unit with no source, which is precisely the sentence opposing counsel will find first. Better to find it yourself while the draft is still yours.</p>
+  </section>
+
+  <section>
+    <h2>Why this matters when the narrative is attacked</h2>
+    <p>Every contested matter reaches a point where the other side goes through your account looking for the sentence that overstates, the inference presented as a fact, or the allegation that rests on nothing. One such sentence, found in a deposition or a motion, damages the credibility of everything around it.</p>
+    <p>A traceable narrative changes what that examination produces. When each statement carries its source, the answer to "what is this based on?" is already attached to the statement. Where the support is thin, you knew that before filing.</p>
+    <p>The same structure keeps supported facts separate from assumptions and from anything an AI model inferred. Those are three different kinds of claim, and a narrative that treats them identically is the kind that falls apart under examination.</p>
+  </section>
+
+  <section>
+    <h2>The case map: where the record concentrates, and where it doesn't</h2>
+    <p>Once facts, documents and allegations are linked, the connections between them form a map. PAi Legal draws it — documents sitting on the transitions between the parts of the case they connect, so the shape of the record is visible rather than inferred from a folder listing.</p>
+    <p>Every element on that map carries a weight derived from its relationships: how much of the record connects to it, how many paths run through it, how much of the case rests on it. Call it relational pressure. It works the way weights work in a neural network, with one difference that matters here — the values are computed deterministically from the evidence you entered, not learned from training data. The same case file produces the same map every time, and the map carries a replay signature that proves it.</p>
+    <p>Pressure identifies attention, not truth. A heavily connected document is where the record concentrates; it is not thereby correct. The map tells you where your case is dense and where it is thin. Whether the dense parts are right remains your judgment.</p>
+  </section>
+
+  <section>
+    <h2>It shows you the weak point before opposing counsel finds it</h2>
+    <p>The useful half of that map is the low-pressure end.</p>
+    <p>A part of the case with little connected support is a structural gap: a claim resting on one document, an allegation nothing corroborates, a chronology with fewer sources than the arguments built on it. Those are the places an opponent probes first, and they are almost impossible to see from inside a draft you have been writing for months. Everything looks supported when you remember the support.</p>
+    <p>PAi Legal names them. The least-represented part of the record is surfaced explicitly as the first place to inspect, alongside the strongest-supported path and the residue left over — what the map cannot yet account for. You get told where the case is soft while there is still time to shore it up or drop the argument.</p>
+    <p>The map is a structural forecast of the record, not a prediction of what a court will do. It describes the evidence you have. It does not know what a judge will find persuasive.</p>
+  </section>
+
+  <section>
+    <h2>Deterministic, and therefore checkable</h2>
+    <p>A language model asked to assess a case produces an answer that cannot be reproduced, audited, or explained beyond a plausible-sounding paragraph. Ask twice, get two answers.</p>
+    <p>The case map is the opposite. It is computed from the links you established between documents and facts, so the same inputs always produce the same output, and the replay signature lets you verify that a map came from a particular state of the record. When something moves — a new document, a retracted statement, a correction — you can see exactly what shifted and why.</p>
+    <p>For work product that may have to be defended, reproducibility is not a technical nicety. It is the difference between an analysis you can stand behind and one you cannot account for.</p>
+  </section>
+
+  <section>
+    <h2>Two products, one engine</h2>
+    <p>An attorney managing a docket and a person handling a single dispute alone need the same underlying machinery — documents in, OCR, matters kept distinct, a searchable record, backups that can be vouched for — but they do not need the same workspace around it.</p>
+    <p>PAi Legal asks which you are when you first load it. What changes is the language. The document handling, the matter separation, and the local-only guarantee are identical either way.</p>
+    <div class="roles">
+      <div class="card">
+        <h3>For firms</h3>
+        <p>Every matter lives in its own storage location chosen by the attorney — a removable drive, a specific volume, a designated path. Separation is physical rather than a permission setting.</p>
+      </div>
+      <div class="card">
+        <h3>For solo and small practice</h3>
+        <p>Standard terminology, no hand-holding, no per-seat billing, and no client file on a third-party service.</p>
+      </div>
+      <div class="card">
+        <h3>For self-represented litigants</h3>
+        <p>Plain language throughout, with every term and step explained as it comes up. The organizing layer a firm would normally provide.</p>
+      </div>
+    </div>
+    <p>The plain-language mode exists because the vocabulary is a real barrier. Someone handling their own matter is not short on intelligence; they are short on the ten years of exposure that makes "styled," "verified," "without prejudice," and "the four corners of the document" read as ordinary words. Software that assumes that vocabulary quietly excludes most of the people who need it most. Software that explains it to a practicing attorney wastes their time. So PAi Legal does one or the other, and you pick.</p>
+  </section>
+
+  <section>
+    <h2>Why local matters more in legal work than almost anywhere else</h2>
+    <p>For an attorney the calculation is straightforward. Client files sitting on a third-party service are a copy you do not control, held under terms you did not negotiate, potentially reachable by process directed at the vendor rather than at you or your client. Every cloud practice-management vendor has a security page; none of them can offer what a machine in your own office offers, which is that the data was never anywhere else. Confidentiality obligations do not get easier to satisfy by adding a custodian.</p>
+    <p>For someone self-represented the exposure is different but no smaller. The file contains your strategy, your weaknesses, and correspondence with anyone you consulted — material an opposing party would very much like to see, held somewhere you cannot fully account for.</p>
+    <p>PAi Legal is a PAi product, which means it loads its AI model onto your machine during setup and runs it there. After installation it works with no network connection, no account, and no data leaving the computer. The AI is optional throughout: import, OCR, organization, and search all work without a model loaded.</p>
+  </section>
+
+  <section>
+    <h2>One matter, one location — chosen by the attorney</h2>
+    <p>Each case is stored where the attorney puts it: a removable drive, a specific volume, a designated path on a workstation. Not a row in a shared database with a permission flag on it. Not a tenant in a vendor's multi-client store.</p>
+    <p>For a firm, that distinction is the product. An ethical wall implemented as a checkbox in a practice-management system depends on the system enforcing it correctly, on nobody being granted access in error, and on the vendor's access-control model behaving as documented. An ethical wall implemented as a drive in a locked drawer does not depend on any of that. The screened matter is not on the machine.</p>
+    <p>The same property covers several problems firms handle separately today. A matter under a litigation hold can be preserved by preserving the volume it lives on. A conflict that surfaces mid-engagement can be walled by removing physical access rather than by auditing permissions. A matter requiring heightened confidentiality — a government client, an internal investigation, an acquisition under NDA — can be worked on an air-gapped machine and stay air-gapped, because the software has no network dependency to begin with.</p>
+    <p>Case files also travel intact. A matter handed to co-counsel, moved to a secure room for review, or carried to a deposition goes as a complete self-contained workspace, with its append-only history attached.</p>
+  </section>
+
+  <section>
+    <h2>What a firm is not buying</h2>
+    <p>There is no server to provision, no tenant to configure, and no data-processing agreement to negotiate, because there is no processor. There is no per-seat subscription that scales with headcount, and no renewal conversation in which the price of continued access to your own client files is the subject.</p>
+    <p>There is also no vendor in the chain of custody. Client data never transits infrastructure controlled by anyone else, which removes an entire category of question from a security review — third-party subprocessors, breach-notification obligations flowing from a vendor incident, and process served on a custodian rather than on the firm.</p>
+    <p>What a firm gives up is the convenience of centralized cloud access. That is the trade, stated plainly: physical separation and no third-party custody, in exchange for matters living on machines and drives the firm manages itself.</p>
+  </section>
+
+  <section>
+    <h2>What the software does</h2>
     <div class="grid">
-      <div class="card"><h3>Preserved originals</h3><p>Keep untouched source records separate from working copies, extracted text, analysis, notes, and exports.</p></div>
-      <div class="card"><h3>OCR and search</h3><p>Extract and search text from scanned PDFs, images, Office documents, email, and other common legal records.</p></div>
-      <div class="card"><h3>Private analysis</h3><p>Use compatible on-device models with visible source markers and Trust Lock confidence states rather than hidden certainty.</p></div>
-      <div class="card"><h3>Structured exports</h3><p>Export Markdown and PDF case records that preserve evidence references, notes, analysis, and confidence information.</p></div>
+      <div class="card"><h3>Traceable narrative</h3><p>Facts, statements, and allegations are entered as discrete units tied to their sources, then assembled into the account.</p></div>
+      <div class="card"><h3>Case map</h3><p>The links between facts and documents are drawn as a map, weighted by how much of the record connects to each point.</p></div>
+      <div class="card"><h3>Gap detection</h3><p>The least-supported part of the record is surfaced explicitly, so thin arguments are visible before an opponent finds them.</p></div>
+      <div class="card"><h3>Document import with OCR</h3><p>PDFs, Word files, spreadsheets, Outlook mail, and scanned or photographed paper become searchable text. Optical character recognition is built in.</p></div>
+      <div class="card"><h3>Separate matters</h3><p>Distinct legal matters stay apart inside one case folder instead of blurring into a single undifferentiated dispute.</p></div>
+      <div class="card"><h3>Encrypted backups</h3><p>Manifest-verified backups and an append-only audit record of what happened to the case file and when.</p></div>
+      <div class="card"><h3>Optional private AI</h3><p>A language model that runs on your own hardware, set up on first run. Nothing is sent anywhere.</p></div>
     </div>
   </section>
 
   <section>
-    <h2>Research stays separate from verification</h2>
-    <p>Optional PSi Legal research can retrieve stored legal-data records for inspection when available. Retrieved records are not automatically treated as verified authority. Optional public-web lookup and external drafting are separate actions the user approves.</p>
-    <p class="notice">PAi Legal assists with legal information and work-product preparation. It is not a law firm and does not provide legal advice. Verify citations, court rules, deadlines, jurisdiction, and current law using primary official sources or a qualified legal professional.</p>
+    <h2>Why matters are kept separate</h2>
+    <p>One event routinely produces more than one legal matter, and collapsing them into a single story is a mistake that costs attorneys and self-represented parties alike.</p>
+    <p>Consider a denied property insurance claim. The dispute with the carrier is one matter, governed by the policy and by insurance law, with its own deadlines and its own defendant. If counsel was retained for the appeal and mishandled it, that is a second matter, governed by an engagement agreement and a professional standard of care, with a different defendant and a different limitations period. The underlying facts overlap heavily. The claims do not.</p>
+    <p>Folded together in one folder, the two blur: evidence relevant to one gets cited for the other, the timeline becomes a single stream, and the distinction that makes each claim viable gets lost. PAi Legal holds them apart inside a single case while keeping shared documents available to both.</p>
   </section>
 
   <section>
-    <h2>One complimentary case for the little guy</h2>
-    <p>The $20 first paid PAi Claims case includes one complimentary PAi Legal case with the PAi Case File Creator and available PSi Legal Data retrieval. This benefit is limited to the introductory $20 purchase.</p>
+    <h2>OCR, because most evidence arrives as an image</h2>
+    <p>A large share of what matters in a case never exists as machine-readable text. Contracts get signed and scanned. Notices arrive as image PDFs. Physical mail gets photographed on a phone. Older records come out of a file cabinet.</p>
+    <p>Without OCR none of that is searchable, which means finding a single sentence six months later depends on remembering which file it was in. PAi Legal runs OCR at import, so a photographed page joins the searchable record alongside everything typed. No per-page fee and no separate service, because the processing happens on your machine.</p>
+  </section>
+
+  <section>
+    <h2>An audit record, for the moment the file is questioned</h2>
+    <p>Backups are manifest-verified, and the case file carries an append-only record of what happened to it.</p>
+    <p>A file that has been reorganized, re-dated, and re-saved dozens of times is hard to vouch for. Append-only means changes accumulate rather than overwrite, so the history of the file is part of the file. If the integrity of the documentation is ever challenged — and in contested matters it eventually is — that history is what answers the challenge.</p>
+  </section>
+
+  <section>
+    <h2>Working with the rest of the line</h2>
+    <p><a href="pai-claims.html">PAi Claims</a> and PAi Legal share a case, so claim evidence carries into the legal workspace when a denial turns into a dispute rather than being rebuilt from scratch. Buying PAi Claims as a first case includes a complimentary PAi Legal case.</p>
+    <p>PSi Legal builds and indexes a case law corpus that lives on your computer, searchable with the network unplugged and leaving no record of what you looked up. PAi Legal can pull authorities from that corpus while your case files stay where they are.</p>
+    <div class="buttons">
+      <a class="button alt" href="software.html">See how the products compare</a>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <h2>The first case is free</h2>
+    <p>The download is free and so is your first matter. Not a trial, not a limited version, not a watermark on the export — the first case runs on the full product.</p>
+    <p>The reason is that this software is hard to evaluate from a description. Whether a traceable narrative is worth anything depends on what it does with your documents, and nobody can tell that from a feature list. So the first one is free and you find out.</p>
+    <p>After that it costs what it costs, which is aimed at the work rather than at the introduction.</p>
+    <div class="buttons">
+      <a class="button" href="https://apps.microsoft.com/detail/9NP4XL1MRXP8">Get PAi Legal in Microsoft Store</a>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Common questions</h2>
+    <h3>Is this for lawyers or for self-represented litigants?</h3>
+    <p>Both. You choose at first run. Self-represented mode uses plain language and explains every term as it appears; attorney mode uses standard terminology and skips the explanations. The features underneath are identical.</p>
+    <h3>What does it cost?</h3>
+    <p>The download is free and so is the first case, on the full product. No trial limits and no watermark on what you export.</p>
+    <h3>Does it find weak points in my case?</h3>
+    <p>It surfaces the least-supported part of the record as the first structural gap to inspect, alongside the strongest-supported path. That identifies where the record is thin, not whether an argument is right — the judgment stays yours.</p>
+    <h3>Is the analysis reproducible?</h3>
+    <p>Yes. The map is computed deterministically from the links you established, so the same case file produces the same map every time, and a replay signature lets you verify which state of the record a given map came from.</p>
+    <h3>How is the narrative kept traceable?</h3>
+    <p>Facts, statements, and allegations are entered as discrete units, each tied to what supports it. The narrative is assembled from those units, so every sentence carries its source and unsupported assertions are visible rather than buried in prose.</p>
+    <h3>How does it handle ethical walls between matters?</h3>
+    <p>Each matter lives in a separate location the attorney chooses — a removable drive, a volume, a path. Separation is physical, so a screened matter can be absent from a machine rather than merely hidden from a user account.</p>
+    <h3>Does it upload case files anywhere?</h3>
+    <p>No. The case folder is on your hard drive. There is no account and no upload step, and the software runs with the network disconnected.</p>
+    <h3>Can it read scanned or photographed documents?</h3>
+    <p>Yes. OCR is built in and runs at import, on your machine, with no per-page fee.</p>
+    <h3>Will it calculate deadlines or tell me what to file?</h3>
+    <p>No. It organizes what you give it. Deadlines, procedural requirements, and strategy remain yours to determine.</p>
+    <h3>What does it run on?</h3>
+    <p>Windows 10 and Windows 11, 64-bit, installed from the Microsoft Store.</p>
+  </section>
+
+  <section>
+    <p class="notice">PAi Legal is an organizational and analytical aid. It is not a law firm, insurer, public adjuster, or engineering authority, and it does not replace licensed professional advice. Verify deadlines, policy interpretations, code requirements, quantities, prices, and any generated document before relying on it.</p>
+    <div class="buttons">
+      <a class="button" href="https://apps.microsoft.com/detail/9NP4XL1MRXP8">View PAi Legal in Microsoft Store</a>
+    </div>
+    <p style="color:var(--muted);margin-top:18px">Store ID 9NP4XL1MRXP8 &nbsp;&middot;&nbsp; Windows 10 and 11, 64-bit</p>
   </section>
 </main>
-<footer><a href="index.html">PAi home</a> &nbsp;Â·&nbsp; <a href="pai-claims.html">PAi Claims</a></footer>
+<footer><a href="index.html">PAi home</a> &nbsp;&middot;&nbsp; <a href="pai-claims.html">PAi Claims</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a></footer>
 </body>
 </html>
