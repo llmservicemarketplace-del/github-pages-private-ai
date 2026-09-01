@@ -1,260 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Software — PAi Luton | On-device tools for Windows</title>
-<meta name="description" content="Four Windows applications that run entirely on your own computer: private legal case management, offline case law research, a local AI assistant, and a materials analysis kit. No accounts, no cloud, no data leaving your machine.">
-<link rel="canonical" href="https://www.thenewfaithchurch.org/software.html">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Software — PAi Luton">
-<meta property="og:description" content="Windows applications that run entirely on your own computer. Private legal case management, offline case law research, and a local AI assistant.">
-<meta property="og:url" content="https://www.thenewfaithchurch.org/software.html">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --paper:#F7F7F5;
-  --ink:#1A1D21;
-  --mid:#63686E;
-  --rule:#D6D6D0;
-  --signal:#17439B;
-  --measure:63ch;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:"Source Sans 3",system-ui,sans-serif;
-  font-size:19px;
-  line-height:1.62;
-}
-.wrap{max-width:860px;margin:0 auto;padding:0 28px}
-
-header.masthead{padding:76px 0 0}
-.mark{
-  font-family:"Barlow Semi Condensed",system-ui,sans-serif;
-  font-weight:600;
-  font-size:15px;
-  letter-spacing:.06em;
-  color:var(--mid);
-  margin:0 0 42px;
-}
-h1{
-  font-family:"Barlow Semi Condensed",system-ui,sans-serif;
-  font-weight:600;
-  font-size:clamp(38px,6.4vw,60px);
-  line-height:1.06;
-  letter-spacing:-.012em;
-  margin:0 0 22px;
-  max-width:19ch;
-}
-.standfirst{
-  font-size:21px;
-  color:var(--mid);
-  max-width:var(--measure);
-  margin:0 0 14px;
-}
-.standfirst strong{color:var(--ink);font-weight:600}
-
-hr.major{
-  border:0;
-  border-top:2px solid var(--ink);
-  margin:60px 0 0;
-}
-
-section.product{
-  border-top:1px solid var(--rule);
-  padding:44px 0 40px;
-  display:grid;
-  grid-template-columns:4px 1fr;
-  gap:0 26px;
-}
-section.product:first-of-type{border-top:0}
-.spine{background:var(--signal);border-radius:2px}
-.product h2{
-  font-family:"Barlow Semi Condensed",system-ui,sans-serif;
-  font-weight:600;
-  font-size:31px;
-  line-height:1.14;
-  margin:-4px 0 4px;
-}
-.role{
-  font-size:17px;
-  color:var(--mid);
-  font-style:italic;
-  margin:0 0 18px;
-}
-.product p.body{max-width:var(--measure);margin:0 0 16px}
-.product ul{
-  max-width:var(--measure);
-  margin:0 0 22px;
-  padding-left:19px;
-}
-.product li{margin:0 0 5px}
-a{color:var(--signal)}
-a:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
-.get{
-  display:inline-block;
-  font-weight:600;
-  text-decoration:none;
-  border-bottom:2px solid var(--signal);
-  padding-bottom:1px;
-}
-.get:hover{border-bottom-width:3px}
-.meta{
-  font-size:15px;
-  color:var(--mid);
-  margin:12px 0 0;
-}
-.meta span{margin-right:20px;display:inline-block}
-
-footer{
-  border-top:2px solid var(--ink);
-  margin-top:56px;
-  padding:34px 0 90px;
-  font-size:16px;
-  color:var(--mid);
-}
-footer p{max-width:var(--measure);margin:0 0 10px}
-
-@media (max-width:600px){
-  body{font-size:18px}
-  header.masthead{padding-top:52px}
-  section.product{grid-template-columns:3px 1fr;gap:0 18px}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PAi Legal, PAi Claims &amp; PSi Legal | Private Case Software for Windows</title>
+  <meta name="description" content="Three Windows applications for handling your own legal and insurance matters: a private case workspace, property insurance claim software, and offline case law research. Your files stay on your computer.">
+  <link rel="canonical" href="https://llmservicemarketplace-del.github.io/github-pages-private-ai/software.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PAi Legal, PAi Claims &amp; PSi Legal | Private Case Software for Windows">
+  <meta property="og:description" content="A private case workspace, property insurance claim software, and offline case law research. Your files stay on your computer.">
+  <meta property="og:url" content="https://llmservicemarketplace-del.github.io/github-pages-private-ai/software.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "PAi Legal, PAi Claims and PSi Legal for Windows",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"item":{"@type":"SoftwareApplication","name":"PAi Legal","applicationCategory":"BusinessApplication","operatingSystem":"Windows 10, Windows 11","url":"https://apps.microsoft.com/detail/9NP4XL1MRXP8","publisher":{"@type":"Organization","name":"PAi Luton"},"description":"A private legal case workspace that runs on your own PC. Imports filings and evidence with built-in OCR, keeps separate legal matters apart, and offers optional on-device AI."}},
+      {"@type":"ListItem","position":2,"item":{"@type":"SoftwareApplication","name":"PAi Claims","applicationCategory":"BusinessApplication","operatingSystem":"Windows 10, Windows 11","url":"https://apps.microsoft.com/detail/9P255VXPD5B4","publisher":{"@type":"Organization","name":"PAi Luton"},"description":"Property insurance claim software for organizing evidence, comparing carrier estimates, and building source-traced preliminary repair costs."}},
+      {"@type":"ListItem","position":3,"item":{"@type":"SoftwareApplication","name":"PSi Legal","applicationCategory":"BusinessApplication","operatingSystem":"Windows 10, Windows 11","url":"https://apps.microsoft.com/detail/9NHNVPTD93XT","publisher":{"@type":"Organization","name":"PAi Luton"},"description":"Offline case law research. Builds and indexes a court opinion corpus on your own computer, searchable without a network connection. Optional API-connected AI."}}
+    ]
+  }
+  </script>
+  <style>
+    :root{--bg:#0f1216;--card:#171b21;--line:#29313b;--text:#f2f4f7;--muted:#aeb7c3;--blue:#18a7ff}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "Segoe UI",Arial,sans-serif}
+    main,nav,footer{max-width:980px;margin:auto;padding:0 24px}nav{padding-top:28px}nav a,footer a{color:var(--blue)}
+    header{padding:72px 0 42px}h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin:12px 0 20px;max-width:850px}
+    h2{font-size:30px;margin-top:0}.eyebrow{color:var(--blue);font-weight:800;letter-spacing:.12em}.lead{font-size:21px;color:var(--muted);max-width:760px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.button{background:var(--blue);color:#06131c;padding:13px 22px;border-radius:9px;text-decoration:none;font-weight:800}.button.alt{background:transparent;color:var(--text);border:1px solid var(--line)}
+    section{padding:46px 0;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:12px}.card h3{margin-top:0}.card p{color:var(--muted);margin-bottom:0}
+    .notice{border-left:4px solid var(--blue);padding:10px 18px;color:var(--muted)}footer{padding:34px 24px 70px;color:var(--muted)}
+    .storeid{color:var(--muted);font-size:15px;margin-top:14px}
+    section p{max-width:760px}
+  </style>
 </head>
 <body>
-
-<div class="wrap">
-
-<header class="masthead">
-  <p class="mark">PAi Luton — The New Faith Church and Co-op Inc.</p>
-  <h1>Software that runs on your computer, not someone else's</h1>
-  <p class="standfirst">Four Windows applications published on the Microsoft Store, in two lines. <strong>PAi</strong> products are private: they load their AI on your own computer and work with the network off. <strong>PSi</strong> products do their core work locally too, and can reach a larger model through an API when you want one.</p>
-  <p class="standfirst">You choose which trade you want. Neither line asks you to hand over your files as the price of using it.</p>
-  <hr class="major">
-</header>
-
+<nav><a href="index.html">PAi home</a> &nbsp;&middot;&nbsp; <a href="pai-legal.html">PAi Legal</a> &nbsp;&middot;&nbsp; <a href="pai-claims.html">PAi Claims</a></nav>
 <main>
+  <header>
+    <div class="eyebrow">SOFTWARE</div>
+    <h1>Handle your own case, with the files staying on your computer</h1>
+    <p class="lead">Three Windows applications on the Microsoft Store that work together: a private case workspace, property insurance claim software, and a case law library you can search offline. Denied claim, malpractice, or a matter you are handling without a lawyer &mdash; the record stays yours.</p>
+  </header>
 
-<section class="product">
-  <div class="spine"></div>
-  <div>
+  <section>
     <h2>PAi Legal</h2>
-    <p class="role">A private case workspace for people handling their own legal matter</p>
-    <p class="body">Legal trouble arrives as a pile of paper: denial letters, contracts, emails, photographs, court forms. PAi Legal takes that pile and turns it into an organized case file on your own hard drive. It reads PDFs, Word files, spreadsheets, Outlook messages, and scanned paper — optical character recognition is built in, so a photographed document becomes searchable text without a subscription to anything.</p>
-    <p class="body">One event often produces more than one legal matter. A denied insurance claim and the lawyer who mishandled the appeal are two different disputes with two different defendants. PAi Legal keeps them separated inside a single case folder so the record stays straight.</p>
-    <ul>
-      <li>Document import with built-in OCR for scans and photographs</li>
-      <li>Separate legal matters tracked inside one case</li>
-      <li>Encrypted backups and an append-only audit record</li>
-      <li>Jurisdiction rules and deterministic filing checks</li>
-      <li>Optional private AI that runs on your own hardware</li>
-      <li>Plain-English guidance for self-represented litigants</li>
-    </ul>
-    <a class="get" href="https://apps.microsoft.com/detail/9NP4XL1MRXP8">Get PAi Legal on the Microsoft Store</a>
-    <p class="meta"><span>Store ID 9NP4XL1MRXP8</span><span>Windows 10 and 11, 64-bit</span></p>
-  </div>
-</section>
+    <p class="lead">A private case workspace for people handling their own legal matter.</p>
+    <p>Legal trouble arrives as a pile of paper: denial letters, contracts, emails, photographs, court forms. PAi Legal turns that pile into an organized case file on your own hard drive. It reads PDFs, Word files, spreadsheets, Outlook messages, and scanned paper, with optical character recognition built in, so a photographed document becomes searchable text without a subscription to anything.</p>
+    <p>One event often produces more than one legal matter. A denied insurance claim and the lawyer who mishandled the appeal are two different disputes with two different defendants. PAi Legal keeps them separated inside a single case folder so the record stays straight.</p>
+    <div class="grid">
+      <div class="card"><h3>Document import with OCR</h3><p>PDFs, Word, spreadsheets, Outlook mail, and scanned or photographed paper become searchable text.</p></div>
+      <div class="card"><h3>Separate matters</h3><p>Distinct legal matters stay apart inside one case folder instead of blurring into a single dispute.</p></div>
+      <div class="card"><h3>Encrypted backups</h3><p>Manifest-verified backups and an append-only audit record of what happened to the case file.</p></div>
+      <div class="card"><h3>Optional private AI</h3><p>A language model that runs on your own hardware, set up on first run. Nothing is sent anywhere.</p></div>
+    </div>
+    <div class="buttons">
+      <a class="button" href="https://apps.microsoft.com/detail/9NP4XL1MRXP8">View PAi Legal in Microsoft Store</a>
+      <a class="button alt" href="pai-legal.html">More about PAi Legal</a>
+    </div>
+    <p class="storeid">Store ID 9NP4XL1MRXP8 &nbsp;&middot;&nbsp; Windows 10 and 11, 64-bit</p>
+  </section>
 
-<section class="product">
-  <div class="spine"></div>
-  <div>
+  <section>
+    <h2>PAi Claims</h2>
+    <p class="lead">Property insurance claim software that keeps the evidence with you.</p>
+    <p>Photographs, carrier estimates, repair costs, correspondence, and payment records belong together in one place you control. PAi Claims connects visible property damage to the records that support it, preserves carrier values separately from your own source-traced repair quantities, and keeps supported facts distinct from assumptions.</p>
+    <div class="grid">
+      <div class="card"><h3>Claim documentation</h3><p>Photographs, estimates, carrier records, correspondence, payments, and exports in a case folder you own.</p></div>
+      <div class="card"><h3>Estimate comparison</h3><p>Carrier values stay separate from preliminary repair quantities and prices, so the gap is visible.</p></div>
+      <div class="card"><h3>Visible provenance</h3><p>See where every figure came from, with supported facts kept apart from assumptions and AI inferences.</p></div>
+    </div>
+    <div class="buttons">
+      <a class="button" href="https://apps.microsoft.com/detail/9P255VXPD5B4">View PAi Claims in Microsoft Store</a>
+      <a class="button alt" href="pai-claims.html">Pricing and details</a>
+    </div>
+    <p class="storeid">Store ID 9P255VXPD5B4 &nbsp;&middot;&nbsp; Windows 10 and 11, 64-bit</p>
+  </section>
+
+  <section>
     <h2>PSi Legal</h2>
-    <p class="role">A case law library on your own machine, searchable without a connection</p>
-    <p class="body">Commercial legal research runs on a meter. PSi Legal takes a different approach: it builds and indexes a case law corpus that lives on your computer, so searching costs nothing, works with the network unplugged, and leaves no record of what you looked up. No AI is required — the index does the work.</p>
-    <p class="body">If you want a model to read the results for you, PSi Legal can reach one through an API. That part is optional and off unless you turn it on. It also pairs with PAi Legal, which can pull authorities from the corpus while your case files stay where they are.</p>
-    <a class="get" href="https://apps.microsoft.com/detail/9NHNVPTD93XT">Get PSi Legal on the Microsoft Store</a>
-    <p class="meta"><span>Store ID 9NHNVPTD93XT</span><span>Windows 10 and 11, 64-bit</span></p>
-  </div>
-</section>
+    <p class="lead">A case law library on your own machine, searchable without a connection.</p>
+    <p>Commercial legal research runs on a meter. PSi Legal takes a different approach: it builds and indexes a case law corpus that lives on your computer, so searching costs nothing, works with the network unplugged, and leaves no record of what you looked up. No AI is required, because the index does the work.</p>
+    <p>If you want a model to read the results for you, PSi Legal can reach one through an API. That part is optional and off unless you turn it on. It also pairs with PAi Legal, which can pull authorities from the corpus while your case files stay where they are.</p>
+    <div class="buttons">
+      <a class="button" href="https://apps.microsoft.com/detail/9NHNVPTD93XT">View PSi Legal in Microsoft Store</a>
+    </div>
+    <p class="storeid">Store ID 9NHNVPTD93XT &nbsp;&middot;&nbsp; Windows 10 and 11, 64-bit</p>
+  </section>
 
-<section class="product">
-  <div class="spine"></div>
-  <div>
-    <h2>PAi LFM</h2>
-    <p class="role">A local AI assistant with no account and no cloud</p>
-    <p class="body">PAi LFM installs a language model on your own computer and gives you a chat window to it. Once the model is downloaded, it answers with the network off. Nothing you type is transmitted, logged on a server, or used to train anything, because there is no server involved.</p>
-    <p class="body">The installer handles the parts that usually stop people: choosing a model that fits the machine, downloading it, and starting it. Free to install; activation uses a purchase code.</p>
-    <a class="get" href="https://apps.microsoft.com/detail/9NTRRM1ZPQ1Q">Get PAi LFM on the Microsoft Store</a>
-    <p class="meta"><span>Store ID 9NTRRM1ZPQ1Q</span><span>Windows 10 and 11, 64-bit</span></p>
-  </div>
-</section>
+  
 
-<section class="product">
-  <div class="spine"></div>
-  <div>
-    <h2>Libby's Mental Metals</h2>
-    <p class="role">Alloy screening that tells you what composition can and cannot determine</p>
-    <p class="body">Enter an alloy composition and get back the properties that genuinely follow from it: density, atomic-size mismatch, valence-electron concentration, configurational entropy, elastic-modulus and conductivity envelopes, thermal expansion, and a phase-family screening hint. Useful for high-entropy alloys and other multi-component systems where hand calculation gets unwieldy.</p>
-    <p class="body">What separates it from a calculator is what it refuses to do. Strength, hardness, toughness, creep, corrosion, and weldability depend on microstructure, process history, and test data — so instead of returning a number that looks like a measurement, the report names exactly which state information is missing. Manufacturing routes get the same treatment: melt and cast, wrought, powder-HIP, LPBF, DED, mechanical alloying, and joining are each marked available, conditional, or requires-data.</p>
-    <p class="body">No output is certified material. Certification needs a controlled specification, a qualified process, a traceable lot, and acceptance testing, and every report states that boundary rather than blurring it.</p>
-    <p class="body">The calculation engine runs on your machine. You can optionally connect an AI model of your choice using your own API key, which adds a reasoning layer over the results — when no key is set, the engine runs its solvers locally and the app works without it.</p>
-    <a class="get" href="https://apps.microsoft.com/detail/9PD3F2F2KNZW">Get Libby's Mental Metals on the Microsoft Store</a>
-    <p class="meta"><span>Store ID 9PD3F2F2KNZW</span><span>Windows 10 and 11, 64-bit</span></p>
-  </div>
-</section>
+  
 
+  <section>
+    <h2>How the two lines differ</h2>
+    <p><strong>PAi</strong> products load an AI model onto your own computer during setup and run it there. Once installed, they work with no network connection, no account, and no data leaving the machine. PAi Legal and PAi Claims are both PAi products.</p>
+    <p><strong>PSi</strong> products do their core work locally as well. Where they differ is that they can optionally reach a hosted model through an API when a job needs one larger than a desktop can hold. That path is off until you enable it and supply your own credentials.</p>
+    <p>PAi Claims and PAi Legal share a case: claim evidence carries into the legal workspace when a denial turns into a dispute, and PAi Legal can pull authorities from a PSi Legal corpus without your case files leaving the machine.</p>
+    <p class="notice">These applications are organizational and analytical aids. They are not a law firm, insurer, public adjuster, or engineering authority, and they do not replace licensed professional advice. Verify deadlines, policy interpretations, code requirements, quantities, prices, and any generated document before relying on it.</p>
+  </section>
 </main>
-
 <footer>
-  <p>Published by The New Faith Church and Co-op Inc., a Georgia nonprofit corporation, under the PAi Luton publisher account on the Microsoft Store.</p>
-  <p>Support and questions: <a href="mailto:keith@thenewfaithchurch.org">keith@thenewfaithchurch.org</a></p>
+  <p><a href="index.html">PAi home</a> &nbsp;&middot;&nbsp; <a href="pai-legal.html">PAi Legal</a> &nbsp;&middot;&nbsp; <a href="pai-claims.html">PAi Claims</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a></p>
+  <p>Published by The New Faith Church and Co-op Inc. under the PAi Luton publisher account on the Microsoft Store.</p>
+  <p><a href="mailto:keith@thenewfaithchurch.org">keith@thenewfaithchurch.org</a></p>
 </footer>
-
-</div>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"SoftwareApplication",
-      "name":"PAi Legal",
-      "applicationCategory":"BusinessApplication",
-      "operatingSystem":"Windows 10, Windows 11",
-      "description":"A private legal case workspace that runs entirely on your own PC. Imports filings and evidence with built-in OCR, keeps separate legal matters apart, and offers optional on-device AI.",
-      "url":"https://apps.microsoft.com/detail/9NP4XL1MRXP8",
-      "author":{"@type":"Organization","name":"PAi Luton"}
-    },
-    {
-      "@type":"SoftwareApplication",
-      "name":"PSi Legal",
-      "applicationCategory":"BusinessApplication",
-      "operatingSystem":"Windows 10, Windows 11",
-      "description":"Offline case law research for Windows. Builds and indexes a court opinion corpus on your own computer, searchable without a network connection. Optional API-connected AI. Pairs with PAi Legal.",
-      "url":"https://apps.microsoft.com/detail/9NHNVPTD93XT",
-      "author":{"@type":"Organization","name":"PAi Luton"}
-    },
-    {
-      "@type":"SoftwareApplication",
-      "name":"PAi LFM",
-      "applicationCategory":"UtilitiesApplication",
-      "operatingSystem":"Windows 10, Windows 11",
-      "description":"A local AI assistant for Windows. Installs a language model on your own computer and runs offline with no account and no cloud service.",
-      "url":"https://apps.microsoft.com/detail/9NTRRM1ZPQ1Q",
-      "author":{"@type":"Organization","name":"PAi Luton"}
-    },
-    {
-      "@type":"SoftwareApplication",
-      "name":"Libby's Mental Metals",
-      "applicationCategory":"BusinessApplication",
-      "operatingSystem":"Windows 10, Windows 11",
-      "description":"Alloy screening for materials engineers. Calculates the properties that follow from composition, names the missing state data for everything else, and screens manufacturing routes with an explicit certification boundary. Runs locally, with optional bring-your-own-key AI.",
-      "url":"https://apps.microsoft.com/detail/9PD3F2F2KNZW",
-      "author":{"@type":"Organization","name":"PAi Luton"}
-    }
-  ]
-}
-</script>
-
 </body>
 </html>
