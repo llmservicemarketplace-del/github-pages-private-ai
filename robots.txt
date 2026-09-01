@@ -1,4 +1,3 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
-
-Sitemap: https://llmservicemarketplace-del.github.io/github-pages-private-ai/sitemap.xml
+Sitemap: https://yprivateai.com/sitemap.xml
