@@ -1,50 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Set up PAi with your activation code</title>
-  <style>
-    body { margin:0; background:#08111f; color:#fff; font-family:Arial,Helvetica,sans-serif; }
-    main { max-width:720px; margin:70px auto; padding:40px; text-align:center; }
-    .logo { font-size:52px; font-weight:800; margin-bottom:12px; }
-    .logo span { color:#147cff; }
-    h1 { font-size:32px; margin-bottom:12px; }
-    p { color:#cbd5e1; font-size:18px; line-height:1.6; }
-    .download { display:inline-block; margin:28px 0 18px; padding:17px 30px; background:#147cff; color:#fff; text-decoration:none; border-radius:9px; font-size:19px; font-weight:700; }
-    .steps { margin-top:35px; padding:25px; background:#111d2e; border-radius:12px; text-align:left; }
-    li { margin:12px 0; color:#dbeafe; }
-    .note { margin-top:30px; font-size:14px; color:#94a3b8; }
-  </style>
+  <title>Set up PAi with your activation code | Offline Local AI for Windows</title>
+  <meta name="description" content="Install PAi from the Microsoft Store, enter your activation code, and run private local AI on your Windows PC. One-time model download, then fully offline.">
   <link rel="canonical" href="https://yprivateai.com/setup.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Set up PAi with your activation code">
+  <meta property="og:description" content="Install PAi, enter your code, and run private local AI on your Windows PC.">
+  <meta property="og:url" content="https://yprivateai.com/setup.html">
+  <style>
+    :root {
+      --bg: #0F1216;
+      --surface: #171B21;
+      --line: #232830;
+      --text: #F2F4F7;
+      --muted: #9AA4B2;
+      --accent: #18A7FF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Inter, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    .wrap { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+    nav { padding: 28px 0 0; font-size: 15px; }
+    nav a { color: var(--accent); text-decoration: none; margin-right: 18px; }
+    header { padding: 56px 0 12px; }
+    h1 {
+      font-size: clamp(28px, 5vw, 36px);
+      line-height: 1.2;
+      margin: 12px 0 16px;
+    }
+    .lead {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 28px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #06131C;
+      padding: 15px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+    section {
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+    }
+    h2 { font-size: 22px; margin: 0 0 16px; }
+    ol { padding-left: 22px; color: var(--muted); }
+    ol li { margin-bottom: 14px; }
+    ol strong { color: var(--text); }
+    p { color: var(--muted); }
+    footer {
+      padding: 40px 0 60px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a { color: var(--accent); text-decoration: none; margin-right: 16px; }
+  </style>
 </head>
 <body>
-  <main>
-    <div class="logo">PAi<span>&middot;</span></div>
-    <h1>Set up PAi with your activation code</h1>
-    <p>
-      PAi installs from the Microsoft Store. On first run it asks for your
-      activation code, checks your computer, and offers only the AI options
-      your hardware can actually run.
-    </p>
-    <a class="download" href="https://apps.microsoft.com/detail/9NTRRM1ZPQ1Q">
-      Get PAi from the Microsoft Store
-    </a>
-    <div class="steps">
+  <div class="wrap">
+    <nav>
+      <a href="index.html">PAi home</a>
+      <a href="software.html">All software</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+
+    <header>
+      <h1>Set up PAi with your activation code</h1>
+      <p class="lead">
+        PAi installs from the Microsoft Store. On first run it asks for your activation code, checks your computer, and offers only the AI options your hardware can actually run.
+      </p>
+      <a class="btn" href="https://apps.microsoft.com/detail/9NTRRM1ZPQ1Q">Get PAi from the Microsoft Store</a>
+    </header>
+
+    <section>
       <h2>Getting started</h2>
       <ol>
-        <li>Install PAi from the Microsoft Store using the button above.</li>
-        <li>Open PAi from the Start menu.</li>
-        <li>Enter the activation code from your purchase email.</li>
-        <li>Allow PAi to check your computer's memory, disk space and graphics.</li>
-        <li>Choose one of the AI engines PAi offers for your hardware.</li>
-        <li>PAi downloads and configures it. This takes a while the first time.</li>
+        <li><strong>Install PAi</strong> from the Microsoft Store using the button above.</li>
+        <li><strong>Open PAi</strong> from the Start menu.</li>
+        <li><strong>Enter the activation code</strong> from your purchase email.</li>
+        <li><strong>Allow PAi to check</strong> your computer’s memory, disk space and graphics.</li>
+        <li><strong>Choose one of the AI engines</strong> PAi offers for your hardware (DeepSeek, Qwen, Llama or Gemma).</li>
+        <li><strong>PAi downloads and configures it.</strong> This takes a while the first time. The download resumes if interrupted.</li>
       </ol>
-    </div>
-    <p class="note">
-      Do not download AI model files manually. PAi handles model downloads,
-      hardware compatibility, installation and configuration for you.
-    </p>
-  </main>
+      <p style="margin-top:24px;">
+        Do not download AI model files manually. PAi handles model downloads, hardware compatibility, installation and configuration for you.
+      </p>
+      <p>
+        After setup you can disconnect the internet. The software continues to work offline.
+      </p>
+    </section>
+
+    <section>
+      <h2>System requirements</h2>
+      <p>Windows 10 or 11, 64-bit. 8 GB memory minimum (16 GB recommended). About 10 GB free disk space. No Python, Docker or developer tools required.</p>
+    </section>
+
+    <footer>
+      <a href="index.html">PAi home</a>
+      <a href="software.html">All software</a>
+      <a href="pai-claims.html">PAi Claims</a>
+      <a href="pai-legal.html">PAi Legal</a>
+      <a href="privacy.html">Privacy</a>
+    </footer>
+  </div>
 </body>
 </html>

@@ -1,211 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PAi — Private AI. Total Privacy.</title>
-<meta name="description" content="Private Windows software from PAi, including property insurance claim organization, private legal case workspaces, and specialist local AI assistants.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="PAi | Private Windows Software and Local AI">
-<meta property="og:description" content="Explore PAi Claims, PAi Legal, and specialist local AI assistants for Windows.">
-<meta property="og:url" content="https://yprivateai.com/">
-<!--
-  PAi landing page.
-
-  Self-contained: all styling is inline, so it does not depend on app.css or
-  setup.css and cannot be broken by leftover files from the previous site.
-
-  It links to setup.html and nothing else. It never downloads a model.
--->
-<style>
-  :root{
-    --bg:#0F1216; --surface:#171B21; --line:#232830;
-    --text:#F2F4F7; --muted:#9AA4B2; --accent:#18A7FF;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);
-       font-family:"Segoe UI",Inter,Arial,sans-serif;line-height:1.6}
-  .wrap{max-width:900px;margin:0 auto;padding:0 24px}
-  header{padding:56px 0 8px}
-  .mark{font-size:24px;font-weight:800;letter-spacing:.5px}
-  .mark span{color:var(--accent)}
-  .tagline{color:var(--muted);letter-spacing:2px;font-size:13px;font-weight:700;margin-top:4px}
-  h1{font-size:42px;line-height:1.15;margin:36px 0 14px}
-  .lead{font-size:19px;color:var(--muted);max-width:640px;margin:0 0 28px}
-  .btn{display:inline-block;background:var(--accent);color:#06131C;
-       padding:15px 30px;border-radius:10px;font-weight:700;font-size:17px;
-       text-decoration:none}
-  .btn.ghost{background:transparent;color:var(--text);
-             border:1px solid #2A2F38;margin-left:10px}
-  .claim{display:inline-block;border:1px solid var(--accent);color:var(--accent);
-         padding:9px 16px;border-radius:8px;font-weight:700;font-size:14px;
-         letter-spacing:1px;margin:32px 0 0}
-  section{padding:52px 0;border-top:1px solid var(--line);margin-top:52px}
-  h2{font-size:26px;margin:0 0 10px}
-  .sub{color:var(--muted);margin:0 0 26px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
-  .item{background:var(--surface);border:1px solid var(--line);
-        border-radius:10px;padding:14px 16px}
-  .item b{display:block;font-size:15px}
-  .item span{color:var(--muted);font-size:13px}
-  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px}
-  .cols h3{margin:0 0 8px;font-size:17px}
-  .cols p{margin:0;color:var(--muted);font-size:15px}
-  ol{color:var(--muted);padding-left:22px}
-  ol li{margin-bottom:12px}
-  ol li strong{color:var(--text)}
-  footer{border-top:1px solid var(--line);margin-top:52px;padding:32px 0 60px;
-         color:var(--muted);font-size:13px}
-  a{color:var(--accent)}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PAi — Offline Local AI Software for Windows | Private Claims &amp; Legal Tools</title>
+  <meta name="description" content="Specialist offline AI software that runs on your Windows PC. PAi Claims for property insurance evidence, PAi Legal for traceable case narratives, and private local AI assistants. No cloud, no account, no data leaving your machine.">
   <link rel="canonical" href="https://yprivateai.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PAi — Offline Local AI Software for Windows | Private Claims &amp; Legal Tools">
+  <meta property="og:description" content="Specialist offline AI software that runs on your Windows PC. No cloud, no account, no data leaving your machine.">
+  <meta property="og:url" content="https://yprivateai.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PAi — Offline Local AI Software for Windows">
+  <meta name="twitter:description" content="Private local AI for Windows. PAi Claims, PAi Legal, and specialist assistants. Runs offline on your computer.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PAi",
+    "url": "https://yprivateai.com/",
+    "description": "Specialist offline AI software for Windows. Local AI assistants, property insurance claim tools, and legal case narrative software that run entirely on your computer.",
+    "email": "support@yprivateai.com"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PAi — Private AI",
+    "url": "https://yprivateai.com/",
+    "description": "Offline local AI software for Windows. Private claims, legal case tools, and specialist assistants."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PAi",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Windows 10, Windows 11",
+    "url": "https://yprivateai.com/",
+    "description": "Specialist offline AI software that runs on your Windows computer. Includes PAi Claims, PAi Legal, and private local AI assistants. No cloud processing, no account required.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free download. Activation codes required for specialist assistants."
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does PAi send my data to the cloud?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. After the one-time model download during setup, everything runs locally on your computer. Your prompts, files, and conversation history never leave your machine."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an account or subscription?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. There is no account, no monthly fee, and no telemetry. Once installed, the software works with the internet switched off."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the system requirements?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Windows 10 or 11 (64-bit), 8 GB RAM minimum (16 GB recommended), and about 10 GB free disk space. No Python, Docker, or developer tools required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the AI model included?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You choose and download an open model (DeepSeek, Qwen, Llama, or Gemma) directly from its publisher under that publisher’s licence. PAi handles the guided install and configuration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use it completely offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Once the model is installed, PAi works with the internet disconnected."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0F1216;
+      --surface: #171B21;
+      --line: #232830;
+      --text: #F2F4F7;
+      --muted: #9AA4B2;
+      --accent: #18A7FF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Inter, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+    nav {
+      padding: 28px 0 0;
+      font-size: 15px;
+    }
+    nav a { color: var(--accent); text-decoration: none; margin-right: 18px; }
+    nav a:hover { text-decoration: underline; }
+    header { padding: 56px 0 12px; }
+    .mark { font-size: 26px; font-weight: 800; letter-spacing: 0.5px; }
+    .mark span { color: var(--accent); }
+    .tagline {
+      color: var(--muted);
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 44px);
+      line-height: 1.15;
+      margin: 36px 0 16px;
+      max-width: 820px;
+    }
+    .lead {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 660px;
+      margin: 0 0 32px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #06131C;
+      padding: 15px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .btn.ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid #2A2F38;
+    }
+    .btn:hover { opacity: 0.92; }
+    section {
+      padding: 52px 0;
+      border-top: 1px solid var(--line);
+    }
+    h2 { font-size: 26px; margin: 0 0 10px; }
+    h3 { font-size: 18px; margin: 0 0 8px; }
+    .sub { color: var(--muted); margin: 0 0 26px; max-width: 700px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .card a:hover { text-decoration: underline; }
+    .card p { color: var(--muted); margin: 8px 0 0; font-size: 15px; }
+    .item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .item b { display: block; font-size: 15px; }
+    .item span { color: var(--muted); font-size: 14px; }
+    ol { padding-left: 22px; color: var(--muted); }
+    ol li { margin-bottom: 12px; }
+    ol strong { color: var(--text); }
+    .cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .cols p { color: var(--muted); font-size: 15px; }
+    .faq-item { margin-bottom: 22px; }
+    .faq-item h3 { font-size: 17px; margin-bottom: 6px; }
+    .faq-item p { color: var(--muted); margin: 0; }
+    footer {
+      padding: 40px 0 60px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a { color: var(--accent); text-decoration: none; margin-right: 16px; }
+    @media (max-width: 600px) {
+      h1 { font-size: 30px; }
+      .btn { display: block; text-align: center; margin-right: 0; }
+    }
+  </style>
 </head>
 <body>
-<nav style="max-width:980px;margin:auto;padding:22px 24px;font:17px/1.65 &quot;Segoe UI&quot;,Arial,sans-serif">
-<a href="software.html" style="color:#18a7ff">All software</a> &nbsp;&middot;&nbsp;
-<a href="pai-legal.html" style="color:#18a7ff">PAi Legal</a> &nbsp;&middot;&nbsp;
-<a href="pai-claims.html" style="color:#18a7ff">PAi Claims</a> &nbsp;&middot;&nbsp;
-<a href="privacy.html" style="color:#18a7ff">Privacy</a>
-</nav>
-<div class="wrap">
+  <div class="wrap">
+    <nav>
+      <a href="software.html">All software</a>
+      <a href="pai-legal.html">PAi Legal</a>
+      <a href="pai-claims.html">PAi Claims</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
 
-<header>
-  <div class="mark">PAi<span>·</span></div>
-  <div class="tagline">PRIVATE AI. TOTAL PRIVACY.</div>
+    <header>
+      <div class="mark">PAi<span>.</span></div>
+      <div class="tagline">PRIVATE AI. TOTAL PRIVACY.</div>
+      <h1>Offline local AI software that runs on your computer, not someone else’s</h1>
+      <p class="lead">
+        Specialist offline AI for Windows. Organize property insurance claims, build traceable legal case narratives, and run private subject-tuned assistants — all on your own hardware. No cloud processing, no account, no monthly fee.
+      </p>
+      <a class="btn" href="setup.html">I have a code — set up now</a>
+      <a class="btn ghost" href="#how">How it works</a>
+      <a class="btn ghost" href="software.html">View all software</a>
+    </header>
 
-  <h1>Specialist offline AI software that runs on your computer, not someone else's. Local AI for Windows, with total privacy.</h1>
-  <p class="lead">
-    Nothing you type is uploaded, logged or used for training. No subscription,
-    no account, no monthly fee. Once it is installed, it keeps working with the
-    internet switched off.
-  </p>
+    <section>
+      <h2>Full desktop applications</h2>
+      <p class="sub">Standalone Windows workspaces that manage documents, build relational maps, and run entirely on your hardware. These are not chat interfaces.</p>
+      <div class="grid">
+        <div class="card">
+          <a href="pai-claims.html">PAi Claims</a>
+          <p>Offline property insurance claim software. Organize photographs, carrier estimates, repair costs and correspondence. Compare estimates with source-traced quantities and prices. Builds a structured map of the claim so gaps are visible.</p>
+        </div>
+        <div class="card">
+          <a href="pai-legal.html">PAi Legal</a>
+          <p>Legal case narrative and evidence software. Enter facts and allegations as discrete units tied to their sources. Assemble a fully traceable narrative and case map that surfaces weak points before opposing counsel does.</p>
+        </div>
+      </div>
+    </section>
 
-  <a class="btn" href="setup.html">I have a code — set up now</a>
-  <a class="btn ghost" href="#how">How it works</a>
+    <section>
+      <h2>Specialist local AI assistants</h2>
+      <p class="sub">Private AI chat tuned to one subject. Each assistant is configured for the questions it asks, how it reasons, and when it tells you to check with a professional. Nothing leaves your computer.</p>
 
-  <div class="claim">FULL AI SOFTWARE — NOT JUST ACCESS</div>
-</header>
+      <h3 style="margin-top:28px;color:var(--muted);font-size:14px;letter-spacing:1px;">PROFESSIONAL AND TECHNICAL</h3>
+      <div class="grid" style="margin-top:12px;">
+        <div class="item"><b>PAi Coding</b><span>Write and debug software</span></div>
+        <div class="item"><b>PAi Engineering</b><span>Calculations and design</span></div>
+        <div class="item"><b>PAi Metallurgy</b><span>Alloys, heat treatment, failures</span></div>
+        <div class="item"><b>PAi Research</b><span>Sources and structured reasoning</span></div>
+        <div class="item"><b>PAi Business</b><span>Planning and operations</span></div>
+        <div class="item"><b>PAi Tech Repair</b><span>Computers, phones, devices</span></div>
+        <div class="item"><b>PAi Work Assistant</b><span>Documents, email, project planning</span></div>
+        <div class="item"><b>PAi Real Estate</b><span>Property, listings, transactions</span></div>
+        <div class="item"><b>PAi Legal Document Assistant</b><span>Everyday legal document reference</span></div>
+      </div>
 
-<section id="products">
-  <h2>Full desktop applications</h2>
-  <p class="sub">
-    Standalone workspaces that manage documents, build relational maps and run
-    entirely on your hardware. These are not chat interfaces.
-  </p>
-  <div class="grid">
-    <a class="item" href="pai-claims.html" style="text-decoration:none">
-      <b>PAi Claims</b>
-      <span>Property insurance claim evidence, estimate comparison and source-traced repair costs. Builds a machine-structured map of the claim.</span>
-    </a>
-    <a class="item" href="pai-legal.html" style="text-decoration:none">
-      <b>PAi Legal</b>
-      <span>Case files, OCR search, source-traced narrative and structured exports. Builds a traceable case map and surfaces the weak points in the record.</span>
-    </a>
+      <h3 style="margin-top:32px;color:var(--muted);font-size:14px;letter-spacing:1px;">EVERYDAY AND HOME</h3>
+      <div class="grid" style="margin-top:12px;">
+        <div class="item"><b>PAi Everyday</b><span>Questions, writing, planning</span></div>
+        <div class="item"><b>PAi Home Pro</b><span>Home repair and renovation</span></div>
+        <div class="item"><b>PAi Mechanic</b><span>Automotive diagnosis and repair</span></div>
+        <div class="item"><b>PAi Interior Design</b><span>Layout, colour, materials</span></div>
+        <div class="item"><b>PAi Grow Pro</b><span>Gardening and growing</span></div>
+        <div class="item"><b>PAi Pet Care</b><span>Everyday animal care</span></div>
+        <div class="item"><b>PAi Family</b><span>Practical family logistics</span></div>
+        <div class="item"><b>PAi Outdoors</b><span>Training, gear, trips</span></div>
+        <div class="item"><b>PAi Seller</b><span>Listings, pricing, buyers</span></div>
+        <div class="item"><b>PAi Personal Finance</b><span>Budgeting and planning</span></div>
+        <div class="item"><b>PAi Student</b><span>Study, revision, writing</span></div>
+        <div class="item"><b>PAi Teacher</b><span>Lessons, materials, marking</span></div>
+      </div>
+
+      <h3 style="margin-top:32px;color:var(--muted);font-size:14px;letter-spacing:1px;">CREATIVE AND HOBBIES</h3>
+      <div class="grid" style="margin-top:12px;">
+        <div class="item"><b>PAi Writer</b><span>Drafting and editing</span></div>
+        <div class="item"><b>PAi Hobby Pro</b><span>Making, DIY, 3D printing</span></div>
+        <div class="item"><b>PAi Photography</b><span>Cameras and technique</span></div>
+        <div class="item"><b>PAi Music Gear</b><span>Instruments and recording</span></div>
+        <div class="item"><b>PAi YouTube Creator</b><span>Scripting, titles, channel growth</span></div>
+        <div class="item"><b>PAi Gaming</b><span>Consoles, retro, collecting</span></div>
+        <div class="item"><b>PAi Style</b><span>Clothing, jewellery, watches</span></div>
+        <div class="item"><b>PAi Collector</b><span>Antiques and collectibles</span></div>
+        <div class="item"><b>PAi Coins &amp; Stamps</b><span>Attribution and grading</span></div>
+        <div class="item"><b>PAi Herbal Reference</b><span>Educational plant reference</span></div>
+        <div class="item"><b>PAi Sports Analysis</b><span>Matchups and probability</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Local reference tools</h2>
+      <p class="sub">Offline research infrastructure that the applications above can draw on.</p>
+      <div class="grid">
+        <div class="card">
+          <strong>PSi Legal</strong>
+          <p>Builds and indexes a case law corpus on your own machine. Searchable with the network unplugged, leaving no record of what you looked up. PAi Legal can pull authorities from it while your case files stay local.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <h2>How it works</h2>
+      <p class="sub">This is the setup path for the specialist chat assistants. PAi Claims and PAi Legal are separate standalone applications and install directly. Internet is needed once, during setup. After that, never.</p>
+      <ol>
+        <li><strong>Buy the assistant you want</strong> and receive an activation code.</li>
+        <li><strong>Download the PAi setup program</strong> — one file, about 40 MB.</li>
+        <li><strong>Enter your code.</strong> PAi checks your computer’s memory, disk space and graphics, then recommends the AI that suits it.</li>
+        <li><strong>Choose your AI engine</strong> — DeepSeek, Qwen, Llama or Gemma.</li>
+        <li><strong>The AI downloads.</strong> Several gigabytes, once, because it runs on your machine rather than a server. It resumes if interrupted.</li>
+        <li><strong>Done.</strong> PAi installs it, tests that it starts, and creates your desktop shortcut. Disconnect the internet if you like.</li>
+      </ol>
+      <p style="margin-top:28px;">
+        <a class="btn" href="setup.html">Set up with my code</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>What you are buying</h2>
+      <div class="cols">
+        <div>
+          <h3>The software</h3>
+          <p>The specialist assistant configuration, guided installation, hardware detection, model setup, the chat application, documentation and support.</p>
+        </div>
+        <div>
+          <h3>The AI model</h3>
+          <p>Downloaded directly from its publisher under that publisher’s own licence. It is not owned by PAi. You choose which one during setup.</p>
+        </div>
+        <div>
+          <h3>What it needs</h3>
+          <p>Windows 10 or 11, 64-bit. 8 GB memory minimum, 16 GB recommended. About 10 GB free disk space. No Python, Docker or developer tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Frequently asked questions</h2>
+      <div class="faq-item">
+        <h3>Does PAi send my data to the cloud?</h3>
+        <p>No. After the one-time model download during setup, everything runs locally on your computer. Your prompts, files and conversation history never leave your machine.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need an account or subscription?</h3>
+        <p>No. There is no account, no monthly fee and no telemetry. Once installed, the software works with the internet switched off.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are the system requirements?</h3>
+        <p>Windows 10 or 11 (64-bit), 8 GB RAM minimum (16 GB recommended), and about 10 GB free disk space. No Python, Docker or developer tools required.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the AI model included?</h3>
+        <p>You choose and download an open model (DeepSeek, Qwen, Llama or Gemma) directly from its publisher under that publisher’s licence. PAi handles the guided install and configuration.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use it completely offline?</h3>
+        <p>Yes. Once the model is installed, PAi works with the internet disconnected.</p>
+      </div>
+    </section>
+
+    <footer>
+      <a href="software.html">All software</a>
+      <a href="pai-claims.html">PAi Claims</a>
+      <a href="pai-legal.html">PAi Legal</a>
+      <a href="setup.html">Setup</a>
+      <a href="privacy.html">Privacy</a>
+      <p style="margin-top:20px;">PAi — Private AI. Total Privacy. Offline local AI software for Windows.</p>
+    </footer>
   </div>
-
-  <h2 style="margin-top:44px">Specialist chat assistants</h2>
-  <p class="sub">
-    Private AI chat, tuned per subject. Each one is configured for the questions
-    it asks you, the way it reasons and where it tells you to check with a
-    professional. Nothing leaves your computer.
-  </p>
-
-  <h3 style="font-size:15px;letter-spacing:1.5px;color:var(--muted);margin:26px 0 10px">PROFESSIONAL AND TECHNICAL</h3>
-  <div class="grid">
-    <div class="item"><b>PAi Coding</b><span>Write and debug software</span></div>
-    <div class="item"><b>PAi Engineering</b><span>Calculations and design</span></div>
-    <div class="item"><b>PAi Metallurgy</b><span>Alloys, heat treatment, failures</span></div>
-    <div class="item"><b>PAi Research</b><span>Sources and structured reasoning</span></div>
-    <div class="item"><b>PAi Business</b><span>Planning and operations</span></div>
-    <div class="item"><b>PAi Tech Repair</b><span>Computers, phones, devices</span></div>
-    <div class="item"><b>PAi Work Assistant</b><span>Documents, email, project planning</span></div>
-    <div class="item"><b>PAi Real Estate</b><span>Property, listings, transactions</span></div>
-    <div class="item"><b>PAi Legal Document Assistant</b><span>Everyday legal document reference</span></div>
-  </div>
-
-  <h3 style="font-size:15px;letter-spacing:1.5px;color:var(--muted);margin:26px 0 10px">EVERYDAY AND HOME</h3>
-  <div class="grid">
-    <div class="item"><b>PAi Everyday</b><span>Questions, writing, planning</span></div>
-    <div class="item"><b>PAi Home Pro</b><span>Home repair and renovation</span></div>
-    <div class="item"><b>PAi Mechanic</b><span>Automotive diagnosis and repair</span></div>
-    <div class="item"><b>PAi Interior Design</b><span>Layout, colour, materials</span></div>
-    <div class="item"><b>PAi Grow Pro</b><span>Gardening and growing</span></div>
-    <div class="item"><b>PAi Pet Care</b><span>Everyday animal care</span></div>
-    <div class="item"><b>PAi Family</b><span>Practical family logistics</span></div>
-    <div class="item"><b>PAi Outdoors</b><span>Training, gear, trips</span></div>
-    <div class="item"><b>PAi Seller</b><span>Listings, pricing, buyers</span></div>
-    <div class="item"><b>PAi Personal Finance</b><span>Budgeting and planning</span></div>
-    <div class="item"><b>PAi Student</b><span>Study, revision, writing</span></div>
-    <div class="item"><b>PAi Teacher</b><span>Lessons, materials, marking</span></div>
-  </div>
-
-  <h3 style="font-size:15px;letter-spacing:1.5px;color:var(--muted);margin:26px 0 10px">CREATIVE AND HOBBIES</h3>
-  <div class="grid">
-    <div class="item"><b>PAi Writer</b><span>Drafting and editing</span></div>
-    <div class="item"><b>PAi Hobby Pro</b><span>Making, DIY, 3D printing</span></div>
-    <div class="item"><b>PAi Photography</b><span>Cameras and technique</span></div>
-    <div class="item"><b>PAi Music Gear</b><span>Instruments and recording</span></div>
-    <div class="item"><b>PAi YouTube Creator</b><span>Scripting, titles, channel growth</span></div>
-    <div class="item"><b>PAi Gaming</b><span>Consoles, retro, collecting</span></div>
-    <div class="item"><b>PAi Style</b><span>Clothing, jewellery, watches</span></div>
-    <div class="item"><b>PAi Collector</b><span>Antiques and collectibles</span></div>
-    <div class="item"><b>PAi Coins &amp; Stamps</b><span>Attribution and grading</span></div>
-    <div class="item"><b>PAi Herbal Reference</b><span>Educational plant reference</span></div>
-    <div class="item"><b>PAi Sports Analysis</b><span>Matchups and probability</span></div>
-  </div>
-
-  <h2 style="margin-top:44px">Local reference tools</h2>
-  <p class="sub">Offline research infrastructure that the applications above can draw on.</p>
-  <div class="grid">
-    <div class="item"><b>PSi Legal</b><span>Builds and indexes a case law corpus on your own machine. Searchable with the network unplugged, leaving no record of what you looked up.</span></div>
-  </div>
-</section>
-
-<section id="how">
-  <h2>How it works</h2>
-  <p class="sub">This is the setup path for the specialist chat assistants. PAi Claims and PAi Legal are separate standalone applications and install directly. Internet is needed once, during setup. After that, never.</p>
-  <ol>
-    <li><strong>Buy the assistant you want</strong> and receive an activation code.</li>
-    <li><strong>Download the PAi setup program</strong> — one file, about 40 MB.</li>
-    <li><strong>Enter your code.</strong> PAi checks your computer's memory, disk
-        space and graphics, then recommends the AI that suits it.</li>
-    <li><strong>Choose your AI engine</strong> — DeepSeek, Qwen, Llama or Gemma.</li>
-    <li><strong>The AI downloads.</strong> Several gigabytes, once, because it runs
-        on your machine rather than a server. It resumes if interrupted.</li>
-    <li><strong>Done.</strong> PAi installs it, tests that it starts, and creates
-        your desktop shortcut. Disconnect the internet if you like.</li>
-  </ol>
-  <p style="margin-top:26px"><a class="btn" href="setup.html">Set up with my code</a></p>
-</section>
-
-<section>
-  <h2>What you are buying</h2>
-  <div class="cols">
-    <div>
-      <h3>The software</h3>
-      <p>The specialist assistant configuration, guided installation, hardware
-         detection, model setup, the chat application, documentation and support.</p>
-    </div>
-    <div>
-      <h3>The AI model</h3>
-      <p>Downloaded directly from its publisher under that publisher's own licence.
-         It is not owned by PAi. You choose which one during setup.</p>
-    </div>
-    <div>
-      <h3>What it needs</h3>
-      <p>Windows 10 or 11, 64-bit. 8 GB memory minimum, 16 GB recommended. About
-         10 GB free disk space. No Python, Docker or developer tools.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <strong>PAi — PRIVATE AI. TOTAL PRIVACY.</strong><br><br>
-  Support: <a href="mailto:support@yprivateai.com">support@yprivateai.com</a><br>
-  AI models are supplied by their publishers under their own licences and are not
-  owned by PAi. PAi provides the specialist configuration, installation and support.
-</footer>
-
-</div>
 </body>
 </html>

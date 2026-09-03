@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Offline Property Insurance Claim Software | PAi Claims</title>
-  <meta name="description" content="Organize photos, carrier estimates, and correspondence for a property insurance claim on your own Windows PC. No cloud account, no data leaving the machine.">
+  <meta name="description" content="Organize photos, carrier estimates, and correspondence for a property insurance claim on your own Windows PC. No cloud account, no data leaving the machine. Source-traced repair costs.">
+  <link rel="canonical" href="https://yprivateai.com/pai-claims.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Offline Property Insurance Claim Software | PAi Claims">
   <meta property="og:description" content="Organize property damage evidence, compare estimates, and build source-traced repair costs on your own computer.">
@@ -17,7 +18,6 @@
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Windows 10, Windows 11",
     "url": "https://yprivateai.com/pai-claims.html",
-    "publisher": {"@type": "Organization", "name": "PAi Luton"},
     "description": "Private-first property insurance claim software for organizing evidence, comparing estimates, and building source-traced preliminary repair costs. Runs entirely on the user's computer.",
     "offers": [
       {"@type": "Offer", "name": "First paid case", "price": "20", "priceCurrency": "USD"},
@@ -34,132 +34,282 @@
       {
         "@type": "Question",
         "name": "Does PAi Claims send my claim files to a server?",
-        "acceptedAnswer": {"@type": "Answer", "text": "No. The case folder lives on your computer. There is no account to create and no upload step. The software runs with the network disconnected."}
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The case folder lives on your computer. There is no account to create and no upload step. The software runs with the network disconnected."
+        }
       },
       {
         "@type": "Question",
         "name": "Do I need AI to use PAi Claims?",
-        "acceptedAnswer": {"@type": "Answer", "text": "No. Organizing evidence, comparing estimates, and building repair quantities all work without AI. A compatible local model can be added, and any hosted model requires your own credentials and explicit approval."}
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Organizing evidence, comparing estimates, and building repair quantities all work without AI. A compatible local model can be added, and any hosted model requires your own credentials and explicit approval."
+        }
       },
       {
         "@type": "Question",
         "name": "Is PAi Claims a replacement for a public adjuster or attorney?",
-        "acceptedAnswer": {"@type": "Answer", "text": "No. It is an organizational and analytical aid. It does not interpret your policy, give legal advice, or represent you with a carrier."}
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. It is an organizational and analytical aid. It does not interpret your policy, give legal advice, or represent you with a carrier."
+        }
       },
       {
         "@type": "Question",
-        "name": "What does PAi Claims cost?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Twenty dollars for a first paid case. Additional single cases are $179. Annual access is $2,000. PAi Legal is a separate product and its first case is free."}
+        "name": "What does it run on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Windows 10 and Windows 11, 64-bit. It installs from the Microsoft Store."
+        }
       }
     ]
   }
   </script>
   <style>
-    :root{--bg:#0f1216;--card:#171b21;--line:#29313b;--text:#f2f4f7;--muted:#aeb7c3;--blue:#18a7ff}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "Segoe UI",Arial,sans-serif}
-    main,nav,footer{max-width:980px;margin:auto;padding:0 24px}nav{padding-top:28px}nav a,footer a{color:var(--blue)}
-    header{padding:72px 0 42px}h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin:12px 0 20px;max-width:850px}
-    h2{font-size:30px;margin-top:0}h3{margin-top:0}
-    .eyebrow{color:var(--blue);font-weight:800;letter-spacing:.12em}.lead{font-size:21px;color:var(--muted);max-width:760px}
-    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.button{background:var(--blue);color:#06131c;padding:13px 22px;border-radius:9px;text-decoration:none;font-weight:800}.button.alt{background:transparent;color:var(--text);border:1px solid var(--line)}
-    section{padding:46px 0;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.card{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:12px}.card p{color:var(--muted);margin-bottom:0}
-    .price{font-size:30px;font-weight:900;color:var(--blue)}.notice{border-left:4px solid var(--blue);padding:10px 18px;color:var(--muted)}footer{padding:34px 24px 70px;color:var(--muted)}
-    section p{max-width:760px}
-    .faq h3{margin-bottom:6px}.faq p{color:var(--muted);max-width:760px}
+    :root {
+      --bg: #0F1216;
+      --surface: #171B21;
+      --line: #232830;
+      --text: #F2F4F7;
+      --muted: #9AA4B2;
+      --accent: #18A7FF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Inter, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+    nav { padding: 28px 0 0; font-size: 15px; }
+    nav a { color: var(--accent); text-decoration: none; margin-right: 18px; }
+    nav a:hover { text-decoration: underline; }
+    header { padding: 56px 0 12px; }
+    h1 {
+      font-size: clamp(30px, 5vw, 40px);
+      line-height: 1.15;
+      margin: 12px 0 16px;
+      max-width: 800px;
+    }
+    .lead {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 0 28px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #06131C;
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .btn.ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid #2A2F38;
+    }
+    section {
+      padding: 48px 0;
+      border-top: 1px solid var(--line);
+    }
+    h2 { font-size: 24px; margin: 0 0 12px; }
+    h3 { font-size: 18px; margin: 0 0 8px; }
+    p { color: var(--muted); max-width: 720px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .card h3 { color: var(--text); }
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .price-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 22px;
+      text-align: center;
+    }
+    .price-card .amount {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+      margin: 8px 0;
+    }
+    .faq-item { margin-bottom: 22px; }
+    .faq-item h3 { font-size: 17px; color: var(--text); }
+    .faq-item p { margin: 6px 0 0; }
+    footer {
+      padding: 40px 0 60px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a { color: var(--accent); text-decoration: none; margin-right: 16px; }
+    .notice {
+      border-left: 4px solid var(--accent);
+      padding: 12px 18px;
+      color: var(--muted);
+      margin-top: 24px;
+    }
   </style>
-  <link rel="canonical" href="https://yprivateai.com/pai-claims.html">
 </head>
 <body>
-<nav><a href="index.html">PAi home</a> &nbsp;&middot;&nbsp; <a href="pai-legal.html">PAi Legal</a></nav>
-<main>
-  <header>
-    <div class="eyebrow">PAi CLAIMS</div>
-    <h1>Property insurance claim software that keeps the evidence with you</h1>
-    <p class="lead">Bring photographs, carrier estimates, repair costs, correspondence, and payment records into one private claim workspace on your own Windows PC. No account, no upload, no subscription to a service that holds your file.</p>
-    <div class="buttons">
-      <a class="button" href="https://apps.microsoft.com/detail/9P255VXPD5B4">View PAi Claims in Microsoft Store</a>
-      <a class="button alt" href="#pricing">See pricing</a>
+  <div class="wrap">
+    <nav>
+      <a href="index.html">PAi home</a>
+      <a href="pai-legal.html">PAi Legal</a>
+      <a href="software.html">All software</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+
+    <header>
+      <h1>Offline property insurance claim software that keeps the evidence with you</h1>
+      <p class="lead">
+        Bring photographs, carrier estimates, repair costs, correspondence and payment records into one private claim workspace on your own Windows PC. No account, no upload, no subscription to a service that holds your file.
+      </p>
+      <a class="btn" href="https://apps.microsoft.com/detail/9P255VXPD5B4">View in Microsoft Store</a>
+      <a class="btn ghost" href="pai-legal.html">See PAi Legal</a>
+    </header>
+
+    <section>
+      <h2>The problem with a claim spread across twelve folders</h2>
+      <p>
+        A property damage claim generates paper faster than almost anything else in ordinary life. Within a few weeks of a storm, fire or burst pipe you typically have hundreds of photographs, a long carrier estimate, contractor bids, policy pages and email threads that have already forked.
+      </p>
+      <p>
+        Most people keep this in whatever is closest: photos on the phone, the estimate in Downloads, emails in the inbox, the quote on the kitchen table. What goes missing is the connection between them — which photograph supports which line item, which version the carrier paid on, and what was said on the call that changed the scope.
+      </p>
+      <p>
+        That connection is exactly what matters if the claim is underpaid, denied or reopened. PAi Claims exists to hold that structure in one place, on hardware you own.
+      </p>
+    </section>
+
+    <section>
+      <h2>What the software does</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Claim documentation</h3>
+          <p>Photographs, estimates, carrier records, correspondence, payments and reports live in a case folder you control on your own disk.</p>
+        </div>
+        <div class="card">
+          <h3>Photo damage mapping</h3>
+          <p>Connect visible damage to the supporting photographs and records so context is not lost across separate files and folders.</p>
+        </div>
+        <div class="card">
+          <h3>Estimate comparison</h3>
+          <p>Carrier values are preserved separately and compared against source-traced preliminary repair quantities and prices. Any gap is visible rather than buried.</p>
+        </div>
+        <div class="card">
+          <h3>Visible provenance</h3>
+          <p>See where every figure came from. Supported facts stay separate from assumptions and from anything an AI model inferred.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why carrier values are kept separate from yours</h2>
+      <p>
+        An insurance estimate is one party’s opinion of scope, quantity and unit price. It may be entirely reasonable. It may also miss a room, price a material at a lower grade, or omit labour steps.
+      </p>
+      <p>
+        The only way to know is to compare it line by line against an independently built quantity takeoff. That comparison falls apart if the two sets of numbers get mixed in a single spreadsheet. PAi Claims keeps the two sets structurally distinct. The carrier’s numbers stay as received. Your own quantities and prices sit alongside, each traceable to the measurement or quote it came from.
+      </p>
+    </section>
+
+    <section>
+      <h2>Everything stays on your computer</h2>
+      <p>
+        PAi Claims loads its AI model onto your machine during setup and runs it there. After installation the software works with no network connection, no account, and no data leaving the computer. There is no server holding your claim file.
+      </p>
+      <p>
+        Claim files contain photographs of the inside of your home, your policy number, your address, payment records and correspondence. The safest place for that material is a machine you physically control.
+      </p>
+    </section>
+
+    <section>
+      <h2>When a claim becomes a legal matter</h2>
+      <p>
+        Denials and underpayments sometimes end in a dispute. <a href="pai-legal.html" style="color:var(--accent);">PAi Claims and PAi Legal share a case</a>, so claim evidence carries into the legal workspace instead of being rebuilt from scratch. PAi Legal keeps distinct matters separated and can pull authorities from a PSi Legal corpus while the case files stay where they are.
+      </p>
+      <p>
+        The transition costs nothing extra: PAi Legal is free to download and your first matter there is free.
+      </p>
+    </section>
+
+    <section>
+      <h2>Pricing</h2>
+      <div class="price-grid">
+        <div class="price-card">
+          <div>First paid case</div>
+          <div class="amount">$20</div>
+          <p>Works with the PAi Case File Creator. Evidence carries into PAi Legal if needed.</p>
+        </div>
+        <div class="price-card">
+          <div>Later single case</div>
+          <div class="amount">$179</div>
+          <p>One additional PAi Claims case.</p>
+        </div>
+        <div class="price-card">
+          <div>Annual access</div>
+          <div class="amount">$2,000</div>
+          <p>For anyone handling claims repeatedly rather than once.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Does PAi Claims send my claim files to a server?</h3>
+        <p>No. The case folder lives on your computer. There is no account to create and no upload step. The software runs with the network disconnected.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need AI to use it?</h3>
+        <p>No. Organizing evidence, comparing estimates and building repair quantities all work without AI. A compatible local model can be added on your own hardware.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will it tell me what my claim is worth?</h3>
+        <p>No. It organizes the evidence and makes the gap between positions visible. What that gap is worth depends on your policy language, jurisdiction and facts the software cannot see.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this a replacement for a public adjuster or attorney?</h3>
+        <p>No. It is an organizational and analytical aid. It does not interpret your policy, give legal advice, or represent you with a carrier.</p>
+      </div>
+    </section>
+
+    <div class="notice">
+      PAi Claims is an organizational and analytical aid. It is not an insurer, public adjuster, law firm, or substitute for licensed professional advice. Verify policy interpretations, deadlines, building-code requirements, quantities, prices and generated documents.
     </div>
-  </header>
 
-  <section>
-    <h2>The problem with a claim spread across twelve folders</h2>
-    <p>A property damage claim generates paper faster than almost anything else in ordinary life. Within a few weeks of a storm, a fire, or a burst supply line, a homeowner typically has several hundred photographs on a phone, a carrier estimate running to twenty or thirty pages of line items, one or two contractor bids, a policy declarations page, an adjuster's business card, a scope sheet, and an email thread that has already forked into four sub-threads.</p>
-    <p>Most people keep this in whatever is closest to hand: photos stay on the phone, the estimate sits in a Downloads folder, the emails stay in the inbox, and the contractor's quote is a paper sheet on the kitchen table. Each item is fine on its own. What goes missing is the connection between them — which photograph supports which line item, which version of the estimate the carrier actually paid on, and what was said on the call three weeks ago that changed the scope.</p>
-    <p>That connection is exactly what matters if the claim is underpaid, denied, or reopened as a supplement. A photograph with no date, no location, and no link to a repair line is much weaker evidence than the same photograph tied to the item it documents.</p>
-    <p>PAi Claims exists to hold that structure in one place, on hardware you own.</p>
-  </section>
-
-  <section>
-    <h2>What the software does</h2>
-    <div class="grid">
-      <div class="card"><h3>Claim documentation</h3><p>Photographs, estimates, carrier records, correspondence, payments, reports, and exports live in a case folder you control on your own disk.</p></div>
-      <div class="card"><h3>Photo damage mapping</h3><p>Connect visible damage to the supporting photographs and records, so context is not lost across separate files and folders.</p></div>
-      <div class="card"><h3>Estimate comparison</h3><p>Carrier values are preserved separately and compared against source-traced preliminary repair quantities and prices, so any gap is visible rather than buried.</p></div>
-      <div class="card"><h3>Visible provenance</h3><p>See where every figure came from. Supported facts stay separate from assumptions and from anything an AI model inferred.</p></div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Why carrier values are kept separate from yours</h2>
-    <p>An insurance estimate is not a neutral document. It is one party's opinion of scope, quantity, and unit price, produced with software the carrier licenses and pricing data the carrier subscribes to. It may be entirely reasonable. It may also miss a room, price a material at a grade below what was there, or omit the labor steps between demolition and finish.</p>
-    <p>The only way to know is to compare it line by line against an independently built quantity takeoff. That comparison falls apart if the two sets of numbers get mixed together in a single spreadsheet, which is what usually happens when someone tries to do this in Excel. Once carrier quantities and your own quantities occupy the same cells, the original position is gone and the disagreement becomes impossible to articulate.</p>
-    <p>PAi Claims keeps the two sets structurally distinct. The carrier's numbers stay as received. Your own preliminary quantities and prices sit alongside, each traceable back to the measurement or quote it came from. The delta between them is a result, not a guess.</p>
-  </section>
-
-  <section>
-    <h2>Provenance, and why it matters more than a total</h2>
-    <p>Any tool can produce a number. The useful question is where the number came from. A figure derived from a measured wall area, a figure copied from a contractor's bid, and a figure a language model produced from a photograph are three different kinds of claim, and treating them identically is how a well-intentioned file becomes indefensible.</p>
-    <p>PAi Claims marks the difference. Supported facts — things with a document, measurement, or record behind them — are held apart from assumptions and from AI-generated inferences. If a figure has to be defended later, the basis for it is attached to it rather than remembered.</p>
-    <p>This matters most in the situation nobody plans for: the claim that goes from routine to contested. At that point the file stops being a personal organizing aid and starts being a record someone else will read critically.</p>
-  </section>
-
-  <section>
-    <h2>Everything stays on your computer</h2>
-    <p>PAi Claims is a PAi product, which means it loads its AI model onto your machine during setup and runs it there. After installation the software works with no network connection, no account, and no data leaving the computer. There is no server holding your claim file, because there is no server.</p>
-    <p>This is a deliberate design choice rather than a marketing position. Claim files contain photographs of the inside of your home, your policy number, your address, records of what you were paid and when, and correspondence you may not want retained by a third party indefinitely. The safest place for that material is a machine you physically control.</p>
-    <p>If you want a larger model than a desktop can hold, that path exists through the PSi line, and it is off until you enable it and supply your own provider credentials.</p>
-  </section>
-
-  <section>
-    <h2>When a claim becomes a legal matter</h2>
-    <p>Denials and underpayments sometimes end in a dispute, and a dispute needs a different kind of file. PAi Claims and <a href="pai-legal.html">PAi Legal</a> share a case, so claim evidence carries into the legal workspace instead of being rebuilt from scratch. PAi Legal keeps distinct matters separated — a denied claim and a subsequent malpractice question are two disputes with two defendants — and can pull authorities from a PSi Legal corpus while the case files stay where they are.</p>
-    <p>The transition costs nothing extra: PAi Legal is free to download and your first matter there is free, whether or not the case started in PAi Claims.</p>
-  </section>
-
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <div class="grid">
-      <div class="card"><div class="price">$20</div><h3>First paid case</h3><p>Works with the PAi Case File Creator and PSi Legal corpus retrieval. Evidence carries into PAi Legal intact if the claim becomes a dispute.</p></div>
-      <div class="card"><div class="price">$179</div><h3>Later single case</h3><p>One additional PAi Claims case.</p></div>
-      <div class="card"><div class="price">$2,000</div><h3>Annual access</h3><p>Annual PAi Claims access, for anyone handling claims repeatedly rather than once.</p></div>
-    </div>
-  </section>
-
-  <section class="faq">
-    <h2>Common questions</h2>
-    <h3>Does PAi Claims send my claim files to a server?</h3>
-    <p>No. The case folder lives on your computer. There is no account to create and no upload step, and the software runs with the network disconnected.</p>
-    <h3>Do I need AI to use it?</h3>
-    <p>No. Organizing evidence, comparing estimates, and building repair quantities all work without AI. A compatible local model can be added on your own hardware, and any hosted model requires your own credentials and explicit approval.</p>
-    <h3>Will it tell me what my claim is worth?</h3>
-    <p>No, and treat anything that claims otherwise with suspicion. It organizes the evidence and makes the gap between positions visible. What that gap is worth depends on your policy language, your jurisdiction, and facts the software cannot see.</p>
-    <h3>Is this a replacement for a public adjuster or an attorney?</h3>
-    <p>No. It is an organizational and analytical aid. It does not interpret your policy, give legal advice, or represent you with a carrier.</p>
-    <h3>What does it run on?</h3>
-    <p>Windows 10 and Windows 11, 64-bit. It installs from the Microsoft Store.</p>
-  </section>
-
-  <section>
-    <h2>AI is optional</h2>
-    <p>Core estimating and comparison tools work without AI. Compatible local AI can run on the user's computer. Hosted AI requires explicit approval and the user's own provider credentials.</p>
-    <p class="notice">PAi Claims is an organizational and analytical aid. It is not an insurer, public adjuster, law firm, or substitute for licensed professional advice. Verify policy interpretations, deadlines, building-code requirements, quantities, prices, and generated documents.</p>
-    <div class="buttons">
-      <a class="button" href="https://apps.microsoft.com/detail/9P255VXPD5B4">View PAi Claims in Microsoft Store</a>
-    </div>
-    <p style="color:var(--muted);margin-top:18px">Store ID 9P255VXPD5B4 &nbsp;&middot;&nbsp; Windows 10 and 11, 64-bit</p>
-  </section>
-</main>
-<footer><a href="index.html">PAi home</a> &nbsp;&middot;&nbsp; <a href="pai-legal.html">PAi Legal</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a></footer>
+    <footer>
+      <a href="index.html">PAi home</a>
+      <a href="pai-legal.html">PAi Legal</a>
+      <a href="software.html">All software</a>
+      <a href="setup.html">Setup</a>
+      <a href="privacy.html">Privacy</a>
+      <p style="margin-top:18px;">Store ID 9P255VXPD5B4 · Windows 10 and 11, 64-bit</p>
+    </footer>
+  </div>
 </body>
 </html>
