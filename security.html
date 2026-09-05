@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>On-Premises Legal Software Security: Local, Encrypted, Audited | PAi Legal</title>
+<meta name="description" content="Loopback enforcement, a token-gated drafting bridge, DPAPI credentials, SHA-256 verified model downloads, role control on Windows accounts, a sealed HMAC audit chain and self-verifying encrypted backups.">
+<link rel="canonical" href="https://yprivateai.com/security.html">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="yPrivateAI">
+<meta property="og:url" content="https://yprivateai.com/security.html">
+<meta property="og:title" content="How PAi Legal protects a case — local by construction">
+<meta property="og:description" content="Loopback enforcement, a token-gated drafting bridge, DPAPI credentials, SHA-256 verified model downloads, role control on Windows accounts, a sealed HMAC audit chain and self-verifying encrypted backups.">
+<meta property="og:image" content="https://yprivateai.com/og-pai.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://yprivateai.com/security.html#page","url":"https://yprivateai.com/security.html","name":"On-Premises Legal Software Security: Local, Encrypted, Audited | PAi Legal","description":"How PAi Legal keeps a case local, encrypted and audited","isPartOf":{"@id":"https://yprivateai.com/#site"},"publisher":{"@id":"https://yprivateai.com/#org"},"primaryImageOfPage":"https://yprivateai.com/og-pai.png","about":{"@type":"SoftwareApplication","name":"PAi Legal","url":"https://apps.microsoft.com/detail/9NP4XL1MRXP8","operatingSystem":"Windows 10, Windows 11","applicationCategory":"BusinessApplication"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yprivateai.com/"},{"@type":"ListItem","position":2,"name":"Security","item":"https://yprivateai.com/security.html"}]}]}
+</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#08111F">
+<style>
+:root{
+  --ink:#08111F;--ink-2:#0D1B2E;--rule:#1C2E45;
+  --gold:#C8A03C;--gold-lt:#E4C471;--blue:#3F8EFC;--blue-lt:#7DB6FF;
+  --text:#E6EDF6;--muted:#93A5BC;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:"Segoe UI",-apple-system,BlinkMacSystemFont,Inter,Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--gold-lt)}
+.wrap{max-width:820px;margin:0 auto;padding:0 28px}
+header{border-bottom:1px solid var(--rule)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 0;max-width:1120px;margin:0 auto;padding-left:28px;padding-right:28px}
+.mark{font-family:var(--serif);font-size:24px;text-decoration:none;color:var(--text)}
+.mark b{color:var(--gold-lt);font-weight:600}.mark i{font-style:normal;color:var(--blue-lt)}
+nav{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+nav a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+nav a:hover,nav a:focus-visible{color:var(--text);border-bottom-color:var(--gold)}
+.crumb{color:var(--muted);font-size:15px;padding:34px 0 0}
+.crumb a{color:var(--muted)}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5vw,52px);line-height:1.08;margin:14px 0 18px;letter-spacing:-.01em}
+.lede{font-size:20px;color:var(--muted);margin:0 0 10px}
+h2{font-family:var(--serif);font-weight:500;font-size:30px;margin:52px 0 14px;line-height:1.2}
+h3{font-size:18px;font-weight:600;margin:30px 0 6px}
+p{max-width:70ch}
+p,li{color:#CFDAE8}
+strong{color:#fff;font-weight:600}
+ul.plain{list-style:none;padding:0;margin:18px 0}
+ul.plain li{padding:12px 0 12px 20px;border-top:1px solid var(--rule);position:relative}
+ul.plain li:before{content:"";position:absolute;left:0;top:21px;width:9px;height:1px;background:var(--gold)}
+.stage{border:1px solid var(--rule);background:var(--ink-2);padding:24px 26px;margin:22px 0}
+.stage h3{margin:0 0 8px;font-family:var(--serif);font-weight:500;font-size:22px;color:var(--gold-lt)}
+.stage p{margin:0;color:var(--muted)}
+.stage p+p{margin-top:10px}
+.tier{display:grid;grid-template-columns:190px 1fr;gap:0 26px;border-top:1px solid var(--rule);padding:20px 0}
+.tier b{font-family:var(--serif);font-size:20px;font-weight:500}
+.tier p{margin:0;color:var(--muted)}
+.tier small{display:block;color:var(--muted);font-size:13px;margin-top:4px;font-family:var(--sans)}
+.note{border-left:3px solid var(--blue);padding:12px 0 12px 20px;margin:26px 0;font-weight:600}
+table{border-collapse:collapse;width:100%;margin:22px 0;font-size:16px}
+th,td{text-align:left;padding:13px 14px;border-top:1px solid var(--rule);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td:first-child{color:var(--gold-lt);font-weight:600;white-space:nowrap}
+.next{border-top:1px solid var(--rule);margin-top:56px;padding:26px 0 0;display:flex;gap:26px;flex-wrap:wrap;font-size:16px}
+footer{border-top:1px solid var(--rule);margin-top:44px;padding:32px 0 54px;color:var(--muted);font-size:15px}
+footer a{color:var(--muted)}
+@media (max-width:640px){.tier{grid-template-columns:1fr;gap:6px}}
+.shot{margin:30px 0 34px;border:1px solid var(--rule);background:var(--ink-2)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:12px 16px;color:var(--muted);font-size:15px;line-height:1.55;border-top:1px solid var(--rule)}
+</style>
+
+
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="mark" href="index.html"><b>yPrivate</b><i>AI</i></a>
+    <nav>
+      <a href="pai-legal.html">PAi Legal</a>
+      <a href="ingest.html">Ingest</a>
+      <a href="promotion.html">Promotion</a>
+      <a href="parliament.html">Analysis</a>
+      <a href="security.html">Security</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumb"><a href="index.html">Home</a> · <a href="pai-legal.html">PAi Legal</a> · Security</p>
+<h1>On-premises legal software security: where the case lives and what cannot reach it</h1>
+<p class="lede">Privacy in this product is not a policy sentence. It is a set of refusals built into the code, and each one is checkable.</p>
+
+<h2>Local by construction</h2>
+<figure class="shot">
+  <img src="img/case-storage.png" width="1600" height="868" loading="lazy" decoding="async"
+       alt="PAi Legal case dashboard with a Choose case storage dialog asking where a new case should be stored: a folder or external drive, or the private folder on this computer.">
+  <figcaption>Every case begins by asking where it should live. An external drive or a jump drive is a first-class answer — the whole matter, its OCR text, indexes, notes and exports go there and nowhere else.</figcaption>
+</figure>
+
+
+<p>Every internal service PAi Legal talks to must resolve to a loopback address, and that is enforced on the URL before a single request goes out. Hostnames other than literal <em>localhost</em> are rejected outright to defeat DNS rebinding, and URLs carrying embedded credentials are refused. This exists because a local feature must not be silently converted into a remote disclosure channel by an environment variable or a writable configuration file — so even a tampered config cannot point the app at someone else's server.</p>
+
+<h2>The drafting bridge, and the four things it refuses</h2>
+<p>When you export a brief to an external drafter, PAi Legal serves it to your own browser rather than making you hunt for a file. That server is deliberately narrow:</p>
+<ul class="plain">
+  <li>It binds to 127.0.0.1, never to all interfaces — the difference between a local tool and a data leak on the office wifi</li>
+  <li>It sends no cross-origin header, so a page open in another tab cannot read the response</li>
+  <li>It requires a random per-session token in the path, generated per run and never written to disk</li>
+  <li>It lets the operating system pick the port, holds one brief at a time in memory, and stops when the app does</li>
+</ul>
+<p>Requests whose Host header does not match are rejected, and request logging is deliberately off — a log of which case files were fetched is not something worth keeping.</p>
+
+<h2>The private model</h2>
+<p>The runtime ships inside the product. On setup it scans this machine — memory, free disk, cores, GPU — and offers only models this computer can genuinely run, holding back headroom for Windows, the context cache and an interrupted download rather than making an optimistic recommendation on a busy machine.</p>
+<p>The download itself is verified twice over: PAi Legal resolves an <strong>immutable repository revision</strong> and the file's <strong>published SHA-256</strong> before fetching, refuses to proceed without both, rejects an unsafe resume range on a partial download, and deletes the file if the final hash does not match. A partial download is preserved so setup can resume.</p>
+<p>At run time the model server is bound to loopback with a freshly generated per-run API key. After that one-time download, nothing leaves the machine.</p>
+
+<h2>Credentials</h2>
+<p>Tokens live in a Windows DPAPI vault tied to the signed-in account, with an application-specific entropy value, and plaintext is never written to disk. If an installed component tries to publish a token in plaintext through a configuration file, PAi Legal refuses it and records why — the configuration may name a credential, not carry one.</p>
+
+<h2>Roles, bound to Windows accounts</h2>
+<p>Owner, lawyer, paralegal, intake and auditor each carry their own permission set — who can create a case, write evidence or work product, export, back up, verify the audit log, run a conflict check, manage integrations. Roles map to operating-system accounts, and the last owner cannot demote themselves without naming another.</p>
+<p>The status screen states the limitation rather than overselling it: this is meaningful authorization when staff use separate Windows accounts and the workspace permissions do not let them rewrite the policy file. It is role control, not authentication, and it says so.</p>
+
+<h2>A firm can require encryption</h2>
+<p>Policy can be set so that no case is written to a volume that is not BitLocker-protected. When enforcement is on and the volume is not protected, the write is refused with the reason attached.</p>
+
+<h2>A sealed audit chain</h2>
+<p>Case events append to a keyed integrity chain: each record carries its sequence number, the previous record's hash, and its own HMAC-SHA256 seal. Verification walks the chain and reports the exact line where a sequence break, a hash mismatch or an altered record occurs. Records written before the chain existed are sealed forward and permanently marked as having an unsealed origin — the software will not pretend to prove something it cannot. An external anchor can be checked against the current head and comes back current, extended or mismatched.</p>
+
+<h2>Backups that verify themselves</h2>
+<p>A case exports to a single encrypted file: scrypt-derived key, AES-GCM, with a manifest hashing every document inside the authenticated envelope. Restoring checks each file against that manifest and refuses the archive if anything is off — a wrong passphrase or altered ciphertext fails authentication outright, and so do unsafe paths, symbolic links, duplicate entries, unmanifested files, size mismatches, or a restore that would not fit safely on the disk. The audit key travels inside the encrypted envelope rather than in a sidecar next to the case.</p>
+
+<h2>What the software says about itself</h2>
+<p class="note">Case files, OCR text, indexes and AI prompts remain on this computer. External sends require your action.</p>
+<p>That line sits in the application header, not only in a privacy policy — and the diagnostics screen will show you every path and endpoint it touched to reach that state.</p>
+<div class="next"><a href="pai-legal.html">Back to PAi Legal</a><a href="promotion.html">How facts get promoted</a><a href="ingest.html">How documents get in</a></div>
+</main>
+<footer>
+  <div class="wrap" style="padding:0">yPrivateAI · Ray City, Georgia · <a href="mailto:keith@thenewfaithchurch.org">keith@thenewfaithchurch.org</a> · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></div>
+</footer>
+</body>
+</html>

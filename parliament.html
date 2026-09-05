@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deterministic Case Analysis: Find the Missing Element of a Claim | PAi Legal</title>
+<meta name="description" content="Three channels, a closure rule, and the missing element as the finding. How PAi Legal computes a case deterministically, marks what you only asserted, keeps separate matters apart, and re-brackets anything the model says.">
+<link rel="canonical" href="https://yprivateai.com/parliament.html">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="yPrivateAI">
+<meta property="og:url" content="https://yprivateai.com/parliament.html">
+<meta property="og:title" content="The Parliament — how PAi Legal builds the relational case map">
+<meta property="og:description" content="Clerk, Advocate, Opposition, Precedent Judge, Forecaster and Recorder: six members with one job each, computing the case analysis deterministically from the record.">
+<meta property="og:image" content="https://yprivateai.com/og-pai.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://yprivateai.com/parliament.html#page","url":"https://yprivateai.com/parliament.html","name":"Deterministic Case Analysis: Find the Missing Element of a Claim | PAi Legal","description":"Deterministic case analysis that names the missing element of a claim","isPartOf":{"@id":"https://yprivateai.com/#site"},"publisher":{"@id":"https://yprivateai.com/#org"},"primaryImageOfPage":"https://yprivateai.com/og-pai.png","about":{"@type":"SoftwareApplication","name":"PAi Legal","url":"https://apps.microsoft.com/detail/9NP4XL1MRXP8","operatingSystem":"Windows 10, Windows 11","applicationCategory":"BusinessApplication"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://yprivateai.com/"},{"@type":"ListItem","position":2,"name":"Case analysis","item":"https://yprivateai.com/parliament.html"}]}]}
+</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#08111F">
+<style>
+:root{
+  --ink:#08111F;--ink-2:#0D1B2E;--rule:#1C2E45;
+  --gold:#C8A03C;--gold-lt:#E4C471;--blue:#3F8EFC;--blue-lt:#7DB6FF;
+  --text:#E6EDF6;--muted:#93A5BC;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:"Segoe UI",-apple-system,BlinkMacSystemFont,Inter,Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--gold-lt)}
+.wrap{max-width:820px;margin:0 auto;padding:0 28px}
+header{border-bottom:1px solid var(--rule)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 0;max-width:1120px;margin:0 auto;padding-left:28px;padding-right:28px}
+.mark{font-family:var(--serif);font-size:24px;text-decoration:none;color:var(--text)}
+.mark b{color:var(--gold-lt);font-weight:600}.mark i{font-style:normal;color:var(--blue-lt)}
+nav{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+nav a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+nav a:hover,nav a:focus-visible{color:var(--text);border-bottom-color:var(--gold)}
+.crumb{color:var(--muted);font-size:15px;padding:34px 0 0}
+.crumb a{color:var(--muted)}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5vw,52px);line-height:1.08;margin:14px 0 18px;letter-spacing:-.01em}
+.lede{font-size:20px;color:var(--muted);margin:0 0 10px}
+h2{font-family:var(--serif);font-weight:500;font-size:30px;margin:52px 0 14px;line-height:1.2}
+h3{font-size:18px;font-weight:600;margin:30px 0 6px}
+p{max-width:70ch}
+p,li{color:#CFDAE8}
+strong{color:#fff;font-weight:600}
+ul.plain{list-style:none;padding:0;margin:18px 0}
+ul.plain li{padding:12px 0 12px 20px;border-top:1px solid var(--rule);position:relative}
+ul.plain li:before{content:"";position:absolute;left:0;top:21px;width:9px;height:1px;background:var(--gold)}
+.stage{border:1px solid var(--rule);background:var(--ink-2);padding:24px 26px;margin:22px 0}
+.stage h3{margin:0 0 8px;font-family:var(--serif);font-weight:500;font-size:22px;color:var(--gold-lt)}
+.stage p{margin:0;color:var(--muted)}
+.stage p+p{margin-top:10px}
+.tier{display:grid;grid-template-columns:190px 1fr;gap:0 26px;border-top:1px solid var(--rule);padding:20px 0}
+.tier b{font-family:var(--serif);font-size:20px;font-weight:500}
+.tier p{margin:0;color:var(--muted)}
+.tier small{display:block;color:var(--muted);font-size:13px;margin-top:4px;font-family:var(--sans)}
+.note{border-left:3px solid var(--blue);padding:12px 0 12px 20px;margin:26px 0;font-weight:600}
+table{border-collapse:collapse;width:100%;margin:22px 0;font-size:16px}
+th,td{text-align:left;padding:13px 14px;border-top:1px solid var(--rule);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+td:first-child{color:var(--gold-lt);font-weight:600;white-space:nowrap}
+.next{border-top:1px solid var(--rule);margin-top:56px;padding:26px 0 0;display:flex;gap:26px;flex-wrap:wrap;font-size:16px}
+footer{border-top:1px solid var(--rule);margin-top:44px;padding:32px 0 54px;color:var(--muted);font-size:15px}
+footer a{color:var(--muted)}
+@media (max-width:640px){.tier{grid-template-columns:1fr;gap:6px}}
+.shot{margin:30px 0 34px;border:1px solid var(--rule);background:var(--ink-2)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:12px 16px;color:var(--muted);font-size:15px;line-height:1.55;border-top:1px solid var(--rule)}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="mark" href="index.html"><b>yPrivate</b><i>AI</i></a>
+    <nav>
+      <a href="pai-legal.html">PAi Legal</a>
+      <a href="ingest.html">Ingest</a>
+      <a href="promotion.html">Promotion</a>
+      <a href="parliament.html">Analysis</a>
+      <a href="security.html">Security</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<p class="crumb"><a href="index.html">Home</a> · <a href="pai-legal.html">PAi Legal</a> · Parliament</p>
+<h1>Deterministic case analysis that names what your claim has not proved</h1>
+<p class="lede">Not a vote between model personas. A closure rule applied to three channels of a legal case, with the gap it exposes as the finding. Nothing here calls a model — the findings are identical whether or not a private AI is installed.</p>
+
+<h2>Three channels</h2>
+<p>Strip a civil case down and every element of every theory sits on one of three things:</p>
+<table>
+  <tr><th>Channel</th><th>What lives there</th></tr>
+  <tr><td>Matter</td><td>Amounts, measurements, injury, physical extent — what it cost.</td></tr>
+  <tr><td>Relation</td><td>Parties, duties, courts, authorities, obligations — who owed what to whom.</td></tr>
+  <tr><td>Chronology</td><td>Acts, dates, sequence, procedural position — when it happened.</td></tr>
+</table>
+<p>These compose under a fixed algebraic rule rather than a heuristic. Two like channels cancel to the baseline; two different channels leave the third as their residue. Relation and chronology together point at matter. Matter and relation point at chronology. The composition is closed and verifiable, and the software checks that closure holds before it relies on it.</p>
+
+<h2>The gap is the finding</h2>
+<p class="note">Two supported channels name the third. If the third is not in your record, that absence is the answer the software gives you.</p>
+<p>A legal theory is the host the channels sit inside. Breach of contract needs a contract that bound the parties (relation), performance that failed on a date (chronology), and a measurable loss (matter). Support two of those from the documents and the algebra names the one you are missing — before a judge does.</p>
+<p>Each theory carries its own text for what is missing, written to be useful rather than clinical. The bad-faith theory is the sharpest example, and the one that saves people from filing something that dies on a motion:</p>
+<div class="stage">
+  <h3>Bad faith, and the amount that does not count</h3>
+  <p>Bad faith needs harm the carrier's conduct caused <strong>on top of</strong> what the policy already owed. So amounts are typed by the line they appear on: attorney's fees, interest, punitive damages, consequential loss and emotional distress read as harm beyond the benefit; estimates, repair costs, ACV, RCV, policy limits and deductibles read as the benefit itself.</p>
+  <p>Anything ambiguous is typed as the policy benefit — the conservative reading, which can never manufacture support for a bad-faith claim. If every amount in your record is the benefit, the software tells you plainly: paying the estimate late is a breach, not bad faith.</p>
+</div>
+
+<h2>A keyword is not support</h2>
+<p>Matching a word is easy and worthless on its own, because the sentence containing it may be denying the very thing you need. Support is read clause by clause: the software finds the clause the match sits in, and a denial anywhere in it — <em>no</em>, <em>never</em>, <em>without</em>, <em>dismissed</em>, <em>insufficient</em>, <em>fails to establish</em>, or a "denies that" running into the match — means the element stays open for human review. "Not only" is treated as the intensifier it is, not a negation. Uncertainty leaves the element unsupported rather than letting a pattern close it.</p>
+
+<h2>Saying it yourself is not proof</h2>
+<p>An element supported only by your own pleading is marked as asserted rather than supported, and the plain-language view says so directly: you say this in your own court filing, but saying it in your filing is not proof of it — a judge will want a document from outside your own paperwork. It then tells you which channel of proof to go find.</p>
+
+<h2>The map and its six projections</h2>
+<figure class="shot">
+  <img src="img/case-map.png" width="1600" height="868" loading="lazy" decoding="async"
+       alt="The Precognitive Case Map in PAi Legal showing documents as transitions between four channels, with a Parliament Projections panel listing Clerk, Advocate, Opposition, Precedent Judge, Forecaster and Recorder findings.">
+  <figcaption>Documents sit on transitions between the channels. The panel on the right is the Parliament: Clerk traces the record, Advocate finds the strongest path, Opposition names the thinnest channel, Precedent Judge confirms nothing was promoted.</figcaption>
+</figure>
+
+
+<p>Documents occupy transitions between those channels, and the case map is built from them. Six projections read that map, each with one job:</p>
+<table>
+  <tr><th>Projection</th><th>What it reports</th></tr>
+  <tr><td>Clerk</td><td>How many indexed document transitions are replayable from their stored signatures. A statement about the record, not about the case.</td></tr>
+  <tr><td>Advocate</td><td>Which document carries the greatest relational pressure — and says in the same breath that this identifies attention, not truth.</td></tr>
+  <tr><td>Opposition</td><td>The least represented channel: the thinnest part of the case and the first structural gap to inspect.</td></tr>
+  <tr><td>Precedent Judge</td><td>Confirms no transition or recurrence promoted a stored epistemic status. This one exists to say no.</td></tr>
+  <tr><td>Forecaster</td><td>What the strongest mapped cross-pair leaves as its unresolved residue — the next thing that has to be answered.</td></tr>
+  <tr><td>Recorder</td><td>The seed and replay signature, so the whole finding can be reproduced exactly.</td></tr>
+</table>
+<p class="note">The map is a structural forecast of possible next states in the record. It is not a prediction of what a court will do.</p>
+
+<h2>More than one lawsuit in one folder</h2>
+<p>Trouble rarely arrives as a single suit. A claim gets denied, then the lawyer hired to fight the denial mishandles it: two matters, different defendants, different theories, one underlying event. Filed together they look like one dispute, and everything downstream inherits the confusion — retrieval pulling bad-faith authorities for a malpractice question, a draft that merges two suits.</p>
+<p>So matters are detected from captions, docket numbers and claim numbers and kept distinct — but deliberately <strong>not severed into separate folders</strong>, because the malpractice matter exists because of the insurance claim and its proof lives in the insurance documents. The links between matters are recorded with the reason for each link. A document with no caption, docket or claim number is left unassigned rather than guessed at.</p>
+<p>Each matter is also marked filed or still building, because whether a court has taken a case in is the single most consequential thing to be wrong about — and the software says plainly that "not filed" does not mean no clock is running.</p>
+
+<h2>Where the model is allowed to speak</h2>
+<p>Last, and on a leash. Its instructions forbid inventing a citation, quotation, date, holding, party, docket number or fact, and require every factual statement to name its supplied source marker. Its output is then <strong>re-bracketed by the software before you see it</strong>: any claim it tried to mark independently validated is checked against the actual validated inputs and demoted to speculative unless it aligns exactly with one. Prose it produces on its own authority is marked speculative on its face.</p>
+<p>The model cannot award itself credibility. It phrases the finding; the record makes it.</p>
+
+<div class="next"><a href="ingest.html">How documents get in</a><a href="promotion.html">How facts get promoted</a><a href="pai-legal.html">Back to PAi Legal</a></div>
+</main>
+<footer>
+  <div class="wrap" style="padding:0">yPrivateAI · Ray City, Georgia · <a href="mailto:keith@thenewfaithchurch.org">keith@thenewfaithchurch.org</a> · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></div>
+</footer>
+</body>
+</html>
