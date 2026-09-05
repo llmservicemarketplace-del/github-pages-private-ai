@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>AI Intelligence With Evidence Control | How PAi Claims Keeps AI Grounded</title>
+
+<meta name="description" content="PAi Claims lets AI inspect, compare, estimate, research, reason and draft while deterministic evidence controls decide what can become part of the factual claim record.">
+
+<link rel="canonical" href="https://yprivateai.com/claims-ai-evidence-control.html">
+
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="yPrivateAI">
+<meta property="og:url" content="https://yprivateai.com/claims-ai-evidence-control.html">
+<meta property="og:title" content="The claim is built from traceable evidence — not by AI">
+<meta property="og:description" content="PAi Claims gives AI room to analyze the claim while software outside the model controls what is allowed to become established fact.">
+<meta property="og:image" content="https://yprivateai.com/og-pai.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Powerful AI. Evidence controls the facts.">
+<meta name="twitter:description" content="AI does the heavy analysis. Traceable evidence decides what survives.">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"TechArticle",
+  "headline":"The claim is built from traceable evidence — not by AI",
+  "description":"How PAi Claims separates AI intelligence from factual authority using provenance, independent evidence, contradictions and application-controlled evidence states.",
+  "url":"https://yprivateai.com/claims-ai-evidence-control.html",
+  "mainEntityOfPage":"https://yprivateai.com/claims-ai-evidence-control.html",
+  "about":{
+    "@type":"SoftwareApplication",
+    "name":"PAi Claims",
+    "operatingSystem":"Windows 10, Windows 11",
+    "applicationCategory":"BusinessApplication",
+    "url":"https://yprivateai.com/pai-claims.html"
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"yPrivateAI",
+    "url":"https://yprivateai.com/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Does PAi Claims stop the AI from reasoning?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. PAi Claims is designed to let AI inspect, compare, reason, estimate, research, explain and draft. The limitation is on factual authority, not analytical capability."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can AI make its own observation into an established claim fact?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. AI can create a provisional observation or proposition, but application-controlled evidence rules determine whether that proposition gains stronger support."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What happens when evidence contradicts the AI?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"The contradiction remains part of the claim record. PAi Claims does not allow the model to silently overwrite conflicting source evidence."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Why separate intelligence from authority?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"AI is extremely useful for finding relationships and doing complex analysis, but factual claim statements need traceable sources. Separating those jobs allows the software to use AI aggressively without making model confidence equivalent to evidence."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+
+:root{
+  --bg:#08111F;
+  --surface:#0D1B2E;
+  --surface2:#111F33;
+  --line:#1C2E45;
+  --text:#E6EDF6;
+  --muted:#93A5BC;
+  --blue:#3F8EFC;
+  --blue-lt:#7DB6FF;
+  --gold:#C8A03C;
+  --gold-lt:#E4C471;
+  --green:#63D297;
+  --red:#FF8181;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:"Segoe UI",-apple-system,BlinkMacSystemFont,Inter,Roboto,Helvetica,Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit}
+
+.wrap{
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 28px;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.brand{
+  font-family:var(--serif);
+  font-size:24px;
+  text-decoration:none;
+}
+
+.brand b{color:var(--blue-lt)}
+
+.links{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+.links a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:15px;
+}
+
+.links a:hover{color:var(--text)}
+
+.hero{
+  padding:84px 0 72px;
+}
+
+.eyebrow{
+  color:var(--blue-lt);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:13px;
+  font-weight:700;
+}
+
+h1{
+  font-family:var(--serif);
+  font-size:clamp(42px,6vw,70px);
+  line-height:1.04;
+  font-weight:500;
+  max-width:15ch;
+  margin:14px 0 22px;
+}
+
+.lead{
+  color:var(--muted);
+  font-size:21px;
+  max-width:800px;
+}
+
+.lead strong{color:var(--text)}
+
+.actions{
+  margin-top:30px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  border:1px solid var(--blue);
+  text-decoration:none;
+  font-weight:700;
+}
+
+.btn.primary{
+  background:var(--blue);
+  color:#07111D;
+}
+
+.btn.secondary{
+  color:var(--blue-lt);
+}
+
+section{
+  padding:70px 0;
+  border-top:1px solid var(--line);
+}
+
+h2{
+  font-family:var(--serif);
+  font-size:clamp(30px,4vw,44px);
+  line-height:1.15;
+  font-weight:500;
+  margin:0 0 20px;
+}
+
+h3{
+  font-size:19px;
+  margin:0 0 8px;
+}
+
+p{
+  color:var(--muted);
+  max-width:810px;
+}
+
+p strong{color:var(--text)}
+
+.statement{
+  max-width:870px;
+  border-left:3px solid var(--blue);
+  background:var(--surface);
+  padding:25px 28px;
+  margin:30px 0;
+}
+
+.statement strong{
+  font-family:var(--serif);
+  font-size:26px;
+  line-height:1.3;
+  font-weight:500;
+}
+
+.big-idea{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:32px;
+}
+
+.side{
+  border:1px solid var(--line);
+  background:var(--surface);
+  padding:30px;
+}
+
+.side.ai{
+  border-top:3px solid var(--blue);
+}
+
+.side.evidence{
+  border-top:3px solid var(--green);
+}
+
+.side h3{
+  font-family:var(--serif);
+  font-size:27px;
+  font-weight:500;
+}
+
+.side.ai h3{color:var(--blue-lt)}
+.side.evidence h3{color:var(--green)}
+
+.side ul{
+  color:var(--muted);
+  padding-left:20px;
+}
+
+.side li{
+  margin:8px 0;
+}
+
+.flow{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:30px 0;
+}
+
+.flow span{
+  padding:10px 13px;
+  border:1px solid var(--line);
+  background:var(--surface);
+  color:#CFDAE8;
+  font-size:14px;
+}
+
+.flow b{
+  color:var(--blue-lt);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:30px;
+}
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  padding:24px;
+}
+
+.card p{
+  font-size:15px;
+  margin-bottom:0;
+}
+
+.card h3{
+  color:var(--text);
+}
+
+.example{
+  border:1px solid var(--line);
+  margin-top:30px;
+}
+
+.example-row{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  border-bottom:1px solid var(--line);
+}
+
+.example-row:last-child{
+  border-bottom:0;
+}
+
+.example-label{
+  background:var(--surface);
+  padding:18px;
+  color:var(--blue-lt);
+  font-weight:700;
+}
+
+.example-body{
+  padding:18px;
+  color:var(--muted);
+}
+
+.warning{
+  border:1px solid rgba(255,129,129,.55);
+  background:rgba(255,129,129,.04);
+  padding:24px;
+  max-width:870px;
+  margin-top:30px;
+}
+
+.warning strong{
+  color:var(--red);
+}
+
+.gold{
+  border-left-color:var(--gold);
+}
+
+.gold strong{
+  color:var(--gold-lt);
+}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:48px 0 70px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+footer a{
+  color:var(--blue-lt);
+  text-decoration:none;
+  margin-right:18px;
+}
+
+@media(max-width:800px){
+
+  nav{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .big-idea,
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .example-row{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+<nav>
+
+  <a class="brand" href="/">yPrivate<b>AI</b></a>
+
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="pai-claims.html">PAi Claims</a>
+    <a href="claims-evidence-ingestion.html">Evidence Ingestion</a>
+    <a href="pai-legal.html">PAi Legal</a>
+    <a href="security.html">Security</a>
+  </div>
+
+</nav>
+
+<header class="hero">
+
+  <div class="eyebrow">PAi Claims Evidence Architecture</div>
+
+  <h1>The claim is built from traceable evidence — not by AI.</h1>
+
+  <p class="lead">
+    PAi Claims is designed to let artificial intelligence do
+    <strong>what artificial intelligence does best</strong>:
+    read, compare, recognize patterns, reason across large records,
+    find gaps, estimate, research, explain and draft.
+  </p>
+
+  <p class="lead">
+    Then software outside the AI keeps the factual record grounded in
+    <strong>real sources, real provenance and real evidence.</strong>
+  </p>
+
+  <div class="actions">
+    <a class="btn primary" href="pai-claims.html">Explore PAi Claims</a>
+    <a class="btn secondary" href="claims-evidence-ingestion.html">See how evidence enters the claim</a>
+  </div>
+
+</header>
+
+<section>
+
+  <h2>Do not weaken the AI. Control its authority.</h2>
+
+  <p>
+    One approach to AI reliability is to constantly tell the model to be
+    cautious, avoid assumptions and refuse to move until it is certain.
+  </p>
+
+  <p>
+    That can also remove much of what makes AI useful.
+  </p>
+
+  <p>
+    PAi Claims takes a different approach.
+  </p>
+
+  <div class="statement">
+    <strong>Let the AI think broadly. Let the evidence system decide what is allowed to become fact.</strong>
+  </div>
+
+  <p>
+    The AI can investigate possibilities, notice relationships, suggest repair
+    methods, compare estimates, find inconsistencies, identify missing
+    information and help build arguments.
+  </p>
+
+  <p>
+    But an AI conclusion does not become stronger merely because the model
+    sounds confident.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Two different jobs.</h2>
+
+  <div class="big-idea">
+
+    <div class="side ai">
+
+      <h3>AI supplies intelligence.</h3>
+
+      <ul>
+        <li>read large amounts of material</li>
+        <li>inspect photographs</li>
+        <li>identify possible damage</li>
+        <li>compare documents</li>
+        <li>look for inconsistencies</li>
+        <li>recognize patterns</li>
+        <li>suggest missing evidence</li>
+        <li>help determine possible repair scope</li>
+        <li>generate preliminary estimates</li>
+        <li>research complicated questions</li>
+        <li>reason across the entire claim</li>
+        <li>draft explanations and correspondence</li>
+      </ul>
+
+    </div>
+
+    <div class="side evidence">
+
+      <h3>The software controls authority.</h3>
+
+      <ul>
+        <li>where each proposition came from</li>
+        <li>which source supports it</li>
+        <li>whether the source is independent</li>
+        <li>whether the proposition is provisional</li>
+        <li>whether another source corroborates it</li>
+        <li>whether evidence contradicts it</li>
+        <li>whether stronger evidence replaced it</li>
+        <li>which facts remain unresolved</li>
+        <li>whether the workflow can proceed</li>
+        <li>the history of how the proposition changed</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>An AI observation is allowed to be useful before it is proven.</h2>
+
+  <p>
+    Suppose the AI examines a photograph and sees what appears to be damaged
+    shingles.
+  </p>
+
+  <p>
+    That observation is valuable.
+  </p>
+
+  <p>
+    PAi Claims does not need to throw it away just because the AI was the first
+    thing to notice it.
+  </p>
+
+  <div class="flow">
+    <span>AI sees possible roof damage</span>
+    <b>&rarr;</b>
+    <span>Provisional proposition</span>
+    <b>&rarr;</b>
+    <span>Look for independent support</span>
+  </div>
+
+  <p>
+    The important distinction is that the AI observation begins as an
+    observation with a known source.
+  </p>
+
+  <p>
+    It is not silently converted into:
+    <strong>"the roof is damaged and therefore this repair is owed."</strong>
+  </p>
+
+</section>
+
+<section>
+
+  <h2>One observation does not prove everything attached to it.</h2>
+
+  <p>
+    If AI identifies possible roof damage, PAi Claims does not automatically
+    promote all the other statements that might follow from it.
+  </p>
+
+  <div class="flow">
+    <span>Damage exists?</span>
+    <b>&rarr;</b>
+    <span>Cause?</span>
+    <b>&rarr;</b>
+    <span>Quantity?</span>
+    <b>&rarr;</b>
+    <span>Repair method?</span>
+    <b>&rarr;</b>
+    <span>Material?</span>
+    <b>&rarr;</b>
+    <span>Price?</span>
+  </div>
+
+  <p>
+    Those are separate factual propositions.
+  </p>
+
+  <p>
+    They can have different sources, different support and different levels of
+    certainty.
+  </p>
+
+  <div class="statement">
+    <strong>The software does not let one true statement drag six unproven statements across the line with it.</strong>
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Evidence promotes the proposition — not the AI.</h2>
+
+  <p>
+    A proposition can become stronger when independent evidence arrives.
+  </p>
+
+  <div class="example">
+
+    <div class="example-row">
+      <div class="example-label">AI observation</div>
+      <div class="example-body">
+        The photograph appears to show wind-damaged shingles.
+      </div>
+    </div>
+
+    <div class="example-row">
+      <div class="example-label">Inspection</div>
+      <div class="example-body">
+        A physical inspection independently documents lifted and creased shingles.
+      </div>
+    </div>
+
+    <div class="example-row">
+      <div class="example-label">Measurement</div>
+      <div class="example-body">
+        Roof measurements independently establish the affected quantity.
+      </div>
+    </div>
+
+    <div class="example-row">
+      <div class="example-label">Contractor</div>
+      <div class="example-body">
+        A contractor provides a repair scope and pricing tied to the observed condition.
+      </div>
+    </div>
+
+    <div class="example-row">
+      <div class="example-label">Invoice</div>
+      <div class="example-body">
+        Actual completed work establishes a real transaction and actual cost.
+      </div>
+    </div>
+
+  </div>
+
+  <p>
+    The AI may have discovered the issue first.
+    The later evidence is what strengthens the factual record.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>The AI cannot promote itself.</h2>
+
+  <p>
+    Asking the model the same question repeatedly does not create independent
+    evidence.
+  </p>
+
+  <p>
+    Having two AI prompts repeat the same conclusion does not turn the
+    conclusion into two sources.
+  </p>
+
+  <p>
+    A summary generated from a photograph does not become independent evidence
+    from that photograph.
+  </p>
+
+  <div class="statement gold">
+    <strong>More AI output is not the same thing as more evidence.</strong>
+  </div>
+
+  <p>
+    PAi Claims tracks provenance so the system can distinguish genuinely
+    independent support from information derived from the same underlying
+    source.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Contradictions are information too.</h2>
+
+  <p>
+    Real claims contain disagreements.
+  </p>
+
+  <p>
+    A photograph may suggest one condition.
+    A contractor may report another.
+    A carrier estimate may omit the item entirely.
+    An invoice may later reveal something different again.
+  </p>
+
+  <p>
+    PAi Claims does not need the AI to hide those conflicts in order to produce
+    a clean answer.
+  </p>
+
+  <div class="warning">
+    <strong>A contradiction remains a contradiction until something actually resolves it.</strong>
+  </div>
+
+  <p>
+    The AI can analyze the disagreement and explain what additional evidence
+    might resolve it.
+  </p>
+
+  <p>
+    What it cannot do is quietly choose the version it likes best and rewrite
+    the claim history.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Confidence is not evidence.</h2>
+
+  <p>
+    Language models are designed to produce coherent answers.
+  </p>
+
+  <p>
+    A coherent answer can still begin from an incorrect observation,
+    incomplete source material or an unsupported assumption.
+  </p>
+
+  <p>
+    PAi Claims therefore does not treat the tone or confidence of the model as
+    a measure of factual strength.
+  </p>
+
+  <div class="statement">
+    <strong>The model can be extremely confident. The evidence still has to be there.</strong>
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Arithmetic does not strengthen the source either.</h2>
+
+  <p>
+    A calculation can be mathematically perfect while one of its inputs is
+    still uncertain.
+  </p>
+
+  <p>
+    For example, multiplying a speculative quantity by an accurate material
+    price does not magically make the quantity proven.
+  </p>
+
+  <div class="flow">
+    <span>Uncertain quantity</span>
+    <b>&times;</b>
+    <span>Reliable price</span>
+    <b>=</b>
+    <span>Useful provisional estimate</span>
+  </div>
+
+  <p>
+    The result may be useful for working the claim.
+    Its evidentiary strength still depends on the strength of the underlying
+    propositions.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>This lets PAi use AI aggressively.</h2>
+
+  <p>
+    Once factual authority is controlled outside the model, AI can be used for
+    far more than simple document summaries.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Investigate</h3>
+      <p>Look across photographs, documents, estimates, correspondence and pricing for connections a person may otherwise miss.</p>
+    </div>
+
+    <div class="card">
+      <h3>Challenge</h3>
+      <p>Compare competing scopes and values, identify omissions and find places where the evidence does not support a position.</p>
+    </div>
+
+    <div class="card">
+      <h3>Explain</h3>
+      <p>Translate a complicated evidence graph into a readable explanation without replacing the evidence underneath it.</p>
+    </div>
+
+    <div class="card">
+      <h3>Research</h3>
+      <p>Look for relevant technical or legal information while keeping external authority distinct from facts about the physical loss.</p>
+    </div>
+
+    <div class="card">
+      <h3>Estimate</h3>
+      <p>Develop a useful preliminary estimate even when some values remain provisional and clearly marked as such.</p>
+    </div>
+
+    <div class="card">
+      <h3>Draft</h3>
+      <p>Prepare supplements, comparisons, explanations and dispute documents from the structured claim record.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>The software can stop the workflow when reality is still unresolved.</h2>
+
+  <p>
+    Some uncertainty is acceptable during investigation.
+  </p>
+
+  <p>
+    Other uncertainty becomes important enough that the next step should not
+    proceed.
+  </p>
+
+  <p>
+    If a critical policy value has conflicting readings, a document still
+    requires human verification, or necessary evidence remains unresolved,
+    application logic can prevent later claim work from treating that
+    information as settled.
+  </p>
+
+  <div class="statement">
+    <strong>The AI can keep thinking. The workflow does not have to pretend the missing fact is known.</strong>
+  </div>
+
+</section>
+
+<section>
+
+  <h2>The history stays attached.</h2>
+
+  <p>
+    Facts in a real claim change as better evidence arrives.
+  </p>
+
+  <p>
+    PAi Claims can preserve the difference between:
+  </p>
+
+  <div class="flow">
+    <span>what AI first suggested</span>
+    <b>&rarr;</b>
+    <span>what was observed</span>
+    <b>&rarr;</b>
+    <span>what was measured</span>
+    <b>&rarr;</b>
+    <span>what was invoiced</span>
+    <b>&rarr;</b>
+    <span>what was paid</span>
+  </div>
+
+  <p>
+    Better evidence can supersede an earlier proposition without destroying the
+    record of how the claim developed.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>That is the separation.</h2>
+
+  <div class="big-idea">
+
+    <div class="side ai">
+
+      <h3>The AI can be intelligent.</h3>
+
+      <p>
+        Let it notice things.
+        Let it ask questions.
+        Let it compare.
+        Let it reason.
+        Let it search.
+        Let it estimate.
+        Let it explain.
+        Let it draft.
+      </p>
+
+    </div>
+
+    <div class="side evidence">
+
+      <h3>The software keeps it real.</h3>
+
+      <p>
+        Preserve the source.
+        Track provenance.
+        Keep propositions separate.
+        Require independent support.
+        Preserve contradictions.
+        Block unresolved critical facts.
+        Maintain the history.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="statement">
+    <strong>All the intelligence of AI. Factual authority stays with traceable evidence.</strong>
+  </div>
+
+</section>
+
+<section>
+
+  <h2>The AI does the heavy analysis. The evidence decides what survives.</h2>
+
+  <p class="lead">
+    That is the architecture behind PAi Claims.
+  </p>
+
+  <p>
+    It is not about making AI less capable.
+  </p>
+
+  <p>
+    It is about separating the thing that is extraordinarily good at finding
+    answers from the thing responsible for deciding whether those answers are
+    actually supported.
+  </p>
+
+  <div class="actions">
+    <a class="btn primary" href="pai-claims.html">See PAi Claims</a>
+    <a class="btn secondary" href="claims-evidence-ingestion.html">See the evidence ingestion process</a>
+  </div>
+
+</section>
+
+<footer>
+
+  <a href="/">yPrivateAI</a>
+  <a href="pai-claims.html">PAi Claims</a>
+  <a href="claims-evidence-ingestion.html">Evidence Ingestion</a>
+  <a href="pai-legal.html">PAi Legal</a>
+  <a href="privacy.html">Privacy</a>
+
+  <p style="margin-top:18px;">
+    PAi Claims &middot; AI-assisted property insurance claim estimating, evidence and dispute software for Windows
+  </p>
+
+</footer>
+
+</div>
+
+</body>
+</html>
