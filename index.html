@@ -130,11 +130,11 @@ h3{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.4vw,40px);lin
 .claims .trust{border-left-color:var(--blue)}
 
 .brand{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;min-width:0}
-.tag{color:var(--muted);font-size:14px;letter-spacing:.01em}
+.tag{color:var(--muted);font-size:15px;letter-spacing:.01em}
 .tag-sub{font-family:var(--serif);font-size:22px;color:var(--gold-lt);margin:-8px 0 0}
 @media (max-width:900px){.tag{display:none}}
 
-.page-h1{font-family:var(--sans);font-size:16px;font-weight:600;color:var(--muted);letter-spacing:.01em;margin:26px 0 0;max-width:none}
+.page-h1{font-family:var(--serif);font-weight:500;font-size:clamp(22px,2.6vw,30px);line-height:1.25;color:var(--text);margin:30px 0 4px;max-width:34ch;letter-spacing:-.005em}
 .closer-h{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5vw,60px);line-height:1.08;margin:0 0 10px;max-width:20ch;letter-spacing:-.01em}
 .faq{display:grid;grid-template-columns:1fr 1fr;gap:30px 48px;margin-top:32px}
 .faq h4{margin:0 0 6px;font-size:17px;font-weight:600}
@@ -171,7 +171,7 @@ h3{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.4vw,40px);lin
 footer{border-top:1px solid var(--rule);padding:40px 0 56px;color:var(--muted);font-size:15px}
 .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .foot a{color:var(--muted)}
-.legal-note{margin-top:22px;font-size:14px;max-width:80ch;line-height:1.6}
+.legal-note{margin-top:22px;font-size:15px;max-width:80ch;line-height:1.6}
 
 @media (max-width:860px){
   .corpora,.panels,.trace{grid-template-columns:1fr}
@@ -267,6 +267,9 @@ footer{border-top:1px solid var(--rule);padding:40px 0 56px;color:var(--muted);f
     <p>If you are fighting this yourself, you do not need to learn what a pleading is first. Put your papers in, press the plain-language button, and the software tells you what your case is claiming, what your documents actually prove, and — the part nobody tells you until it is too late — which things you have only said in your own filing without proof to back them.</p>
     <p>It will not soften a gap to be nice about it. Being told what is missing before a judge tells you is the whole reason to run it.</p>
     <a class="btn-prose" href="self-represented.html">If you are representing yourself</a>
+    <p style="margin-top:20px;font-size:16px;color:var(--muted)">Start here instead if that is where you are:
+      <a href="answering-a-lawsuit.html" style="color:var(--blue-lt)">served with a lawsuit</a> ·
+      <a href="denied-insurance-claim.html" style="color:var(--blue-lt)">a denied insurance claim</a></p>
   </div>
 </section>
 
@@ -350,6 +353,8 @@ footer{border-top:1px solid var(--rule);padding:40px 0 56px;color:var(--muted);f
       <p class="quote">If the software shows you a case, that case exists, and you can open it. Nothing here invents authority to fill a gap.</p>
     </div>
     <dl>
+      <dt>Air-gapped by refusal, not by policy</dt>
+      <dd>Every internal endpoint must resolve to loopback or the app rejects it outright. No setting, environment variable or edited config can point it at a remote server, so a machine with the network cable pulled behaves exactly like one without.</dd>
       <dt>Retrieved, not generated</dt>
       <dd>Authorities come out of an index of stored legal records, each with a source id. A citation on screen is a record that was retrieved, not model output — and one you are told to verify against the opinion itself.</dd>
       <dt>Marked when unverified</dt>
