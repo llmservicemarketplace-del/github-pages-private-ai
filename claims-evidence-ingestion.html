@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>How PAi Claims Ingests & Verifies Evidence | Claim Document Processing</title>
+
+<meta name="description" content="See how PAi Claims stores, hashes, reads, OCRs, cross-checks and verifies property insurance claim documents before information can be used in estimating and claim analysis.">
+
+<link rel="canonical" href="https://yprivateai.com/claims-evidence-ingestion.html">
+
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="yPrivateAI">
+<meta property="og:url" content="https://yprivateai.com/claims-evidence-ingestion.html">
+<meta property="og:title" content="How PAi Claims Ingests and Verifies Evidence">
+<meta property="og:description" content="The complete claim lives with its source files. PAi Claims preserves the original evidence, records how it was read, cross-checks conflicting readings and refuses to silently guess.">
+<meta property="og:image" content="https://yprivateai.com/og-pai.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How PAi Claims Ingests and Verifies Evidence">
+<meta name="twitter:description" content="Files are stored with the claim, read by the strongest available method, cross-checked and kept tied to their provenance.">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"TechArticle",
+  "headline":"How PAi Claims Ingests and Verifies Evidence",
+  "description":"How PAi Claims stores, reads, OCRs, reconciles and verifies claim evidence before it is used in estimating and analysis.",
+  "url":"https://yprivateai.com/claims-evidence-ingestion.html",
+  "mainEntityOfPage":"https://yprivateai.com/claims-evidence-ingestion.html",
+  "about":{
+    "@type":"SoftwareApplication",
+    "name":"PAi Claims",
+    "operatingSystem":"Windows 10, Windows 11",
+    "applicationCategory":"BusinessApplication",
+    "url":"https://yprivateai.com/pai-claims.html"
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"yPrivateAI",
+    "url":"https://yprivateai.com/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Does PAi Claims keep the original claim document?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. The source file is copied into the claim workspace and remains associated with the evidence record. A content hash is also recorded."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"What happens if OCR and another reading disagree?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"PAi Claims preserves the disagreement instead of silently choosing the more plausible value. Unresolved discrepancies can require user confirmation before estimation proceeds."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can AI correct a document during ingestion?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"AI may act as an additional reader, but it is not permitted to turn its own interpretation into the document record. Model-only readings remain limited until reviewed."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Does uploading the same file twice create two independent sources?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. PAi Claims hashes stored files and can identify identical content even when the filename is different, so duplicate evidence does not automatically count as independent corroboration."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#08111F;
+  --surface:#0D1B2E;
+  --surface2:#111F33;
+  --line:#1C2E45;
+  --text:#E6EDF6;
+  --muted:#93A5BC;
+  --blue:#3F8EFC;
+  --blue-lt:#7DB6FF;
+  --gold:#C8A03C;
+  --green:#63D297;
+  --red:#FF8181;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:"Segoe UI",-apple-system,BlinkMacSystemFont,Inter,Roboto,Helvetica,Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit}
+
+.wrap{
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 28px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.brand{
+  font-family:var(--serif);
+  font-size:24px;
+  text-decoration:none;
+}
+
+.brand b{color:var(--blue-lt)}
+
+.links{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+.links a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:15px;
+}
+
+.links a:hover{color:var(--text)}
+
+.hero{
+  padding:82px 0 68px;
+}
+
+.eyebrow{
+  color:var(--blue-lt);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:13px;
+  font-weight:700;
+}
+
+h1{
+  font-family:var(--serif);
+  font-size:clamp(42px,6vw,70px);
+  font-weight:500;
+  line-height:1.04;
+  max-width:14ch;
+  margin:14px 0 22px;
+}
+
+.lead{
+  color:var(--muted);
+  font-size:21px;
+  max-width:780px;
+}
+
+.lead strong{color:var(--text)}
+
+.actions{
+  margin-top:30px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  text-decoration:none;
+  border:1px solid var(--blue);
+  font-weight:700;
+}
+
+.btn.primary{
+  background:var(--blue);
+  color:#07111D;
+}
+
+.btn.secondary{
+  color:var(--blue-lt);
+}
+
+section{
+  padding:68px 0;
+  border-top:1px solid var(--line);
+}
+
+h2{
+  font-family:var(--serif);
+  font-size:clamp(30px,4vw,44px);
+  line-height:1.15;
+  font-weight:500;
+  margin:0 0 20px;
+}
+
+h3{
+  margin:0 0 8px;
+  font-size:19px;
+}
+
+p{
+  max-width:800px;
+  color:var(--muted);
+}
+
+p strong{color:var(--text)}
+
+.statement{
+  border-left:3px solid var(--blue);
+  background:var(--surface);
+  padding:24px 28px;
+  margin:28px 0;
+  max-width:860px;
+}
+
+.statement strong{
+  font-family:var(--serif);
+  font-size:25px;
+  font-weight:500;
+}
+
+.flow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  align-items:center;
+  margin:32px 0;
+}
+
+.flow span{
+  background:var(--surface);
+  border:1px solid var(--line);
+  padding:10px 13px;
+  color:#CFDAE8;
+  font-size:14px;
+}
+
+.flow b{
+  color:var(--blue-lt);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:28px;
+}
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--line);
+  padding:24px;
+}
+
+.card h3{
+  color:var(--text);
+}
+
+.card p{
+  font-size:15px;
+  margin-bottom:0;
+}
+
+.reader-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:28px;
+}
+
+.reader{
+  background:var(--surface);
+  border:1px solid var(--line);
+  padding:24px;
+}
+
+.reader .rank{
+  color:var(--blue-lt);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-weight:700;
+}
+
+.list{
+  columns:2;
+  max-width:820px;
+  color:var(--muted);
+}
+
+.list li{
+  margin:7px 0;
+}
+
+.status-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:28px;
+}
+
+.status{
+  border:1px solid var(--line);
+  background:var(--surface);
+  padding:18px;
+}
+
+.status strong{
+  display:block;
+  margin-bottom:6px;
+}
+
+.status.unverified strong{color:var(--muted)}
+.status.speculative strong{color:#E4C471}
+.status.explained strong{color:var(--blue-lt)}
+.status.validated strong{color:var(--green)}
+
+.warning{
+  border:1px solid rgba(255,129,129,.55);
+  background:rgba(255,129,129,.04);
+  padding:24px;
+  margin-top:28px;
+  max-width:860px;
+}
+
+.warning strong{color:var(--red)}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:28px;
+}
+
+th,td{
+  text-align:left;
+  vertical-align:top;
+  padding:14px 12px;
+  border-bottom:1px solid var(--line);
+}
+
+th{
+  color:var(--text);
+}
+
+td{
+  color:var(--muted);
+}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:48px 0 70px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+footer a{
+  color:var(--blue-lt);
+  text-decoration:none;
+  margin-right:18px;
+}
+
+@media(max-width:800px){
+  nav{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .grid,
+  .reader-grid,
+  .status-grid{
+    grid-template-columns:1fr;
+  }
+
+  .list{
+    columns:1;
+  }
+
+  table{
+    font-size:14px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="wrap">
+
+<nav>
+  <a class="brand" href="/">yPrivate<b>AI</b></a>
+
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="pai-claims.html">PAi Claims</a>
+    <a href="pai-legal.html">PAi Legal</a>
+    <a href="security.html">Security</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<header class="hero">
+
+  <div class="eyebrow">PAi Claims Evidence Architecture</div>
+
+  <h1>The complete claim lives here.</h1>
+
+  <p class="lead">
+    Every source file stays connected to the claim.
+    PAi Claims records <strong>what the file is, where it came from,
+    how it was read, how confidently it was read, and whether independent
+    readings agree.</strong>
+  </p>
+
+  <p class="lead">
+    The goal is simple: information should not enter the claim merely because
+    an AI model said it saw something.
+  </p>
+
+  <div class="actions">
+    <a class="btn primary" href="pai-claims.html">Explore PAi Claims</a>
+    <a class="btn secondary" href="https://apps.microsoft.com/detail/9P255VXPD5B4">Download PAi Claims</a>
+  </div>
+
+</header>
+
+<section>
+
+  <h2>A claim begins with the source material.</h2>
+
+  <p>
+    PAi Claims does not begin by asking AI to summarize a folder of documents.
+  </p>
+
+  <p>
+    The original files become part of the claim workspace first.
+    For a new insurance claim, the policy packet is required before the claim
+    workspace is completed.
+  </p>
+
+  <p>
+    Documents are stored with the claim so later evidence records point back
+    to files that actually travel with that claim.
+  </p>
+
+  <div class="flow">
+    <span>Source file</span><b>&rarr;</b>
+    <span>Stored with claim</span><b>&rarr;</b>
+    <span>Content hash</span><b>&rarr;</b>
+    <span>Text extraction</span><b>&rarr;</b>
+    <span>Verification</span><b>&rarr;</b>
+    <span>Evidence record</span>
+  </div>
+
+</section>
+
+<section>
+
+  <h2>The original file is preserved.</h2>
+
+  <p>
+    When a document is attached, PAi Claims copies the file into the claim
+    workspace before building evidence from it.
+  </p>
+
+  <p>
+    A cryptographic content hash is recorded for the stored file.
+    That gives the system a way to recognize identical content even when the
+    second copy has a different filename.
+  </p>
+
+  <div class="statement">
+    <strong>A renamed copy of the same document does not become a second independent source.</strong>
+  </div>
+
+  <p>
+    This matters because evidence strength should come from independent
+    support, not from counting the same document twice.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>PAi uses the most direct reading available first.</h2>
+
+  <p>
+    The ingestion engine does not send every document straight to a language
+    model.
+  </p>
+
+  <p>
+    It first tries to obtain text deterministically from the file itself.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Digital documents</h3>
+      <p>Plain text, structured text, HTML, spreadsheet-style delimited text, DOCX and ODT content can be read directly from their stored document data.</p>
+    </div>
+
+    <div class="card">
+      <h3>PDF documents</h3>
+      <p>PAi reads the PDF's embedded text layer page by page and preserves page boundaries so later values can be traced back to the page where they appeared.</p>
+    </div>
+
+    <div class="card">
+      <h3>Scanned pages and images</h3>
+      <p>Pages without enough usable embedded text can be rendered and passed through OCR. OCR confidence remains attached to the resulting reading.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>One bad scanned page does not erase the rest of the packet.</h2>
+
+  <p>
+    A mixed policy packet may contain twenty clean digital pages and one
+    scanned endorsement.
+  </p>
+
+  <p>
+    PAi Claims handles the document page by page.
+    Clean text can remain readable while the scanned page is separately marked
+    as requiring OCR or another reading method.
+  </p>
+
+  <p>
+    The ingestion record keeps track of the page count, which pages required
+    OCR, the reading method, confidence information, and whether anything still
+    needs visual review.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>OCR is a reading, not automatic truth.</h2>
+
+  <p>
+    OCR reconstructs characters from pixels.
+    That makes it useful, but fundamentally different from reading text that
+    was embedded directly in the original document.
+  </p>
+
+  <p>
+    PAi Claims keeps that distinction.
+  </p>
+
+  <div class="status-grid">
+
+    <div class="status unverified">
+      <strong>UNVERIFIED</strong>
+      The system does not yet have a reliable reading.
+    </div>
+
+    <div class="status speculative">
+      <strong>SPECULATIVE</strong>
+      A reading or inference exists, but it does not yet have enough independent support.
+    </div>
+
+    <div class="status explained">
+      <strong>EXPLAINED</strong>
+      The value has a traceable direct basis, but has not necessarily been independently corroborated.
+    </div>
+
+    <div class="status validated">
+      <strong>VALIDATED</strong>
+      Independent readings or direct support agree strongly enough to establish the proposition at the higher state.
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>AI can become another reader. It does not become the authority.</h2>
+
+  <p>
+    When AI is available, PAi Claims can ask the model to perform a second
+    reading.
+  </p>
+
+  <p>
+    The task is intentionally narrow: reproduce the document text as read.
+    The model is not being asked to improve it, summarize it, fix spelling,
+    normalize numbers, or decide what the document probably meant.
+  </p>
+
+  <div class="reader-grid">
+
+    <div class="reader">
+      <div class="rank">Reader 1</div>
+      <h3>Embedded document text</h3>
+      <p>The characters supplied directly by the digital file when available.</p>
+    </div>
+
+    <div class="reader">
+      <div class="rank">Reader 2</div>
+      <h3>OCR</h3>
+      <p>A reconstruction from the page image, carrying OCR confidence information.</p>
+    </div>
+
+    <div class="reader">
+      <div class="rank">Reader 3</div>
+      <h3>AI transcription</h3>
+      <p>An additional reading used for comparison, not permission for the AI to rewrite the source.</p>
+    </div>
+
+  </div>
+
+  <div class="statement">
+    <strong>The readers are compared. The AI does not get to declare itself correct.</strong>
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Agreement strengthens the reading. Disagreement stays visible.</h2>
+
+  <p>
+    PAi Claims reconciles independent readings of the same page.
+  </p>
+
+  <p>
+    When readers agree, that agreement can strengthen the resulting text.
+    When they disagree, PAi does not resolve the problem by asking which value
+    looks more reasonable.
+  </p>
+
+  <div class="flow">
+    <span>Reading A</span>
+    <span>Reading B</span>
+    <span>Reading C</span>
+    <b>&rarr;</b>
+    <span>Compare word by word</span>
+    <b>&rarr;</b>
+    <span>Agreement or visible discrepancy</span>
+  </div>
+
+  <p>
+    This is especially important for numbers: policy limits, deductibles,
+    dates, form numbers, quantities, invoices and dollar amounts.
+  </p>
+
+  <div class="warning">
+    <strong>$312,000 and $412,000 are not "close enough."</strong>
+    If the available readers cannot establish which figure is actually on the
+    page, PAi preserves the conflict and asks the user to check the source
+    document.
+  </div>
+
+</section>
+
+<section>
+
+  <h2>The software does not silently average or pick a winner.</h2>
+
+  <p>
+    An unresolved reading remains unresolved.
+  </p>
+
+  <p>
+    The user can be shown the conflicting values, the page where the conflict
+    occurred, and the surrounding context needed to locate it.
+  </p>
+
+  <p>
+    A human confirmation resolves the immediate reading problem, but the
+    confirmation remains identified as a direct human check rather than being
+    magically promoted into multiple independent sources.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>Model-only image transcription has its own gate.</h2>
+
+  <p>
+    Sometimes neither a usable text layer nor OCR can read a page.
+  </p>
+
+  <p>
+    A local model can still help transcribe or describe that image.
+    But PAi Claims does not treat a model-only transcription the same way as a
+    directly readable document.
+  </p>
+
+  <div class="statement">
+    <strong>The user sees the model-only transcription before claim figures are allowed to depend on it.</strong>
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Unresolved document problems can stop estimation.</h2>
+
+  <p>
+    This is where ingestion becomes more than document storage.
+  </p>
+
+  <p>
+    If readers disagree on unresolved text, or a model-only page is still
+    waiting for human review, the estimation-readiness check can identify those
+    pages as blocking.
+  </p>
+
+  <div class="flow">
+    <span>Document read</span><b>&rarr;</b>
+    <span>Readers reconciled</span><b>&rarr;</b>
+    <span>Conflict?</span><b>&rarr;</b>
+    <span>User verification if needed</span><b>&rarr;</b>
+    <span>Ready for figures</span>
+  </div>
+
+  <p>
+    The idea is simple:
+    <strong>do not perform arithmetic on a number nobody has actually established.</strong>
+  </p>
+
+</section>
+
+<section>
+
+  <h2>The evidence record remembers how it got there.</h2>
+
+  <p>
+    The ingestion result does not end as anonymous text.
+  </p>
+
+  <p>
+    PAi Claims can retain information such as:
+  </p>
+
+  <ul class="list">
+    <li>original filename</li>
+    <li>stored file path</li>
+    <li>document type</li>
+    <li>content hash</li>
+    <li>duplicate-source relationship</li>
+    <li>extracted text</li>
+    <li>reading method</li>
+    <li>page count</li>
+    <li>pages requiring OCR</li>
+    <li>OCR confidence</li>
+    <li>evidentiary ceiling</li>
+    <li>whether visual review is required</li>
+    <li>later discrepancy and verification history</li>
+  </ul>
+
+  <div class="statement">
+    <strong>The claim does not merely remember the answer. It remembers the path from source file to answer.</strong>
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Supported document types.</h2>
+
+  <p>
+    The current ingestion pipeline can directly handle common claim and
+    business-document formats including:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>Primary reading method</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>PDF</td>
+        <td>Embedded text first; scanned pages can fall back to OCR.</td>
+      </tr>
+      <tr>
+        <td>PNG, JPG, TIFF, BMP, WebP and other common images</td>
+        <td>OCR where available; visual transcription can be requested when needed.</td>
+      </tr>
+      <tr>
+        <td>DOCX</td>
+        <td>Document text extracted directly from the stored file structure.</td>
+      </tr>
+      <tr>
+        <td>ODT</td>
+        <td>Document text extracted directly from the stored file structure.</td>
+      </tr>
+      <tr>
+        <td>TXT, Markdown, logs, JSON, XML, YAML</td>
+        <td>Direct text reading.</td>
+      </tr>
+      <tr>
+        <td>CSV and TSV</td>
+        <td>Direct delimited-text reading.</td>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Readable text extracted while decoding document entities.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+
+<section>
+
+  <h2>Why this matters for AI.</h2>
+
+  <p>
+    Modern AI can process an enormous amount of claim material very quickly.
+  </p>
+
+  <p>
+    That power becomes much safer when the AI is reasoning over a record whose
+    source, reading method, confidence, conflicts and provenance already exist
+    outside the model.
+  </p>
+
+  <div class="statement">
+    <strong>PAi Claims gives AI the evidence to work with without giving AI authority to manufacture the evidence.</strong>
+  </div>
+
+  <p>
+    The AI can then compare, organize, analyze, research and draft against the
+    claim record while the evidence architecture remains responsible for what
+    is allowed to become established.
+  </p>
+
+</section>
+
+<section>
+
+  <h2>From file to supported claim.</h2>
+
+  <div class="flow">
+    <span>Policy / photo / estimate / invoice</span><b>&rarr;</b>
+    <span>Preserve original</span><b>&rarr;</b>
+    <span>Hash</span><b>&rarr;</b>
+    <span>Read</span><b>&rarr;</b>
+    <span>Cross-check</span><b>&rarr;</b>
+    <span>Resolve conflicts</span><b>&rarr;</b>
+    <span>Evidence record</span><b>&rarr;</b>
+    <span>Claim analysis</span>
+  </div>
+
+  <p class="lead">
+    <strong>The complete claim lives here because the evidence never loses its connection to where it came from.</strong>
+  </p>
+
+  <div class="actions">
+    <a class="btn primary" href="pai-claims.html">See the full PAi Claims platform</a>
+    <a class="btn secondary" href="https://apps.microsoft.com/detail/9P255VXPD5B4">Download PAi Claims</a>
+  </div>
+
+</section>
+
+<footer>
+
+  <a href="/">yPrivateAI</a>
+  <a href="pai-claims.html">PAi Claims</a>
+  <a href="pai-legal.html">PAi Legal</a>
+  <a href="security.html">Security</a>
+  <a href="privacy.html">Privacy</a>
+
+  <p style="margin-top:18px;">
+    PAi Claims &middot; Property insurance claim estimating, evidence and dispute software for Windows
+  </p>
+
+</footer>
+
+</div>
+</body>
+</html>
