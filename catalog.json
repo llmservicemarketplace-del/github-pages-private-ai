@@ -1,6 +1,6 @@
 {
-    "version":  3,
-    "generated_at":  "2026-08-04T06:28:12.2926873Z",
+    "version":  4,
+    "generated_at":  "2026-09-06T12:31:25.9889703-04:00",
     "models":  [
                    {
                        "id":  "light-qwen",
@@ -102,6 +102,32 @@
                        "gated":  false,
                        "runtime":  "llama.cpp",
                        "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "light-qwen35-4b-abliterated",
+                       "tier":  "Light",
+                       "family":  "Qwen",
+                       "label":  "Qwen3.5 4B Abliterated - Light",
+                       "blurb":  "Very compact uncensored Qwen3.5-4B. Excellent value and speed on low-VRAM machines with near-zero refusals.",
+                       "repo_id":  "mradermacher/Qwen3.5-4B-abliterated-GGUF",
+                       "filename":  "Qwen3.5-4B-abliterated.Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/mradermacher/Qwen3.5-4B-abliterated-GGUF/resolve/main/Qwen3.5-4B-abliterated.Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  2.71,
+                       "ram_gb":  5,
+                       "license":  "Apache 2.0",
+                       "license_url":  "https://huggingface.co/huihui-ai/Huihui-Qwen3.5-4B-abliterated",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  32768,
                        "runtime_args":  [
 
                                         ]
@@ -211,6 +237,84 @@
                                         ]
                    },
                    {
+                       "id":  "standard-qwen-abliterated",
+                       "tier":  "Standard",
+                       "family":  "Qwen",
+                       "label":  "Qwen3 8B Abliterated - Standard",
+                       "blurb":  "Strong uncensored Qwen3-8B (huihui-ai v2). Excellent all-rounder for 8â€“12 GB VRAM with near-zero refusals.",
+                       "repo_id":  "mradermacher/Huihui-Qwen3-8B-abliterated-v2-GGUF",
+                       "filename":  "Huihui-Qwen3-8B-abliterated-v2.Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/mradermacher/Huihui-Qwen3-8B-abliterated-v2-GGUF/resolve/main/Huihui-Qwen3-8B-abliterated-v2.Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  5.03,
+                       "ram_gb":  8,
+                       "license":  "Apache 2.0",
+                       "license_url":  "https://huggingface.co/huihui-ai/Huihui-Qwen3-8B-abliterated-v2",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  32768,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "standard-qwen35-9b-abliterated",
+                       "tier":  "Standard",
+                       "family":  "Qwen",
+                       "label":  "Qwen3.5 9B Abliterated - Standard",
+                       "blurb":  "Stronger 9B uncensored model. Better reasoning and longer context than the 8B while still fitting in 8â€“12 GB.",
+                       "repo_id":  "mradermacher/Huihui-Qwen3.5-9B-abliterated-GGUF",
+                       "filename":  "Huihui-Qwen3.5-9B-abliterated.Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/mradermacher/Huihui-Qwen3.5-9B-abliterated-GGUF/resolve/main/Huihui-Qwen3.5-9B-abliterated.Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  5.63,
+                       "ram_gb":  8,
+                       "license":  "Apache 2.0",
+                       "license_url":  "https://huggingface.co/huihui-ai/Huihui-Qwen3.5-9B-abliterated",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  131072,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "standard-qwen14b-abliterated",
+                       "tier":  "Standard",
+                       "family":  "Qwen",
+                       "label":  "Qwen3 14B Abliterated - Standard",
+                       "blurb":  "Mid-size uncensored model. Better reasoning and multilingual performance than the 8B/9B versions. Fits 12â€“16 GB at Q4_K_M.",
+                       "repo_id":  "bartowski/huihui-ai_Qwen3-14B-abliterated-GGUF",
+                       "filename":  "Qwen3-14B-abliterated-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/bartowski/huihui-ai_Qwen3-14B-abliterated-GGUF/resolve/main/Qwen3-14B-abliterated-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  9.0,
+                       "ram_gb":  12,
+                       "license":  "Apache 2.0",
+                       "license_url":  "https://huggingface.co/huihui-ai/Qwen3-14B-abliterated",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  32768,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
                        "id":  "advanced-qwen",
                        "tier":  "Advanced",
                        "family":  "Qwen",
@@ -315,6 +419,84 @@
                                         ]
                    },
                    {
+                       "id":  "advanced-qwen36-27b-abliterated",
+                       "tier":  "Advanced",
+                       "family":  "Qwen",
+                       "label":  "Qwen3.6 27B Abliterated - Advanced",
+                       "blurb":  "Excellent non-gated uncensored 27B. Very low refusal rate and strong general capability.",
+                       "repo_id":  "mradermacher/Huihui-Qwen3.6-27B-abliterated-GGUF",
+                       "filename":  "Huihui-Qwen3.6-27B-abliterated.Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/mradermacher/Huihui-Qwen3.6-27B-abliterated-GGUF/resolve/main/Huihui-Qwen3.6-27B-abliterated.Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  16.6,
+                       "ram_gb":  20,
+                       "license":  "Apache 2.0",
+                       "license_url":  "https://huggingface.co/huihui-ai/Huihui-Qwen3.6-27B-abliterated",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  131072,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "advanced-qwen38-27b-uncensored",
+                       "tier":  "Advanced",
+                       "family":  "Qwen",
+                       "label":  "Qwen3.8 27B Uncensored - Advanced",
+                       "blurb":  "Current best overall uncensored model. Abliterated Qwen3.8-27B with multimodal support, strong coding/reasoning, and essentially zero refusals.",
+                       "repo_id":  "orcarouter/Qwen3.8-27B-Uncensored-GGUF",
+                       "filename":  "Qwen3.8-27B-Uncensored-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-GGUF/resolve/main/Qwen3.8-27B-Uncensored-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  16.8,
+                       "ram_gb":  20,
+                       "license":  "Apache 2.0",
+                       "license_url":  "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  true,
+                       "runtime":  "llama.cpp",
+                       "context_length":  262144,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "advanced-qwen38-27b-iq4",
+                       "tier":  "Advanced",
+                       "family":  "Qwen",
+                       "label":  "Qwen3.8 27B Uncensored IQ4_XS - Advanced",
+                       "blurb":  "Same excellent uncensored Qwen3.8-27B in the smaller IQ4_XS quant. Easier fit on 16 GB cards while retaining most quality.",
+                       "repo_id":  "orcarouter/Qwen3.8-27B-Uncensored-GGUF",
+                       "filename":  "Qwen3.8-27B-Uncensored-IQ4_XS.gguf",
+                       "url":  "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-GGUF/resolve/main/Qwen3.8-27B-Uncensored-IQ4_XS.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  15.3,
+                       "ram_gb":  18,
+                       "license":  "Apache 2.0",
+                       "license_url":  "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  true,
+                       "runtime":  "llama.cpp",
+                       "context_length":  262144,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
                        "id":  "heavy-qwen",
                        "tier":  "Heavy",
                        "family":  "Qwen",
@@ -414,6 +596,32 @@
                        "gated":  false,
                        "runtime":  "llama.cpp",
                        "context_length":  8192,
+                       "runtime_args":  [
+
+                                        ]
+                   },
+                   {
+                       "id":  "heavy-qwq32b-abliterated",
+                       "tier":  "Heavy",
+                       "family":  "Qwen",
+                       "label":  "QwQ 32B Abliterated - Heavy",
+                       "blurb":  "Reasoning-specialist uncensored model (QwQ base). Excellent chain-of-thought with refusals removed. Needs ~24 GB+ for comfortable use.",
+                       "repo_id":  "bartowski/huihui-ai_QwQ-32B-abliterated-GGUF",
+                       "filename":  "QwQ-32B-abliterated-Q4_K_M.gguf",
+                       "url":  "https://huggingface.co/bartowski/huihui-ai_QwQ-32B-abliterated-GGUF/resolve/main/QwQ-32B-abliterated-Q4_K_M.gguf?download=true",
+                       "sha256":  "",
+                       "download_gb":  19.9,
+                       "ram_gb":  24,
+                       "license":  "Apache 2.0",
+                       "license_url":  "https://huggingface.co/huihui-ai/QwQ-32B-abliterated",
+                       "enabled":  true,
+                       "platforms":  [
+                                         "windows",
+                                         "macos"
+                                     ],
+                       "gated":  false,
+                       "runtime":  "llama.cpp",
+                       "context_length":  131072,
                        "runtime_args":  [
 
                                         ]
