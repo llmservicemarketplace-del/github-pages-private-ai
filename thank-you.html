@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your gift is recorded — The New Faith Church and Co-op</title>
+<meta name="description" content="Acknowledgment of your contribution to The New Faith Church and Co-op Inc., a 501(c)(3) public charity.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDEFEC;
+    --paper-deep:#E3E7E2;
+    --ink:#17211D;
+    --ink-soft:#4A5751;
+    --ink-faint:#8A9A91;
+    --green:#2F6B4F;
+    --rule:#C8D0CA;
+  }
+
+  *{box-sizing:border-box}
+
+  html{-webkit-text-size-adjust:100%}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Spectral",Georgia,"Times New Roman",serif;
+    font-weight:400;
+    font-size:18px;
+    line-height:1.65;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .sheet{
+    max-width:41rem;
+    margin:0 auto;
+    padding:clamp(2.5rem,7vw,5.5rem) clamp(1.25rem,5vw,2rem) 4rem;
+  }
+
+  /* ---- masthead ---- */
+  .org{
+    font-size:.9rem;
+    letter-spacing:.01em;
+    color:var(--ink-soft);
+    margin:0 0 clamp(2.75rem,8vw,4.5rem);
+    padding-bottom:.9rem;
+    border-bottom:1px solid var(--rule);
+  }
+  .org span{color:var(--ink-faint)}
+
+  /* ---- opening ---- */
+  h1{
+    font-weight:300;
+    font-size:clamp(2.1rem,6.2vw,3.1rem);
+    line-height:1.12;
+    letter-spacing:-.018em;
+    margin:0 0 1.1rem;
+    max-width:14ch;
+  }
+
+  .lede{
+    font-size:1.12rem;
+    color:var(--ink-soft);
+    margin:0 0 clamp(2.5rem,7vw,3.5rem);
+    max-width:54ch;
+  }
+
+  /* ---- the record ---- */
+  .record{
+    background:var(--paper-deep);
+    border-left:3px solid var(--green);
+    border-radius:2px;
+    padding:clamp(1.5rem,4vw,2rem) clamp(1.25rem,4vw,2rem);
+    margin:0 0 2.75rem;
+  }
+
+  .record h2{
+    font-size:1rem;
+    font-weight:600;
+    margin:0 0 1.25rem;
+    letter-spacing:.005em;
+  }
+
+  dl{margin:0}
+
+  .row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.35rem 1.25rem;
+    padding:.6rem 0;
+    border-top:1px solid var(--rule);
+  }
+  .row:first-of-type{border-top:0;padding-top:0}
+
+  dt{
+    flex:0 0 9.5rem;
+    color:var(--ink-soft);
+    font-size:.95rem;
+  }
+  dd{
+    margin:0;
+    flex:1 1 12rem;
+    font-weight:500;
+  }
+  dd.amount{
+    font-size:1.5rem;
+    font-weight:500;
+    line-height:1.3;
+  }
+
+  .disclosure{
+    margin:1.4rem 0 0;
+    padding-top:1.1rem;
+    border-top:1px solid var(--rule);
+    font-size:.95rem;
+    line-height:1.6;
+    color:var(--ink-soft);
+  }
+
+  /* ---- body sections ---- */
+  h2.section{
+    font-size:1.35rem;
+    font-weight:500;
+    letter-spacing:-.008em;
+    margin:0 0 1rem;
+  }
+
+  p{max-width:60ch}
+
+  .uses{margin:1.5rem 0 0;padding:0;list-style:none}
+  .uses li{
+    padding:1.1rem 0;
+    border-top:1px solid var(--rule);
+    max-width:60ch;
+  }
+  .uses li:last-child{border-bottom:1px solid var(--rule)}
+  .uses strong{
+    display:block;
+    font-weight:600;
+    font-size:1.02rem;
+    margin-bottom:.15rem;
+  }
+  .uses span{color:var(--ink-soft);font-size:.98rem}
+
+  .divider{
+    height:1px;
+    background:var(--rule);
+    border:0;
+    margin:clamp(2.75rem,8vw,4rem) 0;
+  }
+
+  /* ---- actions ---- */
+  .actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.75rem;
+    margin:1.75rem 0 0;
+  }
+  .btn{
+    display:inline-block;
+    font:inherit;
+    font-size:1rem;
+    font-weight:500;
+    padding:.7rem 1.35rem;
+    border-radius:2px;
+    border:1px solid var(--green);
+    cursor:pointer;
+    text-decoration:none;
+    background:var(--green);
+    color:var(--paper);
+  }
+  .btn.quiet{
+    background:transparent;
+    color:var(--green);
+  }
+  .btn:hover{background:#255740;border-color:#255740;color:var(--paper)}
+  .btn:focus-visible{
+    outline:2px solid var(--ink);
+    outline-offset:3px;
+  }
+
+  a{color:var(--green)}
+  a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+  footer{
+    margin-top:clamp(3rem,8vw,4.5rem);
+    padding-top:1.4rem;
+    border-top:1px solid var(--rule);
+    font-size:.92rem;
+    color:var(--ink-soft);
+    line-height:1.7;
+  }
+  footer p{margin:0 0 .5rem;max-width:62ch}
+  footer .legal{color:var(--ink-faint);font-size:.86rem}
+
+  @media (max-width:30rem){
+    dt{flex:1 1 100%}
+    dd{flex:1 1 100%}
+  }
+
+  @media print{
+    :root{--paper:#fff;--paper-deep:#fff}
+    body{font-size:11.5pt}
+    .sheet{padding:0;max-width:none}
+    .actions,.no-print{display:none}
+    .record{border:1px solid #999;border-left:3px solid #333}
+    a{color:inherit;text-decoration:none}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <p class="org">The New Faith Church and Co-op Inc. <span>&nbsp;/&nbsp; Ray City, Georgia</span></p>
+
+  <h1>Your gift is recorded.</h1>
+
+  <p class="lede">Thank you, {{donor_first_name}}. Below is your acknowledgment for tax purposes — print it or save it with your records. A copy is on its way to {{donor_email}}.</p>
+
+  <section class="record" aria-labelledby="receipt-heading">
+    <h2 id="receipt-heading">Contribution acknowledgment</h2>
+    <dl>
+      <div class="row">
+        <dt>Amount</dt>
+        <dd class="amount">${{amount}}</dd>
+      </div>
+      <div class="row">
+        <dt>Received</dt>
+        <dd>{{date_received}}</dd>
+      </div>
+      <div class="row">
+        <dt>From</dt>
+        <dd>{{donor_name}}</dd>
+      </div>
+      <div class="row">
+        <dt>Reference</dt>
+        <dd>{{transaction_id}}</dd>
+      </div>
+      <div class="row">
+        <dt>Received by</dt>
+        <dd>The New Faith Church and Co-op Inc.<br>EIN 33-3049015</dd>
+      </div>
+    </dl>
+    <p class="disclosure">
+      The New Faith Church and Co-op Inc. is a tax-exempt organization under section 501(c)(3)
+      of the Internal Revenue Code, classified as a public charity under 509(a)(2).
+      No goods or services were provided in exchange for this contribution.
+      Contributions are deductible under section 170 of the Code to the extent allowed by law.
+      Keep this acknowledgment for your tax records.
+    </p>
+  </section>
+
+  <h2 class="section">Where it goes</h2>
+  <p>We build and give away tools that help people document a property loss accurately, so an insurance settlement rests on evidence rather than on whoever has more lawyers.</p>
+
+  <ul class="uses">
+    <li>
+      <strong>Free claim documentation for disaster survivors</strong>
+      <span>Our software is offered at no cost through disaster relief and voluntary agency channels, to households working a claim without a public adjuster or attorney.</span>
+    </li>
+    <li>
+      <strong>Software that shows its work</strong>
+      <span>Every figure our tools produce is traced to the page it came from, and marked with how far it can be trusted. Nothing is asserted that cannot be shown.</span>
+    </li>
+    <li>
+      <strong>Keeping it free</strong>
+      <span>Development, hosting, and support are funded by gifts like yours rather than by charging the people who need the tools most.</span>
+    </li>
+  </ul>
+
+  <div class="actions no-print">
+    <button class="btn" type="button" onclick="window.print()">Print this acknowledgment</button>
+    <a class="btn quiet" href="/">Back to the site</a>
+  </div>
+
+  <hr class="divider">
+
+  <h2 class="section">If something looks wrong</h2>
+  <p>Write to <a href="mailto:support@yprivateai.com">support@yprivateai.com</a> with your reference number and we will correct it. If your employer matches charitable gifts, this acknowledgment is the document their program will ask for.</p>
+
+  <footer>
+    <p>The New Faith Church and Co-op Inc. &nbsp;/&nbsp; Ray City, Georgia &nbsp;/&nbsp; <a href="mailto:support@yprivateai.com">support@yprivateai.com</a></p>
+    <p class="legal">Recognized as exempt by IRS determination letter dated February 6, 2025. Effective date of exemption January 24, 2025. This acknowledgment is provided under IRS Publication 1771. We do not provide tax advice; consult your tax advisor about deductibility in your situation.</p>
+  </footer>
+
+</main>
+</body>
+</html>
