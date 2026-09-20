@@ -39,3 +39,6 @@
 
 ## Contact
 keith@thenewfaithchurch.org
+
+## Access and privacy clarification
+PAi Claims download and setup are free, with local AI or a user-provided API connection. Creating the first claim costs $20. PAi Legal first case is free; additional case creation is paid. Existing work is not behind a further feature paywall. External AI submissions leave the device and may incur provider charges. See https://yprivateai.com/pricing.html and https://yprivateai.com/privacy.html.

@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>On-Premises Legal Software Security: Local, Encrypted, Audited | PAi Legal</title>
-<meta name="description" content="Air-gapped on-premises legal software: loopback enforcement, a token-gated drafting bridge, DPAPI credentials, SHA-256 verified model downloads, role control on Windows accounts, a sealed HMAC audit chain and self-verifying encrypted backups.">
+<title>Local Processing & Security | PAi Legal</title>
+<meta name="description" content="Learn about local processing, credentials, backups, and the separate optional external drafting workflow in PAi Legal.">
 <link rel="canonical" href="https://yprivateai.com/security.html">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="yPrivateAI">
 <meta property="og:url" content="https://yprivateai.com/security.html">
-<meta property="og:title" content="How PAi Legal protects a case — local by construction">
+<meta property="og:title" content="Local Processing &amp; Security | PAi Legal">
 <meta property="og:description" content="Loopback enforcement, a token-gated drafting bridge, DPAPI credentials, SHA-256 verified model downloads, role control on Windows accounts, a sealed HMAC audit chain and self-verifying encrypted backups.">
 <meta property="og:image" content="https://yprivateai.com/og-pai.png">
 <script type="application/ld+json">
@@ -116,7 +116,7 @@ footer a{color:var(--muted)}
 <h2>The private model</h2>
 <p>The runtime ships inside the product. On setup it scans this machine — memory, free disk, cores, GPU — and offers only models this computer can genuinely run, holding back headroom for Windows, the context cache and an interrupted download rather than making an optimistic recommendation on a busy machine.</p>
 <p>The download itself is verified twice over: PAi Legal resolves an <strong>immutable repository revision</strong> and the file's <strong>published SHA-256</strong> before fetching, refuses to proceed without both, rejects an unsafe resume range on a partial download, and deletes the file if the final hash does not match. A partial download is preserved so setup can resume.</p>
-<p>At run time the model server is bound to loopback with a freshly generated per-run API key. After that one-time download, nothing leaves the machine.</p>
+<p>At run time the model server is bound to loopback with a freshly generated per-run API key. Local model inference runs on the machine. Separately chosen external drafting, purchase, and activation services involve network communications.</p>
 
 <h2>Credentials</h2>
 <p>Tokens live in a Windows DPAPI vault tied to the signed-in account, with an application-specific entropy value, and plaintext is never written to disk. If an installed component tries to publish a token in plaintext through a configuration file, PAi Legal refuses it and records why — the configuration may name a credential, not carry one.</p>
@@ -142,5 +142,5 @@ footer a{color:var(--muted)}
 <footer>
   <div class="wrap" style="padding:0">yPrivateAI · Ray City, Georgia · <a href="mailto:support@yprivateai.com">support@yprivateai.com</a> · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></div>
 </footer>
-</body>
+<nav aria-label="Site directory" style="padding:20px;text-align:center;font-size:14px"><a href="/all-pages.html">All pages</a> · <a href="/pricing.html">Pricing</a> · <a href="/transparency.html">Funding and transparency</a> · <a href="/privacy.html">Privacy</a></nav></body>
 </html>
