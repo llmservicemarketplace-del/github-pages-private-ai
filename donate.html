@@ -72,6 +72,34 @@ document.addEventListener('click',function(e){
   gtag('event','conversion',{'send_to':'AW-18465563654/y2g4CMSvo4AdEIbIiOVE'});
 });
 </script>
+<style id="donation-options-styles">
+  .donation-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));
+    gap:16px;
+    margin:28px 0;
+  }
+  .donation-card {
+    background:var(--ink-2,#0D1B2E);
+    border:1px solid var(--rule,#1C2E45);
+    border-radius:10px;
+    padding:22px;
+  }
+  .donation-card h3 {margin:0 0 10px;font-size:20px}
+  .donation-card p {margin:0;font-size:16px}
+  .donation-actions {display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+  .donation-secondary {
+    background:transparent;
+    color:var(--gold-lt,#E4C471);
+    border:1px solid var(--gold,#C8A03C);
+  }
+  .donation-secondary:hover {background:var(--ink-2,#0D1B2E)}
+  #give-money {scroll-margin-top:24px}
+  @media(max-width:600px) {
+    .bar {flex-direction:column;align-items:flex-start}
+    .donation-actions .btn {width:100%;text-align:center}
+  }
+</style>
 </head>
 <body>
 <header>
@@ -90,9 +118,97 @@ document.addEventListener('click',function(e){
   <h1>Help people document, recover, and rebuild.</h1>
   <p class="lede">After a storm, a fire, or a flood, most families face an insurance estimate they have no way to check. We develop tools to help people organize the evidence and compare estimates, alongside free online research and recovery resources.</p>
 
-  <div class="give">
+  <section id="donation-options" aria-labelledby="donation-options-title">
+  <h2 id="donation-options-title">Donate money, equipment, or property</h2>
+  <p>The New Faith Church and Co-op Inc. welcomes gifts that support our programs.
+  You can give money through Zeffy or contact us about donating vehicles,
+  computers, tools, household goods, land, or other property.</p>
+
+  <div class="donation-actions">
+    <a class="btn" href="#give-money">Donate money</a>
+    <a class="btn donation-secondary"
+       href="mailto:keith@thenewfaithchurch.org?subject=Property%20donation%20offer">
+       Offer an item or property
+    </a>
+  </div>
+
+  <div class="donation-grid">
+    <article class="donation-card">
+      <h3>Vehicles</h3>
+      <p>Cars, trucks, vans, motorcycles, boats, trailers, RVs, and farm
+      equipment. Contact us about running or non-running vehicles and
+      tell us whether you have the title.</p>
+    </article>
+
+    <article class="donation-card">
+      <h3>Computers and electronics</h3>
+      <p>Desktops, laptops, servers, monitors, networking equipment,
+      phones, and tablets in working or repairable condition.
+      Contact us to discuss equipment condition and storage-device handling.</p>
+    </article>
+
+    <article class="donation-card">
+      <h3>Tools and equipment</h3>
+      <p>Hand and power tools, shop equipment, generators, compressors,
+      ladders, and usable building materials.</p>
+    </article>
+
+    <article class="donation-card">
+      <h3>Land and real property</h3>
+      <p>Vacant land, lots, and buildings. Acceptance depends on review
+      of the property, title, and associated obligations.</p>
+    </article>
+
+    <article class="donation-card">
+      <h3>Household goods</h3>
+      <p>Usable furniture and working appliances. Send a description
+      and photographs so we can confirm whether we can accept them.</p>
+    </article>
+
+    <article class="donation-card">
+      <h3>Money and business gifts</h3>
+      <p>Support the work with a financial contribution through our
+      existing Zeffy donation form, or contact us about a business donation.</p>
+    </article>
+  </div>
+
+  <h2>Ask about free pickup</h2>
+  <p>Free pickup is available within our service area by arrangement.
+  Tell us what you have, your location, its condition, and whether
+  it needs collecting. We will confirm acceptance and pickup availability
+  before you make arrangements.</p>
+
+  <h2>Acknowledgment of your gift</h2>
+  <p>We provide a written acknowledgment for accepted donations.
+  For property donations, we describe what we received without assigning
+  a value. Please consult your tax advisor about valuation and any
+  forms or appraisal requirements.</p>
+
+  <h2>Items we cannot accept</h2>
+  <p>Please do not bring hazardous materials, CRT televisions or monitors,
+  mattresses, contaminated items, or items damaged beyond repair.
+  Contact us first about any property with liens, title issues,
+  or unpaid taxes.</p>
+
+  <h2>How donated items help</h2>
+  <p>Accepted items may be used in our programs, refurbished, sold to
+  support the work, or recycled as appropriate.</p>
+
+  <div class="donation-actions">
+    <a class="btn"
+       href="mailto:keith@thenewfaithchurch.org?subject=Donation%20offer">
+       Email about a donation
+    </a>
+    <a class="btn donation-secondary" href="tel:+17273367430">
+       Call 727-336-7430
+    </a>
+  </div>
+</section>
+
+<h2 id="give-money">Donate money</h2>
+<div class="give">
     <p>Donations are processed by Zeffy. Follow Zeffy’s confirmation and receipt instructions after donating.</p>
-    <a class="btn" href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-23839" target="_blank" rel="noopener">Donate now</a>
+    <a class="btn" href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-23839" target="_blank" rel="noopener">Donate money</a>
   </div>
 
   <p>Donations are voluntary and separate from software purchases. You do not need to donate to use the resources or software.</p><h2>Free access when cost is a barrier</h2><p>People who cannot afford PAi software can <a href="/get-help.html">contact us to request free access</a>. Standard paid access and optional services are explained on the <a href="/pricing.html">pricing page</a>.</p><h2>What your gift supports</h2>
