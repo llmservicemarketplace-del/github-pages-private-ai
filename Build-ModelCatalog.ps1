@@ -21,7 +21,7 @@ $models = @(
         id="light-gemma"; tier="Light"; family="Gemma"
         label="Gemma 3 1B - Light"
         repo="unsloth/gemma-3-1b-it-GGUF"
-        ram=4.0; gated=$true
+        ram=4.0; gated=$false
         license="Gemma Terms"
         license_url="https://ai.google.dev/gemma/terms"
         blurb="Compact Google model for everyday writing and general assistance."
@@ -30,7 +30,7 @@ $models = @(
         id="light-llama"; tier="Light"; family="Llama"
         label="Llama 3.2 1B - Light"
         repo="unsloth/Llama-3.2-1B-Instruct-GGUF"
-        ram=4.0; gated=$true
+        ram=4.0; gated=$false
         license="Llama Community License"
         license_url="https://www.llama.com/llama-downloads/"
         blurb="Small multilingual assistant for lightweight local use."
@@ -58,7 +58,7 @@ $models = @(
         id="standard-gemma"; tier="Standard"; family="Gemma"
         label="Gemma 3 4B - Standard"
         repo="unsloth/gemma-3-4b-it-GGUF"
-        ram=8.0; gated=$true
+        ram=8.0; gated=$false
         license="Gemma Terms"
         license_url="https://ai.google.dev/gemma/terms"
         blurb="Balanced writing, explanation, and everyday assistant performance."
@@ -67,7 +67,7 @@ $models = @(
         id="standard-llama"; tier="Standard"; family="Llama"
         label="Llama 3.2 3B - Standard"
         repo="unsloth/Llama-3.2-3B-Instruct-GGUF"
-        ram=8.0; gated=$true
+        ram=8.0; gated=$false
         license="Llama Community License"
         license_url="https://www.llama.com/llama-downloads/"
         blurb="General-purpose multilingual assistant for everyday local use."
@@ -95,7 +95,7 @@ $models = @(
         id="advanced-gemma"; tier="Advanced"; family="Gemma"
         label="Gemma 3 12B - Advanced"
         repo="unsloth/gemma-3-12b-it-GGUF"
-        ram=16.0; gated=$true
+        ram=16.0; gated=$false
         license="Gemma Terms"
         license_url="https://ai.google.dev/gemma/terms"
         blurb="Larger Gemma model for detailed writing and stronger explanations."
@@ -104,7 +104,7 @@ $models = @(
         id="advanced-llama"; tier="Advanced"; family="Llama"
         label="Llama 3.1 8B - Advanced"
         repo="unsloth/Llama-3.1-8B-Instruct-GGUF"
-        ram=16.0; gated=$true
+        ram=16.0; gated=$false
         license="Llama Community License"
         license_url="https://www.llama.com/llama-downloads/"
         blurb="Strong general-purpose multilingual assistant for capable systems."
@@ -132,7 +132,7 @@ $models = @(
         id="heavy-gemma"; tier="Heavy"; family="Gemma"
         label="Gemma 3 27B - Heavy"
         repo="unsloth/gemma-3-27b-it-GGUF"
-        ram=32.0; gated=$true
+        ram=32.0; gated=$false
         license="Gemma Terms"
         license_url="https://ai.google.dev/gemma/terms"
         blurb="Large Gemma model intended for high-memory desktop workstations."
@@ -141,7 +141,7 @@ $models = @(
         id="heavy-llama"; tier="Heavy"; family="Llama"
         label="Llama 3.3 70B - Heavy"
         repo="bartowski/Llama-3.3-70B-Instruct-GGUF"
-        ram=48.0; gated=$true
+        ram=48.0; gated=$false
         license="Llama Community License"
         license_url="https://www.llama.com/llama-downloads/"
         blurb="Large general-purpose assistant for high-end workstations."
