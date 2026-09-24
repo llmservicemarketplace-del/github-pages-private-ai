@@ -144,6 +144,23 @@ document.addEventListener('click',function(e){
   gtag('event','conversion',{'send_to':'AW-18465563654/y2g4CMSvo4AdEIbIiOVE'});
 });
 </script>
+<script>
+  // Store links open in a new tab, so the page stays loaded and the conversion
+  // beacon sends normally. The browser's default must not be cancelled there.
+  // Same-tab links need the callback, with a timeout so a blocked tag never
+  // strands the visitor.
+  function paiStoreClick(el, url) {
+    var hit = { 'send_to': 'AW-18465563654/wtiPCLiztYAdEIbIiOVE' };
+    if (typeof gtag !== 'function') { return true; }
+    if (!el || el.target === '_blank') { gtag('event', 'conversion', hit); return true; }
+    var done = false;
+    var go = function () { if (!done) { done = true; window.location = url; } };
+    hit.event_callback = go;
+    gtag('event', 'conversion', hit);
+    setTimeout(go, 1000);
+    return false;
+  }
+</script>
 </head>
 <body>
 <header>

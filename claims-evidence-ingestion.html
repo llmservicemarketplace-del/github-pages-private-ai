@@ -437,6 +437,23 @@ document.addEventListener('click',function(e){
   gtag('event','conversion',{'send_to':'AW-18465563654/y2g4CMSvo4AdEIbIiOVE'});
 });
 </script>
+<script>
+  // Store links open in a new tab, so the page stays loaded and the conversion
+  // beacon sends normally. The browser's default must not be cancelled there.
+  // Same-tab links need the callback, with a timeout so a blocked tag never
+  // strands the visitor.
+  function paiStoreClick(el, url) {
+    var hit = { 'send_to': 'AW-18465563654/wtiPCLiztYAdEIbIiOVE' };
+    if (typeof gtag !== 'function') { return true; }
+    if (!el || el.target === '_blank') { gtag('event', 'conversion', hit); return true; }
+    var done = false;
+    var go = function () { if (!done) { done = true; window.location = url; } };
+    hit.event_callback = go;
+    gtag('event', 'conversion', hit);
+    setTimeout(go, 1000);
+    return false;
+  }
+</script>
 </head>
 <body>
 
@@ -474,7 +491,7 @@ document.addEventListener('click',function(e){
 
   <div class="actions">
     <a class="btn primary" href="pai-claims.html">Explore PAi Claims</a>
-    <a class="btn secondary" href="https://apps.microsoft.com/detail/9P255VXPD5B4" onclick="return paiStoreClick('https://apps.microsoft.com/detail/9P255VXPD5B4')">Download PAi Claims</a>
+    <a class="btn secondary" href="https://apps.microsoft.com/detail/9P255VXPD5B4" onclick="return paiStoreClick(this,'https://apps.microsoft.com/detail/9P255VXPD5B4')">Download PAi Claims</a>
   </div>
 
 </header>
@@ -914,7 +931,7 @@ document.addEventListener('click',function(e){
 
   <div class="actions">
     <a class="btn primary" href="pai-claims.html">See the full PAi Claims platform</a>
-    <a class="btn secondary" href="https://apps.microsoft.com/detail/9P255VXPD5B4" onclick="return paiStoreClick('https://apps.microsoft.com/detail/9P255VXPD5B4')">Download PAi Claims</a>
+    <a class="btn secondary" href="https://apps.microsoft.com/detail/9P255VXPD5B4" onclick="return paiStoreClick(this,'https://apps.microsoft.com/detail/9P255VXPD5B4')">Download PAi Claims</a>
   </div>
 
 </section>
