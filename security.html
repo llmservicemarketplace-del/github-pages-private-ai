@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
@@ -127,7 +127,7 @@ footer a{color:var(--muted)}
 <meta property="og:description" content="Learn about local processing, credentials, backups, and the separate optional external drafting workflow in PAi Legal.">
 <meta property="og:url" content="https://yprivateai.com/security.html">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="yPrivateAI · NFCcop">
+<meta property="og:site_name" content="yPrivateAI Â· NFCcop">
 <meta property="og:image" content="https://yprivateai.com/og-pai.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Local Processing &amp; Security | PAi Legal">
@@ -176,7 +176,7 @@ document.addEventListener('click',function(e){
   </div>
 </header>
 <main class="wrap">
-<p class="crumb"><a href="index.html">Home</a> · <a href="pai-legal.html">PAi Legal</a> · Security</p>
+<p class="crumb"><a href="index.html">Home</a> Â· <a href="pai-legal.html">PAi Legal</a> Â· Security</p>
 <h1>On-premises legal software security: where the case lives and what cannot reach it</h1>
 <p class="lede">Privacy in this product is not a policy sentence. It is a set of refusals built into the code, and each one is checkable.</p>
 
@@ -184,50 +184,51 @@ document.addEventListener('click',function(e){
 <figure class="shot">
   <img src="img/case-storage.png" width="1600" height="868" loading="lazy" decoding="async"
        alt="PAi Legal case dashboard with a Choose case storage dialog asking where a new case should be stored: a folder or external drive, or the private folder on this computer.">
-  <figcaption>Every case begins by asking where it should live. An external drive or a jump drive is a first-class answer — the whole matter, its OCR text, indexes, notes and exports go there and nowhere else.</figcaption>
+  <figcaption>Every case begins by asking where it should live. An external drive or a jump drive is a first-class answer â€” the whole matter, its OCR text, indexes, notes and exports go there and nowhere else.</figcaption>
 </figure>
 
 
-<p>Every internal service PAi Legal talks to must resolve to a loopback address, and that is enforced on the URL before a single request goes out. Hostnames other than literal <em>localhost</em> are rejected outright to defeat DNS rebinding, and URLs carrying embedded credentials are refused. This exists because a local feature must not be silently converted into a remote disclosure channel by an environment variable or a writable configuration file — so even a tampered config cannot point the app at someone else's server.</p>
+<p>Every internal service PAi Legal talks to must resolve to a loopback address, and that is enforced on the URL before a single request goes out. Hostnames other than literal <em>localhost</em> are rejected outright to defeat DNS rebinding, and URLs carrying embedded credentials are refused. This exists because a local feature must not be silently converted into a remote disclosure channel by an environment variable or a writable configuration file â€” so even a tampered config cannot point the app at someone else's server.</p>
 
 <h2>The drafting bridge, and the four things it refuses</h2>
 <p>When you export a brief to an external drafter, PAi Legal serves it to your own browser rather than making you hunt for a file. That server is deliberately narrow:</p>
 <ul class="plain">
-  <li>It binds to 127.0.0.1, never to all interfaces — the difference between a local tool and a data leak on the office wifi</li>
+  <li>It binds to 127.0.0.1, never to all interfaces â€” the difference between a local tool and a data leak on the office wifi</li>
   <li>It sends no cross-origin header, so a page open in another tab cannot read the response</li>
   <li>It requires a random per-session token in the path, generated per run and never written to disk</li>
   <li>It lets the operating system pick the port, holds one brief at a time in memory, and stops when the app does</li>
 </ul>
-<p>Requests whose Host header does not match are rejected, and request logging is deliberately off — a log of which case files were fetched is not something worth keeping.</p>
+<p>Requests whose Host header does not match are rejected, and request logging is deliberately off â€” a log of which case files were fetched is not something worth keeping.</p>
 
 <h2>The private model</h2>
-<p>The runtime ships inside the product. On setup it scans this machine — memory, free disk, cores, GPU — and offers only models this computer can genuinely run, holding back headroom for Windows, the context cache and an interrupted download rather than making an optimistic recommendation on a busy machine.</p>
+<p>The runtime ships inside the product. On setup it scans this machine â€” memory, free disk, cores, GPU â€” and offers only models this computer can genuinely run, holding back headroom for Windows, the context cache and an interrupted download rather than making an optimistic recommendation on a busy machine.</p>
 <p>The download itself is verified twice over: PAi Legal resolves an <strong>immutable repository revision</strong> and the file's <strong>published SHA-256</strong> before fetching, refuses to proceed without both, rejects an unsafe resume range on a partial download, and deletes the file if the final hash does not match. A partial download is preserved so setup can resume.</p>
 <p>At run time the model server is bound to loopback with a freshly generated per-run API key. Local model inference runs on the machine. Separately chosen external drafting, purchase, and activation services involve network communications.</p>
 
 <h2>Credentials</h2>
-<p>Tokens live in a Windows DPAPI vault tied to the signed-in account, with an application-specific entropy value, and plaintext is never written to disk. If an installed component tries to publish a token in plaintext through a configuration file, PAi Legal refuses it and records why — the configuration may name a credential, not carry one.</p>
+<p>Tokens live in a Windows DPAPI vault tied to the signed-in account, with an application-specific entropy value, and plaintext is never written to disk. If an installed component tries to publish a token in plaintext through a configuration file, PAi Legal refuses it and records why â€” the configuration may name a credential, not carry one.</p>
 
 <h2>Roles, bound to Windows accounts</h2>
-<p>Owner, lawyer, paralegal, intake and auditor each carry their own permission set — who can create a case, write evidence or work product, export, back up, verify the audit log, run a conflict check, manage integrations. Roles map to operating-system accounts, and the last owner cannot demote themselves without naming another.</p>
+<p>Owner, lawyer, paralegal, intake and auditor each carry their own permission set â€” who can create a case, write evidence or work product, export, back up, verify the audit log, run a conflict check, manage integrations. Roles map to operating-system accounts, and the last owner cannot demote themselves without naming another.</p>
 <p>The status screen states the limitation rather than overselling it: this is meaningful authorization when staff use separate Windows accounts and the workspace permissions do not let them rewrite the policy file. It is role control, not authentication, and it says so.</p>
 
 <h2>A firm can require encryption</h2>
 <p>Policy can be set so that no case is written to a volume that is not BitLocker-protected. When enforcement is on and the volume is not protected, the write is refused with the reason attached.</p>
 
 <h2>A sealed audit chain</h2>
-<p>Case events append to a keyed integrity chain: each record carries its sequence number, the previous record's hash, and its own HMAC-SHA256 seal. Verification walks the chain and reports the exact line where a sequence break, a hash mismatch or an altered record occurs. Records written before the chain existed are sealed forward and permanently marked as having an unsealed origin — the software will not pretend to prove something it cannot. An external anchor can be checked against the current head and comes back current, extended or mismatched.</p>
+<p>Case events append to a keyed integrity chain: each record carries its sequence number, the previous record's hash, and its own HMAC-SHA256 seal. Verification walks the chain and reports the exact line where a sequence break, a hash mismatch or an altered record occurs. Records written before the chain existed are sealed forward and permanently marked as having an unsealed origin â€” the software will not pretend to prove something it cannot. An external anchor can be checked against the current head and comes back current, extended or mismatched.</p>
 
 <h2>Backups that verify themselves</h2>
-<p>A case exports to a single encrypted file: scrypt-derived key, AES-GCM, with a manifest hashing every document inside the authenticated envelope. Restoring checks each file against that manifest and refuses the archive if anything is off — a wrong passphrase or altered ciphertext fails authentication outright, and so do unsafe paths, symbolic links, duplicate entries, unmanifested files, size mismatches, or a restore that would not fit safely on the disk. The audit key travels inside the encrypted envelope rather than in a sidecar next to the case.</p>
+<p>A case exports to a single encrypted file: scrypt-derived key, AES-GCM, with a manifest hashing every document inside the authenticated envelope. Restoring checks each file against that manifest and refuses the archive if anything is off â€” a wrong passphrase or altered ciphertext fails authentication outright, and so do unsafe paths, symbolic links, duplicate entries, unmanifested files, size mismatches, or a restore that would not fit safely on the disk. The audit key travels inside the encrypted envelope rather than in a sidecar next to the case.</p>
 
 <h2>What the software says about itself</h2>
 <p class="note">Case files, OCR text, indexes and AI prompts remain on this computer. External sends require your action.</p>
-<p>That line sits in the application header, not only in a privacy policy — and the diagnostics screen will show you every path and endpoint it touched to reach that state.</p>
+<p>That line sits in the application header, not only in a privacy policy â€” and the diagnostics screen will show you every path and endpoint it touched to reach that state.</p>
 <div class="next"><a href="pai-legal.html">Back to PAi Legal</a><a href="promotion.html">How facts get promoted</a><a href="ingest.html">How documents get in</a></div>
 </main>
 <footer>
-  <div class="wrap" style="padding:0">yPrivateAI · Ray City, Georgia · <a href="mailto:support@yprivateai.com">support@yprivateai.com</a> · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></div>
+  <div class="wrap" style="padding:0">yPrivateAI Â· Ray City, Georgia Â· <a href="mailto:support@yprivateai.com" onclick="gtag('event','conversion',{'send_to':'AW-18465563654/y2g4CMSvo4AdEIbIiOVE'});">support@yprivateai.com</a> Â· <a href="index.html">Home</a> Â· <a href="privacy.html">Privacy</a></div>
 </footer>
-<nav aria-label="Site directory" style="padding:20px;text-align:center;font-size:14px"><a href="/programs.html">Programs</a> · <a href="/get-help.html">Free-access assistance</a> · <a href="/contact.html">Contact</a> · <a href="/all-pages.html">All pages</a> <a href="https://yprivateai.com/about.html">About</a> · <a href="/pricing.html">Pricing</a> · <a href="/transparency.html">Funding and transparency</a> · <a href="/privacy.html">Privacy</a></nav></body>
+<nav aria-label="Site directory" style="padding:20px;text-align:center;font-size:14px"><a href="/programs.html">Programs</a> Â· <a href="/get-help.html">Free-access assistance</a> Â· <a href="/contact.html">Contact</a> Â· <a href="/all-pages.html">All pages</a> <a href="https://yprivateai.com/about.html">About</a> Â· <a href="/pricing.html">Pricing</a> Â· <a href="/transparency.html">Funding and transparency</a> Â· <a href="/privacy.html">Privacy</a></nav></body>
 </html>
+
