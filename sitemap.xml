@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://yprivateai.com/</loc></url>
+  <url><loc>https://yprivateai.com/about.html</loc></url>
+  <url><loc>https://yprivateai.com/access-for-recovery.html</loc></url>
   <url><loc>https://yprivateai.com/all-pages.html</loc></url>
   <url><loc>https://yprivateai.com/answering-a-lawsuit.html</loc></url>
   <url><loc>https://yprivateai.com/claims-ai-evidence-control.html</loc></url>
   <url><loc>https://yprivateai.com/claims-evidence-ingestion.html</loc></url>
+  <url><loc>https://yprivateai.com/contact.html</loc></url>
   <url><loc>https://yprivateai.com/denied-insurance-claim.html</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/after-storm-damage.html</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/document-damage.html</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/find-disaster-help.html</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/find-gas.html</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/find-tarps.html</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/home-repair-help.html</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/power-outage.html</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/roof-tarp-guide.html</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/storm-cleanup.html</loc></url>
+  <url><loc>https://yprivateai.com/disaster-recovery/tree-removal-help.html</loc></url>
   <url><loc>https://yprivateai.com/donate.html</loc></url>
+  <url><loc>https://yprivateai.com/get-help.html</loc></url>
   <url><loc>https://yprivateai.com/ingest.html</loc></url>
+  <url><loc>https://yprivateai.com/legal-help/</loc></url>
+  <url><loc>https://yprivateai.com/legal-help/courts-remedies-process.html</loc></url>
+  <url><loc>https://yprivateai.com/legal-help/employment-business-law.html</loc></url>
+  <url><loc>https://yprivateai.com/legal-help/legal-aid-find-lawyer.html</loc></url>
+  <url><loc>https://yprivateai.com/legal-help/legal-research-understanding.html</loc></url>
+  <url><loc>https://yprivateai.com/legal-help/property-probate-authority.html</loc></url>
+  <url><loc>https://yprivateai.com/more-software.html</loc></url>
   <url><loc>https://yprivateai.com/pai-claims.html</loc></url>
   <url><loc>https://yprivateai.com/pai-legal.html</loc></url>
   <url><loc>https://yprivateai.com/parliament.html</loc></url>
   <url><loc>https://yprivateai.com/pricing.html</loc></url>
   <url><loc>https://yprivateai.com/privacy.html</loc></url>
+  <url><loc>https://yprivateai.com/programs.html</loc></url>
   <url><loc>https://yprivateai.com/promotion.html</loc></url>
   <url><loc>https://yprivateai.com/research/</loc></url>
   <url><loc>https://yprivateai.com/research/actual-cash-value.html</loc></url>
@@ -26,7 +49,8 @@
   <url><loc>https://yprivateai.com/resources/</loc></url>
   <url><loc>https://yprivateai.com/security.html</loc></url>
   <url><loc>https://yprivateai.com/self-represented.html</loc></url>
+  <url><loc>https://yprivateai.com/setup.html</loc></url>
   <url><loc>https://yprivateai.com/software.html</loc></url>
+  <url><loc>https://yprivateai.com/thank-you.html</loc></url>
   <url><loc>https://yprivateai.com/transparency.html</loc></url>
-  <url><loc>https://yprivateai.com/about.html</loc></url>
-<url><loc>https://yprivateai.com/programs.html</loc></url><url><loc>https://yprivateai.com/get-help.html</loc></url><url><loc>https://yprivateai.com/contact.html</loc></url></urlset>
+</urlset>
