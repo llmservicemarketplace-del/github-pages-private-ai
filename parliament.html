@@ -125,7 +125,7 @@ footer a{color:var(--muted)}
 <meta property="og:description" content="How PAi Legal analyzes a case record, identifies missing support, and keeps findings connected to source documents.">
 <meta property="og:url" content="https://yprivateai.com/parliament.html">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="yPrivateAI Â· NFCcop">
+<meta property="og:site_name" content="yPrivateAI · NFCcop">
 <meta property="og:image" content="https://yprivateai.com/og-pai.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Case Analysis &amp; Missing Evidence | PAi Legal">
@@ -173,35 +173,35 @@ document.addEventListener('click',function(e){
   </div>
 </header>
 <main class="wrap">
-<p class="crumb"><a href="index.html">Home</a> Â· <a href="pai-legal.html">PAi Legal</a> Â· Parliament</p>
+<p class="crumb"><a href="index.html">Home</a> · <a href="pai-legal.html">PAi Legal</a> · Parliament</p>
 <h1>Deterministic case analysis that names what your claim has not proved</h1>
-<p class="lede">Not a vote between model personas. A closure rule applied to three channels of a legal case, with the gap it exposes as the finding. Nothing here calls a model â€” the findings are identical whether or not a private AI is installed.</p>
+<p class="lede">Not a vote between model personas. A closure rule applied to three channels of a legal case, with the gap it exposes as the finding. Nothing here calls a model — the findings are identical whether or not a private AI is installed.</p>
 
 <h2>Three channels</h2>
 <p>Strip a civil case down and every element of every theory sits on one of three things:</p>
 <table>
   <tr><th>Channel</th><th>What lives there</th></tr>
-  <tr><td>Matter</td><td>Amounts, measurements, injury, physical extent â€” what it cost.</td></tr>
-  <tr><td>Relation</td><td>Parties, duties, courts, authorities, obligations â€” who owed what to whom.</td></tr>
-  <tr><td>Chronology</td><td>Acts, dates, sequence, procedural position â€” when it happened.</td></tr>
+  <tr><td>Matter</td><td>Amounts, measurements, injury, physical extent — what it cost.</td></tr>
+  <tr><td>Relation</td><td>Parties, duties, courts, authorities, obligations — who owed what to whom.</td></tr>
+  <tr><td>Chronology</td><td>Acts, dates, sequence, procedural position — when it happened.</td></tr>
 </table>
 <p>These compose under a fixed algebraic rule rather than a heuristic. Two like channels cancel to the baseline; two different channels leave the third as their residue. Relation and chronology together point at matter. Matter and relation point at chronology. The composition is closed and verifiable, and the software checks that closure holds before it relies on it.</p>
 
 <h2>The gap is the finding</h2>
 <p class="note">Two supported channels name the third. If the third is not in your record, that absence is the answer the software gives you.</p>
-<p>A legal theory is the host the channels sit inside. Breach of contract needs a contract that bound the parties (relation), performance that failed on a date (chronology), and a measurable loss (matter). Support two of those from the documents and the algebra names the one you are missing â€” before a judge does.</p>
+<p>A legal theory is the host the channels sit inside. Breach of contract needs a contract that bound the parties (relation), performance that failed on a date (chronology), and a measurable loss (matter). Support two of those from the documents and the algebra names the one you are missing — before a judge does.</p>
 <p>Each theory carries its own text for what is missing, written to be useful rather than clinical. The bad-faith theory is the sharpest example, and the one that saves people from filing something that dies on a motion:</p>
 <div class="stage">
   <h3>Bad faith, and the amount that does not count</h3>
   <p>Bad faith needs harm the carrier's conduct caused <strong>on top of</strong> what the policy already owed. So amounts are typed by the line they appear on: attorney's fees, interest, punitive damages, consequential loss and emotional distress read as harm beyond the benefit; estimates, repair costs, ACV, RCV, policy limits and deductibles read as the benefit itself.</p>
-  <p>Anything ambiguous is typed as the policy benefit â€” the conservative reading, which can never manufacture support for a bad-faith claim. If every amount in your record is the benefit, the software tells you plainly: paying the estimate late is a breach, not bad faith.</p>
+  <p>Anything ambiguous is typed as the policy benefit — the conservative reading, which can never manufacture support for a bad-faith claim. If every amount in your record is the benefit, the software tells you plainly: paying the estimate late is a breach, not bad faith.</p>
 </div>
 
 <h2>A keyword is not support</h2>
-<p>Matching a word is easy and worthless on its own, because the sentence containing it may be denying the very thing you need. Support is read clause by clause: the software finds the clause the match sits in, and a denial anywhere in it â€” <em>no</em>, <em>never</em>, <em>without</em>, <em>dismissed</em>, <em>insufficient</em>, <em>fails to establish</em>, or a "denies that" running into the match â€” means the element stays open for human review. "Not only" is treated as the intensifier it is, not a negation. Uncertainty leaves the element unsupported rather than letting a pattern close it.</p>
+<p>Matching a word is easy and worthless on its own, because the sentence containing it may be denying the very thing you need. Support is read clause by clause: the software finds the clause the match sits in, and a denial anywhere in it — <em>no</em>, <em>never</em>, <em>without</em>, <em>dismissed</em>, <em>insufficient</em>, <em>fails to establish</em>, or a "denies that" running into the match — means the element stays open for human review. "Not only" is treated as the intensifier it is, not a negation. Uncertainty leaves the element unsupported rather than letting a pattern close it.</p>
 
 <h2>Saying it yourself is not proof</h2>
-<p>An element supported only by your own pleading is marked as asserted rather than supported, and the plain-language view says so directly: you say this in your own court filing, but saying it in your filing is not proof of it â€” a judge will want a document from outside your own paperwork. It then tells you which channel of proof to go find.</p>
+<p>An element supported only by your own pleading is marked as asserted rather than supported, and the plain-language view says so directly: you say this in your own court filing, but saying it in your filing is not proof of it — a judge will want a document from outside your own paperwork. It then tells you which channel of proof to go find.</p>
 
 <h2>The map and its six projections</h2>
 <figure class="shot">
@@ -215,18 +215,18 @@ document.addEventListener('click',function(e){
 <table>
   <tr><th>Projection</th><th>What it reports</th></tr>
   <tr><td>Clerk</td><td>How many indexed document transitions are replayable from their stored signatures. A statement about the record, not about the case.</td></tr>
-  <tr><td>Advocate</td><td>Which document carries the greatest relational pressure â€” and says in the same breath that this identifies attention, not truth.</td></tr>
+  <tr><td>Advocate</td><td>Which document carries the greatest relational pressure — and says in the same breath that this identifies attention, not truth.</td></tr>
   <tr><td>Opposition</td><td>The least represented channel: the thinnest part of the case and the first structural gap to inspect.</td></tr>
   <tr><td>Precedent Judge</td><td>Confirms no transition or recurrence promoted a stored epistemic status. This one exists to say no.</td></tr>
-  <tr><td>Forecaster</td><td>What the strongest mapped cross-pair leaves as its unresolved residue â€” the next thing that has to be answered.</td></tr>
+  <tr><td>Forecaster</td><td>What the strongest mapped cross-pair leaves as its unresolved residue — the next thing that has to be answered.</td></tr>
   <tr><td>Recorder</td><td>The seed and replay signature, so the whole finding can be reproduced exactly.</td></tr>
 </table>
 <p class="note">The map is a structural forecast of possible next states in the record. It is not a prediction of what a court will do.</p>
 
 <h2>More than one lawsuit in one folder</h2>
-<p>Trouble rarely arrives as a single suit. A claim gets denied, then the lawyer hired to fight the denial mishandles it: two matters, different defendants, different theories, one underlying event. Filed together they look like one dispute, and everything downstream inherits the confusion â€” retrieval pulling bad-faith authorities for a malpractice question, a draft that merges two suits.</p>
-<p>So matters are detected from captions, docket numbers and claim numbers and kept distinct â€” but deliberately <strong>not severed into separate folders</strong>, because the malpractice matter exists because of the insurance claim and its proof lives in the insurance documents. The links between matters are recorded with the reason for each link. A document with no caption, docket or claim number is left unassigned rather than guessed at.</p>
-<p>Each matter is also marked filed or still building, because whether a court has taken a case in is the single most consequential thing to be wrong about â€” and the software says plainly that "not filed" does not mean no clock is running.</p>
+<p>Trouble rarely arrives as a single suit. A claim gets denied, then the lawyer hired to fight the denial mishandles it: two matters, different defendants, different theories, one underlying event. Filed together they look like one dispute, and everything downstream inherits the confusion — retrieval pulling bad-faith authorities for a malpractice question, a draft that merges two suits.</p>
+<p>So matters are detected from captions, docket numbers and claim numbers and kept distinct — but deliberately <strong>not severed into separate folders</strong>, because the malpractice matter exists because of the insurance claim and its proof lives in the insurance documents. The links between matters are recorded with the reason for each link. A document with no caption, docket or claim number is left unassigned rather than guessed at.</p>
+<p>Each matter is also marked filed or still building, because whether a court has taken a case in is the single most consequential thing to be wrong about — and the software says plainly that "not filed" does not mean no clock is running.</p>
 
 <h2>Where the model is allowed to speak</h2>
 <p>Last, and on a leash. Its instructions forbid inventing a citation, quotation, date, holding, party, docket number or fact, and require every factual statement to name its supplied source marker. Its output is then <strong>re-bracketed by the software before you see it</strong>: any claim it tried to mark independently validated is checked against the actual validated inputs and demoted to speculative unless it aligns exactly with one. Prose it produces on its own authority is marked speculative on its face.</p>
@@ -235,8 +235,8 @@ document.addEventListener('click',function(e){
 <div class="next"><a href="ingest.html">How documents get in</a><a href="promotion.html">How facts get promoted</a><a href="pai-legal.html">Back to PAi Legal</a></div>
 </main>
 <footer>
-  <div class="wrap" style="padding:0">yPrivateAI Â· Ray City, Georgia Â· <a href="mailto:support@yprivateai.com">support@yprivateai.com</a> Â· <a href="index.html">Home</a> Â· <a href="privacy.html">Privacy</a></div>
+  <div class="wrap" style="padding:0">yPrivateAI · Ray City, Georgia · <a href="mailto:support@yprivateai.com">support@yprivateai.com</a> · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></div>
 </footer>
-<nav aria-label="Site directory" style="padding:20px;text-align:center;font-size:14px"><a href="/programs.html">Programs</a> Â· <a href="/get-help.html">Free-access assistance</a> Â· <a href="/contact.html">Contact</a> Â· <a href="/all-pages.html">All pages</a> <a href="https://yprivateai.com/about.html">About</a> Â· <a href="/pricing.html">Pricing</a> Â· <a href="/transparency.html">Funding and transparency</a> Â· <a href="/privacy.html">Privacy</a></nav></body>
+<nav aria-label="Site directory" style="padding:20px;text-align:center;font-size:14px"><a href="/programs.html">Programs</a> · <a href="/get-help.html">Free-access assistance</a> · <a href="/contact.html">Contact</a> · <a href="/all-pages.html">All pages</a> <a href="https://yprivateai.com/about.html">About</a> · <a href="/pricing.html">Pricing</a> · <a href="/transparency.html">Funding and transparency</a> · <a href="/privacy.html">Privacy</a></nav></body>
 </html>
 
