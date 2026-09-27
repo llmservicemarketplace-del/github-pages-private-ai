@@ -125,7 +125,7 @@ footer a{color:var(--muted)}
 <meta property="og:description" content="How PAi Legal imports documents, extracts text with OCR, and organizes files for source-based review.">
 <meta property="og:url" content="https://yprivateai.com/ingest.html">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="yPrivateAI Â· NFCcop">
+<meta property="og:site_name" content="yPrivateAI · NFCcop">
 <meta property="og:image" content="https://yprivateai.com/og-pai.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Document OCR &amp; Case File Indexing | PAi Legal">
@@ -173,12 +173,12 @@ document.addEventListener('click',function(e){
   </div>
 </header>
 <main class="wrap">
-<p class="crumb"><a href="index.html">Home</a> Â· <a href="pai-legal.html">PAi Legal</a> Â· Ingest</p>
+<p class="crumb"><a href="index.html">Home</a> · <a href="pai-legal.html">PAi Legal</a> · Ingest</p>
 <h1>Legal document OCR and case file indexing, start to finish</h1>
 <p class="lede">Every file you drop in goes through the same five stages. The original is never altered, and nothing the software cannot read cleanly is allowed to pass quietly.</p>
 
 <h2>1. The original is preserved first</h2>
-<p>Before anything is read, the file is copied into the case folder you chose and kept byte for byte. Everything after this point â€” extracted text, indexes, relations, analysis â€” is <strong>derived</strong>, which means it can be thrown away and rebuilt from the original at any time. If an extraction improves in a later version, you rebuild; you never lose the source document.</p>
+<p>Before anything is read, the file is copied into the case folder you chose and kept byte for byte. Everything after this point — extracted text, indexes, relations, analysis — is <strong>derived</strong>, which means it can be thrown away and rebuilt from the original at any time. If an extraction improves in a later version, you rebuild; you never lose the source document.</p>
 <p>Accepted on the way in: PDF, scanned images, Word and other Office documents, email files, plain and structured text.</p>
 
 <h2>2. Text extraction, by the right tool for the file</h2>
@@ -188,10 +188,10 @@ document.addEventListener('click',function(e){
 </div>
 <div class="stage">
   <h3>Word and Office documents</h3>
-  <p>Word files are unpacked and read from their document structure rather than screenshotted â€” paragraphs, tables, headers and footers come across as text, so a table of line items stays a table.</p>
+  <p>Word files are unpacked and read from their document structure rather than screenshotted — paragraphs, tables, headers and footers come across as text, so a table of line items stays a table.</p>
 </div>
 <div class="stage">
-  <h3>Scans and photographs â€” Tesseract OCR</h3>
+  <h3>Scans and photographs — Tesseract OCR</h3>
   <p>Anything with no text layer goes to Tesseract, the open-source OCR engine, which ships inside the program. Nothing is sent to a cloud OCR service. Scanned exhibits, faxed carrier letters and photographed pages become searchable text on your machine.</p>
   <p>OCR is where quality problems live, which is why the next stage exists.</p>
 </div>
@@ -204,35 +204,35 @@ document.addEventListener('click',function(e){
 <figure class="shot">
   <img src="img/evidence-workspace.png" width="1600" height="868" loading="lazy" decoding="async"
        alt="PAi Legal evidence workspace listing 78 preserved case documents with Float, Mix, Stir and total pressure counters, and a document relational pressure map for a selected PDF.">
-  <figcaption>Originals preserved, text and indexes derived and rebuildable. The panel on the right breaks one document down to its observations, relations and recurrences â€” with a note that pressure cannot promote or demote its Trust Lock.</figcaption>
+  <figcaption>Originals preserved, text and indexes derived and rebuildable. The panel on the right breaks one document down to its observations, relations and recurrences — with a note that pressure cannot promote or demote its Trust Lock.</figcaption>
 </figure>
 
 
-<p>Extracted text is indexed as relational structure, not as a blob: observations, the relations between them, and how often each pattern recurs. This is the layer that makes a case searchable and mappable, and it is computed by rule â€” the same file produces the same index every time, with a signature to prove it.</p>
+<p>Extracted text is indexed as relational structure, not as a blob: observations, the relations between them, and how often each pattern recurs. This is the layer that makes a case searchable and mappable, and it is computed by rule — the same file produces the same index every time, with a signature to prove it.</p>
 
 <h2>4. Nothing is guessed, and nothing fails silently</h2>
-<p>There is no AI in the extraction path at all. Every document is read by a declared method â€” <strong>pdf-text</strong>, <strong>pdf-text+tesseract</strong>, <strong>docx</strong>, <strong>xlsx</strong>, <strong>eml</strong>, <strong>tesseract-ocr</strong> â€” and the method is recorded with the document along with its page count and how many of those pages needed OCR. You can always see how a page became text.</p>
-<p>The OCR decision is made by rule, not by judgement: a PDF page carrying fewer than forty characters of real text is treated as scanned and rendered at 2.5Ã— before Tesseract reads it, because a page holding nothing but a stamp and a page number is a scan whatever the file says. If a page needs OCR and the OCR runtime is missing, ingest <em>stops with an error naming the page</em>. It does not import an empty document and let you find out in a filing.</p>
+<p>There is no AI in the extraction path at all. Every document is read by a declared method — <strong>pdf-text</strong>, <strong>pdf-text+tesseract</strong>, <strong>docx</strong>, <strong>xlsx</strong>, <strong>eml</strong>, <strong>tesseract-ocr</strong> — and the method is recorded with the document along with its page count and how many of those pages needed OCR. You can always see how a page became text.</p>
+<p>The OCR decision is made by rule, not by judgement: a PDF page carrying fewer than forty characters of real text is treated as scanned and rendered at 2.5× before Tesseract reads it, because a page holding nothing but a stamp and a page number is a scan whatever the file says. If a page needs OCR and the OCR runtime is missing, ingest <em>stops with an error naming the page</em>. It does not import an empty document and let you find out in a filing.</p>
 <p>Unsupported types are refused by name rather than half-read. The header carries a live OCR indicator so you know before you drop 300 files whether the runtime is there.</p>
 
 <h2>5. Contradictions surface at analysis, and you resolve them</h2>
 <p class="note">When the same claim appears under two different Trust Locks, the software shows you the tension. It does not pick a winner.</p>
-<p>Cross-checking happens where the evidence meets the case, not at the moment a file is read. When analysis finds the identical claim carried at two different verification levels â€” one document treating it as established, another as unverified or contradicted â€” that tension is listed for you, with both sources. Resolving it is a decision a person makes and the case records.</p>
+<p>Cross-checking happens where the evidence meets the case, not at the moment a file is read. When analysis finds the identical claim carried at two different verification levels — one document treating it as established, another as unverified or contradicted — that tension is listed for you, with both sources. Resolving it is a decision a person makes and the case records.</p>
 <p>The same principle runs through the rest of the workspace: a conflict check screens party names and says plainly that it is a screening aid and not a clearance; a filing preflight reports mechanical omissions and states that it is not a legal-sufficiency determination. The software is built to hand you a decision, not to make it quietly.</p>
 
 <h2>Where the AI is, and where it is not</h2>
 <ul class="plain">
   <li>It is not in extraction. Text comes from the document's own structure or from Tesseract, never from a model reading a picture and describing it</li>
   <li>It is not in classification. A document's role is resolved from its filename and its opening text by rule, and the text wins when the two disagree</li>
-  <li>It does not resolve a tension between two claims â€” a person does</li>
+  <li>It does not resolve a tension between two claims — a person does</li>
   <li>It does not send anything anywhere; when a model is used at all, it runs locally on this machine</li>
   <li>Ingest, indexing, classification and the case map all complete with no model installed</li>
 </ul>
 <div class="next"><a href="promotion.html">Next: how facts get promoted</a><a href="parliament.html">The Parliament</a><a href="pai-legal.html">Back to PAi Legal</a></div>
 </main>
 <footer>
-  <div class="wrap" style="padding:0">yPrivateAI Â· Ray City, Georgia Â· <a href="mailto:support@yprivateai.com">support@yprivateai.com</a> Â· <a href="index.html">Home</a> Â· <a href="privacy.html">Privacy</a></div>
+  <div class="wrap" style="padding:0">yPrivateAI · Ray City, Georgia · <a href="mailto:support@yprivateai.com">support@yprivateai.com</a> · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></div>
 </footer>
-<nav aria-label="Site directory" style="padding:20px;text-align:center;font-size:14px"><a href="/programs.html">Programs</a> Â· <a href="/get-help.html">Free-access assistance</a> Â· <a href="/contact.html">Contact</a> Â· <a href="/all-pages.html">All pages</a> <a href="https://yprivateai.com/about.html">About</a> Â· <a href="/pricing.html">Pricing</a> Â· <a href="/transparency.html">Funding and transparency</a> Â· <a href="/privacy.html">Privacy</a></nav></body>
+<nav aria-label="Site directory" style="padding:20px;text-align:center;font-size:14px"><a href="/programs.html">Programs</a> · <a href="/get-help.html">Free-access assistance</a> · <a href="/contact.html">Contact</a> · <a href="/all-pages.html">All pages</a> <a href="https://yprivateai.com/about.html">About</a> · <a href="/pricing.html">Pricing</a> · <a href="/transparency.html">Funding and transparency</a> · <a href="/privacy.html">Privacy</a></nav></body>
 </html>
 
