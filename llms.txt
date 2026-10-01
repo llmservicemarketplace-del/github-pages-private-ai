@@ -26,6 +26,17 @@
 
 ## Pages
 - [Home](https://yprivateai.com/)
+- [Moving On resource center](https://yprivateai.com/moving-on/): mortgage hardship, rebuilding decisions, safer relocation, property searches, hazard research, and scam prevention after a total loss.
+- [Property search directory](https://yprivateai.com/moving-on/property-search-directory/): direct starting links to major listing platforms, brokerage networks, HUD Home Store, HomePath, and HomeSteps, with independent verification guidance.
+- [Mortgage forbearance](https://yprivateai.com/moving-on/mortgage-forbearance/)
+- [Foreclosure and REO research](https://yprivateai.com/moving-on/foreclosed-reo-property-research/)
+- [Coastal property safety](https://yprivateai.com/moving-on/coastal-property-safety/)
+- [Hazard and flood research](https://yprivateai.com/moving-on/hazard-and-flood-research/)
+- [Seller financing guide](https://yprivateai.com/moving-on/seller-financing-guide/)
+- [Real-estate scam and wire-fraud prevention](https://yprivateai.com/moving-on/real-estate-scam-wire-fraud/)
+- [Rebuild or relocate decision guide](https://yprivateai.com/moving-on/rebuild-or-relocate-decision-guide/)
+- [Served with a lawsuit](https://yprivateai.com/answering-a-lawsuit.html)
+- [Denied or underpaid insurance claim](https://yprivateai.com/denied-insurance-claim.html)
 - [PAi Legal](https://yprivateai.com/pai-legal.html)
 - [PAi Claims](https://yprivateai.com/pai-claims.html)
 - [Ingest](https://yprivateai.com/ingest.html)
