@@ -146,6 +146,7 @@ footer a{color:var(--muted)}
     return false;
   }
 </script>
+  <link rel="stylesheet" href="/css/editorial-images.css">
 </head>
 <body>
 <header>
@@ -173,6 +174,11 @@ footer a{color:var(--muted)}
 <div class="tier"><b>[[[ ]]] Validated</b><p>Independently corroborated. Supported through more than one provenance root, with no outweighing contradiction. Copies of one origin do not count as second roots.<small>Independent corroboration, not repetition</small></p></div>
 <p>Arithmetic over these claims cannot promote its own status. When two values combine, the result takes the dominant position of its inputs and <strong>ties resolve downward, never upward</strong> — mixing something explained with something unverified never produces something validated.</p>
 
+
+<figure class="editorial-photo" data-editorial-photo="one">
+  <img src="/images/editorial/legal-records-self-help.webp" alt="A self-represented person reviewing organized legal records at a public library near a courthouse" width="1440" height="810" loading="lazy" decoding="async">
+  <figcaption>Organized records and reliable public sources make legal information easier to understand and use.</figcaption>
+</figure>
 <h2>Why repetition does not promote anything</h2>
 <p>Support is accumulated per <strong>provenance root</strong>, with diminishing returns as copies pile up under the same root. Three hundred documents descending from a single press release collapse to one root and produce almost no support. Three genuinely separate origins outrank all three hundred. Contradicting sources are not averaged away either — uncontradicted opposition gates promotion outright.</p>
 
@@ -183,6 +189,11 @@ footer a{color:var(--muted)}
 <h2>The top level is not reachable by rule</h2>
 <p>The rules can carry a claim as far as corroborated. The final step — this authority controls, this fact is established for this matter — is left open on purpose for the verification layer and for you. A deterministic engine can prove that two independent roots agree; it cannot decide that a case is good law today. Nothing in the software will award itself that.</p>
 
+
+<figure class="editorial-photo" data-editorial-photo="two">
+  <img src="/images/editorial/private-local-software.webp" alt="A person organizing documents on a private desktop computer beside a locked filing cabinet and local storage drive" width="1440" height="810" loading="lazy" decoding="async">
+  <figcaption>Local organization can help people keep sensitive records under their own control.</figcaption>
+</figure>
 <h2>The handoff from PAi Claims is read-only</h2>
 <p>PAi Claims accumulates by design — scope, pricing and carrier-conduct patterns carry forward, and it gets sharper the more claims it sees. PAi Legal handles the same material under stricter rules, and the seam between them is guarded in both directions.</p>
 <p><strong>PAi Legal never rewrites the Claims record.</strong> The Claims case graph stays the base record in your own workspace. Legal builds an overlay beside it and writes its own separate extension graph, and the handoff is refused outright if the Claims files do not match: the graph must be marked handoff-ready, the claim and the graph must be the same persisted revision, and the file hash must match what the graph says it should be. Legal hashes the base graph before and after linking and stops if it changed.</p>

@@ -151,6 +151,7 @@ footer a{color:var(--muted)}
     return false;
   }
 </script>
+  <link rel="stylesheet" href="/css/editorial-images.css">
 </head>
 <body>
 <header>
@@ -180,6 +181,11 @@ footer a{color:var(--muted)}
 
 <p>Every internal service PAi Legal talks to must resolve to a loopback address, and that is enforced on the URL before a single request goes out. Hostnames other than literal <em>localhost</em> are rejected outright to defeat DNS rebinding, and URLs carrying embedded credentials are refused. This exists because a local feature must not be silently converted into a remote disclosure channel by an environment variable or a writable configuration file — so even a tampered config cannot point the app at someone else's server.</p>
 
+
+<figure class="editorial-photo" data-editorial-photo="one">
+  <img src="/images/editorial/private-local-software.webp" alt="A person organizing documents on a private desktop computer beside a locked filing cabinet and local storage drive" width="1440" height="810" loading="lazy" decoding="async">
+  <figcaption>Local organization can help people keep sensitive records under their own control.</figcaption>
+</figure>
 <h2>The drafting bridge, and the four things it refuses</h2>
 <p>When you export a brief to an external drafter, PAi Legal serves it to your own browser rather than making you hunt for a file. That server is deliberately narrow:</p>
 <ul class="plain">
@@ -198,6 +204,11 @@ footer a{color:var(--muted)}
 <h2>Credentials</h2>
 <p>Tokens live in a Windows DPAPI vault tied to the signed-in account, with an application-specific entropy value, and plaintext is never written to disk. If an installed component tries to publish a token in plaintext through a configuration file, PAi Legal refuses it and records why — the configuration may name a credential, not carry one.</p>
 
+
+<figure class="editorial-photo" data-editorial-photo="two">
+  <img src="/images/editorial/legal-records-self-help.webp" alt="A self-represented person reviewing organized legal records at a public library near a courthouse" width="1440" height="810" loading="lazy" decoding="async">
+  <figcaption>Organized records and reliable public sources make legal information easier to understand and use.</figcaption>
+</figure>
 <h2>Roles, bound to Windows accounts</h2>
 <p>Owner, lawyer, paralegal, intake and auditor each carry their own permission set — who can create a case, write evidence or work product, export, back up, verify the audit log, run a conflict check, manage integrations. Roles map to operating-system accounts, and the last owner cannot demote themselves without naming another.</p>
 <p>The status screen states the limitation rather than overselling it: this is meaningful authorization when staff use separate Windows accounts and the workspace permissions do not let them rewrite the policy file. It is role control, not authentication, and it says so.</p>

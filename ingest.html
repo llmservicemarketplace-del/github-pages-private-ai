@@ -149,6 +149,7 @@ footer a{color:var(--muted)}
     return false;
   }
 </script>
+  <link rel="stylesheet" href="/css/editorial-images.css">
 </head>
 <body>
 <header>
@@ -172,6 +173,11 @@ footer a{color:var(--muted)}
 <p>Before anything is read, the file is copied into the case folder you chose and kept byte for byte. Everything after this point — extracted text, indexes, relations, analysis — is <strong>derived</strong>, which means it can be thrown away and rebuilt from the original at any time. If an extraction improves in a later version, you rebuild; you never lose the source document.</p>
 <p>Accepted on the way in: PDF, scanned images, Word and other Office documents, email files, plain and structured text.</p>
 
+
+<figure class="editorial-photo" data-editorial-photo="one">
+  <img src="/images/editorial/private-local-software.webp" alt="A person organizing documents on a private desktop computer beside a locked filing cabinet and local storage drive" width="1440" height="810" loading="lazy" decoding="async">
+  <figcaption>Local organization can help people keep sensitive records under their own control.</figcaption>
+</figure>
 <h2>2. Text extraction, by the right tool for the file</h2>
 <div class="stage">
   <h3>Native PDF text</h3>
@@ -206,6 +212,11 @@ footer a{color:var(--muted)}
 <p>The OCR decision is made by rule, not by judgement: a PDF page carrying fewer than forty characters of real text is treated as scanned and rendered at 2.5× before Tesseract reads it, because a page holding nothing but a stamp and a page number is a scan whatever the file says. If a page needs OCR and the OCR runtime is missing, ingest <em>stops with an error naming the page</em>. It does not import an empty document and let you find out in a filing.</p>
 <p>Unsupported types are refused by name rather than half-read. The header carries a live OCR indicator so you know before you drop 300 files whether the runtime is there.</p>
 
+
+<figure class="editorial-photo" data-editorial-photo="two">
+  <img src="/images/editorial/legal-records-self-help.webp" alt="A self-represented person reviewing organized legal records at a public library near a courthouse" width="1440" height="810" loading="lazy" decoding="async">
+  <figcaption>Organized records and reliable public sources make legal information easier to understand and use.</figcaption>
+</figure>
 <h2>5. Contradictions surface at analysis, and you resolve them</h2>
 <p class="note">When the same claim appears under two different Trust Locks, the software shows you the tension. It does not pick a winner.</p>
 <p>Cross-checking happens where the evidence meets the case, not at the moment a file is read. When analysis finds the identical claim carried at two different verification levels — one document treating it as established, another as unverified or contradicted — that tension is listed for you, with both sources. Resolving it is a decision a person makes and the case records.</p>

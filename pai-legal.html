@@ -152,6 +152,7 @@ footer a{color:var(--muted)}
 <meta name="twitter:description" content="Organize legal case documents, review supporting evidence, and export your work with PAi Legal. Free download and first case.">
 <meta name="twitter:image" content="https://yprivateai.com/og-pai.png">
 <script defer src="/button-conversions.js"></script>
+  <link rel="stylesheet" href="/css/editorial-images.css">
 </head>
 <body>
 <header>
@@ -189,6 +190,11 @@ footer a{color:var(--muted)}
 </div>
 <p>When something is unavailable, the software says which piece is missing, why it could not reach it, and exactly where to get it — rather than hiding the feature or failing quietly. A diagnostics view lists every place it looked and what it found there.</p>
 
+
+<figure class="editorial-photo" data-editorial-photo="one">
+  <img src="/images/editorial/legal-records-self-help.webp" alt="A self-represented person reviewing organized legal records at a public library near a courthouse" width="1440" height="810" loading="lazy" decoding="async">
+  <figcaption>Organized records and reliable public sources make legal information easier to understand and use.</figcaption>
+</figure>
 <h2>One button, and it becomes a different product</h2>
 <p>A control stays on screen the whole time you are working: attorney, or plain language. Press it and the vocabulary, the reading order, what gets explained and how a gap is described all change. Press it again and you are back. It is not a setup question you answer once, and it is not a separate edition of the software.</p>
 <p>The attorney view speaks in terms of art — operative pleading, controlling authority, elements and burdens — and gets out of the way. The plain-language view names documents by what they are: your main court filing that starts the case, the other side's written answer, something the judge decided. Same engine underneath, same findings, different words.</p>
@@ -208,6 +214,11 @@ footer a{color:var(--muted)}
 <p>If the computer cannot run even the light model, it says so instead of installing something that will crawl.</p>
 <p>The download is resumable and verified against the publisher's own immutable revision and SHA-256, and the model is launched and tested once before setup calls itself finished. Local AI processing stays on the machine. The optional external drafting path sends the brief you choose to submit to your selected provider. <a href="security.html">How the download and runtime are secured</a>.</p>
 
+
+<figure class="editorial-photo" data-editorial-photo="two">
+  <img src="/images/editorial/private-local-software.webp" alt="A person organizing documents on a private desktop computer beside a locked filing cabinet and local storage drive" width="1440" height="810" loading="lazy" decoding="async">
+  <figcaption>Local organization can help people keep sensitive records under their own control.</figcaption>
+</figure>
 <h2>Using a frontier model, without letting it near the case folder</h2>
 <p>Local models are honest about their limits: a small model running on a laptop CPU is good at phrasing a finding and not good at drafting a brief. So PAi Legal does not pretend otherwise — it hands the work out, on your terms.</p>
 <p>Export the case as a drafting brief and PAi Legal opens the bundled drafter in your own browser, with the brief already loaded, served from your own machine over loopback with a one-time token. From there you can point it at a frontier model <strong>using your own API key</strong>, on the structured brief you chose to export — not on your case folder.</p>
