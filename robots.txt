@@ -1,3 +1,14 @@
+# Public content, research, recovery and legal-resource pages
 User-agent: *
 Allow: /
+Allow: /research/
+Allow: /resources/
+Allow: /disaster-recovery/
+Allow: /legal-help/
+Allow: /moving-on/
+
+# Reserve non-public service paths if they are introduced later
+Disallow: /api/
+Disallow: /cdn-cgi/
+
 Sitemap: https://yprivateai.com/sitemap.xml
