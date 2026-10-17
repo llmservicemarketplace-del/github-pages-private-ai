@@ -38,7 +38,7 @@
       "operatingSystem": "Windows 10, Windows 11",
       "applicationCategory": "HealthApplication",
       "publisher": {"@id": "https://yprivateai.com/#organization"},
-      "description": "PAi Health organizes personal medical records, lab results, medications and daily readings in an encrypted local Windows workspace, checks medication names for FDA-label interactions and possible adverse-effect context, and uses a medical-literature index derived from nearly 40 million PubMed baseline article records. It does not diagnose, treat or replace professional medical care.",
+      "description": "PAi Health organizes personal medical records, lab results, medications, daily readings, and procedures or services reported in supported billing records in an encrypted local Windows workspace. It checks medication names for FDA-label interactions and possible adverse-effect context and uses a medical-literature index derived from nearly 40 million PubMed baseline article records. It does not diagnose, treat or replace professional medical care.",
       "offers": {
         "@type": "Offer",
         "name": "30-day free trial",
@@ -65,6 +65,11 @@
           "@type": "Question",
           "name": "Where is PAi Health data stored?",
           "acceptedAnswer": {"@type": "Answer", "text": "The application is designed to keep its encrypted health-record vault on the user's Windows computer. Optional external AI features require the user's own provider key and explicit choice before information is sent to that provider."}
+        },
+        {
+          "@type": "Question",
+          "name": "Does a billing code prove that a procedure was performed?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No. PAi Health organizes procedures and services as they are reported in supported billing records and preserves whether an item was submitted, billed, adjudicated or paid-as-reported. A claim or billing code by itself is not proof that a service was performed, and an explanation of benefits is not a bank record."}
         }
       ]
     }
@@ -100,6 +105,7 @@
     <article class="card"><h3>Organize medical records</h3><p>Import supported visit summaries, discharge papers, lab reports, scans and photos. Extracted information stays connected to its source so you can review what was read.</p></article>
     <article class="card"><h3>Track daily patterns</h3><p>Review blood pressure, glucose and weight over time. Keep day-to-day readings beside the records and medication context that help explain them.</p></article>
     <article class="card"><h3>Check medications by name</h3><p>Resolve brand, generic and combination-product names to their active ingredients, check every medication pair against FDA labels, and flag duplicate ingredients or same-class medicines.</p></article>
+    <article class="card"><h3>Track procedures from billing records</h3><p>Organize procedures and services reported on supported claims, bills, EOBs and Medicare notices by code, service date and claim status.</p></article>
     <article class="card"><h3>Review labs over time</h3><p>Bring supported laboratory reports into a longitudinal view and identify routine information that may be missing from the record.</p></article>
     <article class="card"><h3>Prepare better questions</h3><p>Explore relationships in your own records and turn uncertainties into focused questions to discuss with a qualified healthcare professional.</p></article>
     <article class="card"><h3>Keep evidence separate from ideas</h3><p>Documented information remains tied to its source. AI-generated possibilities stay visibly separate and do not become medical facts automatically.</p></article>
@@ -115,6 +121,16 @@
     <article class="card"><span class="number">3</span><h3>Possible side-effect context</h3><p>Symptoms already in the person’s record are compared with adverse-reaction and warning sections. The app shows the label’s own wording and source link; a match does not prove the medicine caused the symptom.</p></article>
   </div>
   <div class="callout"><strong>Medication safety:</strong> PAi Health provides label-based context, not individualized prescribing advice. Before starting, stopping, combining or changing a medicine, ask a pharmacist or prescriber.</div>
+</div></section>
+
+<section class="section white"><div class="wrap">
+  <div class="section-head"><p class="eyebrow">Procedure history from billing records</p><h2>Build a timeline of services reported by claims and bills.</h2><p>PAi Health can extract and organize procedure or service information from supported healthcare billing documents while preserving what the source actually says.</p></div>
+  <div class="grid">
+    <article class="card"><span class="number">1</span><h3>Recognize supported billing records</h3><p>Work with CMS-1500 and UB-04 claim forms, explanations of benefits, Medicare Summary Notices, patient bills and supported FHIR financial records. For paper forms, the person confirms the detected form type.</p></article>
+    <article class="card"><span class="number">2</span><h3>Preserve the printed codes</h3><p>Keep service dates, descriptions, modifiers, claim-line amounts and printed ICD-10-PCS, HCPCS Level II, CPT or revenue codes connected to the source record. Licensed CPT and revenue-code descriptions are not supplied unless the document itself includes them.</p></article>
+    <article class="card"><span class="number">3</span><h3>Keep the evidence status honest</h3><p>Items remain labeled as submitted, billed, adjudicated or paid-as-reported. PAi Health does not silently turn a claim line into proof that care occurred or a reported payment into a bank transaction.</p></article>
+  </div>
+  <div class="callout"><strong>Review required:</strong> Billing layouts vary. Current extraction materials were tested with synthetic fixtures and have not been verified against every real-world form. Compare every extracted code, date, description and amount with the original document.</div>
 </div></section>
 
 <section class="section" id="how"><div class="wrap">
@@ -141,6 +157,7 @@
   <details><summary>Does every feature require AI?</summary><p>No. The application can organize records and support tracking without AI. Optional private AI can run locally on compatible hardware; optional external AI uses the user’s own provider key and explicit consent.</p></details>
   <details><summary>Does PAi Health contain nearly 40 million medical articles?</summary><p>Its literature index was derived from 39,994,988 PubMed 2026 baseline article records. The application does not bundle the full articles. It stores condensed medical concept relationships, counts, study-design signals and selected PubMed identifiers that point users to citations.</p></details>
   <details><summary>How does the medication interaction and side-effect check work?</summary><p>PAi Health uses RxNorm to resolve medication names to ingredients, then checks medication pairs against public FDA-label sections from openFDA/DailyMed. It can also show when symptoms in the record are mentioned in a medication’s adverse-reaction or warning sections. It quotes and links to the label; a match is not proof of causation and is not a recommendation to change treatment.</p></details>
+  <details><summary>Does a billing code prove that a procedure was performed?</summary><p>No. PAi Health organizes procedures and services as they are reported in supported billing records and preserves whether an item was submitted, billed, adjudicated or paid-as-reported. A claim form is not proof that a service occurred, and an explanation of benefits is not a bank record. Confirm important details against the clinical record, provider and original billing document.</p></details>
   <details><summary>What happens after the free 30 days?</summary><p>The trial lasts 30 days. Microsoft Store shows the current purchase price and licensing terms that apply after the trial.</p></details>
   <details><summary>Are all device integrations validated?</summary><p>No. Support varies by format and device. Some importers and Bluetooth paths in the current software materials are marked as tested with synthetic fixtures but not yet verified against every real export or hardware device. Review imported information against its source.</p></details>
 </div></section>
