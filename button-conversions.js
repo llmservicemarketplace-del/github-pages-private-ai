@@ -5,9 +5,26 @@
   window.paiButtonConversionsReady = true;
 
   var storeLinks = {
-    claims: 'https://apps.microsoft.com/detail/9P255VXPD5B4',
-    legal: 'https://apps.microsoft.com/detail/9NP4XL1MRXP8'
+    claims: 'https://apps.microsoft.com/detail/9P255VXPD5B4?cid=yprivateai-site-claims',
+    legal: 'https://apps.microsoft.com/detail/9NP4XL1MRXP8?cid=yprivateai-site-legal'
   };
+
+  function tagStoreLinks() {
+    document.querySelectorAll('a[href*="apps.microsoft.com/detail/"]').forEach(function (link) {
+      var destination;
+      try { destination = new URL(link.href, document.baseURI); } catch (_) { return; }
+      if (destination.hostname !== 'apps.microsoft.com') return;
+      var productId = destination.pathname.replace(/\/$/, '').split('/').pop().toUpperCase();
+      if (productId === '9P255VXPD5B4') {
+        destination.searchParams.set('cid', 'yprivateai-site-claims');
+      } else if (productId === '9NP4XL1MRXP8') {
+        destination.searchParams.set('cid', 'yprivateai-site-legal');
+      } else {
+        return;
+      }
+      link.href = destination.toString();
+    });
+  }
 
   function ensureGoogleAdsTag() {
     if (typeof window.gtag === 'function') return;
@@ -26,6 +43,7 @@
   ensureGoogleAdsTag();
 
   function addDownloadBar() {
+    tagStoreLinks();
     if (document.querySelector('[data-pai-download-bar]')) return;
 
     var style = document.createElement('style');
