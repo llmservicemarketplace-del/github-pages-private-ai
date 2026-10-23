@@ -16,9 +16,9 @@
       if (destination.hostname !== 'apps.microsoft.com') return;
       var productId = destination.pathname.replace(/\/$/, '').split('/').pop().toUpperCase();
       if (productId === '9P255VXPD5B4') {
-        destination.searchParams.set('cid', 'yprivateai-site-claims');
+        destination.searchParams.set('cid', link.dataset.paiCampaign || 'yprivateai-site-claims');
       } else if (productId === '9NP4XL1MRXP8') {
-        destination.searchParams.set('cid', 'yprivateai-site-legal');
+        destination.searchParams.set('cid', link.dataset.paiCampaign || 'yprivateai-site-legal');
       } else {
         return;
       }
