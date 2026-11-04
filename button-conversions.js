@@ -98,6 +98,10 @@
       label = 'wtiPCLiztYAdEIbIiOVE';
     } else if (destination.hostname === 'www.zeffy.com' && destination.pathname === '/en-US/donation-form/donate-to-change-lives-23839') {
       label = 'V2rGCKuikYcdEIbIiOVE';
+    } else if (/^(resource_link_click|external_resource_click)$/.test(link.dataset.event || '') ||
+               destination.hostname.replace(/^www\./, '') !== location.hostname.replace(/^www\./, '')) {
+      // Resource link click: a guide/resource link or any outbound help link (stores, agencies)
+      label = 'GRZgCPDR1bEdEIbIiOVE';
     }
     if (!label || typeof window.gtag !== 'function') return;
     var hit = {send_to: 'AW-18465563654/' + label};
