@@ -53,3 +53,15 @@ keith@thenewfaithchurch.org
 
 ## Access and privacy clarification
 PAi Claims download and setup are free, with local AI or a user-provided API connection. Creating the first claim costs $20. PAi Legal first case is free; additional case creation is paid. Existing work is not behind a further feature paywall. External AI submissions leave the device and may incur provider charges. See https://yprivateai.com/pricing.html and https://yprivateai.com/privacy.html.
+
+
+## Practical answers and mobile starting points
+- [Insurance complaint preparation](https://yprivateai.com/resources/#complaint-guide): three steps, evidence packet, official state submission channels and follow-up records; no promised payment or forced response.
+- [Receipt organization and documentation checklist](https://yprivateai.com/insurance-claim-organizer.html#receipt-guide): photograph originals, label copies, group expenses and record submission and payment status.
+- [Storm claim denied or underpaid](https://yprivateai.com/denied-insurance-claim.html#storm-denial): request written reasons and organize a supported response; NFIP flood appeals use a separate process.
+- [Choose the insurance research question](https://yprivateai.com/research/#claim-answers): coverage, scope, payment calculation or handling.
+- [First recovery decisions](https://yprivateai.com/moving-on/#recovery-decision): shelter, expenses, mortgage questions and rebuild-versus-relocate records.
+- [Property-damage case workflow](https://yprivateai.com/pai-legal.html#property-damage-workflow): case folder, originals, extracted text, evidence gaps, plain-language review and deliberate export.
+Web guides work on phones without installation. PAi Claims and PAi Legal run on Windows 10/11. Public educational content is not a guarantee of coverage, payment, legal outcomes or software access.
+
+- [Homeowner storm-damage documentation guide](https://yprivateai.com/disaster-recovery/document-damage.html): safety, damage photographs, item inventory, communication timeline, independent estimates and the PAi Claims workflow.
