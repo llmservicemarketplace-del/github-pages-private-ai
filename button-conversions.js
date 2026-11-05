@@ -44,6 +44,8 @@
 
   function addDownloadBar() {
     tagStoreLinks();
+    // Allow an informational landing page to keep mobile users on its guide/access path.
+    if (document.body.getAttribute('data-pai-download-bar-mode') === 'off') return;
     if (document.querySelector('[data-pai-download-bar]')) return;
 
     var style = document.createElement('style');
