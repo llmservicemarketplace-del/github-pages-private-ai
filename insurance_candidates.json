@@ -1,0 +1,456 @@
+{
+  "corpus_role": "discovery only - CaseHOLD is not authority",
+  "scanned": 5449347,
+  "loose_depreciation": 27520,
+  "strict_labor_depreciation": 30,
+  "excluded_unrelated": 2,
+  "candidates": 26,
+  "resolved_by_court_identity": 24,
+  "with_citation": 7,
+  "by_state": {
+    "Oklahoma": 2,
+    "UNKNOWN": 2,
+    "Arkansas": 4,
+    "Tennessee": 2,
+    "Missouri": 7,
+    "Alabama": 2,
+    "Oregon": 1,
+    "Texas": 1,
+    "Kansas": 1,
+    "Minnesota": 1,
+    "Mississippi": 2,
+    "Ohio": 1
+  },
+  "by_basis": {
+    "court_name": 24,
+    "federal_circuit": 2
+  },
+  "records": [
+    {
+      "uuid": "1ae4b995-ce67-423d-a230-e83ad269ba34",
+      "shard": "0.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Oklahoma",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": " Appeals for the Tenth Circuit in two consolidated diversity cases\u2014Branch v. Farmers Insurance Co. and Davis v. Mid-Century Insurance Co.\u2014arising from homeowner insurance claims for hail and wind damage to roofs. The central issues involved the interpretation of insurance policy terms regarding the depreciation of labor costs and the treatment of roof tear-off expenses under \"replacement cost less depreciation\" and \"debris removal\" provisions.  The plaintiffs in both cases had homeowner policies that provided coverage for roof surface repair and replacement, along with separate debris removal coverage. After storm"
+    },
+    {
+      "uuid": "d36dc0d4-5a05-4fe9-85fd-f2e4ca6702b5",
+      "shard": "1.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "UNKNOWN",
+        "basis": "federal_circuit",
+        "court_level": "federal_circuit",
+        "circuit": "Eighth",
+        "circuit_states": [
+          "Arkansas",
+          "Iowa",
+          "Minnesota",
+          "Missouri",
+          "Nebraska",
+          "North Dakota",
+          "South Dakota"
+        ]
+      },
+      "citations": [
+        "147 F. Supp. 3d 839",
+        "874 N.W.2d 780"
+      ],
+      "holding_text_not_extracted": true,
+      "excerpt": "7, applied $2,009.79 in depreciation (including labor), and subtracted LaBrier\u2019s $1,421 deductible, resulting in an actual cash value payment of $4,657.28. LaBrier hired a family friend to repair the home for $5,975 and sued in Missouri state court, alleging that State Farm\u2019s practice of deducting \u201clabor depreciation\u201d breached the insurance contract. The case was removed to federal court, where the district court denied State Farm\u2019s motion to dismiss, holding that the terms \u201cactual cash value\u201d and \u201cdepreciation\u201d were ambiguous under Missouri law and must be construed against the insurer. The court concluded tha"
+    },
+    {
+      "uuid": "7fd90cec-2ed3-41d9-8c3b-18900392304c",
+      "shard": "1.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Arkansas",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [
+        "430 S.W.3d 675",
+        "872 F.3d 567"
+      ],
+      "holding_text_not_extracted": true,
+      "excerpt": "Farm Fire and Casualty Company, Defendant-Appellant, No. 16-3784, United States Court of Appeals, Eighth Circuit.  This appeal arises from the district court\u2019s certification of a class of Arkansas homeowners who alleged that State Farm Fire and Casualty Company breached their insurance contracts by depreciating labor costs when calculating actual cash value (ACV) payments for property damage. The class includes policyholders who received ACV payments between November 21, 2008, and December 6, 2013, during which State Farm used Xactimate software to depreciate both materials and labor. Under the insurance polici"
+    },
+    {
+      "uuid": "822c9d09-925a-4e5c-80a2-620d47a34960",
+      "shard": "1.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Arkansas",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "ctual cash value (ACV) in homeowners insurance claims. The Adamses, insured under a USAA policy, suffered a covered loss in 2009 and were paid ACV that included depreciation of both materials and labor. In 2013, the Arkansas Supreme Court ruled in Adams v. Cameron Mut. Ins. Co. that insurers cannot depreciate labor when calculating ACV. Relying on that decision, the Adamses filed a class-action lawsuit in Polk County Circuit Court seeking recovery for improperly depreciated labor costs. The case was removed to federal court, where the parties negotiated a settlement providing for payments to class members who"
+    },
+    {
+      "uuid": "926ca1b6-6aea-4e39-9d0e-cde4bdb9b6cb",
+      "shard": "1.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Tennessee",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "ercompensates them, violating the principle of indemnity. Auto-Owners maintained that depreciation applies to the total replacement cost, including labor, to prevent overcompensation.  The sole issue before the Tennessee Supreme Court was whether, under the policy language presented, an insurer may depreciate labor costs when calculating ACV using the replacement-cost-less-depreciation method. The Court applied standard principles of insurance contract interpretation, noting that such contracts are construed according to their plain, ordinary meaning and, where ambiguous, are strictly construed against the in"
+    },
+    {
+      "uuid": "3ed5061a-a0fe-4842-b6a4-f0e48ae70c0f",
+      "shard": "2.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Missouri",
+        "basis": "court_name",
+        "court_level": "state_intermediate"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "ash value\u201d as \u201cthe amount it costs to repair or replace property with property of like kind and quality less depreciation for physical deterioration and obsolescence.\u201d  American Family calculated the actual cash value by applying depreciation to both materials and labor costs. Riggins contested the depreciation of labor, arguing that the policy language limited depreciation only to \u201cphysical deterioration and obsolescence,\u201d which do not apply to labor. The insurer moved for summary judgment, seeking a declaration that its calculation method was consistent with the policy terms.  The court applied the standard unde"
+    },
+    {
+      "uuid": "ad31c26c-2bc5-458a-8c06-fee8b09561d5",
+      "shard": "2.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Missouri",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "asualty Company, No. 2:15-cv-04093-NKL, United States District Court for the Western District of Missouri, Central Division.  Plaintiff Amanda M. LaBrier filed a putative class action against defendant State Farm Fire and Casualty Company, alleging that State Farm breached its insurance contract by depreciating labor costs\u2014specifically, labor included in mixed costs such as removing and replacing gutters\u2014when calculating actual cash value (ACV) payments for hail damage to her home. State Farm moved to dismiss the first amended complaint for failure to state a claim under Federal Rule of Civil Procedure 12(b)(6)"
+    },
+    {
+      "uuid": "db85b921-13f7-435f-b31f-a953a7711430",
+      "shard": "2.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Missouri",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "Fire and Casualty Company, No. 2:15-cv-04093-NKL, United States District Court for the Western District of Missouri, Central Division.  This case arises from a class action lawsuit filed by plaintiff Amanda M. LaBrier against State Farm Fire and Casualty Company, alleging that State Farm improperly depreciated labor costs when calculating actual cash value payments for property damage under its insurance policies. The central issue before the court was whether State Farm could legally depreciate labor in such payments. In a prior ruling, the court denied State Farm\u2019s motion to dismiss and held that labor could"
+    },
+    {
+      "uuid": "1c2c6c08-890d-450b-8c34-b90a77164e44",
+      "shard": "2.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Missouri",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "ns v. American Family Mutual Insurance Company, No. 2:14-cv-04171-SRB, United States District Court for the Western District of Missouri, Central Division.  Plaintiff Darnita Riggins filed a putative class action against American Family Mutual Insurance Company, alleging that the insurer improperly depreciated labor costs when calculating Actual Cash Value (ACV) payments for property damage under homeowners\u2019 insurance policies in Missouri. Riggins claimed that the plain language of her policy did not permit depreciation of labor, and that American Family breached its contractual obligations by applying depreci"
+    },
+    {
+      "uuid": "ae280265-faf2-4a87-ada1-9043ac9bc843",
+      "shard": "2.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Alabama",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "sion allowing recovery of the full replacement cost \u201cwithout deduction for depreciation\u201d upon actual repair further supported this interpretation, as it made no distinction between materials and labor.  The court rejected the Wares\u2019 public policy argument, noting that no Alabama authority prohibits depreciation of labor in actual cash value calculations. The court emphasized its role was to interpret the policy\u2019s plain language, not to assess its policy implications. The court also declined to rule on the reasonableness of the depreciation rate, as that issue was not before it, and the Wares had not alleged such u"
+    },
+    {
+      "uuid": "5bb4aaae-3097-4105-8980-728b7557573a",
+      "shard": "2.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Oregon",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "fendant contended it applied to any damaged part at the time of loss. The court sided with defendant, finding the policy context supported replacement based on the damaged portion\u2019s function at the time of loss, not original construction, and granted summary judgment to defendant on this issue.  On depreciation of labor in ACV calculations, the policy did not define actual cash value. Plaintiffs argued labor cannot be depreciated as it is not a physical item subject to wear. Defendant argued labor is depreciable when embedded in a finished product like a roof. The court found the term ACV not ambiguous per se and "
+    },
+    {
+      "uuid": "b1115c07-ee3d-4aec-ba95-cff8249b99e7",
+      "shard": "2.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Alabama",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [
+        "671 So.2d 1368"
+      ],
+      "holding_text_not_extracted": true,
+      "excerpt": "ass action complaint filed by Annie Arnold, the plaintiff, against State Farm Fire and Casualty Company, the defendant, concerning the calculation of actual cash value (ACV) under a replacement cost value (RCV) insurance policy. The plaintiff alleged that State Farm breached its contractual duty by depreciating labor costs when calculating ACV payments for property damage, asserting that labor should not be subject to depreciation. The case was originally filed in Alabama state court and was timely removed to federal court by State Farm.  State Farm moved to dismiss the complaint on two grounds: lack of constit"
+    },
+    {
+      "uuid": "ef1fcdd9-8204-46a6-86c1-2746c0fea1ab",
+      "shard": "2.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Missouri",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [
+        "872 F.3d 567"
+      ],
+      "holding_text_not_extracted": true,
+      "excerpt": " repair or replace property with property of like kind and quality less depreciation for physical deterioration and obsolescence.\u201d In calculating ACV, Defendant depreciated both materials and labor costs. Riggins filed a class action alleging two claims: Count I sought declaratory judgment that the depreciation of labor costs violated the policy terms, and Count II alleged breach of contract for deducting labor depreciation.  Defendant moved for summary judgment, arguing its ACV calculation was consistent with the policy and industry practice. Initially, on March 27, 2015, the court denied summary judgment, findin"
+    },
+    {
+      "uuid": "32d14acc-7c8d-43e4-a1c8-17fe82ef2809",
+      "shard": "3.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Oklahoma",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": ", which provided that losses to roof surfacing would be settled on a \u201creplacement cost less depreciation\u201d basis, and Endorsement E6022, the Debris Removal Endorsement, which covered reasonable debris removal expenses but did not mention depreciation. Branch argued that FICI breached the contract by depreciating labor and tear-off costs, claiming these should be reimbursed at actual cash value without depreciation, and that the Roof Surfacing Endorsement must conform to Oklahoma\u2019s statutory fire policy requiring at least actual cash value coverage. He also contended that tear-off costs fell under the Debris Remo"
+    },
+    {
+      "uuid": "00e4338f-7437-425f-b4bc-48277476c432",
+      "shard": "3.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Texas",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "d a covered loss in June 2001. Prudential estimated repair costs at $13,514.91 but deducted $2,371.30 for depreciation of both labor and materials. Trapasso alleged that under Texas law, labor is a non-depreciable item, and filed suit in Texas state court seeking damages for the improperly withheld labor depreciation, injunctive relief to stop the practice, and an 18% statutory penalty under Texas Insurance Code \u00a7 21.55 for delayed payment.  Prudential removed the case to federal court based on diversity jurisdiction, asserting the amount in controversy exceeded $75,000. Trapasso moved to remand, arguing the am"
+    },
+    {
+      "uuid": "17c93079-05a4-4951-913b-3501ce11fbef",
+      "shard": "3.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Arkansas",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "eciated both materials and labor in adjusting their homeowner\u2019s insurance claim under an \u201cactual cash value\u201d policy. They later amended their complaint twice to file a class-action suit on behalf of all similarly situated Arkansas policyholders, asserting that Farmers Union had a common practice of depreciating labor costs in real-property claims, in violation of Arkansas insurance law, specifically Ark. Code Ann. \u00a7 23-79-208. The circuit court granted their motion for class certification, prompting this appeal under Ark. Sup. Ct. R. 1-2(a)(8) and Ark. R. App. P.\u2013Civ. 2(a)(9).  The Supreme Court of Arkansas rev"
+    },
+    {
+      "uuid": "e8cda5d3-6fa9-4b37-b22b-d184a4ddaf99",
+      "shard": "3.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Arkansas",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "PANY, Respondent, 2013 Ark. 475, Supreme Court of Arkansas.  The United States District Court for the Western District of Arkansas certified a question of law to the Arkansas Supreme Court under Rule 6-8, which the court accepted on June 27, 2013. The certified question asked whether an insurer may depreciate labor costs when determining the \u201cactual cash value\u201d of a covered loss under an indemnity insurance policy that does not define the term \u201cactual cash value.\u201d  The underlying facts involve a homeowners\u2019 insurance policy issued by Cameron Mutual Insurance Company to Mark and Kathy Adams, covering their dwe"
+    },
+    {
+      "uuid": "a8b69b46-84db-47ac-b8b4-4c9d1db2f59d",
+      "shard": "3.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Kansas",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "owner insurance policies. The case was removed to federal district court based on diversity jurisdiction and ultimately resolved on summary judgment in favor of American Family. The plaintiff, Margaret Graves, appealed the district court\u2019s grant of summary judgment, challenging only the legality of depreciating labor costs in determining actual cash value and the deferral of depreciation reimbursement until repairs were completed.  Graves\u2019 home sustained hail damage, and under her policy, American Family calculated the actual cash value of the damage by depreciating both materials and labor. She received an ini"
+    },
+    {
+      "uuid": "8ea58833-bb81-4d2e-a354-1a66a0a5c257",
+      "shard": "3.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "UNKNOWN",
+        "basis": "federal_circuit",
+        "court_level": "federal_circuit",
+        "circuit": "Eighth",
+        "circuit_states": [
+          "Arkansas",
+          "Iowa",
+          "Minnesota",
+          "Missouri",
+          "Nebraska",
+          "North Dakota",
+          "South Dakota"
+        ]
+      },
+      "citations": [
+        "147 F.Supp.3d 839"
+      ],
+      "holding_text_not_extracted": true,
+      "excerpt": ". Co., Nos. 16-3185 and 16-3562.  Facts: Greg Boss\u2019s home in the Eastern District of Missouri sustained hail damage in June 2014. He filed a claim under his replacement cost homeowners\u2019 insurance policy with Travelers. Travelers paid the actual cash value of the loss, which included a deduction for labor depreciation. Boss then filed a putative class action in the Western District of Missouri, alleging that Travelers breached the insurance contract by depreciating labor costs when calculating actual cash value.  Issues: Whether the district court abused its discretion in denying Travelers\u2019 motion to transfer ve"
+    },
+    {
+      "uuid": "194fca20-56c1-4345-9d14-1df3ab42c85e",
+      "shard": "4.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Minnesota",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [
+        "149 N.W.2d 494"
+      ],
+      "holding_text_not_extracted": true,
+      "excerpt": " al. v. State Farm Fire and Casualty Company, No. A15-0724, Supreme Court of Minnesota, February 10, 2016.  The case arose from a putative class action filed by Brent and Leah Wilcox against State Farm Fire and Casualty Company, alleging that State Farm breached their homeowners insurance policy by depreciating labor costs embedded in the cost of repairing or replacing hail-damaged property. The policy obligated State Farm to pay the actual cash value of the damaged property before repairs were completed, but it did not define the term \u201cactual cash value\u201d or specify a method for calculating it. State Farm\u2019s cla"
+    },
+    {
+      "uuid": "9139edf5-10a7-4ed6-8fa8-075530ec2cab",
+      "shard": "4.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Tennessee",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "Jamie Lammert, Larry Reasons, and Susan Reasons v. Auto-Owners (Mutual) Insurance Company, No. 3:17-cv-00819, United States District Court for the Middle District of Tennessee, Nashville Division.  This putative class action involves a dispute over whether Auto-Owners (Mutual) Insurance Company may depreciate labor costs when calculating actual cash value (ACV) payments under homeowners insurance policies in Tennessee. The plaintiffs\u2014two married couples insured by Auto-Owners\u2014sustained property damage from hail and wind and received ACV payments that included depreciation of both materials and labor. They all"
+    },
+    {
+      "uuid": "7e1422b8-3d52-4ea1-ac12-066fe54059a7",
+      "shard": "4.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Mississippi",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [
+        "358 So.2d 387"
+      ],
+      "holding_text_not_extracted": true,
+      "excerpt": "o hail and wind damage. In April 2014, the property sustained significant damage, which CBC reported in March 2016. Underwriters calculated the actual cash value of the loss as $1,217,545.60 using the \"replacement cost value less depreciation\" method, which included a deduction of $1,054,023.63 for labor depreciation. Titan Exteriors was hired to repair the property and, in June 2017, CBC assigned its insurance claim proceeds to Titan Exteriors despite an anti-assignment clause in the policy prohibiting transfers without Underwriters\u2019 written consent. Underwriters refused to pay Titan Exteriors, asserting the a"
+    },
+    {
+      "uuid": "024b9e6b-a6ef-4c40-bf1a-382c71103cc0",
+      "shard": "4.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Mississippi",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "urt for the Northern District of Mississippi, Oxford Division.  Plaintiff Lorine Mitchell filed suit against Defendant State Farm Fire and Casualty Company, her homeowners insurance provider, alleging that the company improperly calculated the actual cash value (ACV) of her property damage claim by depreciating labor costs, resulting in an underpayment. State Farm moved to dismiss the complaint under Federal Rule of Civil Procedure 12(b)(6) for failure to state a claim upon which relief could be granted. The court considered the motion, the parties\u2019 submissions, and applicable law, and issued a ruling on Septem"
+    },
+    {
+      "uuid": "0ca775d1-388d-4a97-a99b-5fc95ab0a2e4",
+      "shard": "4.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Ohio",
+        "basis": "court_name",
+        "court_level": "state_high"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "word \u201cany\u201d indicated an expansive, inclusive meaning. The court reasoned that excluding labor from depreciation would render meaningless OAC subsection (b), which allows insurers to depart from the standard ACV calculation if the property has nominal or no economic value\u2014a scenario possible only if labor is depreciated.  Although the plaintiff cited an Ohio trial court decision, Ingram v. Liberty Ins. Corp., finding ambiguity in similar language, the district court found it unpersuasive and not binding. The court also distinguished a recent Sixth Circuit decision, Hicks v. State Farm Fire & Cas. Co., which appl"
+    },
+    {
+      "uuid": "21464084-7525-4c29-8bca-c2f854b8a1eb",
+      "shard": "5.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Missouri",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": "f all others similarly situated, v. State Farm Fire and Casualty Company, No. 2:15-cv-04093-NKL, United States District Court for the Western District of Missouri, Central Division.  This case arises from a putative class action alleging that State Farm Fire and Casualty Company improperly withheld labor depreciation in actual cash value (ACV) payments on homeowners\u2019 insurance claims in Missouri. Plaintiff Amanda LaBrier sought discovery to identify class members and calculate damages, particularly focusing on data from State Farm\u2019s internal claims system and its vendor, Xactware Solutions, Inc. After State Far"
+    },
+    {
+      "uuid": "32b3069e-0c14-4cbf-8ff5-dc5d6fd21d0a",
+      "shard": "5.parquet",
+      "status": "CANDIDATE_UNVERIFIED",
+      "status_label": "Potential candidate - unverified",
+      "verified_against_full_opinion": false,
+      "jurisdiction": {
+        "state": "Missouri",
+        "basis": "court_name",
+        "court_level": "federal_district"
+      },
+      "citations": [],
+      "holding_text_not_extracted": true,
+      "excerpt": " v. State Farm Fire and Casualty Company, No. 2:15-cv-04093-NKL, United States District Court for the Western District of Missouri, Central Division.  Plaintiff Amanda M. LaBrier filed a class action lawsuit against State Farm Fire and Casualty Company, alleging that the insurer improperly deducted labor depreciation when calculating actual cash value (ACV) payments for structural damage claims under homeowners insurance policies. The case was originally filed in Missouri state court and removed to federal court by State Farm within 30 days of service. LaBrier moved for class certification, seeking to represent"
+    }
+  ]
+}
