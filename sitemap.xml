@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://yprivateai.com/</loc><lastmod>2026-10-23</lastmod></url>
   <url><loc>https://yprivateai.com/about.html</loc><lastmod>2026-10-23</lastmod></url>
@@ -175,5 +175,8 @@
   <url><loc>https://yprivateai.com/disaster-recovery/nfip-proof-of-loss.html</loc></url>
   <url><loc>https://yprivateai.com/disaster-recovery/fema-accessibility-accommodations.html</loc></url>
   <url><loc>https://yprivateai.com/disaster-recovery/identity-theft-after-disaster.html</loc></url>
+<url><loc>https://yprivateai.com/health-help/</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://yprivateai.com/health-help/request-medical-records.html</loc><lastmod>2026-11-08</lastmod></url>
+<url><loc>https://yprivateai.com/health-help/fda-medication-guides.html</loc><lastmod>2026-11-08</lastmod></url>
 </urlset>
 
