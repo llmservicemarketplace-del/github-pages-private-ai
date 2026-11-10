@@ -42,6 +42,21 @@
 
   ensureGoogleAdsTag();
 
+  function isPublicHelpDestination(destination) {
+    var host = destination.hostname.toLowerCase().replace(/^www\./, '');
+    return /\.(gov|mil|edu|org)$/.test(host) ||
+      /\.(gov|nhs)\.uk$/.test(host) ||
+      /(^|\.)211\.org$/.test(host) ||
+      /(^|\.)(benefitscal|communityactionpartnership)\.com$/.test(host);
+  }
+
+  function isHelpRequest(destination) {
+    if (destination.protocol !== 'mailto:') return false;
+    var address = destination.pathname.toLowerCase();
+    var subject = destination.searchParams.get('subject') || '';
+    return address === 'support@yprivateai.com' && /(?:free|help|access|assistance)/i.test(subject);
+  }
+
   function addDownloadBar() {
     tagStoreLinks();
     // Allow an informational landing page to keep mobile users on its guide/access path.
@@ -94,15 +109,22 @@
     if (!link) return;
     var destination;
     try { destination = new URL(link.href, document.baseURI); } catch (_) { return; }
-    if (destination.protocol !== 'https:') return;
     var label;
-    if (destination.hostname === 'apps.microsoft.com' && /^\/detail\/[a-z0-9]+\/?$/i.test(destination.pathname)) {
+    if (isHelpRequest(destination)) {
+      // A request for free access is a meaningful assistance action. The email
+      // address and subject are not sent as conversion parameters.
+      label = 'GRZgCPDR1bEdEIbIiOVE';
+    } else if (destination.protocol !== 'https:') {
+      return;
+    } else if (destination.hostname === 'apps.microsoft.com' && /^\/detail\/[a-z0-9]+\/?$/i.test(destination.pathname)) {
       label = 'wtiPCLiztYAdEIbIiOVE';
     } else if (destination.hostname === 'www.zeffy.com' && destination.pathname === '/en-US/donation-form/donate-to-change-lives-23839') {
       label = 'V2rGCKuikYcdEIbIiOVE';
     } else if (/^(resource_link_click|external_resource_click)$/.test(link.dataset.event || '') ||
-               destination.hostname.replace(/^www\./, '') !== location.hostname.replace(/^www\./, '')) {
-      // Resource link click: a guide/resource link or any outbound help link (stores, agencies)
+               (destination.hostname.replace(/^www\./, '') !== location.hostname.replace(/^www\./, '') &&
+                isPublicHelpDestination(destination))) {
+      // Count only explicit resources or public-service destinations. Ordinary
+      // commercial outbound links must not train the Help Guides campaign.
       label = 'GRZgCPDR1bEdEIbIiOVE';
     }
     if (!label || typeof window.gtag !== 'function') return;
