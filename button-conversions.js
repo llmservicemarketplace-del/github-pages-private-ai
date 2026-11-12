@@ -57,6 +57,20 @@
     return address === 'support@yprivateai.com' && /(?:free|help|access|assistance)/i.test(subject);
   }
 
+  function isContextualUsefulLink(link, destination) {
+    if (!link.closest('main, article, [role="main"], .content, .guide-content')) return false;
+    if (link.closest('header, nav, footer, .breadcrumbs, .breadcrumb, [data-pai-download-bar]')) return false;
+    if (/^(useful_link_click|internal_resource_click)$/.test(link.dataset.event || '')) return true;
+    if (destination.protocol !== 'https:') return false;
+
+    var localHost = location.hostname.toLowerCase().replace(/^www\./, '');
+    var destinationHost = destination.hostname.toLowerCase().replace(/^www\./, '');
+    if (destinationHost !== localHost) return true;
+
+    var ignoredLocalPaths = /^(?:\/?|\/index\.html|\/about\.html|\/privacy-policy\.html|\/terms(?:-of-use)?\.html|\/contact(?:\.html)?|\/get-help\.html)\/?$/i;
+    return destination.pathname !== location.pathname && !ignoredLocalPaths.test(destination.pathname);
+  }
+
   function addDownloadBar() {
     tagStoreLinks();
     // Allow an informational landing page to keep mobile users on its guide/access path.
@@ -121,9 +135,14 @@
     } else if (destination.hostname === 'www.zeffy.com' && destination.pathname === '/en-US/donation-form/donate-to-change-lives-23839') {
       label = 'V2rGCKuikYcdEIbIiOVE';
     } else if (/^(resource_link_click|external_resource_click)$/.test(link.dataset.event || '') ||
-               (destination.hostname.replace(/^www\./, '') !== location.hostname.replace(/^www\./, ''))) {
-      // Count only explicit resources or public-service destinations. Ordinary
-      // commercial outbound links must not train the Help Guides campaign.
+               (destination.hostname.replace(/^www\./, '') !== location.hostname.replace(/^www\./, '') &&
+                isPublicHelpDestination(destination))) {
+      // Government, nonprofit, education, and explicitly marked help resources
+      // are the strongest post-click actions and remain Primary.
+      label = 'GRZgCPDR1bEdEIbIiOVE';
+    } else if (isContextualUsefulLink(link, destination)) {
+      // Contextual links inside the guide body are useful engagement signals,
+      // but remain Secondary so bidding is trained by stronger help actions.
       label = '89c8CNTT6bYdEIbIiOVE';
     }
     if (!label || typeof window.gtag !== 'function') return;
