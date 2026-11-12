@@ -67,7 +67,10 @@
     var destinationHost = destination.hostname.toLowerCase().replace(/^www\./, '');
     if (destinationHost !== localHost) return true;
 
-    var ignoredLocalPaths = /^(?:\/?|\/index\.html|\/about\.html|\/privacy-policy\.html|\/terms(?:-of-use)?\.html|\/contact(?:\.html)?|\/get-help\.html)\/?$/i;
+    // Do not count global or legal navigation. A contextual Get Help link is
+    // intentionally included here as useful engagement; the later form or
+    // email action remains the stronger Primary conversion.
+    var ignoredLocalPaths = /^(?:\/?|\/index\.html|\/about\.html|\/privacy-policy\.html|\/terms(?:-of-use)?\.html|\/contact(?:\.html)?)\/?$/i;
     return destination.pathname !== location.pathname && !ignoredLocalPaths.test(destination.pathname);
   }
 
