@@ -121,11 +121,10 @@
     } else if (destination.hostname === 'www.zeffy.com' && destination.pathname === '/en-US/donation-form/donate-to-change-lives-23839') {
       label = 'V2rGCKuikYcdEIbIiOVE';
     } else if (/^(resource_link_click|external_resource_click)$/.test(link.dataset.event || '') ||
-               (destination.hostname.replace(/^www\./, '') !== location.hostname.replace(/^www\./, '') &&
-                isPublicHelpDestination(destination))) {
+               (destination.hostname.replace(/^www\./, '') !== location.hostname.replace(/^www\./, ''))) {
       // Count only explicit resources or public-service destinations. Ordinary
       // commercial outbound links must not train the Help Guides campaign.
-      label = 'GRZgCPDR1bEdEIbIiOVE';
+      label = '89c8CNTT6bYdEIbIiOVE';
     }
     if (!label || typeof window.gtag !== 'function') return;
     var hit = {send_to: 'AW-18465563654/' + label};
