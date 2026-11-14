@@ -1,0 +1,212 @@
+{
+ "alabama": {
+  "how": "Alabama sells state surplus to the public through online auctions after eligible agencies and nonprofits have had first pick.",
+  "url": "https://adeca.alabama.gov/publicauctions/"
+ },
+ "alaska": {
+  "how": "Alaska's State Surplus Property Program lets residents bid on property the state no longer needs. Vehicles and heavy equipment are sold separately by the transportation department's State Equipment Fleet.",
+  "url": "https://oppm.doa.alaska.gov/property/state-surplus-property-program/"
+ },
+ "arizona": {
+  "how": "Arizona's Surplus Property Management Office sells to the public through an online auction. You create an account on the auction site the state links to.",
+  "url": "https://doa.az.gov/about/services/public-auctions"
+ },
+ "arkansas": {
+  "how": "Arkansas State Surplus, also called Marketing and Redistribution, sells to the public at a weekly public sale day at its warehouse and through online auctions.",
+  "url": "https://sas.arkansas.gov/state-surplus/"
+ },
+ "california": {
+  "how": "California's Department of General Services runs an online state surplus property auction. Anyone can register as a bidder.",
+  "url": "https://www.dgs.ca.gov/OFAM/Services/Page-Content/Office-of-Fleet-and-Asset-Management-Services-List-Folder/View-State-Surplus-Property-Auction-Online"
+ },
+ "colorado": {
+  "how": "In Colorado, state surplus property is handled by Colorado Correctional Industries, which links to the state's online surplus and fleet vehicle auctions.",
+  "url": "https://cci.colorado.gov/surplus"
+ },
+ "connecticut": {
+  "how": "Connecticut's Department of Administrative Services sells state surplus to the public through online auctions.",
+  "url": "https://portal.ct.gov/das/procurement/state-surplus/das-state-surplus-information-page"
+ },
+ "delaware": {
+  "how": "Delaware Surplus Services handles state surplus property.",
+  "url": "https://gss.omb.delaware.gov/surplus/"
+ },
+ "florida": {
+  "how": "Florida's Department of Management Services auctions surplus state vehicles and mobile equipment to the public.",
+  "land_label": "Florida Department of Environmental Protection: surplus state lands for sale",
+  "land_url": "https://floridadep.gov/lands/bureau-real-estate-services/content/surplus-properties-sale",
+  "url": "https://www.dms.myflorida.com/business_operations/fleet_management_and_federal_property_assistance/fleet_management/surplus_state_vehicles_equipment_auctions"
+ },
+ "georgia": {
+  "how": "Georgia's Department of Administrative Services Surplus Property Division handles state and federal surplus.",
+  "url": "https://doas.ga.gov/surplus-property"
+ },
+ "hawaii": {
+  "how": "Hawaii's Surplus Property Office sells to the public through online auctions on a state auction site.",
+  "url": "https://spo.hawaii.gov/surplus-property-office/surplus-property-office-public-auctions/"
+ },
+ "idaho": {
+  "how": "Idaho's Federal Surplus Property Program explains that federal property not donated to eligible groups is sold to the public through GSA Auctions. State agencies sell their own surplus through online auctions.",
+  "url": "https://fsp.idaho.gov/public-auctions/"
+ },
+ "illinois": {
+  "how": "Illinois sells state surplus to the public on iBid, the state's own online auction site, run by Central Management Services.",
+  "url": "https://cms.illinois.gov/business/surplus/statesurp.html"
+ },
+ "indiana": {
+  "how": "Indiana's Department of Administration sells surplus to the public through online auctions and sealed bids, with separate pages for vehicle auctions and surplus real estate.",
+  "land_label": "Indiana Department of Administration: surplus real estate sales",
+  "land_url": "https://www.in.gov/idoa/state-resource-management/state-and-federal-surplus/real-estate-sales/",
+  "url": "https://www.in.gov/idoa/state-resource-management/state-and-federal-surplus/"
+ },
+ "iowa": {
+  "how": "Iowa's Department of Administrative Services sells state surplus, other than real estate, through online auctions run by a contractor.",
+  "url": "https://das.iowa.gov/state-employees/general-services/state-surplus-property-program"
+ },
+ "kansas": {
+  "how": "Kansas lists surplus for public sale online. Its federal surplus program does not hold live auctions.",
+  "url": "https://admin.ks.gov/offices/printing-mailing-surplus/surplus-property/public-auctions"
+ },
+ "kentucky": {
+  "how": "Kentucky's Division of Surplus Properties runs both the state and federal surplus programs and holds public auctions, including online auctions of transportation equipment.",
+  "url": "https://finance.ky.gov/department-for-facilities-and-support-services/division-of-surplus-properties/Pages/public-auctions.aspx"
+ },
+ "louisiana": {
+  "how": "The Louisiana Property Assistance Agency tracks state movable property and sells or auctions what agencies no longer need.",
+  "url": "https://www.doa.la.gov/doa/ogs/louisiana-property-assistance-agency/"
+ },
+ "maine": {
+  "how": "Maine Surplus sells through a monthly public sale at its Augusta warehouse and through online auctions.",
+  "url": "https://www.maine.gov/dafs/centralservices/surplus-property"
+ },
+ "maryland": {
+  "how": "Maryland's Department of General Services sells state surplus through online auctions open to the public.",
+  "url": "https://dgs.maryland.gov/Pages/SurplusProperty/index.aspx"
+ },
+ "massachusetts": {
+  "how": "Massachusetts offers surplus first to state departments, then to cities, towns, and qualified nonprofits, and then to the public through online auctions.",
+  "url": "https://www.mass.gov/how-to/surplus-property-available-to-the-general-public"
+ },
+ "michigan": {
+  "how": "Michigan sells state surplus on MiBid, the state's own online auction site.",
+  "url": "https://www.michigan.gov/dtmb/services/surplusprogram"
+ },
+ "minnesota": {
+  "how": "Minnesota sells state surplus on MNbid, the state's official auction website.",
+  "url": "https://mn.gov/admin/government/surplus-property/auctions/"
+ },
+ "mississippi": {
+  "how": "The Mississippi Office of Surplus Property serves governments and nonprofits and sells state surplus through online auctions.",
+  "url": "https://www.dfa.ms.gov/surplus-property"
+ },
+ "missouri": {
+  "how": "Missouri's State Agency for Surplus Property invites the public to bid in its online auctions.",
+  "url": "https://genserv.oa.mo.gov/surplus-property/public-auctions"
+ },
+ "montana": {
+  "how": "Montana's Surplus Property and Recycling program runs the state and federal surplus programs and sells to the public through an online auction.",
+  "url": "https://gsd.mt.gov/SPR"
+ },
+ "nebraska": {
+  "how": "Nebraska's Materiel Division Surplus Property office processes and sells state surplus.",
+  "url": "https://das.nebraska.gov/materiel/surplus.html"
+ },
+ "nevada": {
+  "how": "Nevada's State Purchasing Division reallocates usable state property and sells the rest at auction.",
+  "land_label": "Nevada Department of Transportation: surplus property for sale",
+  "land_url": "https://www.dot.nv.gov/doing-business/right-of-way/surplus-property-sales",
+  "url": "https://www.purchasing.nv.gov/Property_Management/State-Surplus-Program/"
+ },
+ "new-hampshire": {
+  "how": "New Hampshire Surplus, known as White Farm, is the state's reuse center for state and federal surplus and holds periodic public auctions.",
+  "url": "https://www.das.nh.gov/purchasing/white-farm.aspx"
+ },
+ "new-jersey": {
+  "how": "New Jersey's Distribution and Support Services, in the Treasury Department, sells surplus state vehicles and property through public and online auctions.",
+  "url": "https://www.nj.gov/treasury/dss/surplusproperty.shtml"
+ },
+ "new-mexico": {
+  "how": "New Mexico's State Agency for Surplus Property redistributes state and federal surplus to eligible groups and sells to the public.",
+  "url": "https://generalservices.state.nm.us/surplus-property/"
+ },
+ "new-york": {
+  "how": "New York's Office of General Services sells state surplus through online auctions. You preregister before bidding.",
+  "land_label": "New York Office of General Services: real estate auctions",
+  "land_url": "https://ogs.ny.gov/real-estate/real-estate-auctions",
+  "url": "https://ogs.ny.gov/nysstore"
+ },
+ "north-carolina": {
+  "how": "North Carolina's State Surplus Property Agency sells through retail sales and online bidding.",
+  "url": "https://www.doa.nc.gov/divisions/state-surplus-property"
+ },
+ "north-dakota": {
+  "how": "North Dakota State Surplus Property distributes surplus to eligible organizations and sells state surplus to the public.",
+  "url": "https://www.omb.nd.gov/doing-business-state/surplus-property"
+ },
+ "ohio": {
+  "how": "In Ohio the public can bid on state surplus, including vehicles, through online auctions after registering as a bidder.",
+  "url": "https://das.ohio.gov/buying-and-selling/state-and-federal-surplus-services"
+ },
+ "oklahoma": {
+  "how": "Oklahoma Surplus sells state-owned items, from computers to cars, mainly through online auctions.",
+  "url": "https://oklahoma.gov/omes/divisions/capital-assets-management/surplus.html"
+ },
+ "oregon": {
+  "how": "Oregon's State Surplus Property program sells through online auctions. Some bidders must be pre-qualified by the program first.",
+  "url": "https://www.oregon.gov/das/Surplus/Pages/Index.aspx"
+ },
+ "pennsylvania": {
+  "how": "Pennsylvania's Department of General Services sells surplus supplies, equipment, and vehicles through an online auction marketplace.",
+  "url": "https://www.pa.gov/agencies/dgs/surplus-supplies-equipment-and-vehicles"
+ },
+ "rhode-island": {
+  "how": "Rhode Island's Division of Capital Asset Management and Maintenance repurposes surplus between agencies and sells the rest through online auctions.",
+  "url": "https://dcamm.ri.gov/public-services/surplus-property-request"
+ },
+ "south-carolina": {
+  "how": "South Carolina's Surplus Property Office runs a retail store at its West Columbia warehouse and sells through public auctions and sealed bids.",
+  "land_label": "South Carolina Department of Administration: state surplus real property list",
+  "land_url": "https://admin.sc.gov/news-events/news-and-initiatives/state-surplus-real-property-list",
+  "url": "https://admin.sc.gov/services/surplus-property/public-auctions"
+ },
+ "south-dakota": {
+  "how": "South Dakota Property Management holds live surplus auctions around the state and lists online auctions.",
+  "url": "https://boa.sd.gov/central-services/property-management/property-management-auctions.aspx"
+ },
+ "tennessee": {
+  "how": "Tennessee State Surplus sells to local governments, nonprofits, and the public through an online auction.",
+  "url": "https://www.tn.gov/generalservices/vam/state-surplus.html"
+ },
+ "texas": {
+  "how": "The Texas Facilities Commission runs a State Surplus Store in Austin that is open to the public, plus online auctions.",
+  "url": "https://web.tfc.texas.gov/public/state-surplus-store"
+ },
+ "utah": {
+  "how": "Utah State Surplus Property offers items to government agencies first, then to the public through sales, sealed bids, and auctions.",
+  "url": "https://purchasing.utah.gov/general-services/state-surplus-property/"
+ },
+ "vermont": {
+  "how": "Vermont's Surplus Property office holds vehicle and heavy equipment auctions and online auctions.",
+  "url": "https://bgs.vermont.gov/gbs/surplus/auctions"
+ },
+ "virginia": {
+  "how": "Virginia's Office of Surplus Property Management holds live auctions around the state and online auctions open to the public.",
+  "url": "https://dgs.virginia.gov/office-of-surplus-property-management/public/public-auctions2"
+ },
+ "washington": {
+  "how": "Washington's Department of Enterprise Services sells surplus as buy-now items and online auctions, and also lists surplus real estate.",
+  "url": "https://des.wa.gov/purchase/buy-surplus"
+ },
+ "west-virginia": {
+  "how": "The West Virginia State Agency for Surplus Property sells mainly through online auctions and from its facility in Dunbar.",
+  "url": "https://www.state.wv.us/admin/purchase/Surplus/SurplusPropertyFAQs.html"
+ },
+ "wisconsin": {
+  "how": "Wisconsin agencies offer surplus to other agencies and municipalities first, then to the public through several sale channels.",
+  "url": "https://doa.wi.gov/Pages/StateEmployees/SurplusPropProgram.aspx"
+ },
+ "wyoming": {
+  "how": "Wyoming Surplus Property redistributes and resells items from state agencies through online sales.",
+  "url": "https://ai.wyo.gov/divisions/general-services/surplus-property"
+ }
+}
