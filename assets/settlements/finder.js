@@ -3,7 +3,7 @@
 const C=SettlementCore, data=JSON.parse(document.getElementById('settlement-data').textContent);
 const $=id=>document.getElementById(id);
 const PROFILE_KEY='nfccop.settlement.profile.v1';
-let profile={},selected=null;
+let profile={},selected=null,donationAsked=false;
 function message(id,text,error=false){$(id).textContent=text;$(id).classList.toggle('error',error);}
 try{const stored=localStorage.getItem(PROFILE_KEY);if(stored){profile=C.cleanProfile(JSON.parse(stored));$('remember').checked=true;}}catch{}
 for(const k of C.PROFILE_KEYS)$(k).value=profile[k]||'';
@@ -45,7 +45,7 @@ message('claim-status','');$('claim-dialog').showModal();
 }
 $('close-dialog').addEventListener('click',()=>$('claim-dialog').close());
 function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);}
-$('html-button').addEventListener('click',()=>{download(new Blob([C.packet(selected,profile)],{type:'text/html;charset=utf-8'}),selected.id+'-preparation.html');message('claim-status','Preparation copy downloaded. It is not a claim submission.');});
+$('html-button').addEventListener('click',()=>{download(new Blob([C.packet(selected,profile)],{type:'text/html;charset=utf-8'}),selected.id+'-preparation.html');message('claim-status','Preparation copy downloaded. It is not a claim submission.');offerDonation();});
 $('copy-contact').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('contact-review').textContent);message('claim-status','Contact information copied. Paste it into the official form.');}catch{message('claim-status','Copy unavailable. Select the contact text above and copy it manually.',true);}});
 $('pdf-button').addEventListener('click',async()=>{
 if(!profile.phone){message('claim-status','Add your phone number in Your details, save it, and reopen this form. The official claim asks for it.',true);return;}
@@ -63,8 +63,33 @@ if(font.widthOfTextAtSize(val,size)>rect.width-8)throw Error('Your '+key+' is to
 const field=form.createTextField('nfccop_'+key);field.setText(val);field.addToPage(doc.getPages()[0],{x:rect.x,y:rect.y,width:rect.width,height:rect.height,borderWidth:0,backgroundColor:undefined,textColor:PDFLib.rgb(0,0,0),font});field.setFontSize(size);
 }
 form.updateFieldAppearances(font);download(new Blob([await doc.save()],{type:'application/pdf'}),selected.id+'-prefilled-claim.pdf');
-message('claim-status','PDF downloaded. Review BOTH pages, select payment, sign and date, then mail it or use the official online form. Nothing has been submitted.');
+message('claim-status','PDF downloaded. Review BOTH pages, select payment, sign and date, then mail it or use the official online form. Nothing has been submitted.');offerDonation();
 }catch(e){message('claim-status',e.message+' Your contact information remains here.',true);}finally{b.disabled=false;}
 });
 render();
 if(Date.now()-new Date(data.generated_at).getTime()>3*86400000){$('feed-warning').hidden=false;$('feed-warning').textContent='The daily feed has not refreshed recently. Check the official source for current deadlines and instructions.';}
+
+function offerDonation(){
+ if(donationAsked)return;
+ donationAsked=true;
+ $('optional-donation').hidden=false;
+}
+function calculateDonation(){
+ const raw=$('refund-received').value,choice=$('donation-percent').value;
+ $('custom-percent-label').hidden=choice!=='custom';
+ const rateText=choice==='custom'?$('custom-percent').value:choice;
+ if(raw===''||rateText===''){$('donation-calculation').textContent='No donation selected.';return;}
+ const amount=Number(raw),rate=Number(rateText);
+ if(!Number.isFinite(amount)||!Number.isFinite(rate)||amount<0||amount>1000000||rate<0||rate>100){
+ $('donation-calculation').textContent='Enter an amount from $0 to $1,000,000 and a percentage from 0 to 100.';return;
+ }
+ const cents=Math.round(Math.round(amount*100)*rate/100);
+ $('donation-calculation').textContent='Optional donation: '+new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(cents/100)+' ('+rate+'% of '+new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(amount)+').';
+}
+['refund-received','donation-percent','custom-percent'].forEach(id=>$(id).addEventListener(id==='donation-percent'?'change':'input',calculateDonation));
+$('skip-donation').addEventListener('click',()=>{
+ $('optional-donation').hidden=true;
+ $('refund-received').value='';$('donation-percent').value='';$('custom-percent').value='';
+ calculateDonation();
+ message('claim-status','No donation selected. Your downloads and official submission options remain available.');
+});
