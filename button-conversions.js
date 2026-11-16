@@ -78,7 +78,7 @@
     tagStoreLinks();
     // Allow an informational landing page to keep mobile users on its guide/access path.
     if (document.body.getAttribute('data-pai-download-bar-mode') === 'off') return;
-    if (document.querySelector('[data-pai-download-bar]') || /^\/(disaster-recovery|moving-on|legal-help|research)\//.test(location.pathname)) return;
+    if (document.querySelector('[data-pai-download-bar]') || /^\/(disaster-recovery|moving-on|legal-help|research|money-help|health-help)\//.test(location.pathname)) return;
 
     var style = document.createElement('style');
     style.textContent = [
