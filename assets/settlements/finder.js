@@ -3,7 +3,7 @@
 const C=SettlementCore, data=JSON.parse(document.getElementById('settlement-data').textContent);
 const $=id=>document.getElementById(id);
 const PROFILE_KEY='nfccop.settlement.profile.v1';
-let profile={},selected=null,donationAsked=false;
+let profile={},selected=null,donationDeclined=false;
 function message(id,text,error=false){$(id).textContent=text;$(id).classList.toggle('error',error);}
 try{const stored=localStorage.getItem(PROFILE_KEY);if(stored){profile=C.cleanProfile(JSON.parse(stored));$('remember').checked=true;}}catch{}
 for(const k of C.PROFILE_KEYS)$(k).value=profile[k]||'';
@@ -37,6 +37,8 @@ $('eligibility-check').hidden=!C.canPrepare(selected);
 $('pdf-button').hidden=!C.canPrepare(selected);
 $('pdf-note').hidden=!C.canPrepare(selected);
 $('official-action').href=selected.official_url;
+$('optional-donation').hidden=true;
+$('fast-action').textContent=selected.action==='automatic'||selected.action==='instructions'?'Open the official instructions':'Copy my details & open the official form';
 $('mail-address').textContent=selected.mailing_address||'';
 $('mail-area').hidden=!selected.mailing_address;
 $('email-action').hidden=!selected.submission_email;
@@ -70,9 +72,9 @@ render();
 if(Date.now()-new Date(data.generated_at).getTime()>3*86400000){$('feed-warning').hidden=false;$('feed-warning').textContent='The daily feed has not refreshed recently. Check the official source for current deadlines and instructions.';}
 
 function offerDonation(){
- if(donationAsked)return;
- donationAsked=true;
+ if(donationDeclined)return;
  $('optional-donation').hidden=false;
+ try{$('optional-donation').scrollIntoView({behavior:'smooth',block:'nearest'});}catch{}
 }
 function calculateDonation(){
  const raw=$('refund-received').value,choice=$('donation-percent').value;
@@ -88,8 +90,21 @@ function calculateDonation(){
 }
 ['refund-received','donation-percent','custom-percent'].forEach(id=>$(id).addEventListener(id==='donation-percent'?'change':'input',calculateDonation));
 $('skip-donation').addEventListener('click',()=>{
+ donationDeclined=true;
  $('optional-donation').hidden=true;
  $('refund-received').value='';$('donation-percent').value='';$('custom-percent').value='';
  calculateDonation();
- message('claim-status','No donation selected. Your downloads and official submission options remain available.');
+ message('claim-status','No problem. Your downloads and the official links stay available.');
 });
+// One-step path for every visitor: open the official page first (keeps the click's popup permission), then copy contact details.
+$('fast-action').addEventListener('click',async()=>{
+ if(!selected)return;
+ window.open(selected.official_url,'_blank','noopener');
+ // Same primary conversion the site records for clicks on official resource links. No profile data is sent.
+ try{if(typeof window.gtag==='function')window.gtag('event','conversion',{send_to:'AW-18465563654/GRZgCPDR1bEdEIbIiOVE'});}catch{}
+ const needsDetails=!(selected.action==='automatic'||selected.action==='instructions');
+ if(needsDetails){try{await navigator.clipboard.writeText($('contact-review').textContent);message('claim-status','Official form opened in a new tab and your contact details are copied. Paste them in, then choose payment and sign there yourself. Nothing has been submitted.');}catch{message('claim-status','Official form opened in a new tab. Copy your contact details from the box above. Nothing has been submitted.');}}
+ else message('claim-status','Official instructions opened in a new tab. Nothing has been submitted.');
+ offerDonation();
+});
+$('official-action').addEventListener('click',()=>setTimeout(offerDonation,0));
