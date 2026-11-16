@@ -50,10 +50,10 @@ def discover(body):
 def render(data):
     esc=html.escape; cards=[]
     now=dt.datetime.now(dt.timezone.utc)
-    for r in sorted(data["records"],key=lambda x:(x.get("deadline_at") or "9999",x["title"])):
+    for r in sorted(data["records"],key=lambda x:(0 if x.get("review_status")=="verified" else 1,x.get("deadline_at") or "9999",x["title"])):
         closed=r.get("directory_active") is False or (bool(r.get("deadline_at")) and dt.datetime.fromisoformat(r["deadline_at"])<now)
         if closed: continue
-        cards.append('<article class="card"><span class="tag">'+('FTC refund program' if r["type"]=="ftc" else 'Class-action settlement')+'</span><h3>'+esc(r["title"])+'</h3><p>'+esc(r["summary"])+'</p><p><strong>Who may qualify:</strong> '+esc(r["eligibility"])+'</p><p><strong>Deadline:</strong> '+esc(r.get("deadline_label") or "Read official instructions")+'</p><a class="button secondary" target="_blank" rel="noopener noreferrer" href="'+esc(r["official_url"],quote=True)+'">Open official instructions</a></article>')
+        cards.append('<article class="card"><span class="tag">'+('FTC refund program' if r["type"]=="ftc" else 'Class-action settlement')+'</span><h3>'+esc(r["title"])+'</h3><p>'+esc(r["summary"])+'</p><p><strong>Who may qualify:</strong> '+esc(r["eligibility"])+'</p><p><strong>Deadline:</strong> '+esc(r.get("deadline_label") or "Read official instructions")+'</p><a class="button secondary" data-event="external_resource_click" target="_blank" rel="noopener noreferrer" href="'+esc(r["official_url"],quote=True)+'">Open official instructions</a></article>')
     page=PAGE.read_text(encoding="utf-8")
     page=re.sub(r"<!-- LISTINGS_START -->[\s\S]*?<!-- LISTINGS_END -->",lambda m:"<!-- LISTINGS_START -->"+"\n".join(cards)+"<!-- LISTINGS_END -->",page)
     payload=json.dumps(data,ensure_ascii=True).replace("<","\\u003c")
