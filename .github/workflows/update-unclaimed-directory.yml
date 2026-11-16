@@ -1,0 +1,40 @@
+name: Refresh unclaimed property state links
+on:
+  schedule:
+    - cron: '43 11 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/update_unclaimed_directory.py'
+      - '.github/workflows/update-unclaimed-directory.yml'
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: unclaimed-state-directory
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check private organizer and encrypted backup
+        run: node tests/money-tools/core.test.cjs
+      - name: Update state program links
+        run: python tools/update_unclaimed_directory.py
+      - name: Commit updated directory
+        run: |
+          git config user.name "NFCcop directory updater"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/unclaimed-states.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh unclaimed property state directory"
+            git push
+          fi
+      - name: Rebuild GitHub Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST repos/${{ github.repository }}/pages/builds

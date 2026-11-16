@@ -1,0 +1,428 @@
+{
+  "updated_at": "2026-11-16T05:20:43.097Z",
+  "programs": [
+    {
+      "title": "Find settlements and refunds →",
+      "guide": "/money-help/settlements-and-refunds.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "what to pay first",
+      "guide": "/money-help/cant-pay-all-bills.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Apply for SNAP (Food Stamps): All 50 States",
+      "guide": "/money-help/snap-by-state.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Apply for Medicaid: All 50 States",
+      "guide": "/money-help/medicaid-by-state.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Energy Bill Help (LIHEAP): All 50 States",
+      "guide": "/money-help/energy-bill-help-by-state.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "What to Do If You Get a Utility Shutoff Notice",
+      "guide": "/money-help/utility-shutoff-protection.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Set Up a Utility Payment Plan",
+      "guide": "/money-help/utility-payment-plans.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Get Help Paying Your Water Bill",
+      "guide": "/money-help/water-bill-help.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Lifeline: Discount Phone and Internet Service",
+      "guide": "/money-help/lifeline-phone-internet.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Find Emergency Rent Assistance",
+      "guide": "/money-help/emergency-rent-help.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Apply for Free Home Weatherization",
+      "guide": "/money-help/apply-for-weatherization.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Safer Alternatives to Payday and Title Loans",
+      "guide": "/money-help/payday-loan-alternatives.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Apply for Section 8 Housing Vouchers",
+      "guide": "/money-help/section-8-housing-voucher.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Help Paying for a Funeral or Burial",
+      "guide": "/money-help/funeral-burial-assistance.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Find Unclaimed Money in Your Name",
+      "guide": "/money-help/unclaimed-money.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Get Your Free Credit Report and Dispute Errors",
+      "guide": "/money-help/free-credit-report-dispute.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Freeze Your Credit for Free",
+      "guide": "/money-help/freeze-your-credit.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Apply for SNAP (Food Stamps)",
+      "guide": "/money-help/apply-for-snap.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Disaster SNAP (D-SNAP): Food Help After a Disaster",
+      "guide": "/money-help/disaster-snap.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "WIC: Food Help for Families With Young Children",
+      "guide": "/money-help/wic-program.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Free and Reduced-Price School Meals",
+      "guide": "/money-help/free-school-meals.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Find a Food Pantry or Food Bank Near You",
+      "guide": "/money-help/find-food-pantry.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "What Can You Buy With EBT (SNAP Benefits)?",
+      "guide": "/money-help/what-can-you-buy-with-ebt.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Apply for Medicaid",
+      "guide": "/money-help/apply-for-medicaid.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Get Help Paying for Prescriptions",
+      "guide": "/money-help/prescription-cost-help.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "SSI vs. SSDI: What's the Difference?",
+      "guide": "/money-help/ssi-vs-ssdi.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Appeal a Benefits Denial",
+      "guide": "/money-help/appeal-benefits-denial.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Apply for Social Security Disability (SSDI)",
+      "guide": "/money-help/apply-for-ssdi-disability.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Apply for SSI (Supplemental Security Income)",
+      "guide": "/money-help/apply-for-ssi.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "When and How to Apply for Social Security Retirement",
+      "guide": "/money-help/social-security-retirement.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Replace a Lost Social Security Card",
+      "guide": "/money-help/replace-social-security-card.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Social Security Survivor Benefits: Who Qualifies and How to Apply",
+      "guide": "/money-help/social-security-survivor-benefits.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Get Help Paying for Child Care",
+      "guide": "/money-help/child-care-assistance.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Help With Car Repairs and Getting to Work",
+      "guide": "/money-help/car-repair-transportation-help.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Free Tax Filing and the Earned Income Tax Credit (EITC)",
+      "guide": "/money-help/free-tax-filing-eitc.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Help for Veterans Behind on Bills or at Risk of Losing Housing",
+      "guide": "/money-help/veterans-bills-housing-help.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Apply for Unemployment Benefits",
+      "guide": "/money-help/apply-for-unemployment.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Apply for TANF Cash Assistance",
+      "guide": "/money-help/apply-for-tanf-cash-assistance.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Child Tax Credit: Who Qualifies and How to Claim It",
+      "guide": "/money-help/child-tax-credit.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Apply for Child Support",
+      "guide": "/money-help/apply-for-child-support.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to Fill Out the FAFSA for College Financial Aid",
+      "guide": "/money-help/fafsa-financial-aid.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to File a VA Disability Claim",
+      "guide": "/money-help/va-disability-claim.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to File a Workers' Compensation Claim",
+      "guide": "/money-help/workers-compensation-claim.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "How to File a Claim for Unpaid Wages",
+      "guide": "/money-help/unpaid-wages-claim.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Crowdfunding After a Disaster or Medical Crisis: Taxes and Benefits",
+      "guide": "/money-help/crowdfunding-taxes-public-benefits.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Using Retirement Savings After a Disaster: Qualified Disaster Distributions",
+      "guide": "/money-help/disaster-hardship-401k-withdrawal.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    },
+    {
+      "title": "Property Tax Relief After Disaster Damage",
+      "guide": "/money-help/property-tax-reassessment-after-damage.html",
+      "docs": [
+        "Read the official program instructions",
+        "Confirm which documents the agency requests",
+        "Keep copies and the official confirmation after applying"
+      ]
+    }
+  ]
+}

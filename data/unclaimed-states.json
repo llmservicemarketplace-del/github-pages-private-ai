@@ -1,0 +1,312 @@
+{
+  "source": "https://unclaimed.org/search/",
+  "checked_at": "2026-11-16T05:22:29+00:00",
+  "states": [
+    {
+      "state": "AL",
+      "name": "Alabama",
+      "url": "https://alabama.findyourunclaimedproperty.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "AK",
+      "name": "Alaska",
+      "url": "https://treasury.dor.alaska.gov/Unclaimed-Property.aspx",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "AZ",
+      "name": "Arizona",
+      "url": "https://azdor.gov/unclaimed-property/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "AR",
+      "name": "Arkansas",
+      "url": "https://auditor.ar.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "CA",
+      "name": "California",
+      "url": "https://sco.ca.gov/upd_msg.html",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "CO",
+      "name": "Colorado",
+      "url": "https://colorado.findyourunclaimedproperty.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "CT",
+      "name": "Connecticut",
+      "url": "https://ctbiglist.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "DE",
+      "name": "Delaware",
+      "url": "https://unclaimedproperty.delaware.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "DC",
+      "name": "District of Columbia",
+      "url": "https://dc.findyourunclaimedproperty.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "FL",
+      "name": "Florida",
+      "url": "https://fltreasurehunt.gov/index.jsp",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "GA",
+      "name": "Georgia",
+      "url": "https://dor.georgia.gov/unclaimed-property-program",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "HI",
+      "name": "Hawaii",
+      "url": "https://budget.hawaii.gov/finance/unclaimedproperty/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "ID",
+      "name": "Idaho",
+      "url": "https://yourmoney.idaho.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "IL",
+      "name": "Illinois",
+      "url": "https://icash.illinoistreasurer.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "IN",
+      "name": "Indiana",
+      "url": "https://indianaunclaimed.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "IA",
+      "name": "Iowa",
+      "url": "https://www.iowatreasurer.gov/for-citizens/great-iowa-treasure-hunt/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "KS",
+      "name": "Kansas",
+      "url": "https://kansascash.ks.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "KY",
+      "name": "Kentucky",
+      "url": "https://treasury.ky.gov/Pages/index.aspx",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "LA",
+      "name": "Louisiana",
+      "url": "https://LaCashClaim.org",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "ME",
+      "name": "Maine",
+      "url": "https://maineunclaimedproperty.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "MD",
+      "name": "Maryland",
+      "url": "https://www.marylandtaxes.gov/unclaimed-property/index.php",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "MA",
+      "name": "Massachusetts",
+      "url": "https://www.findmassmoney.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "MI",
+      "name": "Michigan",
+      "url": "https://unclaimedproperty.michigan.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "MN",
+      "name": "Minnesota",
+      "url": "https://mn.gov/commerce/consumers/your-money/find-missing-money/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "MS",
+      "name": "Mississippi",
+      "url": "https://treasury.ms.gov/for-citizens/unclaimed-property/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "MO",
+      "name": "Missouri",
+      "url": "https://treasurer.mo.gov/UnclaimedProperty/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "MT",
+      "name": "Montana",
+      "url": "https://mtrevenue.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "NE",
+      "name": "Nebraska",
+      "url": "https://treasurer.nebraska.gov/up/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "NV",
+      "name": "Nevada",
+      "url": "https://www.nevadatreasurer.gov/Unclaimed_Property/UP_Home/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "NH",
+      "name": "New Hampshire",
+      "url": "https://newhampshire.findyourunclaimedproperty.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "NJ",
+      "name": "New Jersey",
+      "url": "https://www.unclaimedproperty.nj.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "NM",
+      "name": "New Mexico",
+      "url": "https://www.tax.newmexico.gov/Individuals/search-unclaimed-property.aspx",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "NY",
+      "name": "New York",
+      "url": "https://www.osc.state.ny.us/ouf/index.htm",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "NC",
+      "name": "North Carolina",
+      "url": "https://www.nccash.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "ND",
+      "name": "North Dakota",
+      "url": "https://www.land.nd.gov/UnclaimedProperty/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "OH",
+      "name": "Ohio",
+      "url": "https://www.com.ohio.gov/unfd/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "OK",
+      "name": "Oklahoma",
+      "url": "https://www.oktreasure.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "OR",
+      "name": "Oregon",
+      "url": "https://oregon.findyourunclaimedproperty.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "PA",
+      "name": "Pennsylvania",
+      "url": "https://www.patreasury.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "RI",
+      "name": "Rhode Island",
+      "url": "https://findrimoney.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "SC",
+      "name": "South Carolina",
+      "url": "https://www.treasurer.sc.gov/what-we-do/for-citizens/unclaimed-property-program/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "SD",
+      "name": "South Dakota",
+      "url": "https://southdakota.findyourunclaimedproperty.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "TN",
+      "name": "Tennessee",
+      "url": "https://treasury.tn.gov/Unclaimed-Property/Claim-Unclaimed-Property/Find-Your-Missing-Money",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "TX",
+      "name": "Texas",
+      "url": "https://claimittexas.org/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "UT",
+      "name": "Utah",
+      "url": "https://mycash.utah.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "VT",
+      "name": "Vermont",
+      "url": "https://www.vermonttreasurer.gov/content/unclaimed-property",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "VA",
+      "name": "Virginia",
+      "url": "https://vamoneysearch.org/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "WA",
+      "name": "Washington",
+      "url": "https://ucp.dor.wa.gov/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "WV",
+      "name": "West Virginia",
+      "url": "https://www.wvtreasury.com/",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "WI",
+      "name": "Wisconsin",
+      "url": "https://www.revenue.wi.gov/Pages/UnclaimedProperty/Home.aspx",
+      "source": "https://unclaimed.org/search/"
+    },
+    {
+      "state": "WY",
+      "name": "Wyoming",
+      "url": "https://statetreasurer.wyo.gov/UnclaimedProperty.aspx",
+      "source": "https://unclaimed.org/search/"
+    }
+  ]
+}

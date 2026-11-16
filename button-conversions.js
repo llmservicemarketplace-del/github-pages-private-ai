@@ -166,3 +166,18 @@
     }
   });
 }());
+
+/* Public guide shortcut. The URL contains only the guide path, never visitor details. */
+(function(){
+ 'use strict';
+ function addOrganizerShortcut(){
+  if(!/^\/money-help\/.+\.html$/.test(location.pathname)||/\/(application-organizer|unclaimed-money-tool|billing-dispute-letter)\.html$/.test(location.pathname))return;
+  var main=document.querySelector('main'),heading=main&&main.querySelector('h1');
+  if(!heading||main.querySelector('[data-money-organizer-shortcut]'))return;
+  var box=document.createElement('p');box.setAttribute('data-money-organizer-shortcut','true');
+  var a=document.createElement('a');a.href='/money-help/application-organizer.html?guide='+encodeURIComponent(location.pathname);
+  a.textContent='Save this guide to My Organizer';a.style.cssText='display:inline-block;padding:9px 13px;border:1px solid #087f75;border-radius:7px;color:#087168;background:#f0f8f4;font-weight:700;text-decoration:none';
+  box.appendChild(a);heading.insertAdjacentElement('afterend',box);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addOrganizerShortcut,{once:true});else addOrganizerShortcut();
+}());
