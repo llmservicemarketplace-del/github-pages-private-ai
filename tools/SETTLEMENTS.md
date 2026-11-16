@@ -1,32 +1,13 @@
-# Settlement and refund directory
-Page: /money-help/settlements-and-refunds.html
-Data: data/settlements.json. Frontend has no profile submission endpoint.
-Daily updater: .github/workflows/update-settlements.yml, 11:23 UTC, plus manual dispatch.
+# Settlement directory monitoring
 
-## Editorial workflow
-Use directories only to find leads. Add a settlement only after reviewing its official notice/form.
-Record eligibility, receipt and notice-ID requirements separately; use null for unknown.
-Use deadline_at only for a verified timezone-specific deadline. Never invent a closing time.
-Set review_status=verified and last_verified after human review.
-Hash the reviewed official source using normalized() in tools/update_settlements.py. For a PDF hash exact bytes.
-Do not run --bootstrap on existing changed sources to bypass review.
-The updater pauses supported PDF generation if a reviewed source changes. A failed source check does not advance last_checked. Templates also stop after seven days without a successful check.
-FTC discovery publishes only links/titles from the official FTC table with no invented payout or eligibility.
-New non-FTC settlements require editorial review; automated monitoring cannot certify eligibility.
-Do not label a listed email as an accepted claim route unless the official instructions explicitly allow email claims. submission_email is otherwise omitted.
-The local profile contains contact details only and is stored only with the visitor's opt-in.
-Never add profile values to URLs, analytics, logging, or a backend. Downloads remain the visitor's responsibility.
+The default view is accepting new claims. Automatic payments, existing-claim follow-up, upcoming programs, closed claims, and listings needing verification are separate categories. No receipt required is a reviewed property of a particular benefit, not a synonym for no eligibility requirements.
 
-## Official PDF templates
-GoodRx's unmodified two-page official blank is stored in assets/settlements/forms/goodrx-official.pdf.
-Source URL and SHA-256 are recorded in the data. Only contact fields are added as editable widgets.
-Payment choices, declarations, signature and date stay blank. The mailed form requires personal review and completion.
-Do not substitute an NFCcop worksheet for an official claim.
-Check any new template visually with long and accented names. Keep official instructions intact.
+The daily GitHub Actions job reads the source registry, checks published official notices, discovers directory links, deduplicates official URLs, and stores unconfirmed leads in data/settlement-review-queue.json. Registry status and last-success dates are public. Official administrator pages override discovery-directory dates. Robots restrictions and source failures are retained as visible failures, not successful checks.
 
-## Update & test
-python -m unittest discover -s tests/settlements -p 'test_*.py'
-node tests/settlements/core.test.cjs
-python tools/update_settlements.py
-The workflow commits feed changes and requests a GitHub Pages rebuild. Inspect failed Actions runs.
-pdf-lib 1.17.1 is vendored locally (MIT license) to avoid loading third-party code while a visitor types.
+New directory leads are published as submission-route-checked only after the official page has a claim link and an explicit matching future claim deadline. Their eligibility, state restrictions, and proof requirements remain unknown, visibly labeled, and excluded from the no-receipt filter. Other leads await editorial review. Manually reviewed notice changes require renewed review. Missing or failed checks remove listings from the default view; stale checks age out after seven days. This is monitoring of configured sources, not exhaustive coverage of every settlement or automatic legal review.
+
+Contact profiles, preparation HTML, GoodRx official PDF integrity checks, optional donations, and the application organizer are preserved. Downloaded worksheets are not official submissions. No signatures, declarations, or payment accounts are filled automatically.
+
+Run: pip install -r tools/requirements-settlements.txt; python -m unittest discover -s tests/settlements; node tests/settlements/core.test.cjs; python tools/update_settlements.py. Use --render-only to rebuild embedded/static listings without fetching.
+
+To add a source, supply id, name, kind and HTTPS url in data/settlement-sources.json. Supported kinds: classaction, ftc, cfpb, directory (path_pattern), government. Adding a source does not validate its discoveries. Source-layout changes can require parser maintenance.

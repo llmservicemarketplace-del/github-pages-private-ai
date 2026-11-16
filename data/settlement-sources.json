@@ -1,0 +1,89 @@
+{
+  "sources": [
+    {
+      "id": "ftc",
+      "name": "Federal Trade Commission refund programs",
+      "kind": "ftc",
+      "url": "https://www.ftc.gov/enforcement/refunds",
+      "last_checked": "2026-11-16T15:38:29+00:00",
+      "status": "checked",
+      "leads_found": 79
+    },
+    {
+      "id": "classaction",
+      "name": "ClassAction.org settlement directory",
+      "kind": "classaction",
+      "url": "https://www.classaction.org/settlements",
+      "last_checked": "2026-11-16T15:38:31+00:00",
+      "status": "checked",
+      "leads_found": 370
+    },
+    {
+      "id": "openclassactions",
+      "name": "OpenClassActions settlements",
+      "kind": "directory",
+      "url": "https://openclassactions.com/settlements.php",
+      "path_pattern": "/settlements/|/news/",
+      "last_checked": "2026-11-16T15:38:33+00:00",
+      "status": "checked",
+      "leads_found": 17
+    },
+    {
+      "id": "openclassactions-no-proof",
+      "name": "OpenClassActions no-proof directory",
+      "kind": "directory",
+      "url": "https://openclassactions.com/no-proof-class-action-settlements.php",
+      "path_pattern": "/settlements/|/news/",
+      "last_checked": "2026-11-16T15:38:33+00:00",
+      "status": "checked",
+      "leads_found": 4
+    },
+    {
+      "id": "topclassactions",
+      "name": "Top Class Actions open settlements",
+      "kind": "directory",
+      "url": "https://topclassactions.com/category/lawsuit-settlements/open-lawsuit-settlements/",
+      "path_pattern": "/lawsuit-settlements/",
+      "status": "unavailable",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "claimmy",
+      "name": "Claimmy no-proof directory",
+      "kind": "directory",
+      "url": "https://claimmy.org/settlements/no-proof",
+      "path_pattern": "settlement",
+      "last_checked": "2026-11-16T15:38:34+00:00",
+      "status": "checked",
+      "leads_found": 25
+    },
+    {
+      "id": "cfpb",
+      "name": "CFPB payments to harmed consumers",
+      "kind": "cfpb",
+      "url": "https://www.consumerfinance.gov/enforcement/payments-harmed-consumers/payments-by-case/",
+      "last_checked": "2026-11-16T15:38:35+00:00",
+      "status": "checked",
+      "leads_found": 30
+    },
+    {
+      "id": "doj",
+      "name": "DOJ remission and restitution",
+      "kind": "government",
+      "url": "https://www.justice.gov/criminal-mlars/remission",
+      "last_checked": "2026-11-16T15:38:35+00:00",
+      "status": "checked",
+      "leads_found": 11
+    },
+    {
+      "id": "sec",
+      "name": "SEC distributions to harmed investors",
+      "kind": "government",
+      "url": "https://www.sec.gov/enforcement-litigation/distributions-harmed-investors",
+      "last_checked": "2026-11-16T15:39:40+00:00",
+      "status": "checked",
+      "leads_found": 172
+    }
+  ],
+  "updated_at": "2026-11-16T15:38:54+00:00"
+}
