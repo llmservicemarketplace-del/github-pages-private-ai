@@ -5,7 +5,7 @@
       "name": "Federal Trade Commission refund programs",
       "kind": "ftc",
       "url": "https://www.ftc.gov/enforcement/refunds",
-      "last_checked": "2026-11-16T15:48:19+00:00",
+      "last_checked": "2026-11-16T21:14:05+00:00",
       "status": "checked",
       "leads_found": 79
     },
@@ -14,7 +14,7 @@
       "name": "ClassAction.org settlement directory",
       "kind": "classaction",
       "url": "https://www.classaction.org/settlements",
-      "last_checked": "2026-11-16T15:48:24+00:00",
+      "last_checked": "2026-11-16T21:14:08+00:00",
       "status": "checked",
       "leads_found": 370
     },
@@ -24,7 +24,7 @@
       "kind": "directory",
       "url": "https://openclassactions.com/settlements.php",
       "path_pattern": "/settlements/|/news/",
-      "last_checked": "2026-11-16T15:48:25+00:00",
+      "last_checked": "2026-11-16T21:14:09+00:00",
       "status": "checked",
       "leads_found": 17
     },
@@ -34,7 +34,7 @@
       "kind": "directory",
       "url": "https://openclassactions.com/no-proof-class-action-settlements.php",
       "path_pattern": "/settlements/|/news/",
-      "last_checked": "2026-11-16T15:48:25+00:00",
+      "last_checked": "2026-11-16T21:14:09+00:00",
       "status": "checked",
       "leads_found": 4
     },
@@ -53,7 +53,7 @@
       "kind": "directory",
       "url": "https://claimmy.org/settlements/no-proof",
       "path_pattern": "settlement",
-      "last_checked": "2026-11-16T15:48:26+00:00",
+      "last_checked": "2026-11-16T21:14:10+00:00",
       "status": "checked",
       "leads_found": 24
     },
@@ -62,7 +62,7 @@
       "name": "CFPB payments to harmed consumers",
       "kind": "cfpb",
       "url": "https://www.consumerfinance.gov/enforcement/payments-harmed-consumers/payments-by-case/",
-      "last_checked": "2026-11-16T15:48:27+00:00",
+      "last_checked": "2026-11-16T21:14:11+00:00",
       "status": "checked",
       "leads_found": 30
     },
@@ -71,7 +71,7 @@
       "name": "DOJ remission and restitution",
       "kind": "government",
       "url": "https://www.justice.gov/criminal-mlars/remission",
-      "last_checked": "2026-11-16T15:48:27+00:00",
+      "last_checked": "2026-11-16T21:14:11+00:00",
       "status": "checked",
       "leads_found": 9
     },
@@ -80,10 +80,10 @@
       "name": "SEC distributions to harmed investors",
       "kind": "government",
       "url": "https://www.sec.gov/enforcement-litigation/distributions-harmed-investors",
-      "last_checked": "2026-11-16T15:48:28+00:00",
+      "last_checked": "2026-11-16T21:14:12+00:00",
       "status": "checked",
       "leads_found": 166
     }
   ],
-  "updated_at": "2026-11-16T15:48:39+00:00"
+  "updated_at": "2026-11-16T21:14:22+00:00"
 }
