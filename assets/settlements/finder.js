@@ -108,3 +108,20 @@ $('fast-action').addEventListener('click',async()=>{
  offerDonation();
 });
 $('official-action').addEventListener('click',()=>setTimeout(offerDonation,0));
+// Donation pop-up: Zeffy's own embed form in an iframe, loaded only when a visitor chooses Donate. No third-party script runs on this page.
+const ZEFFY_EMBED='https://www.zeffy.com/embed/donation-form/donate-to-change-lives-23839?modal=true',ZEFFY_ORIGIN='https://www.zeffy.com';
+function openDonate(){
+ const d=$('donate-dialog'),f=$('donate-frame');
+ if(!d||!f||typeof d.showModal!=='function')return false;
+ const hello=()=>{try{f.contentWindow.postMessage({id:'zeffy-iframe',open:true},ZEFFY_ORIGIN);}catch{}};
+ if(!f.getAttribute('src')){f.addEventListener('load',hello);f.src=ZEFFY_EMBED+'&cachebust='+Date.now();}else hello();
+ d.showModal();return true;
+}
+// Registered after button-conversions.js, so the donation click is counted first and the new tab is then replaced by the pop-up.
+document.addEventListener('click',e=>{
+ const a=e.target&&e.target.closest?e.target.closest('a[data-donate-popup]'):null;
+ if(!a||e.defaultPrevented||e.button!==0||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;
+ if(openDonate())e.preventDefault();
+});
+window.addEventListener('message',e=>{if(e.origin===ZEFFY_ORIGIN&&e.data&&e.data.id==='zeffy-iframe'&&e.data.close)$('donate-dialog').close();});
+$('close-donate').addEventListener('click',()=>$('donate-dialog').close());
