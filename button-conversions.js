@@ -156,6 +156,9 @@
       reportCommercialFunnel('pai_pricing_view', link, destination);
     } else if (link.dataset.funnelStep === 'plan-select') {
       reportCommercialFunnel('pai_plan_select', link, destination);
+      if (destination.hostname === 'apps.microsoft.com') {
+        reportCommercialFunnel('pai_store_referral', link, destination);
+      }
     } else if (link.dataset.funnelStep === 'store-click' ||
                (destination.hostname === 'apps.microsoft.com' && /^\/detail\/[a-z0-9]+\/?$/i.test(destination.pathname))) {
       reportCommercialFunnel('pai_store_referral', link, destination);
