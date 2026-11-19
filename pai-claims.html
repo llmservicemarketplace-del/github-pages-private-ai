@@ -15,7 +15,7 @@
 
 <title>Property Insurance Claim Software | PAi Claims Tracker</title>
 
-<meta name="description" content="Challenge a low insurance estimate with organized evidence, repair costs and local AI. Download PAi Claims free. First claim $20; access help available.">
+<meta name="description" content="Build a complete property-claim estimate, audit a carrier scope, organize evidence and prepare supported claim documents in one Windows workspace. Download PAi Claims free; first claim $20.">
 
 <link rel="canonical" href="https://yprivateai.com/pai-claims.html">
 
@@ -415,10 +415,32 @@ footer a{
   text-decoration:none;
 }
 
+.funnel-proof{
+  margin:72px 0 30px;
+  padding:38px;
+  border:1px solid var(--blue);
+  background:linear-gradient(145deg,#0d1b2e,#101f34);
+}
+.funnel-proof h2{margin-top:8px}
+.workflow-steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  list-style:none;
+  padding:1px;
+  margin:30px 0;
+  background:var(--line);
+}
+.workflow-steps li{padding:22px;background:var(--surface)}
+.workflow-steps strong{display:block;color:var(--blue-lt);margin-bottom:8px}
+.workflow-steps span{display:block;color:var(--muted);font-size:15px}
+
 @media(max-width:800px){
-  .callouts,.grid,.compare,.price-grid{
+  .callouts,.grid,.compare,.price-grid,.workflow-steps{
     grid-template-columns:1fr;
   }
+
+  .funnel-proof{padding:25px 20px}
 
   .callout{
     border-right:0;
@@ -441,7 +463,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--blue-lt);outline-o
 h1,h2{overflow-wrap:break-word}
 </style>
 <meta property="og:title" content="Property Insurance Claim Software | PAi Claims Tracker">
-<meta property="og:description" content="Challenge a low insurance estimate with organized evidence, repair costs and local AI. Download PAi Claims free. First claim $20; access help available.">
+<meta property="og:description" content="Build a complete property-claim estimate, audit a carrier scope, organize evidence and prepare supported claim documents in one Windows workspace.">
 <meta property="og:url" content="https://yprivateai.com/pai-claims.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="yPrivateAI · NFCcop">
@@ -450,7 +472,7 @@ h1,h2{overflow-wrap:break-word}
 <meta name="twitter:image:alt" content="PAi software brand preview">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Property Insurance Claim Software | PAi Claims Tracker">
-<meta name="twitter:description" content="Challenge a low insurance estimate with organized evidence, repair costs and local AI. Download PAi Claims free. First claim $20; access help available.">
+<meta name="twitter:description" content="Build a complete property-claim estimate, audit a carrier scope, organize evidence and prepare supported claim documents in one Windows workspace.">
 <meta name="twitter:image" content="https://yprivateai.com/og-pai.png">
 <script defer src="/button-conversions.js"></script>
   <link rel="stylesheet" href="/css/editorial-images.css">
@@ -496,13 +518,13 @@ h1,h2{overflow-wrap:break-word}
   </p>
 
   <p class="hero-lead">
-    Stop piecing your claim together from scattered files. Put powerful AI to work
-    analyzing your records, comparing estimates and preparing your next response.
-    <strong>Start building a stronger claim today.</strong>
+    This is complete property-claim estimating software—not a chatbot or a blank
+    claim form. Build line-item repair costs, review missing scope, connect every
+    conclusion to its evidence and prepare a report you can print or save.
   </p>
 
   <div class="actions">
-    <a href="https://apps.microsoft.com/detail/9P255VXPD5B4" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:12px;padding:10px 18px 10px 12px;text-decoration:none;background:var(--ink-2,#0D1B2E);border:1px solid var(--blue,#3F8EFC);border-radius:6px;font-family:var(--sans,'Segoe UI',sans-serif);color:var(--text,#E6EDF6);line-height:1;">
+    <a href="https://apps.microsoft.com/detail/9P255VXPD5B4" data-product="pai-claims" data-funnel-step="store-click" data-pai-campaign="pai-claims-hero" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:12px;padding:10px 18px 10px 12px;text-decoration:none;background:var(--ink-2,#0D1B2E);border:1px solid var(--blue,#3F8EFC);border-radius:6px;font-family:var(--sans,'Segoe UI',sans-serif);color:var(--text,#E6EDF6);line-height:1;">
   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="1" y="1" width="9" height="9" fill="#F25022"/><rect x="12" y="1" width="9" height="9" fill="#7FBA00"/><rect x="12" y="12" width="9" height="9" fill="#00A4EF"/><rect x="12" y="12" width="9" height="9" fill="#FFB900"/></svg>
   <span style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted,#93A5BC);line-height:1;">Get it from</span> <span style="font-size:14px;font-weight:600;color:var(--blue-lt,#7DB6FF);line-height:1;">Microsoft Store</span></span>
   <span style="font-size:13px;color:var(--muted,#93A5BC);padding-left:10px;margin-left:4px;border-left:1px solid var(--rule,#1C2E45);">PAi Claims</span>
@@ -536,6 +558,27 @@ h1,h2{overflow-wrap:break-word}
 
 </div>
 
+<section class="funnel-proof" aria-labelledby="workflow-heading">
+  <div>
+    <div class="eyebrow">See what the software actually does</div>
+    <h2 id="workflow-heading">From scattered records to a reviewable estimate.</h2>
+    <p class="intro">PAi Claims guides the work in a visible sequence. It flags missing information and assumptions instead of hiding them behind an AI answer.</p>
+  </div>
+  <ol class="workflow-steps">
+    <li><strong>1. Start the case</strong><span>Enter the loss, property and claim details.</span></li>
+    <li><strong>2. Add the record</strong><span>Bring in photographs, policy documents, estimates, receipts and correspondence.</span></li>
+    <li><strong>3. Build the estimate</strong><span>Review quantities, line items, labor, materials, equipment, tax and local price evidence.</span></li>
+    <li><strong>4. Audit the carrier</strong><span>Compare scope and pricing and identify work that may be missing or different.</span></li>
+    <li><strong>5. Confirm the facts</strong><span>Resolve open measurements, assumptions, local rates and overhead-and-profit applicability.</span></li>
+    <li><strong>6. Prepare the output</strong><span>Print or save the supported estimate and use the organized record for the next response.</span></li>
+  </ol>
+  <div class="actions">
+    <a class="btn primary" href="https://apps.microsoft.com/detail/9P255VXPD5B4" data-product="pai-claims" data-funnel-step="store-click" data-pai-campaign="pai-claims-workflow">Download the Windows app</a>
+    <a class="btn secondary" href="#pricing" data-product="pai-claims" data-funnel-step="pricing-view">Compare access options</a>
+  </div>
+  <p class="small">The website tracks these button choices as sales-funnel events. A Store referral is not reported as a purchase, installation or completed estimate.</p>
+</section>
+
 <section id="claims-documentation">
   <h2>Take the Stress Out of Property Damage Claims</h2>
   <p class="intro">When disaster damages your home or business, you need more than a folder full of paperwork. You need a clear, supported account of what was damaged, what repairs cost and what the carrier has left unanswered. <strong>PAi Claims</strong> turns scattered records into an organized <strong>property insurance claim</strong> you can use to challenge an estimate, explain missing repairs and prepare your next move.</p>
@@ -546,7 +589,7 @@ h1,h2{overflow-wrap:break-word}
     <li><strong>Put private AI to work:</strong> Analyze correspondence and policy language and draft evidence summaries with a compatible local AI model. Check the sources, refine your response and keep moving.</li>
     <li><strong>Keep control of your claim files:</strong> Work in a native Windows application with workspace folders you choose. Choose local AI for analysis without sending that operation to a hosted AI provider, or connect a supported external provider under its own terms.</li>
   </ul>
-  <div class="actions"><a class="btn" href="https://apps.microsoft.com/detail/9P255VXPD5B4">Download PAi Claims &mdash; Start Building Your Claim</a><a class="btn secondary" href="#pricing">Choose Your Claim Access</a><a class="btn secondary" href="/insurance-claim-organizer.html#receipt-guide">Start With the Receipt Checklist</a></div>
+  <div class="actions"><a class="btn" href="https://apps.microsoft.com/detail/9P255VXPD5B4" data-product="pai-claims" data-funnel-step="store-click" data-pai-campaign="pai-claims-features">Download PAi Claims &mdash; Start Building Your Claim</a><a class="btn secondary" href="#pricing" data-product="pai-claims" data-funnel-step="pricing-view">Choose Your Claim Access</a><a class="btn secondary" href="/insurance-claim-organizer.html#receipt-guide">Start With the Receipt Checklist</a></div>
 </section>
 
 <section>
@@ -1179,19 +1222,22 @@ h1,h2{overflow-wrap:break-word}
     <div class="price">
       <h3>First claim</h3>
       <div class="amount">$20</div>
-      <p>Start with one complete claim without committing to a large software subscription.</p>
+      <p>One complete claim workspace for an individual user without a large software subscription.</p>
+      <a class="btn secondary" href="https://apps.microsoft.com/detail/9P255VXPD5B4" data-product="pai-claims" data-plan="first-claim" data-funnel-step="plan-select" data-pai-campaign="pai-claims-first">Choose first claim</a>
     </div>
 
     <div class="price">
       <h3>Additional claims</h3>
       <div class="amount">$179</div>
-      <p>Pay for another claim only when you need one.</p>
+      <p>Professional single-case access when you need another complete claim workspace.</p>
+      <a class="btn secondary" href="https://apps.microsoft.com/detail/9P255VXPD5B4" data-product="pai-claims" data-plan="additional-claim" data-funnel-step="plan-select" data-pai-campaign="pai-claims-additional">Choose single case</a>
     </div>
 
     <div class="price">
       <h3>Unlimited claims</h3>
       <div class="amount">$2,000</div>
-      <p>Annual unlimited-claim access for higher-volume users and professionals.</p>
+      <p>Annual unlimited new-claim access for higher-volume users and professionals.</p>
+      <a class="btn secondary" href="https://apps.microsoft.com/detail/9P255VXPD5B4" data-product="pai-claims" data-plan="annual" data-funnel-step="plan-select" data-pai-campaign="pai-claims-annual">Choose annual access</a>
     </div>
 
   </div>

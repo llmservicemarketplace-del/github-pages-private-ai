@@ -42,6 +42,32 @@
 
   ensureGoogleAdsTag();
 
+  if (typeof window.gtag === 'function') {
+    if (/\/pai-claims\.html$/i.test(location.pathname)) {
+      window.gtag('event', 'pai_product_view', {product: 'pai-claims', page_path: location.pathname});
+    } else if (/\/pricing\.html$/i.test(location.pathname)) {
+      window.gtag('event', 'pai_pricing_page_view', {page_path: location.pathname});
+    }
+  }
+
+  function reportCommercialFunnel(eventName, link, destination) {
+    if (typeof window.gtag !== 'function') return;
+    var product = link.dataset.product || '';
+    var plan = link.dataset.plan || '';
+    var campaign = link.dataset.paiCampaign || '';
+    var parameters = {
+      product: product,
+      plan: plan,
+      funnel_step: link.dataset.funnelStep || eventName,
+      campaign: campaign,
+      page_path: location.pathname,
+      destination_host: destination.hostname
+    };
+    // These GA4 events are commercial product signals. They are deliberately
+    // separate from nonprofit help-resource and Ad Grant conversion actions.
+    try { window.gtag('event', eventName, parameters); } catch (_) {}
+  }
+
   function isPublicHelpDestination(destination) {
     var host = destination.hostname.toLowerCase().replace(/^www\./, '');
     return /\.(gov|mil|edu|org)$/.test(host) ||
@@ -126,6 +152,14 @@
     if (!link) return;
     var destination;
     try { destination = new URL(link.href, document.baseURI); } catch (_) { return; }
+    if (link.dataset.funnelStep === 'pricing-view') {
+      reportCommercialFunnel('pai_pricing_view', link, destination);
+    } else if (link.dataset.funnelStep === 'plan-select') {
+      reportCommercialFunnel('pai_plan_select', link, destination);
+    } else if (link.dataset.funnelStep === 'store-click' ||
+               (destination.hostname === 'apps.microsoft.com' && /^\/detail\/[a-z0-9]+\/?$/i.test(destination.pathname))) {
+      reportCommercialFunnel('pai_store_referral', link, destination);
+    }
     var label;
     if (isHelpRequest(destination)) {
       // A request for free access is a meaningful assistance action. The email
