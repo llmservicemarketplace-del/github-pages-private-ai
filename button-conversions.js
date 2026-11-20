@@ -154,6 +154,10 @@
     try { destination = new URL(link.href, document.baseURI); } catch (_) { return; }
     if (link.dataset.funnelStep === 'pricing-view') {
       reportCommercialFunnel('pai_pricing_view', link, destination);
+    } else if (link.dataset.funnelStep === 'sales-page') {
+      // This records a visit to the NFCcop product explanation only. It is not
+      // treated as a purchase, software installation, or completed claim.
+      reportCommercialFunnel('pai_sales_page_referral', link, destination);
     } else if (link.dataset.funnelStep === 'plan-select') {
       reportCommercialFunnel('pai_plan_select', link, destination);
       if (destination.hostname === 'apps.microsoft.com') {
