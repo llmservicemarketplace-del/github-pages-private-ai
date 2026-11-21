@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T19:34:05+00:00",
+  "updated_at": "2026-11-21T18:13:00+00:00",
   "leads": [
     {
       "id": "case-a64edc73c157744a",
@@ -2112,8 +2112,7 @@
       "notice_id_required": null,
       "availability": "needs_review",
       "review_status": "needs_review",
-      "deadline_date": "2026-11-22",
-      "verification_error": "Source robots access unavailable"
+      "deadline_date": "2026-11-22"
     },
     {
       "id": "case-16a4849c206b6a6b",
@@ -2163,8 +2162,7 @@
       "notice_id_required": null,
       "availability": "needs_review",
       "review_status": "needs_review",
-      "deadline_date": "2026-11-20",
-      "verification_error": "HTTP Error 403: Forbidden"
+      "deadline_date": "2026-11-20"
     },
     {
       "id": "case-9b2df4a538e5bf6a",
@@ -2196,8 +2194,7 @@
       "notice_id_required": null,
       "availability": "needs_review",
       "review_status": "needs_review",
-      "deadline_date": "2026-11-20",
-      "verification_error": "Source robots access unavailable"
+      "deadline_date": "2026-11-20"
     },
     {
       "id": "case-5efd8da2274ae934",
@@ -2213,8 +2210,7 @@
       "notice_id_required": null,
       "availability": "needs_review",
       "review_status": "needs_review",
-      "deadline_date": "2026-11-19",
-      "verification_error": "Source robots access unavailable"
+      "deadline_date": "2026-11-19"
     },
     {
       "id": "case-65c52bb82633c1a1",
@@ -2230,8 +2226,7 @@
       "notice_id_required": null,
       "availability": "needs_review",
       "review_status": "needs_review",
-      "deadline_date": "2026-11-19",
-      "verification_error": "Source robots access unavailable"
+      "deadline_date": "2026-11-19"
     },
     {
       "id": "case-69cca18950e07d73",
@@ -2560,7 +2555,7 @@
     },
     {
       "id": "case-fe24a6a6e691a644",
-      "title": "Florence Bank $390,881 Overdraft & NSF Fee Settlement Automatic payment · no claim form · retry NSF and debit card overdraft fees (Apr 2018 – Feb 2024) Automatic Dec 15, 2026 27 days left",
+      "title": "Florence Bank $390,881 Overdraft & NSF Fee Settlement Automatic payment · no claim form · retry NSF and debit card overdraft fees (Apr 2018 – Feb 2024) Automatic Dec 15, 2026 24 days left",
       "type": "settlement",
       "official_url": "https://openclassactions.com/settlements/overdraft-fees/florence-bank-overdraft-nsf-fee-settlement.php",
       "source_url": "https://openclassactions.com/settlements/overdraft-fees/florence-bank-overdraft-nsf-fee-settlement.php",
@@ -2575,7 +2570,7 @@
     },
     {
       "id": "case-69666a095ec5e894",
-      "title": "$500K Service Spot Parking Reservation Fee California Class Action Settlement Proof / ID Dec 17, 2026 29 days left",
+      "title": "$500K Service Spot Parking Reservation Fee California Class Action Settlement Proof / ID Dec 17, 2026 26 days left",
       "type": "settlement",
       "official_url": "https://openclassactions.com/settlements/service-spot-parking-reservation-fees-california-class-action-settlement.php",
       "source_url": "https://openclassactions.com/settlements/service-spot-parking-reservation-fees-california-class-action-settlement.php",
@@ -2590,7 +2585,7 @@
     },
     {
       "id": "case-e189fb45ed253824",
-      "title": "$21M Whirlpool / Maytag Bottom-Mount & French-Door Refrigerator Freezer Class Action Settlement Proof / ID Dec 31, 2026 43 days left",
+      "title": "$21M Whirlpool / Maytag Bottom-Mount & French-Door Refrigerator Freezer Class Action Settlement Proof / ID Dec 31, 2026 40 days left",
       "type": "settlement",
       "official_url": "https://openclassactions.com/settlements/whirlpool-freezers-class-action.php",
       "source_url": "https://openclassactions.com/settlements/whirlpool-freezers-class-action.php",
@@ -3055,7 +3050,7 @@
     },
     {
       "id": "case-db43fc2bb056bc73",
-      "title": "Capital One Arena concessions venue fee Share of $4.5M No proof Closes Dec 4 · 16 days left · Food & beverage",
+      "title": "Capital One Arena concessions venue fee Share of $4.5M No proof Closes Dec 4 · 13 days left · Food & beverage",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/capital-one-arena-venue-fee",
       "source_url": "https://claimmy.org/settlements/capital-one-arena-venue-fee",
@@ -3070,7 +3065,7 @@
     },
     {
       "id": "case-6641d00bc14e3d7e",
-      "title": "Neutrogena Skin360 (Illinois) Equal share of $4.7M No proof Closes Nov 25 · 7 days left · Data breach & privacy",
+      "title": "Neutrogena Skin360 (Illinois) Equal share of $4.7M No proof Closes Nov 25 · 4 days left · Data breach & privacy",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/neutrogena-skin360",
       "source_url": "https://claimmy.org/settlements/neutrogena-skin360",
@@ -3130,7 +3125,7 @@
     },
     {
       "id": "case-9e17aaf4012babe0",
-      "title": "Dr. Squatch \"natural\" labels Up to $12.50 No proof Closes Nov 27 · 9 days left · Home & personal care",
+      "title": "Dr. Squatch \"natural\" labels Up to $12.50 No proof Closes Nov 27 · 6 days left · Home & personal care",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/dr-squatch-natural",
       "source_url": "https://claimmy.org/settlements/dr-squatch-natural",
@@ -3175,7 +3170,7 @@
     },
     {
       "id": "case-9f0022be5166799f",
-      "title": "Venetian website tracking (California) Share of $1.6M No proof Closes Nov 24 · 6 days left · Data breach & privacy",
+      "title": "Venetian website tracking (California) Share of $1.6M No proof Closes Nov 24 · 3 days left · Data breach & privacy",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/venetian-website-tracking-ca",
       "source_url": "https://claimmy.org/settlements/venetian-website-tracking-ca",
@@ -3190,7 +3185,7 @@
     },
     {
       "id": "case-ab1302daae4a4528",
-      "title": "Planned Parenthood lab data breach Share of $6.1M No proof Closes Nov 24 · 6 days left · Data breach & privacy",
+      "title": "Planned Parenthood lab data breach Share of $6.1M No proof Closes Nov 24 · 3 days left · Data breach & privacy",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/planned-parenthood-lab-breach",
       "source_url": "https://claimmy.org/settlements/planned-parenthood-lab-breach",
@@ -3205,7 +3200,7 @@
     },
     {
       "id": "case-386734c54bae44f7",
-      "title": "ParkOn & CheapAirportParking fees (California) Share of $500K No proof Closes Dec 17 · 29 days left · Retail & ecommerce",
+      "title": "ParkOn & CheapAirportParking fees (California) Share of $500K No proof Closes Dec 17 · 26 days left · Retail & ecommerce",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/parkon-reservation-fees",
       "source_url": "https://claimmy.org/settlements/parkon-reservation-fees",
@@ -6428,7 +6423,7 @@
     },
     {
       "id": "case-d0b6806847fa7211",
-      "title": "Mixbook - Deceptive Sales",
+      "title": "Mixbook - Discounts",
       "type": "settlement",
       "official_url": "https://www.mbpricingsettlement.com/",
       "source_url": "https://www.mbpricingsettlement.com/",
@@ -6465,6 +6460,21 @@
       "official_url": "https://www.sec.gov/enforcement-litigation/distributions-harmed-investors/marino",
       "source_url": "https://www.sec.gov/enforcement-litigation/distributions-harmed-investors/marino",
       "discovered_from": "sec",
+      "states": [
+        "UNKNOWN"
+      ],
+      "receipt_required": null,
+      "notice_id_required": null,
+      "availability": "needs_review",
+      "review_status": "needs_review"
+    },
+    {
+      "id": "case-7360b49d801a7e5c",
+      "title": "Access Funding",
+      "type": "government",
+      "official_url": "https://www.consumerfinance.gov/enforcement/payments-harmed-consumers/payments-by-case/access/",
+      "source_url": "https://www.consumerfinance.gov/enforcement/payments-harmed-consumers/payments-by-case/access/",
+      "discovered_from": "cfpb",
       "states": [
         "UNKNOWN"
       ],

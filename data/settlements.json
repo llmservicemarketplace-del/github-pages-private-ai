@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-18T19:34:05+00:00",
+  "generated_at": "2026-11-21T18:13:00+00:00",
   "records": [
     {
       "id": "goodrx-privacy",
@@ -22,7 +22,7 @@
       "source_url": "https://www.goodrxprivacysettlement.com/assets/docs/GoodRx%20Criteo%20Claim%20Form%20Draft%20V3%20-%20Blank.pdf",
       "source_hash": "9ccea08792bed02248db645067ff32023725b9772089ac5a2631dbc156dae1ec",
       "last_verified": "2026-11-16T03:44:55.353Z",
-      "last_checked": "2026-11-18T19:27:18+00:00",
+      "last_checked": "2026-11-21T18:06:19+00:00",
       "review_status": "verified",
       "instructions": "For online submission, open the official website and complete its form; you can copy your contact details from here. For mail, download the prefilled official PDF, review both pages, select payment, sign and date, and mail it by the postmark deadline. Email is listed for questions, not as a verified claim submission route.",
       "mailing_address": "GoodRx Data Disclosure Settlement\nc/o A.B. Data, Ltd.\nP.O. Box 173138\nMilwaukee, WI 53217",
@@ -101,9 +101,9 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/amazon-refunds",
       "review_status": "action_verified",
       "last_verified": "2026-11-16T03:44:55.353Z",
-      "last_checked": "2026-11-18T19:27:34+00:00",
+      "last_checked": "2026-11-21T18:06:29+00:00",
       "instructions": "Read the official program page for the current payment, contact, or claim instructions. Do not send a preparation worksheet as a claim.",
-      "source_hash": "287990556a4913e1cc5a6f87286c00b9cf8d3b38ae310e3fb5e4a92109ed7e2f",
+      "source_hash": "4c1ec40ec4176ca202313b91e923644bfbdc85bc160eaec08046e9e9ae36bb94",
       "availability": "automatic",
       "discovered_from": "ftc",
       "source_status": "checked"
@@ -125,10 +125,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/consumer-health-benefits-association-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:27:23+00:00",
+      "last_checked": "2026-11-21T18:06:21+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "bd17eca2a492341ae9abdfd28fa9db8b7f97a944accfa0cd53415d80ba3ed25c",
+      "source_hash": "d0520a9b501fd71b760c4b046c1a3654a01bc952a7c6c4eda5d0fe37ca3ca698",
       "source_status": "checked"
     },
     {
@@ -148,10 +148,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/ed-napleton-automotive-group-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:27:29+00:00",
+      "last_checked": "2026-11-21T18:06:24+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "a7aa6b86fd595c09961d9b6538e6e0f34b1f18904d1a3a75fe9a587c162bc1cf",
+      "source_hash": "a987b45b4beb6b99dcc4ccbc91a02eccc74d02178af890372e2f6c3d1527ce95",
       "source_status": "checked"
     },
     {
@@ -171,10 +171,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/publishers-clearing-house-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:27:42+00:00",
+      "last_checked": "2026-11-21T18:06:41+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "d058710902c26916fdeb5e40c4109ab1ac368c8f9eb7f87264b712cec73ce3d1",
+      "source_hash": "583bafd1a8886614e5740d4efa3340eac6a121e40cdde8e77976d4dfad08f260",
       "source_status": "checked"
     },
     {
@@ -194,10 +194,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/razer-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:27:19+00:00",
+      "last_checked": "2026-11-21T18:06:34+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "68f89a3f451f0e5cd2f6e3af77a9a229b9cf780d282f4535f0550ddb478cf48d",
+      "source_hash": "d76ba4581e08ca8b2eef633c73fbdaccf31f068ada495480112e747d46d5269f",
       "source_status": "checked"
     },
     {
@@ -217,10 +217,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/walmart-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:27:44+00:00",
+      "last_checked": "2026-11-21T18:06:44+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "d96d830bb8af18a3f3eeeb5d5cce66a0bf515ea8f74eda51e70fb48448ff0968",
+      "source_hash": "53bd92251788c5d10a0d3e8c0f7fe2f0613a71ea9b30d1d19dad4265dc410983",
       "source_status": "checked"
     },
     {
@@ -240,10 +240,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/cleo-ai-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:27:48+00:00",
+      "last_checked": "2026-11-21T18:06:51+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "41f5fdacb72ff0036a54bc89eb31f625971616b74c15c2277018430296810a7b",
+      "source_hash": "8e31135f14165b89043e444cb716f9b7cc6aef36395bcd0b299164a13234fb33",
       "source_status": "checked"
     },
     {
@@ -263,10 +263,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/avast-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:27:54+00:00",
+      "last_checked": "2026-11-21T18:06:56+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "50031cf04d3aaa91802cd623e0770e86442f6cdf66283ff00a30968337c5b210",
+      "source_hash": "48d68abec04502c52ae09a869ad44bce5f720e3a9cc15979c17ffbcb0ec49815",
       "source_status": "checked"
     },
     {
@@ -286,10 +286,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/advocare-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:27:58+00:00",
+      "last_checked": "2026-11-21T18:07:02+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "f7944bacd26f38c0531d9b4e2f382edd6ad773e815777ce3130919ba2bed88ab",
+      "source_hash": "75772ca5e4d5cddcf76df04c05dec95d1a6ffe03ba48bced9228949562f0415d",
       "source_status": "checked"
     },
     {
@@ -309,10 +309,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/goat-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:03+00:00",
+      "last_checked": "2026-11-21T18:07:06+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "ce1a211b495decd495ebae8f83ab980ad0a891eff580cbada77658e177397b00",
+      "source_hash": "99df09c8c2c6686b95a55a49c02cf3b71b718c17bd253bacba232b62e38393ba",
       "source_status": "checked"
     },
     {
@@ -332,10 +332,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/att-data-throttling-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:09+00:00",
+      "last_checked": "2026-11-21T18:07:11+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "202bb43fd72086b87c8f0ddce32926f17934ba300f905106996a51b9b7b51a3e",
+      "source_hash": "b41b5ee9ffcd039c34d062a35d718cba7cc3c77afacb1021426a02038b4d67f1",
       "source_status": "checked"
     },
     {
@@ -355,10 +355,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/helping-america-group-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:14+00:00",
+      "last_checked": "2026-11-21T18:07:16+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "c8f41bca4d8f6ea415a88476ac370199cfd71395d268cf654932dcf93a340bf0",
+      "source_hash": "c08361ed666051c847cbd4cd2a8584556d31d35947194fb4c89ce223ae365fcd",
       "source_status": "checked"
     },
     {
@@ -378,10 +378,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/blueprint-wealth-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:19+00:00",
+      "last_checked": "2026-11-21T18:07:21+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "4d5047e4deffa54a5ee412c67f042c41a0a32198eef9506bbc51027e6fcafdcf",
+      "source_hash": "355a28296cde26082a600431e88aa6e6b324c656e162d771351b22d3df817d20",
       "source_status": "checked"
     },
     {
@@ -401,10 +401,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/grubhub-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:24+00:00",
+      "last_checked": "2026-11-21T18:07:24+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "cc135d579e7c4c1b7698dfff97d16ff8c9b1201840b0850219ed1d8a3d3761b6",
+      "source_hash": "74593a3cc855acc93fb397f489d761ed08f55467f953827f80023c6443a6bf6a",
       "source_status": "checked"
     },
     {
@@ -424,10 +424,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/trend-deploy-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:28+00:00",
+      "last_checked": "2026-11-21T18:07:31+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "8bb42788789e6c17f5130ad3acae8840281dce62d65ade3e37ce9ebfb3c20431",
+      "source_hash": "c30d72bdbde3105b0eb7e1e615f82d17817dc97f8fe543aea695980fa6dea3fe",
       "source_status": "checked"
     },
     {
@@ -447,10 +447,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/ah-media-group-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:34+00:00",
+      "last_checked": "2026-11-21T18:07:36+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "5d44fb4125350c7188b88b0878bf381f8be7eb62c3dc01b80e8ea41083807ece",
+      "source_hash": "d0f37cbcfac32c8e060bad4be2d4587a0fbd5a20949d64eafd23ea92b27602b9",
       "source_status": "checked"
     },
     {
@@ -470,10 +470,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/sales-mentor-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:39+00:00",
+      "last_checked": "2026-11-21T18:07:41+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "796b107d76b482c6515485bb642e0f578165d4779cd50f117b195cd100bf7d47",
+      "source_hash": "cb724686359649b7b47c364379d42e818d22f09b945176584fdccbe2ffca161f",
       "source_status": "checked"
     },
     {
@@ -493,10 +493,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/handy-technologies-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:44+00:00",
+      "last_checked": "2026-11-21T18:07:46+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "5dfaa3c2a249b336bdce21ae5e865db87e87c8ba859c54c83eef09b2f590deef",
+      "source_hash": "53292b81bf02131d90009db328ae3ed74a9063186784a4cd90e55dda34d37de7",
       "source_status": "checked"
     },
     {
@@ -516,10 +516,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/zurixx-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:49+00:00",
+      "last_checked": "2026-11-21T18:07:51+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "227a38fc02e3c97d14b11caa475a4fba3458d3ed4a420410d2ac4cd0d04705e7",
+      "source_hash": "8ec2cccf403721c1addfcacc30dba363437af323ea9b9134cb8219599461ab4d",
       "source_status": "checked"
     },
     {
@@ -539,10 +539,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/american-vehicle-protection-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:54+00:00",
+      "last_checked": "2026-11-21T18:07:56+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "c3e4b2675b4e998a789fbfe0762e5a86cae94285827549c9aeb4846d18ae631b",
+      "source_hash": "a7dc544fd98f9fc8074a4ef9982433829fb3f3e10db7353493890837033a1b93",
       "source_status": "checked"
     },
     {
@@ -562,10 +562,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/yellowstone-capital-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:28:58+00:00",
+      "last_checked": "2026-11-21T18:08:01+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "7b416fe3d55c0dd6c618e32e6e2ba497d01353e9898f7faf10cc94d1e042c323",
+      "source_hash": "b23d9b48e9166599b26ef35d21806fd47051c33c27bf26b12b8a40038cbd1fb7",
       "source_status": "checked"
     },
     {
@@ -585,10 +585,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/golden-home-services-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:03+00:00",
+      "last_checked": "2026-11-21T18:08:06+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "9ebf7a24e90a5debb94092af92c2aed481212316d21c9716e84adb8750c6c970",
+      "source_hash": "5669bf9304fd16d2fce0ba2ff934a8ba53b5d993ead71528ec16bf8c693e89a1",
       "source_status": "checked"
     },
     {
@@ -608,10 +608,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/brigit-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:09+00:00",
+      "last_checked": "2026-11-21T18:08:11+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "3a4c5d3c387fa1b622f7ed4e3c933b5b443b83799d35c2da2ee5938d8dd8c330",
+      "source_hash": "1b024f9caca4a629fb3a15894790424d624a5a73e95be5aefbf10d073731653a",
       "source_status": "checked"
     },
     {
@@ -631,10 +631,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/golden-sunrise-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:14+00:00",
+      "last_checked": "2026-11-21T18:08:16+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "30a1e3aab919e2b46ece78f105705a0529220e496c35396d9616f617732c4276",
+      "source_hash": "e3e4f4927697a8b85b01bf5add57f10d522f5e5bed65f093b2c160a6e6eb7708",
       "source_status": "checked"
     },
     {
@@ -654,10 +654,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/coulter-motor-company-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:18+00:00",
+      "last_checked": "2026-11-21T18:08:21+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "25881cd807d97e10f104e3acf03d81c4e649074020150fe1fe096d502c219cc7",
+      "source_hash": "669f64f8df814bbfa91ca7c4af9eea10b47ec060ba6b7cac96058bbae8e1e6a1",
       "source_status": "checked"
     },
     {
@@ -677,10 +677,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/national-landmark-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:23+00:00",
+      "last_checked": "2026-11-21T18:08:26+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "f671e679d62a0d02afa12fc548fc1f9c7ea212b3c2e57fe46c6c86c51ea3cd68",
+      "source_hash": "470a1b073946c5faee5988bb40a77d61f0f83b144477a5d8214240a53fee5a40",
       "source_status": "checked"
     },
     {
@@ -700,10 +700,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/supergooddealscom-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:29+00:00",
+      "last_checked": "2026-11-21T18:08:32+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "12f10b326b61be2017b2f5ff72e9674e132311d97d405c3d87e434cf67ee09c1",
+      "source_hash": "9acc78b50f61ac3516fdf5c5165f4d13ef7a620925e6d81c2badc3bc4368a3dc",
       "source_status": "checked"
     },
     {
@@ -723,10 +723,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/acro-services-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:34+00:00",
+      "last_checked": "2026-11-21T18:08:36+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "ba8eb4e6e3b18ce006aa9822d6cb970fab56cc570354281bfe3001597e21c438",
+      "source_hash": "90bbf71079da6f133195fb7e61785bca3bcfaf68915c47f3fe967bec03692b47",
       "source_status": "checked"
     },
     {
@@ -746,10 +746,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/ngl-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:38+00:00",
+      "last_checked": "2026-11-21T18:08:40+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "8bc010ca14f702e68f413c7631694e35f1822dcb3f2dcb1945326913ece9b2c3",
+      "source_hash": "4cb3152b10188e7ec7033b70e82f218b079b947a4169a2e33c755401002b2a5a",
       "source_status": "checked"
     },
     {
@@ -769,10 +769,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/credit-karma-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:44+00:00",
+      "last_checked": "2026-11-21T18:08:44+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "ac54b0d5ff2e2933d79d769b1a68f8515828c803d2637da4059bfed3c5e40754",
+      "source_hash": "9e63befb3af02e503fcc66d52ef2dcb13926c353ae73fde0f5c998949a31f530",
       "source_status": "checked"
     },
     {
@@ -792,10 +792,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/floatme-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:48+00:00",
+      "last_checked": "2026-11-21T18:08:51+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "b6ba85a1903fdb650ffcdab89c4c129adc1a054ec57422de9e2d547ce98c43c8",
+      "source_hash": "c83cb4216e1aedd14efc92f85679e13ae7013884a8fec3e77cf148f7626c1fa7",
       "source_status": "checked"
     },
     {
@@ -815,10 +815,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/hey-dude-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:53+00:00",
+      "last_checked": "2026-11-21T18:08:56+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "d94d746fdaa453bb7f6457ff4c5bfc12345cd578821dc04e5768b473161168f2",
+      "source_hash": "386bf73d43c96a448b09353b7d9c6cd23f9583d055f5d37fb9edca6655c7bc63",
       "source_status": "checked"
     },
     {
@@ -838,10 +838,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/financial-education-services-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:29:59+00:00",
+      "last_checked": "2026-11-21T18:09:01+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "451977b1a476830bb72965d5ee9eafe6ee4c3528e4b6161b35b4f25abcffde78",
+      "source_hash": "ebddb1727d7d67143a1ddb4089ed9e3589793b213f9b0bab2f5a2a3a5ce52cb0",
       "source_status": "checked"
     },
     {
@@ -861,10 +861,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/invitation-homes-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:03+00:00",
+      "last_checked": "2026-11-21T18:09:06+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "5bf984382c30292e824e20286478d8f743b6e7def0c2a993551f434ab5ebe2ca",
+      "source_hash": "942375c4a74dc29cfac46f281c37f9963ae5a6ad63102e6a6af22ec96a31d9d3",
       "source_status": "checked"
     },
     {
@@ -884,10 +884,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/wealthpress-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:09+00:00",
+      "last_checked": "2026-11-21T18:09:09+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "b0f8643254123858fa94346bbf46bdb0907b9905569e1c2d28ccac42985e53a6",
+      "source_hash": "d1fa46aa25e37c722d29262c4223c53992e587c91bc46c1a76a60a8d267ed1fb",
       "source_status": "checked"
     },
     {
@@ -907,10 +907,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/restoro-reimage-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:14+00:00",
+      "last_checked": "2026-11-21T18:09:16+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "2435fd5bbf936ffa21c17552bb7dccb1f9752cf02ab4b843145aca44623ea561",
+      "source_hash": "d57e8dd0ab919f8ec255a910dd007caf240fffb8b2ab363346d46b55a82a6388",
       "source_status": "checked"
     },
     {
@@ -930,10 +930,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/mission-hills-federal-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:18+00:00",
+      "last_checked": "2026-11-21T18:09:21+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "305eb1b82478896436e2a7ac025ffd6a5770873fe4f5fb69b124a1899fcefe24",
+      "source_hash": "517b4b72c10c12192182e82335e79f8ee030c37fd258db285f5f20a9a8729f29",
       "source_status": "checked"
     },
     {
@@ -953,10 +953,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/first-american-payment-systems-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:24+00:00",
+      "last_checked": "2026-11-21T18:09:27+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "3b710961b33be352926f55368ce9cac8101099b99efcac1c34c84fe719391d46",
+      "source_hash": "369f65af730182ab68cc19dcef63546f7935f692d51c5375de86fa3bc553d2a9",
       "source_status": "checked"
     },
     {
@@ -976,10 +976,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/next-gen-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:29+00:00",
+      "last_checked": "2026-11-21T18:09:31+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "6c36524a85c9a55bf928c217c6f684307ce76ddd189358d53dbeeb5ddec4a008",
+      "source_hash": "2b684c8a9c37610857ad80c45e5196b05b7e725af2d2622281fb4ba71eec19fb",
       "source_status": "checked"
     },
     {
@@ -999,10 +999,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/carshield-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:34+00:00",
+      "last_checked": "2026-11-21T18:09:34+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "c0f70a7a975cc7754d74103c36ac575179f96319c69ec857dff2084e22ce9f47",
+      "source_hash": "4c3912f2667c013438ffa84e4236532275e41c4ae6889c1ef3909d81637526c2",
       "source_status": "checked"
     },
     {
@@ -1022,10 +1022,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/legion-media-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:38+00:00",
+      "last_checked": "2026-11-21T18:09:39+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "83389dbfe5a63e5d377632e634bcac252269eb05a47dd31fabcaa2d3371f7094",
+      "source_hash": "6c2c900cbe704ed200cf44e358483b959a64b1429bfed5f796d4f8071cdb4dd8",
       "source_status": "checked"
     },
     {
@@ -1045,10 +1045,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/progressive-leasing-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:43+00:00",
+      "last_checked": "2026-11-21T18:09:44+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "046c5e36b1285609e6200dcb4eda9f0cdc092f71df2336fc51933099ba658805",
+      "source_hash": "a9bafc92cc40596b28ed4d535a187ae296cb4e82bcc2d9fbc56a7aaaaccd08d3",
       "source_status": "checked"
     },
     {
@@ -1068,10 +1068,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/revmountain-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:49+00:00",
+      "last_checked": "2026-11-21T18:09:49+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "cb1733ccdce8261d0b28bdffbb77ca7d37471d09f9bf6c1d6a4662d4dfb2972c",
+      "source_hash": "40f4abebcb5d2ac36bcd2af76241f214621c4456152e50e77b6ff033d98c3733",
       "source_status": "checked"
     },
     {
@@ -1091,10 +1091,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/arise-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:30:54+00:00",
+      "last_checked": "2026-11-21T18:09:56+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "6f973b7e2302ef38f51742ff5d699add2ebf507646f4984f7d53ed3c8a0761e3",
+      "source_hash": "1e2e652bb77d84974704d284e09ea268c64bdf237d9e6adec2bd7517bd0fe54b",
       "source_status": "checked"
     },
     {
@@ -1114,10 +1114,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/bco-consulting-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:01+00:00",
+      "last_checked": "2026-11-21T18:09:59+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "5a9cf35eaf8c0364f7f136a427f074936f0b42821e7b027662e1874142f573d3",
+      "source_hash": "215c48edb1f43bed50a20b965ef4ffc1088a8e1e42c7c80c94e0484c6bc9de0c",
       "source_status": "checked"
     },
     {
@@ -1137,10 +1137,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/sl-finance-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:04+00:00",
+      "last_checked": "2026-11-21T18:10:06+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "0a4513ce112cb72dda2780ef7ed7acf5a0b444197d5d93d1de9c3ad5e247280c",
+      "source_hash": "0bfddd213e466ccb97d41b0d55f811b28fb26f014274527a2b7f3d7df3a7c703",
       "source_status": "checked"
     },
     {
@@ -1160,10 +1160,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/fortnite-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:08+00:00",
+      "last_checked": "2026-11-21T18:10:09+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "2ff0100dba150cbda4edacc87146d9aaa6f4f5fe691bbbdaf2b1bbebfc19747c",
+      "source_hash": "84aa8f3d5ad6ea51943f133cb474ef0b6c4af50acc03f9e39ce500e5a6c91556",
       "source_status": "checked"
     },
     {
@@ -1183,10 +1183,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/roca-labs-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:13+00:00",
+      "last_checked": "2026-11-21T18:10:16+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "5712827cbbf75abd52d9d6dd0ff092c43583ddadff5a23b770c140c1fe761579",
+      "source_hash": "db38ee4039be631385e99fb1cc268228d2d92f1dea4616285f25c7a80fe25b2c",
       "source_status": "checked"
     },
     {
@@ -1206,10 +1206,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/ygrene-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:19+00:00",
+      "last_checked": "2026-11-21T18:10:21+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "ba3b097803ede14fc405a37103de0f8fcaa791c331a974b247ee61c007fdafd5",
+      "source_hash": "ffe7b914c307b0c82f5ab08572feffa0fea26253f16feea15425c4e3f15bfce1",
       "source_status": "checked"
     },
     {
@@ -1229,10 +1229,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/rando-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:23+00:00",
+      "last_checked": "2026-11-21T18:10:24+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "5f28e5f808a85a9178f8c72ca6a714fc713dcd889e72688893dffc8779516676",
+      "source_hash": "8759bd19e054698c1d7b8f6d4ff6d12436628a5e8ef19aff8e0a4817d2153e79",
       "source_status": "checked"
     },
     {
@@ -1252,10 +1252,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/carecom-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:29+00:00",
+      "last_checked": "2026-11-21T18:10:31+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "809bca554cb76fb72336455a6309277e4c111a0fcb8362339d7bbdc24e480f38",
+      "source_hash": "72817188eb15e2db77795766498db9e5f9e19b4a8f8a0b1e64fb5e7c072d6398",
       "source_status": "checked"
     },
     {
@@ -1275,10 +1275,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/nexway-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:33+00:00",
+      "last_checked": "2026-11-21T18:10:36+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "0540d36a91ed1728b850575b64f793b0b8e8551fb0fa8fb7709d493004c4e5b0",
+      "source_hash": "97995d572a1aeacc6768441c4e156ed924c2beae3b968b16cdc89a331b015b2f",
       "source_status": "checked"
     },
     {
@@ -1298,10 +1298,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/john-beck-amazing-profits-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:38+00:00",
+      "last_checked": "2026-11-21T18:10:41+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "5fc387f4f956bbb5d0886580e14d1c7a55cba8190fedd9950bfbbfb374f45312",
+      "source_hash": "b93e565ce1f36ab52580242eb8b834ae8e94285a69bb8a2ae07c640ebf5a5b17",
       "source_status": "checked"
     },
     {
@@ -1321,10 +1321,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/i-works-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:44+00:00",
+      "last_checked": "2026-11-21T18:10:44+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "0d74ba19f808ce64bf752c30cff8a106f755912a50355e143913924d72589ea6",
+      "source_hash": "c920d3bad566a06330ee2b237ff6c5144b0b7a74f6039a9e29ed4a9d12f4b3be",
       "source_status": "checked"
     },
     {
@@ -1344,10 +1344,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/cerebral-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:49+00:00",
+      "last_checked": "2026-11-21T18:10:51+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "13ca1f421fb640a6dd1994966c04ef9c722bf2f8ed3cb69faa1309f12599f471",
+      "source_hash": "5da2e47dfbe1f6f9e8cfd68256ccbce51133b0189ccc5ce88ed9c396826fd34d",
       "source_status": "checked"
     },
     {
@@ -1367,10 +1367,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/betterhelp-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:53+00:00",
+      "last_checked": "2026-11-21T18:10:56+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "c3b5a871ea92a96e253d0f9aaf1c7f97ffd6a4213fcc3b2b45d03ec579dd9a44",
+      "source_hash": "1c9886756cc56a0e3d9b1342a8a6d54973147f495df6092c4acd17467e951961",
       "source_status": "checked"
     },
     {
@@ -1390,10 +1390,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/vroom-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:31:59+00:00",
+      "last_checked": "2026-11-21T18:11:01+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "a6834d34cff9242f6c91c3cda73a64a94599a9f6099d15e19695113c19830c6c",
+      "source_hash": "8e7f7ce881fbca00b588ded8ba07109b16c57995cb541f79c884627d135200c7",
       "source_status": "checked"
     },
     {
@@ -1413,10 +1413,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/response-marketing-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:03+00:00",
+      "last_checked": "2026-11-21T18:11:04+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "c9ddabc15f6743aaa7dd3bd0caaef06ea447fa3a404154a18450c77b88afbc01",
+      "source_hash": "ac40f885b7e38542469872be552361aa13bbddf2d80f450a3a307daad04cede1",
       "source_status": "checked"
     },
     {
@@ -1436,10 +1436,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/career-step-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:09+00:00",
+      "last_checked": "2026-11-21T18:11:12+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "6c10a26bdb82dbda0255eae9db632120f890f758222ebcec6eb602810d0bbea3",
+      "source_hash": "fae5ab17675a8c1edd5047700cf081d0c5fa8088645841626fc7abd9fb54dbc3",
       "source_status": "checked"
     },
     {
@@ -1459,10 +1459,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/vitagene-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:13+00:00",
+      "last_checked": "2026-11-21T18:11:14+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "a6b299399c2d88658c23f1bf0fa14942bfa42939c5ef72d2543fff5418eb171f",
+      "source_hash": "d73e903c5b0a582058b22d06a568b054a7d94b24f6fac3ccc7e2101b17c563d3",
       "source_status": "checked"
     },
     {
@@ -1482,18 +1482,18 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/arete-financial-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:18+00:00",
+      "last_checked": "2026-11-21T18:11:19+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "8b12d74cc6410509d9be2749f6a03c3b21783ade497063422eaf1f866af375d1",
+      "source_hash": "b9cbd66741322f9c562f30e33286247a4ec338129ae5f1b41a830d06c47492d7",
       "source_status": "checked"
     },
     {
       "id": "ftc-pure-green-coffee-refunds",
       "title": "Pure Green Coffee Refunds",
       "type": "ftc",
-      "summary": "Payments are distributed using program records. This is an automatic-payment program, not an open application.",
-      "eligibility": "Only people covered by the official program qualify; an application is not offered here.",
+      "summary": "Payment distribution, existing claims, or refund follow-up. This is not listed as an opportunity to file a new claim.",
+      "eligibility": "Program-specific recipients or previously filed claimants. Read the official instructions for payment questions.",
       "instructions": "Read the official program page for the current payment, contact, or claim instructions. Do not send a preparation worksheet as a claim.",
       "states": [
         "ALL"
@@ -1505,10 +1505,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/pure-green-coffee-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:24+00:00",
+      "last_checked": "2026-11-21T18:11:24+00:00",
       "directory_active": true,
-      "availability": "automatic",
-      "source_hash": "5163f18cc128090cbbda8b10670befdda4216623c77e05bdbab2b208c7779919",
+      "availability": "follow_up",
+      "source_hash": "37e7256af9151eb04d449503f27bf17e7d76f0a432809b8556b89d6535d7d9c5",
       "source_status": "checked"
     },
     {
@@ -1528,10 +1528,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/t-mobile-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:28+00:00",
+      "last_checked": "2026-11-21T18:11:29+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "69c04854a000af841e7c7a5a0587d912b1f00f5df0ee7037e59f60e1ef1fc379",
+      "source_hash": "96ef8412b04c1f6c213f5699287fd3ae462193db5a0686bd5806757743fa1fe5",
       "source_status": "checked"
     },
     {
@@ -1551,10 +1551,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/aqua-finance-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:33+00:00",
+      "last_checked": "2026-11-21T18:11:36+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "bd2c719d0ac683a78f1aed892bf7108921e637b7bd2b4dbf562107dbdca4c0e1",
+      "source_hash": "7612db899d353671596750d92b39525fd62b5478ccec4becbbdb9c9516573f55",
       "source_status": "checked"
     },
     {
@@ -1574,10 +1574,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/fashion-nova-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:38+00:00",
+      "last_checked": "2026-11-21T18:11:41+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "d6fdb341bcc431eca6a3a9ecfd2659c2d4838f4f2a0bca1f48a407fcc1c8324f",
+      "source_hash": "e0af8233cee091be9e7658012c26bf09ca97afb26abf32cc0a959b220945d0ff",
       "source_status": "checked"
     },
     {
@@ -1597,15 +1597,15 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/vivint-smart-home-settlement",
       "discovered_from": "ftc",
       "review_status": "needs_review",
-      "last_checked": "2026-11-18T19:32:44+00:00",
+      "last_checked": "2026-11-21T18:11:44+00:00",
       "directory_active": true,
       "availability": "new_claims",
       "editorial_override": true,
       "deadline_label": "No verified closing date; call the administrator to confirm intake.",
       "last_verified": "2026-11-16T15:30:49.000Z",
-      "source_hash": "48382741987c409a9e976065936b9ca39bba20e5ae5f0d7c093163f69f651c98",
+      "source_hash": "e59980cd33b1463c9f5138574e112d84d9e39f87e7d9819156464a2271ff43a6",
       "source_status": "checked",
-      "change_detected_at": "2026-11-18T19:32:44+00:00"
+      "change_detected_at": "2026-11-21T18:11:44+00:00"
     },
     {
       "id": "ftc-myscore-refunds",
@@ -1624,10 +1624,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/myscore-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:49+00:00",
+      "last_checked": "2026-11-21T18:11:49+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "34eec851cf7f829ed5f431724d3cd96bd75a00345a38449d30028f1c497c0fe0",
+      "source_hash": "5038e8d47e588e7a398f4bedc9196e688da9ccf06e033d311469108ce4097f19",
       "source_status": "checked"
     },
     {
@@ -1647,10 +1647,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/warrior-trading-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:54+00:00",
+      "last_checked": "2026-11-21T18:11:56+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "811b81e313922a2516d82fcafc8c67bacc349233b6ba063b2766bb59646435ae",
+      "source_hash": "b758123141e16ee5911aa75d0b77005143e2d2d2d16c54e6a7a3a1120de919c7",
       "source_status": "checked"
     },
     {
@@ -1670,10 +1670,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/rejuvica-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:32:58+00:00",
+      "last_checked": "2026-11-21T18:11:59+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "8ebc875dfbe01b96dd2950a3de36d1b4dc39cc1d06664259137afa09b456f4fa",
+      "source_hash": "65e1668ea4432279529b93dfdd230f5dbb258a2a83355d288a46b08724652027",
       "source_status": "checked"
     },
     {
@@ -1693,10 +1693,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/equifax-data-breach-settlement",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:33:03+00:00",
+      "last_checked": "2026-11-21T18:12:04+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "bd830777a2a57498c6cfdcad0467829322a927ae63e785a68b9cce46e06a33f1",
+      "source_hash": "6bad5ca9ccff75267638c6e16ad40ea73f2fa67fb0efe1dab637f67d0b762d7f",
       "source_status": "checked"
     },
     {
@@ -1716,10 +1716,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/rhinelander-auto-center-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:33:09+00:00",
+      "last_checked": "2026-11-21T18:12:11+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "967b5bcb20472ba83fe29f860fbfca4f3e1e2550af6aec79fa5f5bfceaaa29cf",
+      "source_hash": "92bbfe13a3be441a9138f7b604d2b60a2399d8d1dda944d3ea36a8124e1b4804",
       "source_status": "checked"
     },
     {
@@ -1739,10 +1739,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/apex-capital-group-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:33:14+00:00",
+      "last_checked": "2026-11-21T18:12:16+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "6c80586c8236d86fb1fca09e2d6b0d29821211cc855877028890b38892d021ae",
+      "source_hash": "145e6799a41a2885e694357380cf5bfe448212cfa3009e8e058327702c5f4634",
       "source_status": "checked"
     },
     {
@@ -1762,10 +1762,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/opendoor-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:33:18+00:00",
+      "last_checked": "2026-11-21T18:12:19+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "ef213a69713d0198528be5ce8f61d00fc5fc035891e2b98e5590cecf27d15786",
+      "source_hash": "faa755101abf4d45936988a58e6663b28091bd1bb47eb62e50790abf9098537d",
       "source_status": "checked"
     },
     {
@@ -1785,10 +1785,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/benefytt-technologies-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:33:24+00:00",
+      "last_checked": "2026-11-21T18:12:26+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "c804d79346f8e8b57d27fa7fe72493f7a36be12ca6f78984ff4c38672d32d1b4",
+      "source_hash": "5d6b3eb6ca9ff5daced7be72414e31798ad46c8dffe954c9451a1be46b77bcbb",
       "source_status": "checked"
     },
     {
@@ -1808,10 +1808,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/vonage-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:33:28+00:00",
+      "last_checked": "2026-11-21T18:12:31+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "b8e69f75c1bae8a6c943a2be14e0ffaec677243ba017a842382e03d4fa2bf2fd",
+      "source_hash": "a93d0cfcc3e6fc46ad01401d97ee938a228a0dd137b52621ba7ed188ea0a9524",
       "source_status": "checked"
     },
     {
@@ -1831,10 +1831,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/herbalife-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:33:34+00:00",
+      "last_checked": "2026-11-21T18:12:36+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "d1a947834b3d8f04c5a25bd7066b386678b45083de87d98394094459bb0a118c",
+      "source_hash": "3788978209a0e51b876ba12559a0e32a3f7a7a1916c2ef27c90ed3946c9791eb",
       "source_status": "checked"
     },
     {
@@ -1854,10 +1854,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/amg-services-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:33:38+00:00",
+      "last_checked": "2026-11-21T18:12:39+00:00",
       "directory_active": true,
       "availability": "follow_up",
-      "source_hash": "abcb8abfe1c7b15f6cf9a50c8cd4eb403b839a2c396472b02aa2f6d4fee37b91",
+      "source_hash": "785972600875eaae92e8cc91b14b80aa896b44ad0e054ae3ec02d4f3d84cf9ab",
       "source_status": "checked"
     },
     {
@@ -1877,10 +1877,10 @@
       "source_url": "https://www.ftc.gov/enforcement/refunds/trudeau-refunds",
       "discovered_from": "ftc",
       "review_status": "action_verified",
-      "last_checked": "2026-11-18T19:33:43+00:00",
+      "last_checked": "2026-11-21T18:12:46+00:00",
       "directory_active": true,
       "availability": "automatic",
-      "source_hash": "a45463117ad80234fb02afecf8d743ef6b03be81b44cf6f0305d7b71b7f4fc03",
+      "source_hash": "172e763125ceabf0f29b8b0ad583a728da250c778c8eb356e9d91b95c308145c",
       "source_status": "checked"
     },
     {
@@ -1908,7 +1908,7 @@
       "action": "claim",
       "source_hash": "42016b504543a2691e42aef89663ac13e7815c1b0ff2506e810e8e0b89cdf3bf",
       "source_status": "checked",
-      "last_checked": "2026-11-18T19:33:19+00:00"
+      "last_checked": "2026-11-21T18:12:20+00:00"
     },
     {
       "id": "bigelow-tea",
@@ -1935,7 +1935,7 @@
       "action": "claim",
       "source_hash": "df2a127411895c968f82445fa98a89063da7531b682727bec750f160297dc8fe",
       "source_status": "checked",
-      "last_checked": "2026-11-18T19:33:19+00:00"
+      "last_checked": "2026-11-21T18:12:20+00:00"
     },
     {
       "id": "carter-credit-union",
@@ -1952,7 +1952,7 @@
       "receipt_required": false,
       "notice_id_required": true,
       "type": "settlement",
-      "availability": "new_claims",
+      "availability": "closed",
       "review_status": "needs_review",
       "editorial_override": true,
       "last_verified": "2026-11-16T15:30:48.999Z",
@@ -2040,7 +2040,7 @@
       "action": "claim",
       "source_hash": "0d7e28aeabcafe8fa18a6237650afc3ff13eb34e06447be267f50d54fb9cde09",
       "source_status": "checked",
-      "last_checked": "2026-11-18T19:33:20+00:00"
+      "last_checked": "2026-11-21T18:12:21+00:00"
     },
     {
       "id": "arena-fees",
@@ -2067,7 +2067,7 @@
       "action": "claim",
       "source_hash": "366adc3edec510b252808ab4f5935169a5073c25d77c2e1a6cbeb0c234983b50",
       "source_status": "checked",
-      "last_checked": "2026-11-18T19:33:21+00:00"
+      "last_checked": "2026-11-21T18:12:21+00:00"
     },
     {
       "id": "apple-ai",
@@ -2121,7 +2121,7 @@
       "action": "claim",
       "source_hash": "6cc342e09607b618cfbde5958cc25078f9b3e6fa4ba15f95954bf5e148e14cd9",
       "source_status": "checked",
-      "last_checked": "2026-11-18T19:33:21+00:00"
+      "last_checked": "2026-11-21T18:12:21+00:00"
     },
     {
       "id": "fastbucks-nm",
@@ -2148,7 +2148,7 @@
       "action": "claim",
       "source_hash": "14c09cea3204c18fb9f84bcf2885e99e173061a64da0780cf371684504ae6276",
       "source_status": "checked",
-      "last_checked": "2026-11-18T19:33:21+00:00"
+      "last_checked": "2026-11-21T18:12:22+00:00"
     },
     {
       "id": "venetian-privacy",
@@ -2227,7 +2227,7 @@
       "action": "claim",
       "source_hash": "5a8f100dd06cdb204e3278b5783255f082e5b6f1697062363cd9b11911142da3",
       "source_status": "checked",
-      "last_checked": "2026-11-18T19:33:22+00:00"
+      "last_checked": "2026-11-21T18:12:23+00:00"
     },
     {
       "id": "western-union-phase3",
@@ -2257,7 +2257,7 @@
       ],
       "source_hash": "164ac6b4e25291d4fe9e21263aaf25a5e6ed9c7fdf093dc6e632a1cd8891e925",
       "source_status": "checked",
-      "last_checked": "2026-11-18T19:33:24+00:00"
+      "last_checked": "2026-11-21T18:12:25+00:00"
     },
     {
       "id": "case-496f20d39e705663",
@@ -2275,10 +2275,10 @@
       "review_status": "action_verified",
       "deadline_date": "2027-01-29",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:24+00:00",
-      "last_verified": "2026-11-18T19:33:24+00:00",
+      "last_checked": "2026-11-21T18:12:25+00:00",
+      "last_verified": "2026-11-21T18:12:25+00:00",
       "source_status": "checked",
-      "source_hash": "5a9f545966b953bdd4ccf9a61c6908fc5d1641b401add1a69392d89d04991e66",
+      "source_hash": "ed9f00d3f101aa94908b8ff818b23ac284c4ecb24da7a8cd276eda373e28304f",
       "action": "claim",
       "summary": "The official notice lists a claim submission route and a future claim deadline. Eligibility and document requirements must be checked in that notice.",
       "eligibility": "Read the official class definition, purchase/activity dates, exclusions, and claim instructions. A filing route does not mean every visitor qualifies.",
@@ -2302,8 +2302,8 @@
       "review_status": "action_verified",
       "deadline_date": "2027-01-22",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:24+00:00",
-      "last_verified": "2026-11-18T19:33:24+00:00",
+      "last_checked": "2026-11-21T18:12:25+00:00",
+      "last_verified": "2026-11-21T18:12:25+00:00",
       "source_status": "checked",
       "source_hash": "e681f6f8e372737e9ba83073065cd5dd579b512e7575e4c451868cee4c96b501",
       "action": "claim",
@@ -2329,8 +2329,8 @@
       "review_status": "action_verified",
       "deadline_date": "2027-01-19",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:25+00:00",
-      "last_verified": "2026-11-18T19:33:25+00:00",
+      "last_checked": "2026-11-21T18:12:26+00:00",
+      "last_verified": "2026-11-21T18:12:26+00:00",
       "source_status": "checked",
       "source_hash": "5ca7020bb49c645a8ea7ace2378da47772953c363378d84a3ba7ee1b2242de95",
       "action": "claim",
@@ -2356,8 +2356,8 @@
       "review_status": "action_verified",
       "deadline_date": "2027-01-02",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:25+00:00",
-      "last_verified": "2026-11-18T19:33:25+00:00",
+      "last_checked": "2026-11-21T18:12:27+00:00",
+      "last_verified": "2026-11-21T18:12:27+00:00",
       "source_status": "checked",
       "source_hash": "e23b3b29cae4a1a3e2974dc561d1d7f56cbdfea35b5f15325488a1c352337407",
       "action": "claim",
@@ -2383,8 +2383,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-12-31",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:25+00:00",
-      "last_verified": "2026-11-18T19:33:25+00:00",
+      "last_checked": "2026-11-21T18:12:27+00:00",
+      "last_verified": "2026-11-21T18:12:27+00:00",
       "source_status": "checked",
       "source_hash": "d4dfbca7df5c28971537664d0093aa6630f891ef31301f44b5b80908ca3fd09e",
       "action": "claim",
@@ -2410,8 +2410,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-12-23",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:26+00:00",
-      "last_verified": "2026-11-18T19:33:26+00:00",
+      "last_checked": "2026-11-21T18:12:27+00:00",
+      "last_verified": "2026-11-21T18:12:27+00:00",
       "source_status": "checked",
       "source_hash": "278c15431e86a4a6af7068481a8623ea04cc95a6f3831fe916599966de24d67f",
       "action": "claim",
@@ -2437,8 +2437,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-12-22",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:25+00:00",
-      "last_verified": "2026-11-18T19:33:25+00:00",
+      "last_checked": "2026-11-21T18:12:27+00:00",
+      "last_verified": "2026-11-21T18:12:27+00:00",
       "source_status": "checked",
       "source_hash": "f4be019dd7a4c51a60836352756f807f9c8674f09370d41a43837e33d4428e48",
       "action": "claim",
@@ -2464,8 +2464,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-12-21",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:25+00:00",
-      "last_verified": "2026-11-18T19:33:25+00:00",
+      "last_checked": "2026-11-21T18:12:27+00:00",
+      "last_verified": "2026-11-21T18:12:27+00:00",
       "source_status": "checked",
       "source_hash": "f9a63900b798bb3d842d04d3645c039ad1fec8b77d10960773a064b62ea255bc",
       "action": "claim",
@@ -2491,8 +2491,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-12-21",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:26+00:00",
-      "last_verified": "2026-11-18T19:33:26+00:00",
+      "last_checked": "2026-11-21T18:12:27+00:00",
+      "last_verified": "2026-11-21T18:12:27+00:00",
       "source_status": "checked",
       "source_hash": "eb8378affd813ac1c8dd8352c3bf11bca4fe8ba8b8ae183ff2b3b6bd9af502c7",
       "action": "claim",
@@ -2518,8 +2518,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-12-20",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:26+00:00",
-      "last_verified": "2026-11-18T19:33:26+00:00",
+      "last_checked": "2026-11-21T18:12:28+00:00",
+      "last_verified": "2026-11-21T18:12:28+00:00",
       "source_status": "checked",
       "source_hash": "892b0f7ee1eaceca536e0781ad4ad877cc87d5484cd490159ec0479d6c352882",
       "action": "claim",
@@ -2545,8 +2545,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-12-14",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:26+00:00",
-      "last_verified": "2026-11-18T19:33:26+00:00",
+      "last_checked": "2026-11-21T18:12:28+00:00",
+      "last_verified": "2026-11-21T18:12:28+00:00",
       "source_status": "checked",
       "source_hash": "865abe1b3ff85d349e4d598df1635a97c6a2317e0b380fccd6ff3f0416036ee9",
       "action": "claim",
@@ -2572,8 +2572,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-12-07",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:27+00:00",
-      "last_verified": "2026-11-18T19:33:27+00:00",
+      "last_checked": "2026-11-21T18:12:28+00:00",
+      "last_verified": "2026-11-21T18:12:28+00:00",
       "source_status": "checked",
       "source_hash": "701e2eaa6e3c8bbdde3f0c347ee8912948f9f34019c464fc099ebe9363437fba",
       "action": "claim",
@@ -2599,8 +2599,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-12-02",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:27+00:00",
-      "last_verified": "2026-11-18T19:33:27+00:00",
+      "last_checked": "2026-11-21T18:12:28+00:00",
+      "last_verified": "2026-11-21T18:12:28+00:00",
       "source_status": "checked",
       "source_hash": "2245566d9955482e5026d76e4b0eb43c2e2ed0a97c4653a86953f3fadd2140f1",
       "action": "claim",
@@ -2626,8 +2626,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-11-29",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:28+00:00",
-      "last_verified": "2026-11-18T19:33:28+00:00",
+      "last_checked": "2026-11-21T18:12:28+00:00",
+      "last_verified": "2026-11-21T18:12:28+00:00",
       "source_status": "checked",
       "source_hash": "a651b8cc0b0e8a7c7d65e648df6e0a0aa39fa8122caf438a7b0f50f5ff532693",
       "action": "claim",
@@ -2653,8 +2653,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-11-24",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:33:27+00:00",
-      "last_verified": "2026-11-18T19:33:27+00:00",
+      "last_checked": "2026-11-21T18:12:29+00:00",
+      "last_verified": "2026-11-21T18:12:29+00:00",
       "source_status": "checked",
       "source_hash": "5c0a341f735b970efdc601ae470518efe523c3188521faa47a525aa9c5e5a321",
       "action": "claim",
@@ -2707,8 +2707,8 @@
       "review_status": "action_verified",
       "deadline_date": "2027-02-01",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:34:03+00:00",
-      "last_verified": "2026-11-18T19:34:03+00:00",
+      "last_checked": "2026-11-21T18:12:29+00:00",
+      "last_verified": "2026-11-21T18:12:29+00:00",
       "source_status": "checked",
       "source_hash": "c335d3648bc5683fa2d4a0061976697585a89795ecf810e47a6c7f54a04d668a",
       "action": "claim",
@@ -2734,8 +2734,8 @@
       "review_status": "action_verified",
       "deadline_date": "2026-12-14",
       "action_check_only": true,
-      "last_checked": "2026-11-18T19:34:04+00:00",
-      "last_verified": "2026-11-18T19:34:04+00:00",
+      "last_checked": "2026-11-21T18:12:29+00:00",
+      "last_verified": "2026-11-21T18:12:29+00:00",
       "source_status": "checked",
       "source_hash": "d8efeaedd61b0714abdc13378d749fe5e2ef90b128f3dc7eab16c8765acb7f1d",
       "action": "claim",
@@ -2747,5 +2747,5 @@
     }
   ],
   "ftc_feed_checked": "2026-11-16T04:35:04+00:00",
-  "discovery_pending": 412
+  "discovery_pending": 413
 }
