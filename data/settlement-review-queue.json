@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T21:30:22+00:00",
+  "updated_at": "2026-11-25T20:38:25+00:00",
   "leads": [
     {
       "id": "case-a64edc73c157744a",
@@ -1944,8 +1944,7 @@
       "notice_id_required": null,
       "availability": "needs_review",
       "review_status": "needs_review",
-      "deadline_date": "2026-11-24",
-      "verification_error": "Source robots access unavailable"
+      "deadline_date": "2026-11-24"
     },
     {
       "id": "case-c53be0a206947c5b",
@@ -1961,8 +1960,7 @@
       "notice_id_required": null,
       "availability": "needs_review",
       "review_status": "needs_review",
-      "deadline_date": "2026-11-24",
-      "verification_error": "Source robots access unavailable"
+      "deadline_date": "2026-11-24"
     },
     {
       "id": "case-56934205715eb8ce",
@@ -2554,7 +2552,7 @@
     },
     {
       "id": "case-fe24a6a6e691a644",
-      "title": "Florence Bank $390,881 Overdraft & NSF Fee Settlement Automatic payment · no claim form · retry NSF and debit card overdraft fees (Apr 2018 – Feb 2024) Automatic Dec 15, 2026 21 days left",
+      "title": "Florence Bank $390,881 Overdraft & NSF Fee Settlement Automatic payment · no claim form · retry NSF and debit card overdraft fees (Apr 2018 – Feb 2024) Automatic Dec 15, 2026 20 days left",
       "type": "settlement",
       "official_url": "https://openclassactions.com/settlements/overdraft-fees/florence-bank-overdraft-nsf-fee-settlement.php",
       "source_url": "https://openclassactions.com/settlements/overdraft-fees/florence-bank-overdraft-nsf-fee-settlement.php",
@@ -2569,7 +2567,7 @@
     },
     {
       "id": "case-69666a095ec5e894",
-      "title": "$500K Service Spot Parking Reservation Fee California Class Action Settlement Proof / ID Dec 17, 2026 23 days left",
+      "title": "$500K Service Spot Parking Reservation Fee California Class Action Settlement Proof / ID Dec 17, 2026 22 days left",
       "type": "settlement",
       "official_url": "https://openclassactions.com/settlements/service-spot-parking-reservation-fees-california-class-action-settlement.php",
       "source_url": "https://openclassactions.com/settlements/service-spot-parking-reservation-fees-california-class-action-settlement.php",
@@ -2584,7 +2582,7 @@
     },
     {
       "id": "case-e189fb45ed253824",
-      "title": "$21M Whirlpool / Maytag Bottom-Mount & French-Door Refrigerator Freezer Class Action Settlement Proof / ID Dec 31, 2026 37 days left",
+      "title": "$21M Whirlpool / Maytag Bottom-Mount & French-Door Refrigerator Freezer Class Action Settlement Proof / ID Dec 31, 2026 36 days left",
       "type": "settlement",
       "official_url": "https://openclassactions.com/settlements/whirlpool-freezers-class-action.php",
       "source_url": "https://openclassactions.com/settlements/whirlpool-freezers-class-action.php",
@@ -3049,7 +3047,7 @@
     },
     {
       "id": "case-db43fc2bb056bc73",
-      "title": "Capital One Arena concessions venue fee Share of $4.5M No proof Closes Dec 4 · 10 days left · Food & beverage",
+      "title": "Capital One Arena concessions venue fee Share of $4.5M No proof Closes Dec 4 · 9 days left · Food & beverage",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/capital-one-arena-venue-fee",
       "source_url": "https://claimmy.org/settlements/capital-one-arena-venue-fee",
@@ -3064,7 +3062,7 @@
     },
     {
       "id": "case-6641d00bc14e3d7e",
-      "title": "Neutrogena Skin360 (Illinois) Equal share of $4.7M No proof Closes Nov 25 · 1 day left · Data breach & privacy",
+      "title": "Neutrogena Skin360 (Illinois) Equal share of $4.7M No proof Closes Nov 25 · 0 days left · Data breach & privacy",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/neutrogena-skin360",
       "source_url": "https://claimmy.org/settlements/neutrogena-skin360",
@@ -3124,7 +3122,7 @@
     },
     {
       "id": "case-9e17aaf4012babe0",
-      "title": "Dr. Squatch \"natural\" labels Up to $12.50 No proof Closes Nov 27 · 3 days left · Home & personal care",
+      "title": "Dr. Squatch \"natural\" labels Up to $12.50 No proof Closes Nov 27 · 2 days left · Home & personal care",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/dr-squatch-natural",
       "source_url": "https://claimmy.org/settlements/dr-squatch-natural",
@@ -3199,7 +3197,7 @@
     },
     {
       "id": "case-386734c54bae44f7",
-      "title": "ParkOn & CheapAirportParking fees (California) Share of $500K No proof Closes Dec 17 · 23 days left · Retail & ecommerce",
+      "title": "ParkOn & CheapAirportParking fees (California) Share of $500K No proof Closes Dec 17 · 22 days left · Retail & ecommerce",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/parkon-reservation-fees",
       "source_url": "https://claimmy.org/settlements/parkon-reservation-fees",
@@ -3214,7 +3212,7 @@
     },
     {
       "id": "case-c1d9368ff7558dc9",
-      "title": "Coast Dental appointment texts Up to $59 No proof Closes Dec 24 · 30 days left · Data breach & privacy",
+      "title": "Coast Dental appointment texts Up to $59 No proof Closes Dec 24 · 29 days left · Data breach & privacy",
       "type": "settlement",
       "official_url": "https://claimmy.org/settlements/coast-dental-texts",
       "source_url": "https://claimmy.org/settlements/coast-dental-texts",
